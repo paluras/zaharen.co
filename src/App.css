@@ -33,7 +33,7 @@
  
   transform:scale(1);
  object-fit: contain;
- background-image: url("src/assets/7vqd.gif");
+ background-image: url("https://raw.githubusercontent.com/paluras/new/master/src/assets/7vqd.gif");
  background-size: 90% 90%;
  background-repeat: no-repeat ;
  background-position: center;
@@ -42,7 +42,7 @@
   
   transform:scale(1.0505);
   transition:  1s;
-  background-image: url("src/assets/7vqd.gif");
+  background-image: url("https://raw.githubusercontent.com/paluras/new/master/src/assets/7vqd.gif");
   
 }
 .tv-main:not(:hover) {  transform:scale(1);
