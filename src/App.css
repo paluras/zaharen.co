@@ -1,0 +1,137 @@
+*{
+  overflow: hidden;
+  font-family: 'Libre Baskerville', serif;
+  margin: 0px;
+}
+
+.App{
+  
+ 
+}
+
+.img-container{
+  
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.tv-main >img{
+  cursor: pointer;
+}
+.tv-main{
+  box-sizing: border-box;
+  border-color: white;
+  border-style: solid;
+  border-width: 20vh 20vw ;
+  
+ 
+  transform:scale(1);
+ object-fit: contain;
+ background-image: url("src/assets/7vqd.gif");
+ background-size: 90% 90%;
+ background-repeat: no-repeat ;
+ background-position: center;
+}
+.tv-main:hover{
+  
+  transform:scale(1.0505);
+  transition:  1s;
+  background-image: url("src/assets/7vqd.gif");
+  
+}
+.tv-main:not(:hover) {  transform:scale(1);
+  transition:  1s;
+  background-image: url("src/assets/7vqd.gif");} 
+
+.tv-main-2{
+  box-sizing: border-box;
+  border-color: white;
+  border-style: solid;
+  border-width: 30vh 30vw ;
+
+ 
+  rotate: -15deg;
+  transform: scale(15);
+  transition: ease-in 3s ;
+  pointer-events: none;
+  object-fit: contain;
+  
+}
+
+
+.page{
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  transition: 2s;
+  opacity: 0;
+  
+}
+
+.page-main{
+  display: flex;
+  flex-direction: column;
+  transition: 2s;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(201, 83, 83);
+  
+}
+
+
+nav{
+  
+  width: 100%;
+  
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: white;
+  
+  
+}
+
+.left{
+  font-weight: 700;
+}
+.mid{
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+nav > div{
+  cursor: pointer;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+
+.album-image > img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 30px;
+ 
+}
+
