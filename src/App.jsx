@@ -47,7 +47,7 @@ function App() {
         <img 
         onClick={handleClick} 
         className={start}
-         src='src\assets\pngwing.com.png'> 
+         src='https://github.com/paluras/new/blob/master/src/assets/pngwing.com.png'> 
         </img>
         
       </div>
