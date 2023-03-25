@@ -47,7 +47,7 @@
 }
 .tv-main:not(:hover) {  transform:scale(1);
   transition:  1s;
-  background-image: url("src/assets/7vqd.gif");} 
+  background-image: url("https://raw.githubusercontent.com/paluras/new/master/src/assets/7vqd.gif");} 
 
 .tv-main-2{
   box-sizing: border-box;
