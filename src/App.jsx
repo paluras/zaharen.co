@@ -63,7 +63,7 @@ function App() {
           <div className="nav-container">
               <div>About</div>
               <div>Songs</div>
-              <img className='logo' src='src\assets\Asset 4.svg'></img>
+              <img className='logo' src='https://raw.githubusercontent.com/paluras/new/5cb0efb49c2186c94399291e20f262185aec59cb/src/assets/Asset%204.svg'></img>
               <div>Contact</div>
             <div className="projects">Projects</div>
           
@@ -76,7 +76,7 @@ function App() {
               
               <div className="album-image">
                 
-                <img className='album' src='src\assets\257402019_111385201360055_4339298082473236043_n.jpg'></img>
+                <img className='album' src='https://raw.githubusercontent.com/paluras/new/master/src/assets/257402019_111385201360055_4339298082473236043_n.jpg'></img>
                 <h2>Primordial feelings</h2>
               </div>
           </div>
