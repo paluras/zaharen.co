@@ -8,11 +8,13 @@ function App() {
   const [displays, setDisplay] = useState("flex")
   const [clicked, setClicked] = useState(false);
   const [secondDisplay, setSecondDisplay] = useState("0")
+  const [compenentOverflow , setComponentOverflow] = useState("hidden")
 
   
   useEffect(() => {
     let theDisplay1;
     let theDisplay2;
+    let componentDisplay;
     if (clicked) {
       theDisplay1 = setTimeout(() => {
         setDisplay("none")
@@ -20,8 +22,11 @@ function App() {
       theDisplay2 = setTimeout(() => {
         setSecondDisplay("1")
       }, 300);
+      componentDisplay = setTimeout(() => {
+        setComponentOverflow("scroll")
+      }, 500);
     }
-    return () => clearTimeout(theDisplay1,theDisplay2);
+    return () => clearTimeout(theDisplay1,theDisplay2, componentDisplay);
   }, [clicked]);
 
  
@@ -53,25 +58,76 @@ function App() {
       </div>
       <div
       style={{opacity:`${secondDisplay}`}} className={mainPage}>
-        <div className="components">
+        <div style={{overflowY:`${compenentOverflow}`}}  className="components">
         <nav>
-        <div className="nav-container">
-          <h1 className="left">Zaharenco</h1>
-          <div className="mid"> 
-            <div>About</div>
-            <div>Songs</div>
-            <div>Contact</div>
+          <div className="nav-container">
+              <div>About</div>
+              <div>Songs</div>
+              <img className='logo' src='src\assets\Asset 4.svg'></img>
+              <div>Contact</div>
+            <div className="projects">Projects</div>
+          
           </div>
-          <div className="spotify">Spotify</div>
-         
-        </div>
         </nav>
         <main>
-          <h2>Primordial feelings</h2>
-          <div className="album-image"><img src='src\assets\257402019_111385201360055_4339298082473236043_n.jpg'></img></div>
+          
+          <div className="first-page">
+              
+              
+              <div className="album-image">
+                
+                <img className='album' src='src\assets\257402019_111385201360055_4339298082473236043_n.jpg'></img>
+                <h2>Primordial feelings</h2>
+              </div>
+          </div>
+          
+         
         </main>
+        
+        <div className='second-page'>
+            <div className='about-me'>About </div>
+            <p className='description one'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium atque laboriosam minima labore commodi vero sapiente in, reiciendis deleniti nulla, delectus cum unde, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem adipisci dolorum saepe tenetur beatae ea error, non nostrum voluptas veniam culpa soluta exercitationem esse omnis quos modi voluptatum nesciunt reprehenderit! quas eum aut magnam vel nihil? Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, nihil facere! Similique veniam nam quia doloribus facere dolorem obcaecati facilis perspiciatis consequatur quaerat maiores odio, deleniti quam quae corrupti nihil.</p>
+            <div className="poze-component">
+                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
+                <img src="src\assets\R1-05143-0011.JPG" alt="" />
+                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
+                <img src="src\assets\R1-05143-0011.JPG" alt="" />
+                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
+                <img src="src\assets\R1-05143-0011.JPG" alt="" />
+                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
+                <img src="src\assets\R1-05143-0011.JPG" alt="" />
+                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
+                <img src="src\assets\R1-05143-0011.JPG" alt="" />
+                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
+                <img src="src\assets\R1-05143-0011.JPG" alt="" />
+              </div>
+              <div className="align-decription">
+             <div className="description two">
+</div>
+             <div className="description three">Lorem ipsum dolor sit 
+             </div>  
+             </div>     
       </div>
+      <div className='second-page'>
+            <div className='about-me'>Projects </div>
+            <p className='description one'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium atque laboriosam minima labore commodi vero sapiente in, reiciendis deleniti nulla, delectus cum unde, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem adipisci dolorum saepe tenetur beatae ea error, non nostrum voluptas veniam culpa soluta exercitationem esse omnis quos modi voluptatum nesciunt reprehenderit! quas eum aut magnam vel nihil? Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, nihil facere! Similique veniam nam quia doloribus facere dolorem obcaecati facilis perspiciatis consequatur quaerat maiores odio, deleniti quam quae corrupti nihil.</p>
+            
+              <div className="align-decription">
+             <div className="description two">
+</div>
+             
+              
+             </div>     
       </div>
+      
+
+
+       
+        
+      </div>
+      
+      </div>
+      
     </div>
   )
 }

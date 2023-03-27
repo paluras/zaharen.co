@@ -1,11 +1,13 @@
 *{
-  overflow: hidden;
-  font-family: 'Libre Baskerville', serif;
+  
+  font-family: 'Bebas Neue', cursive , sans-serif;
   margin: 0px;
+ 
 }
 
-.App{
-  
+.components::-webkit-scrollbar{
+ width: 0px;
+ height: 0px;
  
 }
 
@@ -14,7 +16,7 @@
   width: 100%;
   position: absolute;
   z-index: 1;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -75,6 +77,7 @@
   height: 100vh;
   transition: 2s;
   opacity: 0;
+  overflow: hidden;
   
 }
 
@@ -84,54 +87,184 @@
   transition: 2s;
   width: 100%;
   height: 100vh;
-  background-color: rgb(201, 83, 83);
+  background-color: #567cad;
   
 }
+
+
 
 
 nav{
   
+  position:absolute;
+  z-index: 2;
+  
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
   
 }
 
 .nav-container{
+  
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 65px;
   align-items: center;
   height: 60px;
-  background-color: white;
-  
   
 }
-
-.left{
-  font-weight: 700;
-}
-.mid{
-  display: flex;
-  width: 40%;
-  justify-content: space-evenly;
+.logo{
+  width: 50px;
 }
 
-nav > div{
+
+
+
+.nav-container > div{
   cursor: pointer;
+  font-size: 42px;
+ 
+}
+.components{
+ scroll-snap-type: y mandatory;
 }
 
 main{
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./assets/cloud_1b.png");
+  background-repeat: no-repeat;
+ 
 }
 
 
+.album-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -100px;
+  width: 350px;
+}
+.album-image:hover{
+  scale: 1.1;
+  transition: 1s;
+  box-shadow: 10px 10px 30px;
+}
+.album-image:not(:hover){
+  scale: 1;
+  transition: 1s;
+}
 .album-image > img{
   width: 300px;
   height: 300px;
   object-fit: cover;
   margin-top: 30px;
+  z-index: 1;
+  position: relative;
+  border-radius: 5px;
  
+  
+}
+.album-image > h2{
+  color: white;
+  letter-spacing: 6px;
 }
 
+.first-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align:center;
+ 
+
+}
+
+.second-page{
+  margin: 0 auto;
+ background-color: #567cad;
+  height: 100vh;
+  scroll-snap-align:center;
+  width: 80%;
+}
+.about-me{
+  font-size: 120px;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+
+.poze-component{
+  display: flex;
+  gap: 32px;
+  overflow: scroll;
+ height: 30%;
+max-width: 3000px;
+
+margin-left: -300px;
+
+
+
+}
+.poze-component > img{
+  filter:grayscale(300);
+  width: 300px;
+  height: 80%;
+  border: 5px solid #d1d1d1d3;
+ 
+  box-shadow: 20px 20px 20px rgba(43, 40, 40, 0.253);
+  object-fit: cover;
+  transition: all 3s;
+  animation-duration: 250s;
+  animation-name: scroll-auto;
+  animation-iteration-count: 10000;
+  
+}
+@keyframes scroll-auto {
+  0% {transform: translateX(0%);}
+  
+  100% {transform: translateX(-1000%);}
+}
+
+.poze-component::-webkit-scrollbar{
+  width: 0px;
+  
+ }
+ 
+ .align-decription{
+  display: flex;
+  justify-content: space-between;
+ }
+ .description{
+  position: relative;
+  z-index: 3;
+  max-width: 33%;
+  max-height: 30px;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  
+}
+
+ .one{
+  text-shadow: 2px 2px #656b72;
+  font-weight: 400;
+ }
+
+ .three{
+  font-size: 200px;
+  overflow-wrap: normal;
+  overflow :visible;
+ }
