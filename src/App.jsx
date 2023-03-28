@@ -43,6 +43,31 @@ function App() {
   
   console.log(displays);
 
+
+
+  
+    const [selectedButton, setSelectedButton] = useState(null);
+  
+    const handleClickDisplay = (buttonName) => {
+      setSelectedButton(buttonName);
+    };
+  
+    
+      <div>
+        <button onClick={() => handleClickDisplay('Button 1')}>Button 1</button>
+        <button onClick={() => handleClickDisplay('Button 2')}>Button 2</button>
+        
+       
+      </div>
+   
+  
+
+
+
+
+
+
+
   return (
     <div className="App">
       <div
@@ -57,78 +82,157 @@ function App() {
         
       </div>
       <div
-      style={{opacity:`${secondDisplay}`}} className={mainPage}>
+      style={{opacity:`${secondDisplay}`}} 
+      className={mainPage}>
         <div style={{overflowY:`${compenentOverflow}`}}  className="components">
         <nav>
-          <div className="nav-container">
-              <div>About</div>
-              <div>Songs</div>
-              <img className='logo' src='https://raw.githubusercontent.com/paluras/new/5cb0efb49c2186c94399291e20f262185aec59cb/src/assets/Asset%204.svg'></img>
-              <div>Contact</div>
-            <div className="projects">Projects</div>
-          
-          </div>
         </nav>
-        <main>
-          
-          <div className="first-page">
-              
-              
-              <div className="album-image">
-                
-                <img className='album' src='https://raw.githubusercontent.com/paluras/new/master/src/assets/257402019_111385201360055_4339298082473236043_n.jpg'></img>
-                <h2>Primordial feelings</h2>
-              </div>
-          </div>
-          
-         
-        </main>
-        
-        <div className='second-page'>
-            <div className='about-me'>About </div>
-            <p className='description one'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium atque laboriosam minima labore commodi vero sapiente in, reiciendis deleniti nulla, delectus cum unde, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem adipisci dolorum saepe tenetur beatae ea error, non nostrum voluptas veniam culpa soluta exercitationem esse omnis quos modi voluptatum nesciunt reprehenderit! quas eum aut magnam vel nihil? Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, nihil facere! Similique veniam nam quia doloribus facere dolorem obcaecati facilis perspiciatis consequatur quaerat maiores odio, deleniti quam quae corrupti nihil.</p>
-            <div className="poze-component">
-                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
-                <img src="src\assets\R1-05143-0011.JPG" alt="" />
-                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
-                <img src="src\assets\R1-05143-0011.JPG" alt="" />
-                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
-                <img src="src\assets\R1-05143-0011.JPG" alt="" />
-                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
-                <img src="src\assets\R1-05143-0011.JPG" alt="" />
-                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
-                <img src="src\assets\R1-05143-0011.JPG" alt="" />
-                <img className='elPian' src='src\assets\Eu pian Chroma Copac.png'></img>
-                <img src="src\assets\R1-05143-0011.JPG" alt="" />
-              </div>
-              <div className="align-decription">
-             <div className="description two">
-</div>
-             <div className="description three">Lorem ipsum dolor sit 
-             </div>  
-             </div>     
-      </div>
-      <div className='second-page'>
-            <div className='about-me'>Projects </div>
-            <p className='description one'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium atque laboriosam minima labore commodi vero sapiente in, reiciendis deleniti nulla, delectus cum unde, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem adipisci dolorum saepe tenetur beatae ea error, non nostrum voluptas veniam culpa soluta exercitationem esse omnis quos modi voluptatum nesciunt reprehenderit! quas eum aut magnam vel nihil? Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, nihil facere! Similique veniam nam quia doloribus facere dolorem obcaecati facilis perspiciatis consequatur quaerat maiores odio, deleniti quam quae corrupti nihil.</p>
+          <main>
+            <nav>
+              <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 13:13:34</p>
+            </nav>
+            <img className='logo' src="src\assets\Zaharenco-logo.png" alt="" />
             
-              <div className="align-decription">
-             <div className="description two">
-</div>
-             
-              
-             </div>     
-      </div>
-      
-
-
-       
+        <div className="container">
+            <div className="container-left">
+            <ul>
+              <li onClick={() => handleClickDisplay('Button 1')}>Whats new</li>
+              <li onClick={() => handleClickDisplay('Button 2')}>About</li>
+              <li onClick={() => handleClickDisplay('Button 3')}>Projects</li>
+              <li onClick={() => handleClickDisplay('Button 4')}>Music</li>
+            </ul> 
+            </div>
+            <div className="container-right">
+            
+          {selectedButton === 'Button 1' &&    <div className="table">
+                      <div className="row">
+                        <div className="title">Baschet</div>
+                        <div className="dots"></div>
+                        <div className="value">245</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">Folbal</div>
+                        <div className="dots"></div>
+                        <div className="value">254</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">formula 1</div>
+                        <div className="dots"></div>
+                        <div className="value">222</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">market</div>
+                        <div className="dots"></div>
+                        <div className="value">745</div>
+                      </div>
+                      </div>}
+        {selectedButton === 'Button 2' &&    <div className="table">
+                      <div className="row">
+                        <div className="title">asdasdt</div>
+                        <div className="dots"></div>
+                        <div className="value">12412</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">asdasf</div>
+                        <div className="dots"></div>
+                        <div className="value">135234</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">asfdfg</div>
+                        <div className="dots"></div>
+                        <div className="value">412</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">asdf</div>
+                        <div className="dots"></div>
+                        <div className="value">7654</div>
+                      </div>
+                      </div>}
+                      {selectedButton === 'Button 3' &&    <div className="table">
+                      <div className="row">
+                        <div className="title">Baschet</div>
+                        <div className="dots"></div>
+                        <div className="value">245</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">Folbal</div>
+                        <div className="dots"></div>
+                        <div className="value">254</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">formula 1</div>
+                        <div className="dots"></div>
+                        <div className="value">222</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">market</div>
+                        <div className="dots"></div>
+                        <div className="value">745</div>
+                      </div>
+                      </div>}
+        {selectedButton === 'Button 4' &&    <div className="table">
+                      <div className="row">
+                        <div className="title">asdasdt</div>
+                        <div className="dots"></div>
+                        <div className="value">12412</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">asdasf</div>
+                        <div className="dots"></div>
+                        <div className="value">135234</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">asfdfg</div>
+                        <div className="dots"></div>
+                        <div className="value">412</div>
+                      </div>
+                      <div className="row">
+                        <div className="title">asdf</div>
+                        <div className="dots"></div>
+                        <div className="value">7654</div>
+                      </div>
+                      </div>}
+         
         
+              
+            </div>
+        </div>
+        <div className="container-lower">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis saepe soluta recusandae natus, nobis voluptas dicta, nulla asperiores, amet cupiditate obcaecati. Nesciunt unde nemo reprehenderit, qui omnis quidem aliquam!</p>
+          <div className="colored-box">
+          <p>Adversarii României vin după un eșec la scor contra Elveției, 0-5, în prima rundă din preliminariile EURO 2024. Mai mult, Belarus a câștigat ultima dată un meci oficial pe 27 martie 2021, 4-2 contra Estoniei, în preliminarile CM 2022.</p>
+          
+          </div>
+          <div className='line-border'>
+            <div className="line"></div>
+            <p>www.zaharen.co</p>
+            <div className="line"></div>
+          </div>
+        </div>  
+           <footer>
+            <div className="about">
+              <div className="box-red"></div>
+              <p>About</p>
+            </div>
+            <div className="contact">
+              <div className="box-green"></div>
+              <p>Contact</p>
+            </div>
+            
+            <div className="news">
+              <div className="box-yellow"></div>
+              <p>News</p>
+            </div>
+            
+            <div className="sport">
+              <div className="box-blue"></div>
+              <p>Sport</p>
+            </div>
+           </footer>
+          </main>
       </div>
-      
-      </div>
-      
-    </div>
+    </div>    
+  </div>
   )
 }
 
