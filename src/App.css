@@ -120,6 +120,11 @@ li{
   cursor: pointer;
 }
 
+li:hover{
+  background-color: blue;
+  color: white;
+}
+
  .container{
   display: flex;
   position: relative;
