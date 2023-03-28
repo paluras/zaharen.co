@@ -46,20 +46,14 @@ function App() {
 
 
   
-    const [selectedButton, setSelectedButton] = useState(null);
+    const [selectedButton, setSelectedButton] = useState("Button 1");
   
     const handleClickDisplay = (buttonName) => {
       setSelectedButton(buttonName);
     };
   
     
-      <div>
-        <button onClick={() => handleClickDisplay('Button 1')}>Button 1</button>
-        <button onClick={() => handleClickDisplay('Button 2')}>Button 2</button>
-        
-       
-      </div>
-   
+      
   
 
 
@@ -91,7 +85,7 @@ function App() {
             <nav>
               <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 13:13:34</p>
             </nav>
-            <img className='logo' src="src\assets\Zaharenco-logo.png" alt="" />
+            <img className='logo' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png" alt="logo-zaharenco" />
             
         <div className="container">
             <div className="container-left">
