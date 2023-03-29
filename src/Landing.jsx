@@ -53,8 +53,15 @@ function LandingPage(){
       const handleClickDisplay = (buttonName) => {
         setSelectedButton(buttonName);
       };
+      const [time, setTime] = useState(new Date());
 
-
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setTime(new Date());
+        }, 1000);
+    
+        return () => clearInterval(interval);
+      }, []);
 
     return(
         <div className="App">
@@ -79,7 +86,7 @@ function LandingPage(){
             <main className="main crt">
             
               <nav>
-                <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 13:13:34</p>
+                <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 {time.toLocaleTimeString()}</p>
               </nav>
               <img className='logo' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png" alt="logo-zaharenco" />
               
