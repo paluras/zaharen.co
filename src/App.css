@@ -408,8 +408,6 @@ iframe{
   opacity: 0;
   z-index: 2;
   pointer-events: none;
-  animation: textShadow 1s;
-  
 }
 .crt::before {
   content: " ";
@@ -423,8 +421,8 @@ iframe{
   z-index: 2;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
-  animation: textShadow 1s;
+ 
 }
 .crt {
-  animation: textShadow 10s infinite;
+  animation: textShadow 1000s infinite;
 }
