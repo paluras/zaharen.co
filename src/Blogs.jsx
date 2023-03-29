@@ -13,7 +13,7 @@ function Blog(){
           <div className="components-blog">
           <nav>
           </nav>
-            <main className="main-blogs">
+            <main className="main-blogs crt">
               <nav>
                 <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 13:13:34</p>
               </nav>
