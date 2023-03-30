@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
 function Blog(){
@@ -15,11 +15,8 @@ function Blog(){
           <nav>
           </nav>
             <main className="main-blogs crt">
-              <nav>
-                <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 13:13:34</p>
-              </nav>
-              
-              
+              <Nav/>
+        
           <div className="container-tittle">
               Jazz in the Park - 2022
           </div>

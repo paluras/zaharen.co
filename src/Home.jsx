@@ -1,28 +1,26 @@
+
 import React from "react";
 import { useState ,useEffect} from 'react'
 import { Outlet, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 
-function LandingPage(){
+function Home(){
 
     const [count, setCount] = useState(true)
     const [start, setStart] =useState("tv-main")
     const [mainPage,setMainPage] = useState('page')
-    const [displays, setDisplay] = useState("flex")
+   
     const [clicked, setClicked] = useState(false);
     const [secondDisplay, setSecondDisplay] = useState("0")
     const [compenentOverflow , setComponentOverflow] = useState("hidden")
   
     
     useEffect(() => {
-      let theDisplay1;
+      
       let theDisplay2;
       let componentDisplay;
       if (clicked) {
-        theDisplay1 = setTimeout(() => {
-          setDisplay("none")
-        }, 2000);
         theDisplay2 = setTimeout(() => {
           setSecondDisplay("1")
         }, 300);
@@ -30,50 +28,32 @@ function LandingPage(){
           setComponentOverflow("scroll")
         }, 500);
       }
-      return () => clearTimeout(theDisplay1,theDisplay2, componentDisplay);
+      return () => clearTimeout(theDisplay2, componentDisplay);
     }, [clicked]);
   
    
-    function handleClick(){
-        setCount(count)
-        count?setStart("tv-main-2"):setStart("tv-main")
-        count?setMainPage("page-main"):setStart("page")
-        setClicked(true);
-    }
+
+  
     
       const [selectedButton, setSelectedButton] = useState("Button 1");
     
       const handleClickDisplay = (buttonName) => {
         setSelectedButton(buttonName);
       };
-      
+     
 
     return(
         <div className="App">
-        <div
+       
         
-         style={{display:`${displays}`}} className='img-container'>
-          <div className='screen'></div>
-          <img 
-          onClick={handleClick} 
-          className={start}
-           src='https://raw.githubusercontent.com/paluras/new/master/src/assets/pngwing.com.png'> 
-          </img>
-          
-        </div>
-        <div
-        style={{opacity:`${secondDisplay}`}} 
-        className={mainPage}>
-          <div style={{overflowY:`${compenentOverflow}`}}  className="components">
-            
-          
+          <div  className="components">
             <main className="main">
-            
-              <Nav />
+            <Nav />
               
+                
               <img className='logo' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png" alt="logo-zaharenco" />
               
-          <div className="container">
+            <div className="container">
               <div className="container-left">
               <ul>
                 <li onClick={() => handleClickDisplay('Button 1')}>Whats new</li>
@@ -191,13 +171,14 @@ function LandingPage(){
               <div className="line"></div>
             </div>
           </div>  
+       
              <Footer />
-           
+            
             </main>
         </div>
-      </div>    
+         
     </div>
     )
 }
 
-export default LandingPage
+export default Home

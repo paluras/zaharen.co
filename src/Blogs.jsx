@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
 function Blog(){
@@ -11,14 +11,11 @@ function Blog(){
        
        <div className="page-main">
           <div className="components-blog">
-          <nav>
-          </nav>
+          
             <main className="main-blogs crt">
-              <nav>
-                <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 13:13:34</p>
-              </nav>
+              <Nav />
               
-              
+              <div>
           <div className="container-tittle">
               Past Events
           </div>
@@ -43,7 +40,8 @@ function Blog(){
             <div className="text">Post Rave for singer, ensemble, electronics, haze and light</div>
             </div> 
 
-          </div>            
+          </div>   
+          </div>         
             <Footer />
             </main>
         </div>

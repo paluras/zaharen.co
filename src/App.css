@@ -8,6 +8,9 @@
 
 
 
+
+
+
 .img-container{
   
   width: 100%;
@@ -97,6 +100,8 @@
 }
 
 .main-blogs{
+  display: grid;
+  align-content: space-between;
   background-color: rgb(0, 0, 0);
   width: 80%;
   margin: auto;
@@ -122,10 +127,14 @@ nav{
  }
 
  .main{
+  display: grid;
+  align-content: space-between;
   width: 80%;
   margin: auto;
-  height: 100vh;
+  height: 100%;
   background-color: black;
+  
+  
  }
 
 ul{
@@ -158,11 +167,12 @@ li:hover{
   color: blue;
   background-color: yellow;
   width:44%;
-  height: 33%;
+  
   font-size: 2.5rem;
  }
  .container-left > ul  {
   width: 100%;
+  
  }
 
  .container-right{
@@ -185,15 +195,17 @@ li:hover{
 
  .logo {
   image-rendering: pixelated;
-  width: 80%;
-  height: 20%;
-  margin: auto ;
+  width: 90%;
+  height: 90%;
+  
+ 
+
  }
 
  .container-lower{
+  display: flex;
+  flex-direction: column;
   margin-top:3%;
- 
-  overflow: hidden;
   
   color: white;
   font-size: 2rem;
@@ -207,7 +219,7 @@ li:hover{
 
  .line-border{
   display: flex;
-  height: 3%;
+  
   justify-content: center;
   align-items: center;
  }
@@ -222,9 +234,8 @@ li:hover{
  }
 
  footer{
-  position: absolute;
-  bottom: 0;
-  width: 80%;
+  
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
@@ -327,6 +338,7 @@ a:visited{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3vw;
+  
 }
 .container-tittle{
   font-size: 4rem;
@@ -335,7 +347,7 @@ a:visited{
 }
 
 .container-para{
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 2rem;
 }
 
@@ -361,6 +373,7 @@ a:visited{
 .container-blog.text{
   width: 50%;
   font-size: 1.5rem;
+  color: white;
 }
 
 .container-blog.media{
@@ -374,4 +387,59 @@ iframe{
   
 }
 
+
+
+@media screen and (max-width: 768px) {
+  .page-main{
+    background-color: black;
+  }
+
+  li{
+    font-size: 2rem;
+  }
+
+  .title{
+     font-size: 1.5rem;
+  }
+
+  .main{
+    width: 90%;
+  }
+
+  p{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 426px){
+  .container{
+    display: flex;
+  }
+  .container-left{
+    width: 50%;
+    justify-content: start;
+  }
+
+  .container-left > ul{
+    padding-left: 10px ;
+  }
+
+  .container-right{
+    position: static;
+    width: 50%;
+    padding: 0;
+  }
+
+  .main{
+    width: 100%;
+  }
+
+  p{
+    text-align: center;
+  }
+
+  .colored-box{
+    padding: 0px;
+  }
+}
 
