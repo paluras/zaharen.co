@@ -5,12 +5,6 @@
   
 }
 
-
-
-
-
-
-
 .img-container{
   
   width: 100%;
@@ -250,7 +244,7 @@ li:hover{
   color: red;
  }
 
- .box-red{
+ .red{
   height: 20px;
   width:20px;
   background-color: red;
@@ -262,7 +256,7 @@ li:hover{
   color: greenyellow;
  }
 
- .box-green{
+ .green{
   height: 20px;
   width:20px;
   background-color: greenyellow;
@@ -275,7 +269,7 @@ li:hover{
   color: yellow;
  }
 
- .box-yellow{
+ .yellow{
   height: 20px;
   width:20px;
   background-color: yellow;
@@ -288,7 +282,7 @@ li:hover{
   color: rgb(100, 250, 237);
  }
 
- .box-blue{
+.blue{
   height: 20px;
   width:20px;
   background-color: rgb(100, 250, 237);
@@ -410,9 +404,27 @@ iframe{
   p{
     font-size: 1.5rem;
   }
+  .value{
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and (max-width: 426px){
+@media screen and (max-width: 425px){
+  nav > p{
+    font-size: 1rem;
+  }
+  footer > div > p{
+    font-size: 1.5rem;
+  }
+  footer{
+    height: 30px;
+  }
+
+  .box{
+    width: 10px;
+    height: 10px;
+  }
+  
   .tv-main{
     width: 100%;
   }
