@@ -79,7 +79,7 @@ function LandingPage(){
                 <li onClick={() => handleClickDisplay('Button 1')}>Whats new</li>
                 <li onClick={() => handleClickDisplay('Button 2')}>About</li>
                 <li onClick={() => handleClickDisplay('Button 3')}>Projects</li>
-                <li onClick={() => handleClickDisplay('Button 4')}>Music</li>
+                <li onClick={() => handleClickDisplay('Button 4')}>Band</li>
               </ul> 
               </div>
               <div className="container-right">
@@ -180,9 +180,11 @@ function LandingPage(){
               </div>
           </div>
           <div className="container-lower">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis saepe soluta recusandae natus, nobis voluptas dicta, nulla asperiores, amet cupiditate obcaecati. Nesciunt unde nemo reprehenderit, qui omnis quidem aliquam!</p>
+            <p>Zaharenco is a jazz quartet whose music aims to explore the New Jazz scene by fusing jazz with classical and rock influences. He submits his works to the issue of musical predictability, seeking a balance between predictability and uncertainty, and thus managing to reach a wide range of emotions. 
+
+</p>
             <div className="colored-box">
-            <p>Adversarii României vin după un eșec la scor contra Elveției, 0-5, în prima rundă din preliminariile EURO 2024. Mai mult, Belarus a câștigat ultima dată un meci oficial pe 27 martie 2021, 4-2 contra Estoniei, în preliminarile CM 2022.</p>
+            <p>Primordial feelings, his first EP, is an exposition of the 2 main topics addressed: the impulsive being and the ever-changing sentimental self.</p>
             
             </div>
             <div className='line-border'>
