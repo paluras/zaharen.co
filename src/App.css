@@ -384,6 +384,10 @@ iframe{
 
 
 @media screen and (max-width: 768px) {
+  .page{
+    height: 100dvh;
+  }
+  
   .page-main{
     background-color: black;
     height: 100vh;
