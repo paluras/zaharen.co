@@ -404,6 +404,7 @@ iframe{
 
   .main{
     width: 90%;
+    height: 100vh;
   }
 
   p{
@@ -412,6 +413,15 @@ iframe{
 }
 
 @media screen and (max-width: 426px){
+  .tv-main{
+    width: 100%;
+  }
+
+  .tv-main-2{
+    width: 100%;
+  }
+  
+  
   .container{
     display: flex;
   }
