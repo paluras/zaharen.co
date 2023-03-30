@@ -399,7 +399,7 @@ iframe{
 
   .main{
     width: 90%;
-    
+    height: 100dvh;
     transition: 1s;
   }
 
