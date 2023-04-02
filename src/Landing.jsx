@@ -104,7 +104,7 @@ function LandingPage(){
                           <div className="value">222</div>
                         </div>
                         <div className="row">
-                         <div className="title"><Link to="/contact"> Contacts</Link></div>
+                         <div className="title"><Link to="/contacts"> Contacts</Link></div>
                           <div className="dots"></div>
                           <div className="value">745</div>
                         </div>
