@@ -17,7 +17,18 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />}/>
         <Route path="/home" element={<Home />}/>
-        <Route path="/blogs" element={<Blog />}/>
+        <Route path="/bio" element={<Blog 
+        textBlog={"lorem asdada asdas das asd asda sda sdas das dasd asd asdasdasdasads asd asd da"}
+         />}/>
+        <Route path="/photos" element={<Blog 
+        textBlog={"lorem asdada asdas das asd asda sda sdas das dasd asd asdasdasdasads asd asd da"}
+         />}/>
+        <Route path="/contacts" element={<Blog 
+        textBlog={"lorem asdada asdas das asd asda sda sdas das dasd asd asdasdasdasads asd asd da"}
+         />}/>
+        <Route path="/inspiration" element={<Blog 
+        textBlog={"lorem asdada asdas das asd asda sda sdas das dasd asd asdasdasdasads asd asd da"}
+        />}/>
         <Route path="/jazz" element={<Jazz />}/>
       </Routes>
     

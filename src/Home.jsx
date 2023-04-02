@@ -45,7 +45,7 @@ function Home(){
     return(
         <div className="App">
        
-        
+        <div className="page-main">
           <div  className="components">
             <main className="main">
             <Nav />
@@ -53,13 +53,13 @@ function Home(){
                 
               <img className='logo' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png" alt="logo-zaharenco" />
               
-            <div className="container">
+              <div className="container">
               <div className="container-left">
               <ul>
-                <li onClick={() => handleClickDisplay('Button 1')}>Whats new</li>
-                <li onClick={() => handleClickDisplay('Button 2')}>About</li>
-                <li onClick={() => handleClickDisplay('Button 3')}>Projects</li>
-                <li onClick={() => handleClickDisplay('Button 4')}>Music</li>
+                <li onClick={() => handleClickDisplay('Button 1')}>About</li>
+                <li onClick={() => handleClickDisplay('Button 2')}>Portfolio</li>
+                <li onClick={() => handleClickDisplay('Button 3')}>Band</li>
+                <li onClick={() => handleClickDisplay('Button 4')}>Horoscop</li>
               </ul> 
               </div>
               <div className="container-right">
@@ -67,70 +67,66 @@ function Home(){
             {selectedButton === 'Button 1' &&    <div className="table">
                         <div className="row">
                         
-                        <Link to="/blogs"> <div className="title">Concerts</div></Link>
+                        <Link to="/bio"> <div className="title">Bio</div></Link>
                           <div className="dots"></div>
                           <div className="value">245</div>
                           
                         </div>
                         <div className="row">
-                          <div className="title">Folbal</div>
+                         <Link to="/photos"> <div className="title">Photos</div></Link>
                           <div className="dots"></div>
                           <div className="value">254</div>
                         </div>
                         <div className="row">
-                          <div className="title">formula 1</div>
+                        <Link to="/inspiration">  <div className="title">Inspiration</div></Link>
                           <div className="dots"></div>
                           <div className="value">222</div>
                         </div>
                         <div className="row">
-                          <div className="title">market</div>
+                        <Link to="/contact">  <div className="title">Contacts</div></Link>
                           <div className="dots"></div>
                           <div className="value">745</div>
                         </div>
                         </div>}
           {selectedButton === 'Button 2' &&    <div className="table">
                         <div className="row">
-                          <div className="title">asdasdt</div>
+                          <div className="title">Visual Art</div>
                           <div className="dots"></div>
-                          <div className="value">12412</div>
+                          <div className="value">124</div>
                         </div>
                         <div className="row">
-                          <div className="title">asdasf</div>
+                          <div className="title">Mixing</div>
                           <div className="dots"></div>
-                          <div className="value">135234</div>
+                          <div className="value">135</div>
                         </div>
                         <div className="row">
-                          <div className="title">asfdfg</div>
+                          <div className="title">Film</div>
                           <div className="dots"></div>
                           <div className="value">412</div>
                         </div>
                         <div className="row">
-                          <div className="title">asdf</div>
+                          <div className="title">Music</div>
                           <div className="dots"></div>
-                          <div className="value">7654</div>
+                          <div className="value">765</div>
                         </div>
                         </div>}
                         {selectedButton === 'Button 3' &&    <div className="table">
                         <div className="row">
-                          <div className="title">Baschet</div>
+                          <div className="title">About</div>
                           <div className="dots"></div>
                           <div className="value">245</div>
                         </div>
                         <div className="row">
-                          <div className="title">Folbal</div>
+                          <div className="title">Events</div>
                           <div className="dots"></div>
                           <div className="value">254</div>
                         </div>
                         <div className="row">
-                          <div className="title">formula 1</div>
+                          <div className="title">Media</div>
                           <div className="dots"></div>
                           <div className="value">222</div>
                         </div>
-                        <div className="row">
-                          <div className="title">market</div>
-                          <div className="dots"></div>
-                          <div className="value">745</div>
-                        </div>
+                        
                         </div>}
           {selectedButton === 'Button 4' &&    <div className="table">
                         <div className="row">
@@ -160,9 +156,11 @@ function Home(){
               </div>
           </div>
           <div className="container-lower">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis saepe soluta recusandae natus, nobis voluptas dicta, nulla asperiores, amet cupiditate obcaecati. Nesciunt unde nemo reprehenderit, qui omnis quidem aliquam!</p>
+            <p>Zaharenco is a jazz quartet whose music aims to explore the New Jazz scene by fusing jazz with classical and rock influences. He submits his works to the issue of musical predictability, seeking a balance between predictability and uncertainty, and thus managing to reach a wide range of emotions. 
+
+</p>
             <div className="colored-box">
-            <p>Adversarii României vin după un eșec la scor contra Elveției, 0-5, în prima rundă din preliminariile EURO 2024. Mai mult, Belarus a câștigat ultima dată un meci oficial pe 27 martie 2021, 4-2 contra Estoniei, în preliminarile CM 2022.</p>
+            <p>Primordial feelings, his first EP, is an exposition of the 2 main topics addressed: the impulsive being and the ever-changing sentimental self.</p>
             
             </div>
             <div className='line-border'>
@@ -171,12 +169,11 @@ function Home(){
               <div className="line"></div>
             </div>
           </div>  
-       
              <Footer />
-            
+           
             </main>
         </div>
-         
+      </div>    
     </div>
     )
 }
