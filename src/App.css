@@ -105,9 +105,7 @@
   margin: auto;
   height: 100%;
 }
-.main-blogs >footer{
-  align-items: end;
-}
+
 
 .blog-top{
   display: grid;
