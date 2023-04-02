@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import NavSecond from "./components/SecondNav";
+///taraneala continua si aici ///
+function Blog({textBlog}){
+  
+  
+ 
 
-function Blog(){
+
     return(
         <div className="App">
        
@@ -13,33 +19,23 @@ function Blog(){
           <div className="components-blog">
           
             <main className="main-blogs crt">
+              <div className="blog-top">
               <Nav />
+              <NavSecond 
+              
+              />
               
               <div>
           <div className="container-tittle">
-              Past Events
+              Titlu
           </div>
           <div className="container-main">
           <div className="container-para">
-             <div className="title"><Link to="/jazz">Jazz</Link></div>
-            <div className="text">Post Rave for singer, ensemble, electronics, haze and light</div>
+            <div className="text">{textBlog}</div>
             </div> 
 
-            <div className="container-para">
-            <div className="title">Iasi</div>
-            <div className="text">Post Rave for singer, ensemble, electronics, haze and light</div>
+             
             </div>
-            
-            <div className="container-para">
-            <div className="title">Iasi</div>
-            <div className="text">Post Rave for singer, ensemble, electronics, haze and light</div>
-            </div> 
-
-            <div className="container-para">
-            <div className="title">Iasi</div>
-            <div className="text">Post Rave for singer, ensemble, electronics, haze and light</div>
-            </div> 
-
           </div>   
           </div>         
             <Footer />
