@@ -487,6 +487,11 @@ iframe{
     height: 100dvh;
     transition: 1s;
   }
+  .main-blogs{
+  
+    width: 90%;
+   
+  }
 
   p{
     font-size: 1.5rem;
@@ -552,6 +557,11 @@ iframe{
 
   .main{
     width: 100%;
+  }
+  .main-blogs{
+  
+    width: 100%;
+   
   }
 
   p{
