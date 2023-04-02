@@ -19,7 +19,7 @@ function App() {
   const contacts = <div className="contact-text">
    <div><a href="mailto:zaharencu.alexandru@gmail.com?">Mail</a> </div>
     <div><a href='https://www.facebook.com/zaharen.co'>Facebook</a></div>
-    <div><a href='https://www.instagram.com/zaharen.co/'></a>Instagram</div>
+    <div><a href='https://www.instagram.com/zaharen.co/'>Instagram</a></div>
     <div><a href='https://www.youtube.com/@zaharenco'>Youtube</a></div>
     <div><a href='https://open.spotify.com/artist/4azDTEsE76hndB8paNOEe8?si=dBL-mht3RRapA-CO_-miEg&fbclid=IwAR2IwJVZyvZxF0uPJiI8uBJBqBTCiKa0-0b0wqabiZUxj5rDimbykAR5saY&nd=1'>Spotify</a></div>
     <div><a href='https://linktr.ee/zaharen.co?utm_source=linktree_profile_share&ltsid=56442ba0-afdf-4bbd-8046-e6c2f7bf8572'>LinkTree</a></div>
