@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import NavSecond from "./components/SecondNav";
 ///taraneala continua si aici ///
-function Blog({textBlog}){
+function Blog({textBlog,tittleBlog, media,contact}){
   
   
  
@@ -27,17 +27,21 @@ function Blog({textBlog}){
               
               <div>
           <div className="container-tittle">
-              Titlu
+              {tittleBlog}
           </div>
           <div className="container-main">
           <div className="container-para">
             <div className="text">{textBlog}</div>
             </div> 
-
+                
              
             </div>
+            
           </div>   
-          </div>         
+          
+          </div>  
+          {media}   
+          {contact}
             <Footer />
             </main>
         </div>

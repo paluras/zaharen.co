@@ -10,17 +10,17 @@ function Footer(){
         </div>
         <div className="contact">
           <div className="box green"></div>
-          <p>Contact</p>
+          <Link to="/bio"> <p>About</p></Link>
         </div>
         
         <div className="news">
           <div className="box yellow"></div>
-          <p>News</p>
+          <Link to="/bio"> <p>Portfolio</p></Link>
         </div>
         
         <div className="sport">
           <div className="box blue"></div>
-          <p>Sport</p>
+          <Link to="/bio"> <p>Band</p></Link>
         </div>
        </footer>)
 }

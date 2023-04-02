@@ -87,23 +87,24 @@ function LandingPage(){
             {selectedButton === 'Button 1' &&    <div className="table">
                         <div className="row">
                         
-                        <Link to="/bio"> <div className="title">Bio</div></Link>
+                        
+                        <div className="title"><Link to="/bio"> Bio</Link></div>
                           <div className="dots"></div>
                           <div className="value">245</div>
                           
                         </div>
                         <div className="row">
-                         <Link to="/photos"> <div className="title">Photos</div></Link>
+                          <div className="title"><Link to="/photos">Photos</Link></div>
                           <div className="dots"></div>
                           <div className="value">254</div>
                         </div>
                         <div className="row">
-                        <Link to="/inspiration">  <div className="title">Inspiration</div></Link>
+                          <div className="title"><Link to="/inspiration">Inspiration</Link></div>
                           <div className="dots"></div>
                           <div className="value">222</div>
                         </div>
                         <div className="row">
-                        <Link to="/contact">  <div className="title">Contacts</div></Link>
+                         <div className="title"><Link to="/contact"> Contacts</Link></div>
                           <div className="dots"></div>
                           <div className="value">745</div>
                         </div>

@@ -154,6 +154,7 @@ function Home(){
                
                 
               </div>
+              
           </div>
           <div className="container-lower">
             <p>Zaharenco is a jazz quartet whose music aims to explore the New Jazz scene by fusing jazz with classical and rock influences. He submits his works to the issue of musical predictability, seeking a balance between predictability and uncertainty, and thus managing to reach a wide range of emotions. 
