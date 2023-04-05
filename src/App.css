@@ -489,12 +489,14 @@ video{
 }
 
 .media > div{
-  position: absolute;
-  
+ display: flex;
+ justify-content: center;
+  background-color: #282828a9;
   z-index: 10;
-  
-  
-  
+  position: absolute;
+  top: 0%;
+  height: 100vh;
+  width: 100vw;
 }
 
 
@@ -503,9 +505,10 @@ video{
  
   
   width: 50%;
+
  
   object-fit: contain;
-  box-shadow: 10px 10px 10px;
+  
 
 
 }
