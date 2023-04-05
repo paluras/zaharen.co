@@ -22,7 +22,7 @@ const spotify = <div className='inspo-section'>
 
   const mediaPhotos= <div className='media'>
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG" alt="" />
-      <img src="https://github.com/paluras/new/blob/master/src/assets/Zahar/zahar2.JPG" alt="" />
+      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar2.JPG" alt="" />
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar4.JPG" alt="" />
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar5.png" alt="" />
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar6.JPG" alt="" />
