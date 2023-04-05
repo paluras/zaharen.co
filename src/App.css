@@ -488,6 +488,33 @@ video{
   object-fit: cover;
 }
 
+.media > div{
+  position: absolute;
+  
+  z-index: 10;
+  
+  
+  
+}
+
+
+
+.big-img{
+ 
+  
+  width: 50%;
+ 
+  object-fit: contain;
+  box-shadow: 10px 10px 10px;
+
+
+}
+.x{
+  position: absolute;
+  width: 12px;
+  right: 0;
+}
+
 
 
 

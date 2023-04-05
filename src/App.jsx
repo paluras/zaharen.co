@@ -7,7 +7,11 @@ import Jazz from "./Jazz"
 import Home from './Home';
 
 function App() {
-
+  const [modalOpen, setModalOpen] = useState(false);
+  
+  function handleImageClick() {
+    setModalOpen(!modalOpen);
+  }
 
   const bioText=`Alexandru Zaharencu is a musician, composer, and multimedia artist. His music is distinguished by a dramatic component, a balance of predictability and honesty, and an approach to various genres ranging from jazz to contemporary music, film music, or sound design.
   He was born in Tulcea, Romania, in 1998, and spent 12 years there studying classical piano performance. He continued his education at the National University of Music in Bucharest, where he earned bachelor's degrees in jazz-pop composition under Andrei Tudor and a master's in modern composition under Diana Rotaru.
@@ -36,8 +40,15 @@ const spotify = <div className='inspo-section'>
 </div>
 
   const mediaPhotos= <div className='media'>
-      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG" alt="" />
+      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG" alt="" onClick={handleImageClick} />
+      {modalOpen && (
+        <div>
+          
+          <img className='big-img' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG" alt="your-full-image-alt" onClick={handleImageClick} />
+        </div>
+      )}
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar2.JPG" alt="" />
+      
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar4.JPG" alt="" />
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar5.png" alt="" />
       <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar6.JPG" alt="" />
