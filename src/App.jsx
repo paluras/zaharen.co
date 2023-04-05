@@ -5,12 +5,16 @@ import LandingPage from './Landing';
 import Blog from './Blogs';
 import Jazz from "./Jazz"
 import Home from './Home';
+import img from "../img.json"
+import Modal from './components/Modal';
+
+console.log(img.pageOne[0].src);
 
 function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-  
-  function handleImageClick() {
-    setModalOpen(!modalOpen);
+  const [selectedImg, setSelectedImg] = useState(null);
+
+  function handleImageClick(src) {
+    setSelectedImg(src);
   }
 
   const bioText=`Alexandru Zaharencu is a musician, composer, and multimedia artist. His music is distinguished by a dramatic component, a balance of predictability and honesty, and an approach to various genres ranging from jazz to contemporary music, film music, or sound design.
@@ -40,24 +44,27 @@ const spotify = <div className='inspo-section'>
 </div>
 
   const mediaPhotos= <div className='media'>
-      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG" alt="" onClick={handleImageClick} />
-      {modalOpen && (
-        <div>
-          
-          <img className='big-img' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG" alt="your-full-image-alt" onClick={handleImageClick} />
-        </div>
+       {img.pageOne.map((image) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          onClick={() => handleImageClick(image.src)}
+        />
+      ))}
+      {selectedImg && (
+        <Modal
+          src={selectedImg}
+          alt="full-image"
+          onClose={() => setSelectedImg(null)}
+        />
       )}
-      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar2.JPG" alt="" />
-      
-      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar4.JPG" alt="" />
-      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar5.png" alt="" />
-      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar6.JPG" alt="" />
-      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar7.jpg" alt="" />
   </div>
 
   const mediaVisual1 = <div className='media'>
     <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/1.JPG" alt="" />
     <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/2.JPG" alt="" />
+    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG" alt="" />
     <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG" alt="" />
     <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/4.JPG" alt="" />
     <video width="300" height="300" controls>
