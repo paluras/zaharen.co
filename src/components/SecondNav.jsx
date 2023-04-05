@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 
 
-function NavSecond(){
+function NavSecond({navItems}){
 
     const location = useLocation();
     const [activeIndex, setActiveIndex] = useState(0);
@@ -15,12 +15,7 @@ function NavSecond(){
       setActiveIndex(index);
     }, [location.pathname]);
 
-    const navItems = [
-        { text: 'Bio', url: '/bio' },
-        { text: 'Photos', url: '/photos' },
-        { text: 'Inspo', url: '/inspiration' },
-        { text: "Contact",url:"/contacts"}
-      ];
+    
     
 ////asta este taraneala trebuie refacut,,,, trebuie sa faci cu map dintr un array , ca e groaznic ce se intampla aici//
 ///sau sa folosesti un json , cred ca trebuie json cel mai bine//    

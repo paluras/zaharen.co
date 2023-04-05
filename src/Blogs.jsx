@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import NavSecond from "./components/SecondNav";
 ///taraneala continua si aici ///
-function Blog({textBlog,tittleBlog, media,contact}){
+function Blog({textBlog,tittleBlog, media,contact, navItems}){
   
   
  
@@ -21,7 +21,7 @@ function Blog({textBlog,tittleBlog, media,contact}){
             <main className="main-blogs crt">
               <div className="blog-top">
               <Nav />
-              <NavSecond 
+              <NavSecond navItems={navItems}
               
               />
               

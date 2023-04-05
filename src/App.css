@@ -395,28 +395,38 @@ a:visited{
   width: 50%;
 }
 
-iframe{
-  
-  border : 10px solid #00bce8;
-  box-shadow: 5px 5px 10px;
-  
+iframe {
+  height: 80px;
+  background-color: #282828;
+  margin-top: 10px;
+
 }
+
+
+
+
+
 
 .secondNav{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: white;
   background-color: #00bce8;
   font-size: 2rem;
 }
 .secondNav > a{
- 
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   color: white;
   list-style: none;
   width: 100%;
   border-right: 6px solid black;
+  height: 100%;
+ 
 }
 .secondNav > li > a{
  

@@ -15,7 +15,7 @@ function Footer(){
         
         <div className="news">
           <div className="box yellow"></div>
-          <Link to="/bio"> <p>Portfolio</p></Link>
+          <Link to="/music"> <p>Portfolio</p></Link>
         </div>
         
         <div className="sport">

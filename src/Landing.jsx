@@ -111,22 +111,22 @@ function LandingPage(){
                         </div>}
           {selectedButton === 'Button 2' &&    <div className="table">
                         <div className="row">
-                          <div className="title">Visual Art</div>
+                          <div className="title"><Link to="/music">Music</Link></div>
                           <div className="dots"></div>
                           <div className="value">124</div>
                         </div>
                         <div className="row">
-                          <div className="title">Mixing</div>
+                          <div className="title">Film Composition</div>
                           <div className="dots"></div>
                           <div className="value">135</div>
                         </div>
                         <div className="row">
-                          <div className="title">Film</div>
+                          <div className="title">Multimedia Art</div>
                           <div className="dots"></div>
                           <div className="value">412</div>
                         </div>
                         <div className="row">
-                          <div className="title">Music</div>
+                          <div className="title">Mixing</div>
                           <div className="dots"></div>
                           <div className="value">765</div>
                         </div>
