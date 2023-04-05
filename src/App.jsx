@@ -68,7 +68,7 @@ const spotify = <div className='inspo-section'>
     <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG" alt="" />
     <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/4.JPG" alt="" />
     <video width="300" height="300" controls>
-    <source src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/Catoptro-tono_demo.mp4" alt="" />
+    <source src='./src\assets\project1\video.webm' alt="" />
     </video>
   </div>
 
