@@ -45,12 +45,12 @@ const spotify = <div className='inspo-section'>
   </div>
 
   const mediaVisual1 = <div className='media'>
-    <img src="../src\assets\project1\1.JPG" alt="" />
-    <img src="../src\assets\project1\2.JPG" alt="" />
-    <img src="../src\assets\project1\3.JPG" alt="" />
-    <img src="../src\assets\project1\4.JPG" alt="" />
+    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/1.JPG" alt="" />
+    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/2.JPG" alt="" />
+    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG" alt="" />
+    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/4.JPG" alt="" />
     <video width="300" height="300" controls>
-    <source src="../src\assets\project1\Catoptro-tono_demo.mp4" alt="" />
+    <source src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/Catoptro-tono_demo.mp4" alt="" />
     </video>
   </div>
 
