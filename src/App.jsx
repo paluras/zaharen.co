@@ -82,6 +82,34 @@ const spotify = <div className='inspo-section'>
   </div>
 
 
+   const mediaVisual2 = <div className='media'>
+   {img.pageThree.map((image) => (
+       <img
+         key={image.src}
+         src={image.src}
+         alt={image.alt}
+         onClick={() => handleImageClick(image.src)}
+       />
+     ))}
+     {selectedImg && (
+       <Modal
+         src={selectedImg}
+         alt="full-image"
+         onClose={() => setSelectedImg(null)}
+       />
+     )}
+   <video width="300" height="300" controls>
+   <source src='https://raw.githubusercontent.com/paluras/new/master/src/assets/project2/pVid1.webm' alt="" />
+   </video>
+   <video width="300" height="300" controls>
+   <source src='https://raw.githubusercontent.com/paluras/new/master/src/assets/project2/vidP2.webm' alt="" />
+   </video>
+   <video width="300" height="300" controls>
+   <source src='https://raw.githubusercontent.com/paluras/new/master/src/assets/project2/vidp3.webm' alt="" />
+   </video>
+ </div>
+
+
   const contacts = <div className="contact-text">
    <div><a href="mailto:zaharencu.alexandru@gmail.com?">Mail</a> </div>
     <div><a href='https://www.facebook.com/zaharen.co'>Facebook</a></div>
@@ -156,7 +184,7 @@ const navItemsPort = [
         navItems={navItemsPort}
         />}/>
         <Route path="/visual/visual2" element={<Blog 
-        textBlog={mediaPhotos}
+        textBlog={mediaVisual2}
         tittleBlog={"Primordial feelings "}
         navItems={navItemsPort}
         />}/>
