@@ -21,12 +21,12 @@ const spotify = <div className='inspo-section'>
 </div>
 
   const mediaPhotos= <div className='media'>
-      <img src="src\assets\Zahar\zahar2.JPG" alt="" />
-      <img src="src\assets\Zahar\zahar3.JPG" alt="" />
-      <img src="src\assets\Zahar\zahar4.JPG" alt="" />
-      <img src="src\assets\Zahar\zahar5.png" alt="" />
-      <img src="src\assets\Zahar\zahar6.JPG" alt="" />
-      <img src="src\assets\Zahar\zahar7.jpg" alt="" />
+      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG" alt="" />
+      <img src="https://github.com/paluras/new/blob/master/src/assets/Zahar/zahar2.JPG" alt="" />
+      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar4.JPG" alt="" />
+      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar5.png" alt="" />
+      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar6.JPG" alt="" />
+      <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar7.jpg" alt="" />
   </div>
   const contacts = <div className="contact-text">
    <div><a href="mailto:zaharencu.alexandru@gmail.com?">Mail</a> </div>
