@@ -8,7 +8,7 @@ import Home from './Home';
 import img from "../img.json"
 import Modal from './components/Modal';
 
-console.log(img.pageOne[0].src);
+console.log(img.pageTwo[2].src);
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -34,7 +34,6 @@ The art installation exhibited at the 2021 Diploma Festival.
 The installation consists of four tvs and two pairs of headphones. Each TV is modified to represent an analog oscilloscope, which is used to visualize sound, and reflects one of the musical instruments used in the works. Because cathode ray tube televisions are perceived as "primordial" technology by the youth today, the television has been chosen as the primary visual component.
 </div>
   </div>
-
 
 const spotify = <div className='inspo-section'>
 <iframe className='spotify' src="https://open.spotify.com/embed/track/1Qrg8KqiBpW07V7PNxwwwL?utm_source=generator&theme=0" width="100%" height="152px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -62,13 +61,23 @@ const spotify = <div className='inspo-section'>
   </div>
 
   const mediaVisual1 = <div className='media'>
-    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/1.JPG" alt="" />
-    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/2.JPG" alt="" />
-    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG" alt="" />
-    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG" alt="" />
-    <img src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/4.JPG" alt="" />
+    {img.pageTwo.map((image) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          onClick={() => handleImageClick(image.src)}
+        />
+      ))}
+      {selectedImg && (
+        <Modal
+          src={selectedImg}
+          alt="full-image"
+          onClose={() => setSelectedImg(null)}
+        />
+      )}
     <video width="300" height="300" controls>
-    <source src='./src\assets\project1\video.webm' alt="" />
+    <source src='https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/video.webm' alt="" />
     </video>
   </div>
 
