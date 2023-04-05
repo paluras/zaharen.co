@@ -116,12 +116,12 @@ function LandingPage(){
                           <div className="value">124</div>
                         </div>
                         <div className="row">
-                          <div className="title"><Link to="/film">Film Composition</Link></div>
+                          <div className="title"><Link to="/film">Film</Link></div>
                           <div className="dots"></div>
                           <div className="value">135</div>
                         </div>
                         <div className="row">
-                          <div className="title"><Link to="/visual">Multimedia Art</Link></div>
+                          <div className="title"><Link to="/visual">Multimedia</Link></div>
                           <div className="dots"></div>
                           <div className="value">412</div>
                         </div>

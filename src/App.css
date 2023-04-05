@@ -468,6 +468,26 @@ iframe {
   color: white;
 }
 
+.visual-art{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.visual-container{
+  display: flex;
+  flex-direction: column;
+  gap : 30px
+}
+
+.visual-container > a{
+  color: #ff68b4;
+}
+
+video{
+  object-fit: cover;
+}
+
 
 
 
@@ -500,6 +520,7 @@ iframe {
   .main-blogs{
   
     width: 90%;
+    height: 100dvh;
    
   }
 
@@ -530,7 +551,7 @@ iframe {
     font-size: 1.5rem;
   }
   footer{
-    height: 30px;
+    height: 40px;
   }
 
   .box{
@@ -580,6 +601,13 @@ iframe {
 
   .colored-box{
     padding: 0px;
+  }
+  .secondNav > a{
+    border-right: 0px;
+  }
+  .secondNav > a > li {
+    font-size: 1.5rem;
+   
   }
 }
 
