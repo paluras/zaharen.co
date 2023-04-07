@@ -12,6 +12,16 @@ console.log(img.pageTwo[2].src);
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
+ 
+  const [crt, setCrt] = useState('')
+  const [stateCrt, setStateCrt] = useState(false)
+
+function handleClickCRT(){
+  setStateCrt(!stateCrt)
+  stateCrt?setCrt("crt"):setCrt("")
+}
+
+
 
   function handleImageClick(src) {
     setSelectedImg(src);
@@ -138,60 +148,84 @@ const navItemsPort = [
    
       <>
       <Routes>
-        <Route path="/" element={<LandingPage />}/>
-        <Route path="/home" element={<Home />}/>
+        <Route path="/" element={<LandingPage
+        crt={crt}
+        handleClickCRT={handleClickCRT} />}/>
+        <Route path="/home" element={<Home 
+        crt={crt}
+        handleClickCRT={handleClickCRT} />}/>
         <Route path="/bio" element={<Blog 
         textBlog={bioText}
         tittleBlog={"Bio"}
         navItems={navItems}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
          />}/>
         <Route path="/photos" element={<Blog 
         textBlog={"Photo photo photo"}
         tittleBlog={"Photos"}
         media={mediaPhotos}
         navItems={navItems}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
          />}/>
         <Route path="/contacts" element={<Blog 
         textBlog={""}
         tittleBlog={"Contacts"}
         contact={contacts}
         navItems={navItems}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
          />}/>
         <Route path="/inspiration" element={<Blog 
         textBlog={spotify}
         tittleBlog={"Inspiration"}
         navItems={navItems}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
         />}/>
         <Route path="/music" element={<Blog 
         textBlog={"Music"}
         tittleBlog={"Music"}
         navItems={navItemsPort}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
 
         />}/>
         <Route path="/film" element={<Blog 
         textBlog={"text"}
         tittleBlog={"Film Composition"}
         navItems={navItemsPort}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
         />}/>
         <Route path="/visual" element={<Blog 
         textBlog={visualArts}
         tittleBlog={"Visual"}
         navItems={navItemsPort}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
         />}/>
         <Route path="/visual/visual1" element={<Blog 
         textBlog={mediaVisual1}
         tittleBlog={"Catoptro-tono v.1"}
         navItems={navItemsPort}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
         />}/>
         <Route path="/visual/visual2" element={<Blog 
         textBlog={mediaVisual2}
         tittleBlog={"Primordial feelings "}
         navItems={navItemsPort}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
         />}/>
         <Route path="/mixing" element={<Blog 
         textBlog={"text"}
         tittleBlog={"Mixing"}
         navItems={navItemsPort}
+        crt={crt}
+        handleClickCRT={handleClickCRT}
         />}/>
         <Route path="/jazz" element={<Jazz />}/>
       </Routes>

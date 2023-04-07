@@ -1,7 +1,7 @@
 import React from "react";
 import { useState ,useEffect} from 'react'
 
-function Nav(){
+function Nav({handleClickCRT}){
 
     const [time, setTime] = useState(new Date());
 
@@ -15,7 +15,7 @@ function Nav(){
 
     return(
             <nav>
-                <p>100 <span>TVR</span> <span>100</span> <span>Dum</span> 24 Sep 2017 {time.toLocaleTimeString()}</p>
+                <p>100 <span className="crt-mode" onClick={() => handleClickCRT()}>CRT</span> <span>100</span> <span>Dum</span> 24 Sep 2017 {time.toLocaleTimeString()}</p>
               </nav>
     )
 }

@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 
-function LandingPage(){
+function LandingPage({crt, handleClickCRT}){
 
     const [count, setCount] = useState(true)
     const [start, setStart] =useState("tv-main")
@@ -13,8 +13,10 @@ function LandingPage(){
     const [clicked, setClicked] = useState(false);
     const [secondDisplay, setSecondDisplay] = useState("0")
     const [compenentOverflow , setComponentOverflow] = useState("hidden")
-  
-    
+   
+
+
+
     useEffect(() => {
       let theDisplay1;
       let theDisplay2;
@@ -53,7 +55,7 @@ function LandingPage(){
         <div
         
          style={{display:`${displays}`}} className='img-container'>
-          <div className='screen'></div>
+          
           <img 
           onClick={handleClick} 
           className={start}
@@ -67,9 +69,9 @@ function LandingPage(){
           <div style={{overflowY:`${compenentOverflow}`}}  className="components">
             
           
-            <main className="main">
+            <main className={`main ${crt}`}>
             
-              <Nav />
+              <Nav handleClickCRT={handleClickCRT} />
               
               <img className='logo' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png" alt="logo-zaharenco" />
               
@@ -189,8 +191,9 @@ function LandingPage(){
               <p>www.zaharen.co</p>
               <div className="line"></div>
             </div>
+            <Footer />
           </div>  
-             <Footer />
+             
            
             </main>
         </div>

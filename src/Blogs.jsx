@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import NavSecond from "./components/SecondNav";
 ///taraneala continua si aici ///
-function Blog({textBlog,tittleBlog, media,contact, navItems}){
+function Blog({textBlog,tittleBlog, media,contact, navItems, crt, handleClickCRT}){
   
   
  
@@ -18,9 +18,10 @@ function Blog({textBlog,tittleBlog, media,contact, navItems}){
        <div className="page-main">
           <div className="components-blog">
           
-            <main className="main-blogs crt">
+            <main className={`main-blogs ${crt}`}>
               <div className="blog-top">
-              <Nav />
+              <Nav 
+            handleClickCRT={handleClickCRT}/>
               <NavSecond navItems={navItems}
               
               />

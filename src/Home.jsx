@@ -5,7 +5,7 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 
-function Home(){
+function Home({crt,handleClickCRT}){
 
     const [count, setCount] = useState(true)
     const [start, setStart] =useState("tv-main")
@@ -14,6 +14,8 @@ function Home(){
     const [clicked, setClicked] = useState(false);
     const [secondDisplay, setSecondDisplay] = useState("0")
     const [compenentOverflow , setComponentOverflow] = useState("hidden")
+  
+    
   
     
     useEffect(() => {
@@ -47,8 +49,9 @@ function Home(){
        
         <div className="page-main">
           <div  className="components">
-            <main className="main">
-            <Nav />
+            <main className={`main ${crt}`}>
+            <Nav 
+            handleClickCRT={handleClickCRT}/>
               
                 
               <img className='logo' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png" alt="logo-zaharenco" />
