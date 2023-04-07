@@ -1,14 +1,13 @@
 import { useState ,useEffect} from 'react'
 import './App.css'
-import { BrowserRouter, Routes,Route, Link } from "react-router-dom";
+import {Routes,Route, Link } from "react-router-dom";
 import LandingPage from './Landing';
 import Blog from './Blogs';
-import Jazz from "./Jazz"
 import Home from './Home';
 import img from "../img.json"
 import Modal from './components/Modal';
 
-console.log(img.pageTwo[2].src);
+
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -20,8 +19,6 @@ function handleClickCRT(){
   setStateCrt(!stateCrt)
   stateCrt?setCrt("crt"):setCrt("")
 }
-
-
 
   function handleImageClick(src) {
     setSelectedImg(src);
@@ -227,7 +224,7 @@ const navItemsPort = [
         crt={crt}
         handleClickCRT={handleClickCRT}
         />}/>
-        <Route path="/jazz" element={<Jazz />}/>
+       
       </Routes>
     
       </>

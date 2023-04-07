@@ -7,39 +7,10 @@ import Nav from "./components/Nav";
 
 function Home({crt,handleClickCRT}){
 
-    const [count, setCount] = useState(true)
-    const [start, setStart] =useState("tv-main")
-    const [mainPage,setMainPage] = useState('page')
    
-    const [clicked, setClicked] = useState(false);
-    const [secondDisplay, setSecondDisplay] = useState("0")
-    const [compenentOverflow , setComponentOverflow] = useState("hidden")
-  
+  const [selectedButton, setSelectedButton] = useState("Button 1");
     
-  
-    
-    useEffect(() => {
-      
-      let theDisplay2;
-      let componentDisplay;
-      if (clicked) {
-        theDisplay2 = setTimeout(() => {
-          setSecondDisplay("1")
-        }, 300);
-        componentDisplay = setTimeout(() => {
-          setComponentOverflow("scroll")
-        }, 500);
-      }
-      return () => clearTimeout(theDisplay2, componentDisplay);
-    }, [clicked]);
-  
-   
-
-  
-    
-      const [selectedButton, setSelectedButton] = useState("Button 1");
-    
-      const handleClickDisplay = (buttonName) => {
+  const handleClickDisplay = (buttonName) => {
         setSelectedButton(buttonName);
       };
      
@@ -49,14 +20,13 @@ function Home({crt,handleClickCRT}){
        
         <div className="page-main">
           <div  className="components">
-            <main className={`main ${crt}`}>
-            <Nav 
-            handleClickCRT={handleClickCRT}/>
+          <main className={`main ${crt}`}>
+            
+              <Nav handleClickCRT={handleClickCRT} />
               
-                
               <img className='logo' src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png" alt="logo-zaharenco" />
               
-              <div className="container">
+          <div className="container">
               <div className="container-left">
               <ul>
                 <li onClick={() => handleClickDisplay('Button 1')}>About</li>
@@ -70,40 +40,41 @@ function Home({crt,handleClickCRT}){
             {selectedButton === 'Button 1' &&    <div className="table">
                         <div className="row">
                         
-                        <Link to="/bio"> <div className="title">Bio</div></Link>
+                        
+                        <div className="title"><Link to="/bio"> Bio</Link></div>
                           <div className="dots"></div>
                           <div className="value">245</div>
                           
                         </div>
                         <div className="row">
-                         <Link to="/photos"> <div className="title">Photos</div></Link>
+                          <div className="title"><Link to="/photos">Photos</Link></div>
                           <div className="dots"></div>
                           <div className="value">254</div>
                         </div>
                         <div className="row">
-                        <Link to="/inspiration">  <div className="title">Inspiration</div></Link>
+                          <div className="title"><Link to="/inspiration">Inspiration</Link></div>
                           <div className="dots"></div>
                           <div className="value">222</div>
                         </div>
                         <div className="row">
-                        <Link to="/contact">  <div className="title">Contacts</div></Link>
+                         <div className="title"><Link to="/contacts"> Contacts</Link></div>
                           <div className="dots"></div>
                           <div className="value">745</div>
                         </div>
                         </div>}
           {selectedButton === 'Button 2' &&    <div className="table">
-          <div className="row">
+                        <div className="row">
                           <div className="title"><Link to="/music">Music</Link></div>
                           <div className="dots"></div>
                           <div className="value">124</div>
                         </div>
                         <div className="row">
-                          <div className="title"><Link to="/film">Film Composition</Link></div>
+                          <div className="title"><Link to="/film">Film</Link></div>
                           <div className="dots"></div>
                           <div className="value">135</div>
                         </div>
                         <div className="row">
-                          <div className="title"><Link to="/visual">Multimedia Art</Link></div>
+                          <div className="title"><Link to="/visual">Multimedia</Link></div>
                           <div className="dots"></div>
                           <div className="value">412</div>
                         </div>
