@@ -160,7 +160,7 @@ function App() {
     <div className="contact-text">
       <div>
         <a href="mailto:zaharencu.alexandru@gmail.com?">
-        <img width={"42px"} src="public\icons\Mail.png" alt="" />Mail
+        <img width={"42px"} src="\icons\Mail.png" alt="" />Mail
        </a>
       </div>
       <div>
