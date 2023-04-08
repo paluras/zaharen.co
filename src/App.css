@@ -438,14 +438,15 @@ video{
   }
   .contact-text{
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     font-size: 2rem;
     grid-template-columns: 1fr;
     color: white;
     gap:30px;
-    width: 50%;
+    width: 30%;
   }
+
   .big-img{
     width: 100%;
   }
