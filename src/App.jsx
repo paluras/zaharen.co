@@ -159,25 +159,37 @@ function App() {
   const contacts = (
     <div className="contact-text">
       <div>
-        <a href="mailto:zaharencu.alexandru@gmail.com?">Mail</a>{" "}
+        <a href="mailto:zaharencu.alexandru@gmail.com?">
+        <img width={"42px"} src="public\icons\Mail.png" alt="" />Mail
+       </a>
       </div>
       <div>
-        <a href="https://www.facebook.com/zaharen.co">Facebook</a>
+        <a href="https://www.facebook.com/zaharen.co">
+          <img width={"42px"} src="public\icons\Facebook.png" alt="" />Facebook
+        </a>
       </div>
       <div>
-        <a href="https://www.instagram.com/zaharen.co/">Instagram</a>
+        <a href="https://www.instagram.com/zaharen.co/">
+        <img width={"42px"} src="public\icons\Instagram.png" alt="" />Instagram
+        </a>
       </div>
       <div>
-        <a href="https://www.youtube.com/@zaharenco">Youtube</a>
+        <a href="https://www.youtube.com/@zaharenco">
+        <img width={"42px"} src="public\icons\YouTube.png" alt="" />Youtube
+        </a>
       </div>
       <div>
         <a href="https://open.spotify.com/artist/4azDTEsE76hndB8paNOEe8?si=dBL-mht3RRapA-CO_-miEg&fbclid=IwAR2IwJVZyvZxF0uPJiI8uBJBqBTCiKa0-0b0wqabiZUxj5rDimbykAR5saY&nd=1">
+        <img width={"42px"} src="public\icons\Spotify.png" alt="" />
           Spotify
+          
         </a>
       </div>
       <div>
         <a href="https://linktr.ee/zaharen.co?utm_source=linktree_profile_share&ltsid=56442ba0-afdf-4bbd-8046-e6c2f7bf8572">
-          LinkTree
+          
+        <img width={"42px"} src="public\icons\ShareThis.png" alt="" />LinkTree
+         
         </a>
       </div>
     </div>

@@ -349,14 +349,27 @@ iframe {
 }
 .contact-text{
   display: grid;
-  justify-content: space-between;
+  
+  justify-content: center;
   text-align: center;
   font-size: 2rem;
   grid-template-columns: repeat(3, 1fr);
   color: white;
+  gap: 30px;
+  width: 60%;
+  margin: auto;
+  
+}
+.contact-text > div{
+ 
 }
 .contact-text > div > a{
   color: white;
+  display: flex;
+ 
+  align-items: center;
+  
+  
 }
 .visual-art{
   display: flex;
@@ -430,7 +443,8 @@ video{
     font-size: 2rem;
     grid-template-columns: 1fr;
     color: white;
-    gap:30px
+    gap:30px;
+    width: 50%;
   }
   .big-img{
     width: 100%;
