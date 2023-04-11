@@ -91,6 +91,47 @@ function App() {
     </div>
   );
 
+  const aboutMusic = (
+    <div className="page-band">
+      <div>
+        <div>
+          Zaharenco is a jazz quartet whose music aims to explore the New Jazz
+          scene by fusing jazz with classical and rock influences. He submits
+          his works to the issue of musical predictability, seeking a balance
+          between predictability and uncertainty, and thus managing to reach a
+          wide range of emotions.
+          <a
+            style={{ color: "#ff68b4" }}
+            href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=Tgr-UWa9Rcag4uDjxw-uug"
+          >
+            {" "}
+            Primordial feelings
+          </a>
+          , his first EP, is an exposition of the 2 main topics addressed: the
+          impulsive being and the ever-changing sentimental self.
+        </div>
+      </div>
+
+      <div className="media">
+        {img.pageBand.map((image) => (
+          <img
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            onClick={() => handleImageClick(image.src)}
+          />
+        ))}
+        {selectedImg && (
+          <Modal
+            src={selectedImg}
+            alt="full-image"
+            onClose={() => setSelectedImg(null)}
+          />
+        )}
+      </div>
+    </div>
+  );
+
   const events = (
     <>
       <div className="event">18 Nov 2022 - Uzina, Bucharest</div>
@@ -187,7 +228,7 @@ function App() {
       </div>
       <div>
         <a href="https://www.youtube.com/@zaharenco">
-          <img width={"42px"} src="\icons\YouTube.png" alt="" />
+          <img width={"42px"} src="\icons\youtube.png" alt="" />
           Youtube
         </a>
       </div>
@@ -199,7 +240,7 @@ function App() {
       </div>
       <div>
         <a href="https://linktr.ee/zaharen.co?utm_source=linktree_profile_share&ltsid=56442ba0-afdf-4bbd-8046-e6c2f7bf8572">
-          <img width={"42px"} src="\icons\ShareThis.png" alt="" />
+          <img width={"42px"} src="\icons\linktree.png" alt="" />
           LinkTree
         </a>
       </div>
@@ -362,49 +403,7 @@ function App() {
           path="/about-music"
           element={
             <Blog
-              textBlog={
-                <div className="page-band">
-                  <div>
-                    <div>
-                      Zaharenco is a jazz quartet whose music aims to explore
-                      the New Jazz scene by fusing jazz with classical and rock
-                      influences. He submits his works to the issue of musical
-                      predictability, seeking a balance between predictability
-                      and uncertainty, and thus managing to reach a wide range
-                      of emotions.
-                      <a
-                        style={{ color: "#ff68b4" }}
-                        href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=Tgr-UWa9Rcag4uDjxw-uug"
-                      >
-                        {" "}
-                        Primordial feelings
-                      </a>
-                      , his first EP, is an exposition of the 2 main topics
-                      addressed: the impulsive being and the ever-changing
-                      sentimental self.
-                    </div>
-                  </div>
-                 
-                    <div className="media">
-                      {img.pageBand.map((image) => (
-                        <img
-                          key={image.src}
-                          src={image.src}
-                          alt={image.alt}
-                          onClick={() => handleImageClick(image.src)}
-                        />
-                      ))}
-                      {selectedImg && (
-                        <Modal
-                          src={selectedImg}
-                          alt="full-image"
-                          onClose={() => setSelectedImg(null)}
-                        />
-                      )}
-                    </div>
-                  </div>
-               
-              }
+              textBlog={aboutMusic}
               tittleBlog={"About"}
               navItems={navItemsBand}
               crt={crt}
