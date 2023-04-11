@@ -20,7 +20,7 @@ function Footer(){
         
         <div className="sport">
           <div className="box blue"></div>
-          <Link to="/bio"> <p>Band</p></Link>
+          <Link to="/about-music"> <p>Band</p></Link>
         </div>
        </footer>)
 }

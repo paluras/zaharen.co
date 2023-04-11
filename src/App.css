@@ -360,9 +360,7 @@ iframe {
   margin: auto;
   
 }
-.contact-text > div{
- 
-}
+
 .contact-text > div > a{
   color: white;
   display: flex;
@@ -406,7 +404,39 @@ video{
 .crt-mode{
   cursor: pointer;
 }
+
+.music-spotify{
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.media-band{
+  
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.media-band > img{
+  width: 50%;
+  place-self: center;
+  object-fit: contain;
+}
+
+
+
+
 @media screen and (max-width: 768px) {
+
+.for-spotify{
+  display: flex;
+  height: 150px;
+}
   .page{
     height: 100dvh;
   }
