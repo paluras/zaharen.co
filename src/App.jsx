@@ -228,7 +228,7 @@ function App() {
       </div>
       <div>
         <a href="https://www.youtube.com/@zaharenco">
-          <img width={"42px"} src="\icons\youtube.png" alt="" />
+          <img width={"42px"} src="\icons\Youtube.png" alt="" />
           Youtube
         </a>
       </div>
