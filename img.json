@@ -1,11 +1,11 @@
 {"pageOne":[  
     
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar3.JPG", "alt":""},  
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar2.JPG", "alt":""},  
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar4.JPG", "alt":""}, 
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar5.png", "alt":""},
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar6.JPG", "alt":""},
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/Zahar/zahar7.jpg", "alt":""} 
+    {"src":"/about-media/ZAH (1).jpg", "alt":"poza cu fata"},  
+    {"src":"/about-media/ZAH (2).jpg", "alt":"poza zahar"},  
+    {"src":"/about-media/ZAH (3).png", "alt":"poza zahar2"}, 
+    {"src":"/about-media/ZAH (4).jpg", "alt":"poza zahar 3"},
+    {"src":"/about-media/ZAH (5).jpg", "alt":"poza zahar 4"},
+    {"src":"/about-media/ZAH (6).jpg", "alt":"poza zahar "} 
      
 ] ,
 "pageTwo":[  
