@@ -6,6 +6,8 @@ import Blog from "./Blogs";
 import Home from "./Home";
 import img from "../img.json";
 import Modal from "./components/Modal";
+import SongPlayer from "./components/Player";
+
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -23,13 +25,25 @@ function App() {
   }
 
 const textMusic = <div className="text-music">
-<div><a href="https://on.soundcloud.com/zCpfC" target="_blank">Piano Sonata No.1 (2022)</a></div>
-<div><a target="_blank" href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA">Primordial feelings EP (2021)</a></div>
-<div><a href="https://on.soundcloud.com/4Lgkt" target="_blank">Conditions (2021)</a></div>
-<div><a href="https://youtu.be/GlA0zGgIUH8" target="_blank">Inside of you (2020)</a></div>
-<div><a href="https://on.soundcloud.com/ULp64" target="_blank">Provincial (2019)</a></div>
+
+<div>
+  <SongPlayer song={"public/Untitled.mp3"}/>
+  <a href="https://on.soundcloud.com/zCpfC" target="_blank">Piano Sonata No.1 (2022)</a></div>
+<div>
+<SongPlayer song={"public/Untitled.mp3"}/>
+  <a target="_blank" href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA">Primordial feelings EP (2021)</a></div>
+<div>
+<SongPlayer song={"public/Untitled.mp3"}/>
+  <a href="https://on.soundcloud.com/4Lgkt" target="_blank">Conditions (2021)</a></div>
+<div>
+<SongPlayer song={"public/Untitled.mp3"}/>
+  <a href="https://youtu.be/GlA0zGgIUH8" target="_blank">Inside of you (2020)</a></div>
+<div>
+<SongPlayer song={"public/Untitled.mp3"}/>
+  <a href="https://on.soundcloud.com/ULp64" target="_blank">Provincial (2019)</a></div>
 </div>
 const textMix = <div className="text-music">
+
 <div>Mixing Engineer - L'elisir d'amore (2023)  - dr. Cristian Mihailescu</div>
 <div>Sound Design - Good, Evil and the Sun (2023) - dr. Yutaro Keino</div>
 <div>Sound Design - Punguista (2022) - dr. Yutaro Keino</div>
@@ -367,7 +381,7 @@ https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1
           path="/film"
           element={
             <Blog
-              textBlog={"text"}
+              textBlog={""}
               tittleBlog={"Film Composition"}
               navItems={navItemsPort}
               crt={crt}
