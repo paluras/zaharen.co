@@ -425,6 +425,17 @@ video {
   object-fit: contain;
 }
 
+.text-music{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.text-music > div > a{
+  color: #ff68b4;
+}
+
+
 @media screen and (max-width: 768px) {
   .for-spotify {
     display: flex;
