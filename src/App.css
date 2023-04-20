@@ -462,7 +462,48 @@ video {
   height: 48px;
 }
 
+
+
+.even , .odd{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-self: center;
+}
+
+.text-mix > div > div > span , 
+.text-mix > div > div > a > span{
+ color: #ff68b4;
+}
+
 @media screen and (max-width: 768px) {
+  
+  .text-mix{
+    display: grid;
+    gap: 15px;
+  }
+  .even , .odd{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .even{
+    margin-top: 15px;
+  }
+
+  .even:nth-of-type(odd){
+    gap: 15px;
+  }
+  .odd:nth-child(even){
+    gap: 15px;
+  }
+  
+
+  
+
+
+  
+
+
   .for-spotify {
     display: flex;
     height: 150px;

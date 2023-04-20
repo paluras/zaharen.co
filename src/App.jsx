@@ -27,45 +27,118 @@ function App() {
     <div className="media">
       <div>
         <h4>Punguista (2022)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          className="video-container"
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM?modestbranding=1&showinfo=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
       </div>
       <div>
         <h4>Salve Boutique (2022)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div>
         <h4>Isabelle (2021)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div>
         <h4>Titanik Kabaret - theater (2021)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div>
         <h4>Die Melodie Der Welt - rescore (2021)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div>
         <h4>inHabited - contest rescore (2020)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div>
         <h4>Pelicam IFF - jingle (2020)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div>
         <h4>The Master of the Waters (2020)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
       <div>
         <h4>Danny and the Wild Bunch - contest rescore (2019)</h4>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/m8iwG8cajcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="300"
+          height="300"
+          src="https://www.youtube.com/embed/m8iwG8cajcM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   );
 
   const textMusic = (
-    <div className="text-music">
+    <div className="text-music song">
       <div>
         <SongPlayer song={"public/Untitled.mp3"} />
         <a href="https://on.soundcloud.com/zCpfC" target="_blank">
@@ -102,26 +175,59 @@ function App() {
     </div>
   );
   const textMix = (
-    <div className="text-music">
-      <div>
-        Mixing Engineer - L'elisir d'amore (2023) - dr. Cristian Mihailescu
+    <div className="text-mix">
+      <div className="even">
+        <div>
+          <span>Mixing Engineer</span> <br></br> L'elisir d'amore (2023)<br></br>dr. Cristian
+          Mihailescu
+        </div>
+        <div></div>
+        <div>
+          <span>Sound Design</span> <br></br> Good, Evil and the Sun (2023) <br></br> dr.
+          Yutaro Keino
+        </div>
+        <div></div>
       </div>
-      <div>Sound Design - Good, Evil and the Sun (2023) - dr. Yutaro Keino</div>
-      <div>Sound Design - Punguista (2022) - dr. Yutaro Keino</div>
-      <div>Recording Engineer - Alice Sonia Michael - The Spell (2022)</div>
-      <div>Recording Engineer - Mohamad Zatari Trio - Istehlal LP (2022)</div>
-      <div>Mixing Engineer - Isabelle (2021)- dr. Cristian Nicolae</div>
-      <div>Recording Engineer - Fine It’s Pink - Sailor (2021)</div>
+      <div className="odd">
+        <div></div>
+      <div>
+        <span>Sound Design</span> <br></br> Punguista (2022) <br></br> dr. Yutaro Keino
+      </div>
+    <div></div>
+      <div>
+        <span>Recording Engineer</span> <br></br> The Spell(2022) <br></br> Alice Sonia Michael
+      </div>
+      <div></div>
+      </div>
+      <div className="even">
+      <div>
+        <span>Recording Engineer</span> <br></br>Istehlal LP (2022)
+         <br></br> Mohamad Zatari Trio
+      </div>
+      <div></div>
+      <div>
+        <span >Mixing Engineer</span> <br></br> Isabelle (2021)<br></br> dr. Cristian Nicolae
+      </div>
+      </div>
+      <div className="odd">
+        <div></div>
+      <div>
+        <span>Recording Engineer</span> <br></br>Sailor (2021)  <br></br> Fine It’s Pink
+      </div>
+      <div></div>
       <div>
         <a
           target="_blank"
           href="https://www.youtube.com/watch?v=vhOumBg0gDA&embeds_euri=https%3A%2F%2Feditor.wixapps.net%2F&embeds_origin=https%3A%2F%2Feditor.wixapps.net&feature=emb_logo 
 "
         >
-          Mixing Engineer - Mohamad Zatari Trio - Live Concert (2020)
+          <span>Mixing Engineer</span> <br />Live Concert (2020) <br />  Mohamad Zatari Trio
         </a>
       </div>
-      <div>Recording Engineer - Urma - Love Create Inspire (2020)</div>
+      </div>
+      <div className="even">
+      <div><span>Recording Engineer </span><br /> Love Create Inspire (2020) <br></br>Urma </div>
+      <div></div>
       <div>
         <a
           target="_blank"
@@ -129,9 +235,10 @@ function App() {
 https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1 
 "
         >
-          Assistent Sound Editor - Zoo (2018) - dr. Antonio Tublen
+          <span>Assistent Sound Editor</span> <br /> Zoo (2018) <br /> dr. Antonio Tublen
         </a>
       </div>
+    </div>
     </div>
   );
 
@@ -368,22 +475,22 @@ https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1
   );
 
   const navItems = [
-    { text: "Bio", url: "/bio", key:"1" },
-    { text: "Photos", url: "/photos",key:2 },
-    { text: "Inspo", url: "/inspiration",key:3 },
-    { text: "Contact", url: "/contacts",key:4 },
+    { text: "Bio", url: "/bio", key: "1" },
+    { text: "Photos", url: "/photos", key: 2 },
+    { text: "Inspo", url: "/inspiration", key: 3 },
+    { text: "Contact", url: "/contacts", key: 4 },
   ];
 
   const navItemsPort = [
-    { text: "Music", url: "/music",key:5 },
-    { text: "Film Composition", url: "/film",key:6 },
-    { text: "Multimedia Art", url: "/visual",key:7 },
-    { text: "Mixing", url: "/mixing",key:8 },
+    { text: "Music", url: "/music", key: 5 },
+    { text: "Film Composition", url: "/film", key: 6 },
+    { text: "Multimedia Art", url: "/visual", key: 7 },
+    { text: "Mixing", url: "/mixing", key: 8 },
   ];
   const navItemsBand = [
-    { text: "Music", url: "/about-music",key:9 },
-    { text: "Events", url: "/events",key:10 },
-    { text: "Media", url: "/music-media",key:11 },
+    { text: "Music", url: "/about-music", key: 9 },
+    { text: "Events", url: "/events", key: 10 },
+    { text: "Media", url: "/music-media", key: 11 },
   ];
 
   return (
@@ -463,7 +570,7 @@ https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1
           path="/film"
           element={
             <Blog
-              textBlog={filmComp }
+              textBlog={filmComp}
               tittleBlog={"Film Composition"}
               navItems={navItemsPort}
               crt={crt}
