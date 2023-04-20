@@ -307,7 +307,6 @@ a:visited {
   width: 50%;
 }
 iframe {
- 
   background-color: #282828;
   margin-top: 10px;
 }
@@ -353,7 +352,7 @@ iframe {
   height: 300px;
   object-fit: cover;
 }
-.media > div>h4{
+.media > div > h4 {
   display: flex;
   align-items: center;
   height: 60px;
@@ -439,7 +438,7 @@ video {
   gap: 50px;
 }
 
-.text-music > div > a {
+.text-music > div > .for-nothing > a {
   color: #ff68b4;
 }
 
@@ -448,7 +447,7 @@ video {
   height: 1040px;
 }
 
-.text-music > div > div > img {
+.text-music > div > div > div > img {
   filter: invert(97%) sepia(72%) saturate(3022%) hue-rotate(208deg)
     brightness(132%) contrast(109%);
   background-color: transparent;
@@ -459,50 +458,75 @@ video {
 }
 
 .for-nothing {
-  height: 48px;
+  display: flex;
+  align-items: center;
 }
 
-
-
-.even , .odd{
+.even,
+.odd {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   place-self: center;
 }
 
-.text-mix > div > div > span , 
-.text-mix > div > div > a > span{
- color: #ff68b4;
+.text-mix > div > div > div > span,
+.text-mix > div > div > div > a > span {
+  color: #ff68b4;
+}
+
+.container-player{
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar{
+ 
+  width: 150px;
+  background-color: rgb(196, 66, 66);
+  height: 10px;
+  margin-left: 20px;
+}
+.progress-bar-fill{
+  
+height: 10px;
+background-color: green;
 }
 
 @media screen and (max-width: 768px) {
-  
-  .text-mix{
+
+  .for-nothing{
+    display: block;
+    
+  }
+
+  .progress-bar{
+    position: relative;
+    left:28px;
+    
+    width: 200px;
+  }
+
+
+  .text-mix {
     display: grid;
     gap: 15px;
   }
-  .even , .odd{
+  .even,
+  .odd {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  .even{
+  .even {
     margin-top: 15px;
   }
 
-  .even:nth-of-type(odd){
+  .even:nth-of-type(odd) {
     gap: 15px;
   }
-  .odd:nth-child(even){
+  .odd:nth-child(even) {
     gap: 15px;
   }
-  
-
-  
-
-
-  
-
 
   .for-spotify {
     display: flex;

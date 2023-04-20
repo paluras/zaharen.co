@@ -137,40 +137,53 @@ function App() {
     </div>
   );
 
+  const textMusictext = {
+    text1: (
+      <a href="https://on.soundcloud.com/zCpfC" target="_blank">
+        Piano Sonata No.1 (2022)
+      </a>
+    ),
+    text2: (
+      <a
+        target="_blank"
+        href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA"
+      >
+        Primordial feelings EP (2021).
+      </a>
+    ),
+    text3: (
+      <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
+        Conditions (2021)
+      </a>
+    ),
+    text4: (
+      <a href="https://youtu.be/GlA0zGgIUH8" target="_blank">
+        Inside of you (2020)
+      </a>
+    ),
+    text5: (
+      <a href="https://on.soundcloud.com/ULp64" target="_blank">
+        Provincial (2019)
+      </a>
+    ),
+  };
+
   const textMusic = (
     <div className="text-music song">
       <div>
-        <SongPlayer song={"public/Untitled.mp3"} />
-        <a href="https://on.soundcloud.com/zCpfC" target="_blank">
-          Piano Sonata No.1 (2022)
-        </a>
+        <SongPlayer song={"/Sonata no.1.mp3"} text={textMusictext.text1} />
       </div>
       <div>
-        <SongPlayer song={"public/Untitled.mp3"} />
-        <a
-          target="_blank"
-          href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA"
-        >
-          Primordial feelings EP (2021)
-        </a>
+        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text2} />
       </div>
       <div>
-        <SongPlayer song={"public/Untitled.mp3"} />
-        <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
-          Conditions (2021)
-        </a>
+        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text3} />
       </div>
       <div>
-        <SongPlayer song={"public/Untitled.mp3"} />
-        <a href="https://youtu.be/GlA0zGgIUH8" target="_blank">
-          Inside of you (2020)
-        </a>
+        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text4} />
       </div>
       <div>
-        <SongPlayer song={"public/Untitled.mp3"} />
-        <a href="https://on.soundcloud.com/ULp64" target="_blank">
-          Provincial (2019)
-        </a>
+        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text5} />
       </div>
     </div>
   );
@@ -178,67 +191,73 @@ function App() {
     <div className="text-mix">
       <div className="even">
         <div>
-          <span>Mixing Engineer</span> <br></br> L'elisir d'amore (2023)<br></br>dr. Cristian
-          Mihailescu
+          <span>Mixing Engineer</span> <br></br> L'elisir d'amore (2023)
+          <br></br>dr. Cristian Mihailescu
         </div>
         <div></div>
         <div>
-          <span>Sound Design</span> <br></br> Good, Evil and the Sun (2023) <br></br> dr.
-          Yutaro Keino
+          <span>Sound Design</span> <br></br> Good, Evil and the Sun (2023){" "}
+          <br></br> dr. Yutaro Keino
         </div>
         <div></div>
       </div>
       <div className="odd">
         <div></div>
-      <div>
-        <span>Sound Design</span> <br></br> Punguista (2022) <br></br> dr. Yutaro Keino
-      </div>
-    <div></div>
-      <div>
-        <span>Recording Engineer</span> <br></br> The Spell(2022) <br></br> Alice Sonia Michael
-      </div>
-      <div></div>
+        <div>
+          <span>Sound Design</span> <br></br> Punguista (2022) <br></br> dr.
+          Yutaro Keino
+        </div>
+        <div></div>
+        <div>
+          <span>Recording Engineer</span> <br></br> The Spell(2022) <br></br>{" "}
+          Alice Sonia Michael
+        </div>
+        <div></div>
       </div>
       <div className="even">
-      <div>
-        <span>Recording Engineer</span> <br></br>Istehlal LP (2022)
-         <br></br> Mohamad Zatari Trio
-      </div>
-      <div></div>
-      <div>
-        <span >Mixing Engineer</span> <br></br> Isabelle (2021)<br></br> dr. Cristian Nicolae
-      </div>
+        <div>
+          <span>Recording Engineer</span> <br></br>Istehlal LP (2022)
+          <br></br> Mohamad Zatari Trio
+        </div>
+        <div></div>
+        <div>
+          <span>Mixing Engineer</span> <br></br> Isabelle (2021)<br></br> dr.
+          Cristian Nicolae
+        </div>
       </div>
       <div className="odd">
         <div></div>
-      <div>
-        <span>Recording Engineer</span> <br></br>Sailor (2021)  <br></br> Fine It’s Pink
-      </div>
-      <div></div>
-      <div>
-        <a
-          target="_blank"
-          href="https://www.youtube.com/watch?v=vhOumBg0gDA&embeds_euri=https%3A%2F%2Feditor.wixapps.net%2F&embeds_origin=https%3A%2F%2Feditor.wixapps.net&feature=emb_logo 
-"
-        >
-          <span>Mixing Engineer</span> <br />Live Concert (2020) <br />  Mohamad Zatari Trio
-        </a>
-      </div>
+        <div>
+          <span>Recording Engineer</span> <br></br>Sailor (2021) <br></br> Fine
+          It’s Pink
+        </div>
+        <div></div>
+        <div>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/watch?v=vhOumBg0gDA&embeds_euri=https%3A%2F%2Feditor.wixapps.net%2F&embeds_origin=https%3A%2F%2Feditor.wixapps.net&feature=emb_logo"
+          >
+            <span>Mixing Engineer</span> <br />
+            Live Concert (2020) <br /> Mohamad Zatari Trio
+          </a>
+        </div>
       </div>
       <div className="even">
-      <div><span>Recording Engineer </span><br /> Love Create Inspire (2020) <br></br>Urma </div>
-      <div></div>
-      <div>
-        <a
-          target="_blank"
-          href="
-https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1 
-"
-        >
-          <span>Assistent Sound Editor</span> <br /> Zoo (2018) <br /> dr. Antonio Tublen
-        </a>
+        <div>
+          <span>Recording Engineer </span>
+          <br /> Love Create Inspire (2020) <br></br>Urma{" "}
+        </div>
+        <div></div>
+        <div>
+          <a
+            target="_blank"
+            href="https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1"
+          >
+            <span>Assistent Sound Editor</span> <br /> Zoo (2018) <br /> dr.
+            Antonio Tublen
+          </a>
+        </div>
       </div>
-    </div>
     </div>
   );
 
