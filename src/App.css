@@ -10,7 +10,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
- 
 }
 .tv-main > img {
   cursor: pointer;
@@ -308,7 +307,7 @@ a:visited {
   width: 50%;
 }
 iframe {
-  height: 80px;
+ 
   background-color: #282828;
   margin-top: 10px;
 }
@@ -348,14 +347,18 @@ iframe {
   grid-template-columns: repeat(auto-fill, 300px);
   align-items: center;
   justify-content: center;
- 
-  
 }
 .media > img {
   width: 300px;
   height: 300px;
   object-fit: cover;
 }
+.media > div>h4{
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
 .contact-text {
   display: grid;
 
@@ -429,26 +432,25 @@ video {
   object-fit: contain;
 }
 
-.text-music{
+.text-music {
   display: flex;
   flex-direction: column;
- 
+
   gap: 50px;
 }
 
-.text-music > div > a{
+.text-music > div > a {
   color: #ff68b4;
 }
 
-.testvideo > iframe{
+.testvideo > iframe {
   width: 100%;
   height: 1040px;
 }
 
-
-
-.text-music > div > div > img{
-  filter: invert(97%) sepia(72%) saturate(3022%) hue-rotate(208deg) brightness(132%) contrast(109%);
+.text-music > div > div > img {
+  filter: invert(97%) sepia(72%) saturate(3022%) hue-rotate(208deg)
+    brightness(132%) contrast(109%);
   background-color: transparent;
 }
 .text-music > div {
@@ -456,11 +458,9 @@ video {
   align-items: center;
 }
 
-.for-nothing{
+.for-nothing {
   height: 48px;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .for-spotify {

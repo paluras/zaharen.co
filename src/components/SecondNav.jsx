@@ -24,9 +24,10 @@ return (
     
       <div className="secondNav">
         {navItems.map((item, index) => (
-           <NavLink to={item.url} activeClassName="active">
+           <NavLink to={item.url} activeclassname="active">
+            
            <li
-            key={index}
+            key={item.key}
             className={index === activeIndex ? 'active' : ''}
           >{item.text}
             
