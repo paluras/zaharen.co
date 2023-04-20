@@ -237,9 +237,9 @@ function App() {
             target="_blank"
             href="https://www.youtube.com/watch?v=vhOumBg0gDA&embeds_euri=https%3A%2F%2Feditor.wixapps.net%2F&embeds_origin=https%3A%2F%2Feditor.wixapps.net&feature=emb_logo"
           >
-            <span>Mixing Engineer</span> <br />
+            <span>Mixing Engineer</span></a> <br />
             Live Concert (2020) <br /> Mohamad Zatari Trio
-          </a>
+          
         </div>
       </div>
       <div className="even">
@@ -253,9 +253,9 @@ function App() {
             target="_blank"
             href="https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1"
           >
-            <span>Assistent Sound Editor</span> <br /> Zoo (2018) <br /> dr.
+            <span>Assistent Sound Editor</span></a> <br /> Zoo (2018) <br /> dr.
             Antonio Tublen
-          </a>
+          
         </div>
       </div>
     </div>

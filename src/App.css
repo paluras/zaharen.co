@@ -182,11 +182,14 @@ li {
   height: 2vh;
 }
 footer {
+  position: sticky;
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
   height: 10vh;
+  background-color: black;
 }
 .about {
   display: flex;
@@ -470,7 +473,7 @@ video {
 }
 
 .text-mix > div > div > div > span,
-.text-mix > div > div > div > a > span {
+.text-mix > div > div >  a  {
   color: #ff68b4;
 }
 
@@ -481,13 +484,13 @@ video {
 
 .progress-bar {
   width: 150px;
-  background-color: #ff0000;
+  background-color: rgb(196, 66, 66);
   height: 10px;
   margin-left: 20px;
 }
 .progress-bar-fill {
   height: 10px;
-  background-color: #adff2e;
+  background-color: green;
 }
 
 @media screen and (max-width: 768px) {
