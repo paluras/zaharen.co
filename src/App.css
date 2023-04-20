@@ -474,38 +474,32 @@ video {
   color: #ff68b4;
 }
 
-.container-player{
+.container-player {
   display: flex;
   align-items: center;
 }
 
-.progress-bar{
- 
+.progress-bar {
   width: 150px;
-  background-color: rgb(196, 66, 66);
+  background-color: #ff0000;
   height: 10px;
   margin-left: 20px;
 }
-.progress-bar-fill{
-  
-height: 10px;
-background-color: green;
+.progress-bar-fill {
+  height: 10px;
+  background-color: #adff2e;
 }
 
 @media screen and (max-width: 768px) {
-
-  .for-nothing{
+  .for-nothing {
     display: block;
-    
   }
 
-  .progress-bar{
+  .progress-bar {
     position: relative;
-    left:28px;
-    
+    left: 28px;
     width: 200px;
   }
-
 
   .text-mix {
     display: grid;
