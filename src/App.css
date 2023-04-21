@@ -201,7 +201,7 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
-  height: 10vh;
+  height: 5vh;
   background-color: black;
 }
 .place-ex{
@@ -212,7 +212,7 @@ footer {
   justify-content: space-between;
   font-size: 2rem;
   height: 10vh;
-  background-color: black;
+ 
 }
 .about {
   display: flex;
