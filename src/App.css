@@ -201,7 +201,7 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
-  height: 5vh;
+  height: 6vh;
   background-color: black;
 }
 .place-ex{
@@ -211,7 +211,7 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
-  height: 10vh;
+  height: 6vh;
  
 }
 .about {
@@ -473,11 +473,13 @@ video {
   height: 1040px;
 }
 
-.text-music > div > div > div > img {
+.icon {
   filter: invert(97%) sepia(72%) saturate(3022%) hue-rotate(208deg)
     brightness(132%) contrast(109%);
   background-color: transparent;
 }
+
+
 .text-music > div {
   display: flex;
   align-items: center;
@@ -506,7 +508,7 @@ video {
 }
 
 .progress-bar {
-  width: 150px;
+  width: 10vw;
   background-color: rgb(196, 66, 66);
   height: 10px;
   margin-left: 20px;
@@ -516,13 +518,40 @@ video {
   background-color: green;
 }
 
+.drop-down-album{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  transition: 1s ease;
+  overflow: hidden;
+  margin-left: 30px;
+}
+
+.text-music >.allthecacat{
+  flex-direction: column;
+  align-items: start;
+}
+
+
+
 @media screen and (max-width: 768px) {
   .for-nothing {
     display: block;
   }
-  footer {
+  footer , .place-ex {
     height: 42px;
     width: 90%;
+  }
+
+
+  .tv-main {
+    width: 100%;
+    border-width: 2000px 20vw;
+  }
+  .tv-main-2 {
+    width: 100%;
+    border-width: 2000px 20vw;
   }
 
   .progress-bar {
@@ -622,6 +651,7 @@ video {
   }
   .tv-main {
     width: 100%;
+    border-width: 2000px 20vw;
   }
   .tv-main-2 {
     width: 100%;
@@ -659,6 +689,10 @@ video {
   .secondNav > a > li {
     font-size: 1.5rem;
   }
+.box{
+  display: none;
+}
+  
 }
 
 @keyframes flicker {

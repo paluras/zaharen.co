@@ -31,4 +31,10 @@
 "pageBand":[  
     {"src":"/band-media/Poza Zaharenco.JPG", "alt":""},  
     {"src":"/band-media/Primordial feelings_Artwork .png", "alt":""}
+],
+
+"pageBandMedia":[  
+    {"src":"/band-media/band3.jpg", "alt":""},  
+    {"src":"/band-media/band1.jpg", "alt":""},
+    {"src":"/band-media/band2.jpg", "alt":""}
 ]}

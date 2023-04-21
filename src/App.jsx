@@ -7,17 +7,33 @@ import Home from "./Home";
 import img from "../img.json";
 import Modal from "./components/Modal";
 import SongPlayer from "./components/Player";
-import Footer from "./components/Footer";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
-
+  const [show, setShow] = useState("0px");
+  const [show2, setShow2] = useState("0px");
   const [crt, setCrt] = useState("");
   const [stateCrt, setStateCrt] = useState(false);
+  const [popupState, setpopupState] = useState(false);
+  const [popupState2, setpopupState2] = useState(false);
 
   function handleClickCRT() {
     setStateCrt(!stateCrt);
     stateCrt ? setCrt("crt") : setCrt("");
+  }
+  function handlePopUp() {
+    setpopupState(!popupState);
+    if (show === "0px") setShow("17vh");
+    else {
+      setShow("0px");
+    }
+  }
+  function handlePopUp2() {
+    setpopupState2(!popupState2);
+    if (show2 === "0px") setShow2("23vh");
+    else {
+      setShow2("0px");
+    }
   }
 
   function handleImageClick(src) {
@@ -149,12 +165,12 @@ function App() {
         target="_blank"
         href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA"
       >
-        Primordial feelings EP (2021).
+        Primordial feelings (2021)
       </a>
     ),
     text3: (
       <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
-        Conditions (2021)
+        Cold Feet
       </a>
     ),
     text4: (
@@ -167,24 +183,87 @@ function App() {
         Provincial (2019)
       </a>
     ),
+    textConditions1: <div>Conditions 1</div>,
+    textConditions2: <div>Conditions 2</div>,
+    textConditions4: <div>Conditions 4</div>,
   };
 
   const textMusic = (
     <div className="text-music song">
       <div>
-        <SongPlayer song={"/Sonata no.1.mp3"} text={textMusictext.text1} />
+        <SongPlayer song={"Audio/Sonata no.1.mp3"} text={textMusictext.text1} />
+      </div>
+      <div className="allthecacat">
+        <div className="container-player">
+          <img
+            className="icon"
+            onClick={handlePopUp}
+            src={popupState ? "/icons/up.svg" : "/icons/down.svg"}
+            alt=""
+          />
+          <a
+            target="_blank"
+            href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA"
+          >
+            Primordial feelings (2021)
+          </a>
+        </div>
+        <div style={{ height: `${show}` }} className="drop-down-album">
+          <div>
+            <SongPlayer
+              song={"Audio/Primordial feelings.mp3"}
+              text={"Primordial Feelings"}
+            />
+          </div>
+          <div>
+            <SongPlayer
+              song={"/Audio/Cold feet.mp3"}
+              text={"Cold Feet"}
+            />
+          </div>
+        </div>
       </div>
       <div>
-        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text2} />
+        <SongPlayer
+          song={"Audio/Inside of you.mp3"}
+          text={textMusictext.text4}
+        />
+      </div>
+      <div className="allthecacat">
+        <div className="container-player">
+          <img
+            className="icon"
+            onClick={handlePopUp2}
+            src={popupState2 ? "/icons/up.svg" : "/icons/down.svg"}
+            alt=""
+          />
+           <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
+        Conditions(2021)
+      </a>
+        </div>
+        <div style={{ height: `${show2}` }} className="drop-down-album">
+          <div>
+            <SongPlayer
+              song={"Audio/condition 1.mp3"}
+              text={textMusictext.textConditions1}
+            />
+          </div>
+          <div>
+            <SongPlayer
+              song={"Audio/condition 2.mp3"}
+              text={textMusictext.textConditions2}
+            />
+          </div>
+          <div>
+            <SongPlayer
+              song={"Audio/condition 4.mp3"}
+              text={textMusictext.textConditions4}
+            />
+          </div>
+        </div>
       </div>
       <div>
-        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text3} />
-      </div>
-      <div>
-        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text4} />
-      </div>
-      <div>
-        <SongPlayer song={"public/Untitled.mp3"} text={textMusictext.text5} />
+        <SongPlayer song={"Audio/Provincial.mp3"} text={textMusictext.text5} />
       </div>
     </div>
   );
@@ -238,9 +317,10 @@ function App() {
             target="_blank"
             href="https://www.youtube.com/watch?v=vhOumBg0gDA&embeds_euri=https%3A%2F%2Feditor.wixapps.net%2F&embeds_origin=https%3A%2F%2Feditor.wixapps.net&feature=emb_logo"
           >
-            <span>Mixing Engineer</span></a> <br />
-            Live Concert (2020) <br /> Mohamad Zatari Trio
-          
+            <span>Mixing Engineer</span>
+          </a>{" "}
+          <br />
+          Live Concert (2020) <br /> Mohamad Zatari Trio
         </div>
       </div>
       <div className="even">
@@ -254,9 +334,9 @@ function App() {
             target="_blank"
             href="https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1"
           >
-            <span>Assistent Sound Editor</span></a> <br /> Zoo (2018) <br /> dr.
-            Antonio Tublen
-          
+            <span>Assistent Sound Editor</span>
+          </a>{" "}
+          <br /> Zoo (2018) <br /> dr. Antonio Tublen
         </div>
       </div>
     </div>
@@ -447,6 +527,44 @@ function App() {
     </div>
   );
 
+  const bandMedia = (
+    <div className="media">
+      {img.pageBandMedia.map((image) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          onClick={() => handleImageClick(image.src)}
+        />
+      ))}
+      {selectedImg && (
+        <Modal
+          src={selectedImg}
+          alt="full-image"
+          onClose={() => setSelectedImg(null)}
+        />
+      )}
+      <iframe
+        width="300"
+        height="300"
+        src="https://www.youtube.com/embed/oHCpuh29s5Q"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="300"
+        height="300"
+        src="https://www.youtube.com/embed/LT-DftXVJLc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  );
+
   const contacts = (
     <div className="contact-text">
       <div>
@@ -519,9 +637,8 @@ function App() {
         <Route
           path="/"
           element={<LandingPage crt={crt} handleClickCRT={handleClickCRT} />}
-          
         />
-        
+
         <Route
           path="/home"
           element={<Home crt={crt} handleClickCRT={handleClickCRT} />}
@@ -676,17 +793,15 @@ function App() {
           path="/music-media"
           element={
             <Blog
-              textBlog={""}
-              tittleBlog={"Events"}
+              textBlog={bandMedia}
+              tittleBlog={"Band Media"}
               navItems={navItemsBand}
               crt={crt}
               handleClickCRT={handleClickCRT}
             />
           }
         />
-        
       </Routes>
-     
     </>
   );
 }
