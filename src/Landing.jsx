@@ -12,6 +12,18 @@ function LandingPage({ crt, handleClickCRT }) {
   const [clicked, setClicked] = useState(false);
   const [secondDisplay, setSecondDisplay] = useState("0");
   const [compenentOverflow, setComponentOverflow] = useState("hidden");
+  const [shouldRender, setShouldRender] = useState(false);
+
+  useEffect(() => {
+    const hasRendered = sessionStorage.getItem('hasRendered');
+    if (!hasRendered) {
+      // Set the flag to indicate that the content has been rendered
+      sessionStorage.setItem('hasRendered', 'true');
+      setShouldRender(true);
+    }
+  }, []);
+
+
 
   useEffect(() => {
     let theDisplay1;
@@ -46,14 +58,15 @@ function LandingPage({ crt, handleClickCRT }) {
 
   return (
     <div className="App">
-      <div style={{ display: `${displays}` }} className="img-container">
+       
+       {shouldRender &&<div style={{ display: `${displays}` }} className="img-container">
         <img
           onClick={handleClick}
           className={start}
           src="https://raw.githubusercontent.com/paluras/new/master/src/assets/pngwing.com.png"
         ></img>
-      </div>
-      <div style={{ opacity: `${secondDisplay}` }} className={mainPage}>
+      </div>}
+      <div style={{ opacity: `1` }} >
         <div
           style={{ overflowY: `${compenentOverflow}` }}
           className="components"
@@ -212,7 +225,7 @@ function LandingPage({ crt, handleClickCRT }) {
               </div>
              
             </div>
-            <Footer />
+             <Footer />
               <div className="place-ex"></div>
           </main>
         </div>

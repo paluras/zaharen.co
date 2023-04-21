@@ -6,6 +6,13 @@
 *::-webkit-scrollbar{
   width: 0;
 }
+:root{
+  
+}
+
+.App{
+
+}
 .img-container {
   width: 100%;
   position: absolute;
@@ -22,13 +29,14 @@
   box-sizing: border-box;
   border-color: white;
   border-style: solid;
-  border-width: 2000px 20vw;
+  border-width: 2000px 40vw;
   transform: scale(1);
   object-fit: contain;
   background-image: url("https://raw.githubusercontent.com/paluras/new/master/src/assets/7vqd.gif");
   background-size: 90% 90%;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: white;
 }
 .tv-main:hover {
   transform: scale(1.0505);
@@ -50,6 +58,7 @@
   transition: ease-in 2s;
   pointer-events: none;
   object-fit: contain;
+  
 }
 .page {
   flex-direction: column;
@@ -512,6 +521,7 @@ video {
     display: block;
   }
   footer {
+    height: 42px;
     width: 90%;
   }
 
