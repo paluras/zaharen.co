@@ -210,8 +210,10 @@ function LandingPage({ crt, handleClickCRT }) {
                 <p>www.zaharen.co</p>
                 <div className="line"></div>
               </div>
-              <Footer />
+             
             </div>
+            <Footer />
+              <div className="place-ex"></div>
           </main>
         </div>
       </div>

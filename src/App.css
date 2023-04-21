@@ -1,6 +1,10 @@
 * {
   font-family: "VT323", monospace;
   margin: 0;
+  
+}
+*::-webkit-scrollbar{
+  width: 0;
 }
 .img-container {
   width: 100%;
@@ -182,7 +186,17 @@ li {
   height: 2vh;
 }
 footer {
-  position: sticky;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  height: 10vh;
+  background-color: black;
+}
+.place-ex{
+  position: static;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -497,6 +511,9 @@ video {
   .for-nothing {
     display: block;
   }
+  footer {
+    width: 90%;
+  }
 
   .progress-bar {
     position: relative;
@@ -534,7 +551,7 @@ video {
   }
   .page-main {
     background-color: black;
-    height: 100vh;
+    height: 100dvh;
   }
   li {
     font-size: 2rem;
@@ -582,6 +599,11 @@ video {
     font-size: 1.5rem;
   }
   footer {
+    height: 40px;
+    width: 100%;
+  }
+
+  .place-ex{
     height: 40px;
   }
   .box {

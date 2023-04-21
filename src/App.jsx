@@ -7,6 +7,7 @@ import Home from "./Home";
 import img from "../img.json";
 import Modal from "./components/Modal";
 import SongPlayer from "./components/Player";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -518,7 +519,9 @@ function App() {
         <Route
           path="/"
           element={<LandingPage crt={crt} handleClickCRT={handleClickCRT} />}
+          
         />
+        
         <Route
           path="/home"
           element={<Home crt={crt} handleClickCRT={handleClickCRT} />}
@@ -681,7 +684,9 @@ function App() {
             />
           }
         />
+        
       </Routes>
+     
     </>
   );
 }

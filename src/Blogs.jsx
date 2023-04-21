@@ -32,10 +32,16 @@ function Blog({
               </div>
               {media}
               {contact}
+            
               <Footer />
+              <div className="place-ex"></div>
             </main>
+
+           
           </div>
+        
         </div>
+      
       </div>
     </div>
   );
