@@ -74,7 +74,7 @@
 .page-main {
   display: flex;
   flex-direction: column;
-  transition: 1s;
+
   width: 100%;
   height: 100vh;
   background-color: black;
