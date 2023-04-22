@@ -450,16 +450,24 @@ video {
   filter: invert(97%) sepia(72%) saturate(3022%) hue-rotate(208deg)
     brightness(132%) contrast(109%);
   background-color: transparent;
+  
+}
+
+a > .icon{
+ display: flex;
+ 
 }
 
 .text-music > div {
   display: flex;
-  align-items: center;
+ 
 }
 
 .for-nothing {
   display: flex;
   align-items: center;
+ 
+  width: 100%;
 }
 
 .even,
@@ -477,6 +485,7 @@ video {
 .container-player {
   display: flex;
   align-items: center;
+
 }
 
 .progress-bar {
@@ -505,9 +514,18 @@ video {
   align-items: start;
 }
 
+
 @media screen and (max-width: 768px) {
   .for-nothing {
-    display: block;
+    display: grid;
+  }
+  .container-player{
+    width: 100%;
+  }
+
+  .test{
+    width: 100%;
+    font-size: 28px;
   }
   footer,
   .place-ex {
@@ -594,12 +612,17 @@ video {
   .big-img {
     width: 100%;
   }
+ 
 }
 
 @media screen and (max-width: 425px) {
   nav > p {
     font-size: 1rem;
   }
+
+  
+  
+
   footer > div > p {
     font-size: 1.5rem;
   }
