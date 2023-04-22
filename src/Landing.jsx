@@ -161,17 +161,17 @@ function LandingPage({ crt, handleClickCRT }) {
                 {selectedButton === "Button 3" && (
                   <div className="table">
                     <div className="row">
-                      <div className="title">About</div>
+                      <div className="title"><Link to="/about-music">About</Link></div>
                       <div className="dots"></div>
                       <div className="value">245</div>
                     </div>
                     <div className="row">
-                      <div className="title">Events</div>
+                      <div className="title"><Link to="/events">Event</Link></div>
                       <div className="dots"></div>
                       <div className="value">254</div>
                     </div>
                     <div className="row">
-                      <div className="title">Media</div>
+                      <div className="title"><Link to="/music-media">Media</Link></div>
                       <div className="dots"></div>
                       <div className="value">222</div>
                     </div>

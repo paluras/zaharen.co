@@ -57,6 +57,7 @@ function SongPlayer(props) {
       />
       {props.text}
       </div>
+      <img className="icon" width={"32px"} src="/icons/link.svg" alt="link" />
       {showProgressBar && (
         <div className="progress-bar" onClick={handleProgressBarClick}>
           <div className="progress-bar-fill" style={progressBarStyles} />

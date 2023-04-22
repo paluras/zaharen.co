@@ -3,7 +3,7 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import LandingPage from "./Landing";
 import Blog from "./Blogs";
-import Home from "./Home";
+
 import img from "../img.json";
 import Modal from "./components/Modal";
 import SongPlayer from "./components/Player";
@@ -637,11 +637,6 @@ function App() {
         <Route
           path="/"
           element={<LandingPage crt={crt} handleClickCRT={handleClickCRT} />}
-        />
-
-        <Route
-          path="/home"
-          element={<Home crt={crt} handleClickCRT={handleClickCRT} />}
         />
         <Route
           path="/bio"

@@ -6,7 +6,7 @@ function Footer(){
     return( <footer>
         <div className="about">
           <div className="box red"></div>
-          <Link to="/home"> <p>Home</p></Link>
+          <Link to="/"> <p>Home</p></Link>
         </div>
         <div className="contact">
           <div className="box green"></div>
