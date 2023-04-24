@@ -5,11 +5,6 @@
 *::-webkit-scrollbar {
   width: 0;
 }
-:root {
-}
-
-.App {
-}
 .img-container {
   width: 100%;
   position: absolute;
@@ -442,21 +437,9 @@ video {
   justify-content: center;
   align-items: center;
 }
-
-.media-band {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.media-band > img {
-  width: 50%;
-  place-self: center;
-  object-fit: contain;
-}
-
 .text-music {
   display: flex;
   flex-direction: column;
-
   gap: 50px;
 }
 
@@ -464,25 +447,24 @@ video {
   color: #ff68b4;
 }
 
-.testvideo > iframe {
-  width: 100%;
-  height: 1040px;
-}
-
 .icon {
   filter: invert(97%) sepia(72%) saturate(3022%) hue-rotate(208deg)
     brightness(132%) contrast(109%);
   background-color: transparent;
+  
 }
+
 
 .text-music > div {
   display: flex;
-  align-items: center;
+ 
 }
 
 .for-nothing {
   display: flex;
   align-items: center;
+ 
+  width: 100%;
 }
 
 .even,
@@ -505,6 +487,7 @@ video {
 .container-player {
   display: flex;
   align-items: center;
+
 }
 
 .progress-bar {
@@ -533,25 +516,23 @@ video {
   align-items: start;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .for-nothing {
-    display: block;
+    display: grid;
   }
-  footer,
-  .place-ex {
+  footer , .place-ex {
     height: 42px;
     width: 90%;
   }
+
 
   .tv-main {
     width: 100%;
     border-width: 2000px 20vw;
   }
-  .tv-main-2 {
-    width: 100%;
-    border-width: 2000px 20vw;
-  }
-
+ 
   .progress-bar {
     position: relative;
     left: 28px;
@@ -626,12 +607,17 @@ video {
   .big-img {
     width: 100%;
   }
+ 
 }
 
 @media screen and (max-width: 425px) {
   nav > p {
     font-size: 1rem;
   }
+
+  
+  
+
   footer > div > p {
     font-size: 1.5rem;
   }
@@ -643,15 +629,14 @@ video {
     gap: 7vw;
   }
 
+  .place-ex{
+    height: 40px;
+  }
   .box {
     width: 10px;
     height: 10px;
   }
-  .tv-main {
-    width: 100%;
-    border-width: 2000px 20vw;
-  }
-  .tv-main-2 {
+  .tv-main , .tv-main-2 {
     width: 100%;
   }
   .container {

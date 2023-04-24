@@ -44,7 +44,10 @@ function SongPlayer(props) {
    
   };
 
-  console.log(currentTime);
+
+  let iconLink = <img className="icon" width={"32px"} src="/icons/link.svg" alt="link" />
+
+  
 
   return (
     <div className="for-nothing">
@@ -55,8 +58,12 @@ function SongPlayer(props) {
         alt={isPlaying ? "Stop" : "Play"}
         onClick={handlePlayPause}
       />
+      <div onClick={handlePlayPause}  className="test">
       {props.text}
       </div>
+      {props.iconLink}
+      </div>
+      
       {showProgressBar && (
         <div className="progress-bar" onClick={handleProgressBarClick}>
           <div className="progress-bar-fill" style={progressBarStyles} />

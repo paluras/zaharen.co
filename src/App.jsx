@@ -3,7 +3,7 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import LandingPage from "./Landing";
 import Blog from "./Blogs";
-import Home from "./Home";
+
 import img from "../img.json";
 import Modal from "./components/Modal";
 import SongPlayer from "./components/Player";
@@ -154,44 +154,34 @@ function App() {
     </div>
   );
 
-  const textMusictext = {
-    text1: (
-      <a href="https://on.soundcloud.com/zCpfC" target="_blank">
-        Piano Sonata No.1 (2022)
-      </a>
-    ),
-    text2: (
-      <a
-        target="_blank"
-        href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA"
-      >
-        Primordial feelings (2021)
-      </a>
-    ),
-    text3: (
-      <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
-        Cold Feet
-      </a>
-    ),
-    text4: (
-      <a href="https://youtu.be/GlA0zGgIUH8" target="_blank">
-        Inside of you (2020)
-      </a>
-    ),
-    text5: (
+    let link = <img className="icon link" width={"32px"} src="/icons/link.svg" alt="link" />
+
+  let iconLink = [
+    <a href="https://on.soundcloud.com/zCpfC" target="_blank">
+      {link}
+    </a>,
+    <a href="https://youtu.be/GlA0zGgIUH8" target="_blank">
+    {link}
+    </a>,
       <a href="https://on.soundcloud.com/ULp64" target="_blank">
-        Provincial (2019)
-      </a>
-    ),
-    textConditions1: <div>Conditions 1</div>,
-    textConditions2: <div>Conditions 2</div>,
-    textConditions4: <div>Conditions 4</div>,
-  };
+      <img
+        className="icon"
+        width={"32px"}
+        
+        src="/icons/link.svg"
+        alt="link"
+      />
+    </a>
+  ];
 
   const textMusic = (
     <div className="text-music song">
       <div>
-        <SongPlayer song={"Audio/Sonata no.1.mp3"} text={textMusictext.text1} />
+        <SongPlayer
+          song={"Audio/Sonata no.1.mp3"}
+          text={"Piano Sonata No.1 (2022)"}
+          iconLink={iconLink[0]}
+        />
       </div>
       <div className="allthecacat">
         <div className="container-player">
@@ -201,11 +191,14 @@ function App() {
             src={popupState ? "/icons/up.svg" : "/icons/down.svg"}
             alt=""
           />
+          <div onClick={handlePopUp} className="test">
+          Primordial feelings (2021)
+          </div>
           <a
             target="_blank"
             href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=oTJCNnzKQK2T6UJ1zU4IvA"
           >
-            Primordial feelings (2021)
+            {link}
           </a>
         </div>
         <div style={{ height: `${show}` }} className="drop-down-album">
@@ -216,17 +209,15 @@ function App() {
             />
           </div>
           <div>
-            <SongPlayer
-              song={"/Audio/Cold feet.mp3"}
-              text={"Cold Feet"}
-            />
+            <SongPlayer song={"/Audio/Cold feet.mp3"} text={"Cold Feet"} />
           </div>
         </div>
       </div>
       <div>
         <SongPlayer
           song={"Audio/Inside of you.mp3"}
-          text={textMusictext.text4}
+          text={"Inside of you (2020)"}
+          iconLink={iconLink[1]}
         />
       </div>
       <div className="allthecacat">
@@ -237,33 +228,40 @@ function App() {
             src={popupState2 ? "/icons/up.svg" : "/icons/down.svg"}
             alt=""
           />
-           <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
-        Conditions(2021)
-      </a>
+          <div onClick={handlePopUp2} className="test">
+          Conditions(2021)
+          </div>
+          <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
+           {link}
+          </a>
         </div>
         <div style={{ height: `${show2}` }} className="drop-down-album">
           <div>
             <SongPlayer
               song={"Audio/condition 1.mp3"}
-              text={textMusictext.textConditions1}
+              text={"Conditions 1"}
             />
           </div>
           <div>
             <SongPlayer
               song={"Audio/condition 2.mp3"}
-              text={textMusictext.textConditions2}
+              text={"Conditions 2"}
             />
           </div>
           <div>
             <SongPlayer
               song={"Audio/condition 4.mp3"}
-              text={textMusictext.textConditions4}
+              text={"Conditions 4"}
             />
           </div>
         </div>
       </div>
       <div>
-        <SongPlayer song={"Audio/Provincial.mp3"} text={textMusictext.text5} />
+        <SongPlayer
+          song={"Audio/Provincial.mp3"}
+          text={"Provincial (2019)"}
+          iconLink={iconLink[2]}
+        />
       </div>
     </div>
   );
@@ -637,11 +635,6 @@ function App() {
         <Route
           path="/"
           element={<LandingPage crt={crt} handleClickCRT={handleClickCRT} />}
-        />
-
-        <Route
-          path="/home"
-          element={<Home crt={crt} handleClickCRT={handleClickCRT} />}
         />
         <Route
           path="/bio"
