@@ -15,11 +15,6 @@ function NavSecond({navItems}){
       setActiveIndex(index);
     }, [location.pathname]);
 
-    
-    
-////asta este taraneala trebuie refacut,,,, trebuie sa faci cu map dintr un array , ca e groaznic ce se intampla aici//
-///sau sa folosesti un json , cred ca trebuie json cel mai bine//    
-
 return (
     
       <div className="secondNav">

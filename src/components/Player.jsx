@@ -44,11 +44,6 @@ function SongPlayer(props) {
    
   };
 
-
-  let iconLink = <img className="icon" width={"32px"} src="/icons/link.svg" alt="link" />
-
-  
-
   return (
     <div className="for-nothing">
       <div className="container-player">
