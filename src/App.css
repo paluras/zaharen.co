@@ -2,6 +2,7 @@
   font-family: "VT323", monospace;
   margin: 0;
 }
+
 *::-webkit-scrollbar {
   width: 0;
 }
@@ -382,7 +383,7 @@ iframe {
 
 .contact-text {
   display: grid;
-
+  
   justify-content: center;
   text-align: center;
   font-size: 2rem;
@@ -391,6 +392,7 @@ iframe {
   gap: 30px;
   width: 60%;
   margin: auto;
+  margin-top: -100px;
 }
 
 .contact-text > div > a {
@@ -626,10 +628,14 @@ video {
     justify-content: center;
     text-align: center;
     font-size: 2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: 300px;
     color: white;
     gap: 30px;
-    width: 30%;
+   
+  }
+  .contact-text > div{
+    display: flex;
+    justify-content: center;
   }
 
   .big-img {
@@ -637,6 +643,18 @@ video {
   }
   nav > p {
     font-size: 1.5rem;
+  }
+  .text{
+    font-size: 1.5rem;
+  }
+   .secondNav > a > li {
+    font-size: 1.5rem;
+  }
+  .icon{
+    width: 28px;
+  }
+  .video-justtittle{
+    margin-left: 28px;
   }
  
 }
@@ -646,6 +664,9 @@ video {
     font-size: 1rem;
   }
 
+  .text{
+    font-size: 1.5rem;
+  }
   
   
 
