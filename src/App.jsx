@@ -3,10 +3,10 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import LandingPage from "./Landing";
 import Blog from "./Blogs";
-
 import img from "../img.json";
 import Modal from "./components/Modal";
 import SongPlayer from "./components/Player";
+import VideoModal from "./components/VideoModal";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -40,139 +40,33 @@ function App() {
     setSelectedImg(src);
   }
 
-  const filmComp = (
-    <div className="media">
-      <div>
-        <h4>Punguista (2022)</h4>
-        <iframe
-          className="video-container"
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM?modestbranding=1&showinfo=0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>Salve Boutique (2022)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>Isabelle (2021)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>Titanik Kabaret - theater (2021)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>Die Melodie Der Welt - rescore (2021)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>inHabited - contest rescore (2020)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>Pelicam IFF - jingle (2020)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>The Master of the Waters (2020)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h4>Danny and the Wild Bunch - contest rescore (2019)</h4>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/m8iwG8cajcM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+  let link = (
+    <img
+      className="icon link"
+      width={"32px"}
+      src="/icons/link.svg"
+      alt="link"
+    />
   );
-
-    let link = <img className="icon link" width={"32px"} src="/icons/link.svg" alt="link" />
 
   let iconLink = [
     <a href="https://on.soundcloud.com/zCpfC" target="_blank">
       {link}
     </a>,
     <a href="https://youtu.be/GlA0zGgIUH8" target="_blank">
-    {link}
+      {link}
     </a>,
-      <a href="https://on.soundcloud.com/ULp64" target="_blank">
-      <img
-        className="icon"
-        width={"32px"}
-        
-        src="/icons/link.svg"
-        alt="link"
-      />
-    </a>
+    <a href="https://on.soundcloud.com/ULp64" target="_blank">
+      <img className="icon" width={"32px"} src="/icons/link.svg" alt="link" />
+    </a>,
   ];
+
+  let iconLinkVideo=[
+    <VideoModal 
+    videoId = {"Ntmdd6Rc15c "}/>,
+    <VideoModal 
+    videoId = {"FtvhTk3XnaU "}/>
+  ]
 
   const textMusic = (
     <div className="text-music song">
@@ -192,7 +86,7 @@ function App() {
             alt=""
           />
           <div onClick={handlePopUp} className="test">
-          Primordial feelings (2021)
+            Primordial feelings (2021)
           </div>
           <a
             target="_blank"
@@ -229,30 +123,21 @@ function App() {
             alt=""
           />
           <div onClick={handlePopUp2} className="test">
-          Conditions(2021)
+            Conditions(2021)
           </div>
           <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
-           {link}
+            {link}
           </a>
         </div>
         <div style={{ height: `${show2}` }} className="drop-down-album">
           <div>
-            <SongPlayer
-              song={"Audio/condition 1.mp3"}
-              text={"Conditions 1"}
-            />
+            <SongPlayer song={"Audio/condition 1.mp3"} text={"Conditions 1"} />
           </div>
           <div>
-            <SongPlayer
-              song={"Audio/condition 2.mp3"}
-              text={"Conditions 2"}
-            />
+            <SongPlayer song={"Audio/condition 2.mp3"} text={"Conditions 2"} />
           </div>
           <div>
-            <SongPlayer
-              song={"Audio/condition 4.mp3"}
-              text={"Conditions 4"}
-            />
+            <SongPlayer song={"Audio/condition 4.mp3"} text={"Conditions 4"} />
           </div>
         </div>
       </div>
@@ -263,6 +148,57 @@ function App() {
           iconLink={iconLink[2]}
         />
       </div>
+    </div>
+  );
+
+  const textFilm = (
+    <div className="text-music song">
+      <div>
+        <SongPlayer
+          song={"/film-music/Punguista music.mp3"}
+          text={"Punguista (2022)"}
+        />
+       
+      </div>
+      
+      <div>
+        <SongPlayer
+          song={"/film-music/Salve Boutique Ad.mp3"}
+          text={"Salve Boutique (2022)"}
+          iconLink={iconLinkVideo[0]}
+        />
+      </div>
+      <div>
+        <SongPlayer
+          song={"/film-music/Isabelle Soundtrack.mp3"}
+          text={"Isabelle (2021)"}
+          iconLink={""}
+        />
+      </div>
+      <div>Die Melodie Der Welt - Rescore (2021)
+        <VideoModal 
+        videoId={"KXFbLKqSpLk "} />
+      </div>
+      <div>
+        <SongPlayer
+          song={"/film-music/The master of the waters.mp3"}
+          text={"The Master of the Waters (2020)"}
+          iconLink={""}
+        />
+      </div>
+      <div>
+        <SongPlayer
+          song={"/film-music/Danny and the wild bunch.mp3"}
+          text={"Danny and the Wild Bunch - contest rescore (2019)"}
+          iconLink={iconLinkVideo[1]}
+        />
+      </div>
+      <div>inHabited - contest rescore (2020)
+        <VideoModal 
+        videoId={"Nx7hPJIzaDA "}/>
+      </div>
+      <div style={{ merginLeft: "48px" }}>Titanik Kabaret - Theater (2021)</div>
+      <div style={{ merginLeft: "48px" }}>Pelicam IFF - Jingle (2020)</div>
     </div>
   );
   const textMix = (
@@ -652,7 +588,7 @@ function App() {
           path="/photos"
           element={
             <Blog
-              textBlog={"Photo photo photo"}
+              textBlog={""}
               tittleBlog={"Photos"}
               media={mediaPhotos}
               navItems={navItems}
@@ -702,7 +638,7 @@ function App() {
           path="/film"
           element={
             <Blog
-              textBlog={filmComp}
+              textBlog={textFilm}
               tittleBlog={"Film Composition"}
               navItems={navItemsPort}
               crt={crt}

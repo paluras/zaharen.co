@@ -4,6 +4,8 @@ import { useState ,useEffect} from 'react'
 function Nav({handleClickCRT}){
 
     const [time, setTime] = useState(new Date());
+    
+    const months = ["Mon","Tue","Wen","Thurs","Fry","Sat","Sun"];
 
     useEffect(() => {
       const interval = setInterval(() => {
@@ -15,7 +17,7 @@ function Nav({handleClickCRT}){
 
     return(
             <nav>
-                <p>100 <span className="crt-mode" onClick={() => handleClickCRT()}>CRT</span> <span>100</span> <span>Dum</span> 24 Sep 2017 {time.toLocaleTimeString()}</p>
+                <p>100 <span className="crt-mode" onClick={() => handleClickCRT()}>CRT</span> <span>100</span> <span>{months[time.getDay()]}</span> {time.getDay()}.{time.getMonth()}.{time.getFullYear()} {time.toLocaleTimeString()}</p>
               </nav>
     )
 }
