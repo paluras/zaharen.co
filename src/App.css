@@ -533,6 +533,17 @@ video {
 
 }
 
+.video-justtittle{
+  margin-left: 48px;
+}
+
+.video-justtittle > div > div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 
 
 @media screen and (max-width: 768px) {

@@ -175,7 +175,7 @@ function App() {
           iconLink={""}
         />
       </div>
-      <div>Die Melodie Der Welt - Rescore (2021)
+      <div className="video-justtittle">Die Melodie Der Welt - Rescore (2021)
         <VideoModal 
         videoId={"KXFbLKqSpLk "} />
       </div>
@@ -193,12 +193,12 @@ function App() {
           iconLink={iconLinkVideo[1]}
         />
       </div>
-      <div>inHabited - contest rescore (2020)
+      <div className="video-justtittle">inHabited - contest rescore (2020)
         <VideoModal 
         videoId={"Nx7hPJIzaDA "}/>
       </div>
-      <div style={{ merginLeft: "48px" }}>Titanik Kabaret - Theater (2021)</div>
-      <div style={{ merginLeft: "48px" }}>Pelicam IFF - Jingle (2020)</div>
+      <div className="video-justtittle">Titanik Kabaret - Theater (2021)</div>
+      <div className="video-justtittle">Pelicam IFF - Jingle (2020)</div>
     </div>
   );
   const textMix = (
