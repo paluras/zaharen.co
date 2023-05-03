@@ -1,10 +1,10 @@
 import React from "react";
 import { useState ,useEffect} from 'react'
 
-function Nav({handleClickCRT}){
+function Nav({handleClickCRT, number}){
 
     const [time, setTime] = useState(new Date());
-    
+    //const [number , setNumber] = useState(Math.floor(Math.random() * 100))
     const months = ["Mon","Tue","Wen","Thurs","Fry","Sat","Sun"];
 
     useEffect(() => {
@@ -17,7 +17,7 @@ function Nav({handleClickCRT}){
 
     return(
             <nav>
-                <p>100 <span className="crt-mode" onClick={() => handleClickCRT()}>CRT</span> <span>100</span> <span>{months[time.getDay()-1]}</span> {time.getDay()}.{time.getMonth()+1}.{time.getFullYear()} {time.toLocaleTimeString()}</p>
+                <p>100 <span className="crt-mode" onClick={() => handleClickCRT()}>CRT</span> <span>{number}</span> <span>{months[time.getDay()-1]}</span> {time.getDay()}.{time.getMonth()+1}.{time.getFullYear()} {time.toLocaleTimeString()}</p>
               </nav>
     )
 }

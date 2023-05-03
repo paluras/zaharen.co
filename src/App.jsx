@@ -61,12 +61,10 @@ function App() {
     </a>,
   ];
 
-  let iconLinkVideo=[
-    <VideoModal 
-    videoId = {"Ntmdd6Rc15c "}/>,
-    <VideoModal 
-    videoId = {"FtvhTk3XnaU "}/>
-  ]
+  let iconLinkVideo = [
+    <VideoModal videoId={"Ntmdd6Rc15c "} />,
+    <VideoModal videoId={"FtvhTk3XnaU "} />,
+  ];
 
   const textMusic = (
     <div className="text-music song">
@@ -105,8 +103,11 @@ function App() {
             />
           </div>
           <div>
-            <SongPlayer song={"/Audio/Cold feet.mp3"} text={"Cold Feet"}
-            key={8} />
+            <SongPlayer
+              song={"/Audio/Cold feet.mp3"}
+              text={"Cold Feet"}
+              key={8}
+            />
           </div>
         </div>
       </div>
@@ -161,11 +162,10 @@ function App() {
         <SongPlayer
           song={"/film-music/Punguista music.mp3"}
           text={"Punguista (2022)"}
-          key ={1}
+          key={1}
         />
-       
       </div>
-      
+
       <div>
         <SongPlayer
           song={"/film-music/Salve Boutique Ad.mp3"}
@@ -183,13 +183,13 @@ function App() {
         />
       </div>
       <div className="video-justtittle">Titanik Kabaret - Theater (2021)</div>
-      <div className="video-justtittle">Die Melodie Der Welt - Rescore (2021)
-        <VideoModal 
-        videoId={"KXFbLKqSpLk "} />
+      <div className="video-justtittle">
+        Die Melodie Der Welt - Rescore (2021)
+        <VideoModal videoId={"KXFbLKqSpLk "} />
       </div>
-      <div className="video-justtittle">inHabited - contest rescore (2020)
-        <VideoModal 
-        videoId={"Nx7hPJIzaDA "}/>
+      <div className="video-justtittle">
+        inHabited - contest rescore (2020)
+        <VideoModal videoId={"Nx7hPJIzaDA "} />
       </div>
       <div className="video-justtittle">Pelicam IFF - Jingle (2020)</div>
       <div>
@@ -256,14 +256,19 @@ function App() {
         </div>
         <div></div>
         <div>
-          <a className="mix-flex"
+          <a
+            className="mix-flex"
             target="_blank"
             href="https://www.youtube.com/watch?v=vhOumBg0gDA&embeds_euri=https%3A%2F%2Feditor.wixapps.net%2F&embeds_origin=https%3A%2F%2Feditor.wixapps.net&feature=emb_logo"
           >
             <span>Mixing Engineer</span>
-            <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />{" "}
+            <img
+              className="icon"
+              width="24px"
+              src="/icons/link.svg"
+              alt="link icon"
+            />{" "}
           </a>{" "}
-          
           Live Concert (2020) <br /> Mohamad Zatari Trio
         </div>
       </div>
@@ -274,14 +279,20 @@ function App() {
         </div>
         <div></div>
         <div>
-          <a className="mix-flex"
+          <a
+            className="mix-flex"
             target="_blank"
             href="https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1"
           >
             <span>Assistent Sound Editor</span>
-            <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />{" "}
+            <img
+              className="icon"
+              width="24px"
+              src="/icons/link.svg"
+              alt="link icon"
+            />{" "}
           </a>
-           Zoo (2018) <br /> dr. Antonio Tublen
+          Zoo (2018) <br /> dr. Antonio Tublen
         </div>
       </div>
     </div>
@@ -297,7 +308,12 @@ function App() {
       <div className="visual-container">
         <Link to="visual1">
           Catoptro-tono v.1 - AI based Sound Installation (2022)
-          <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />
+          <img
+            className="icon"
+            width="24px"
+            src="/icons/link.svg"
+            alt="link icon"
+          />
         </Link>
         The catoptrophobia, or fear of mirrors, is the core of this
         installation. Through this work, I want to investigate the idea of sound
@@ -311,7 +327,12 @@ function App() {
       <div className="visual-container">
         <Link to="visual2">
           Primordial feelings - Audio-Visual Installation (2021)
-          <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />
+          <img
+            className="icon"
+            width="24px"
+            src="/icons/link.svg"
+            alt="link icon"
+          />
         </Link>
         The art installation exhibited at the 2021 Diploma Festival. The
         installation consists of four tvs and two pairs of headphones. Each TV
@@ -594,6 +615,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={245}
             />
           }
         />
@@ -607,6 +629,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={254}
             />
           }
         />
@@ -620,6 +643,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={745}
             />
           }
         />
@@ -632,6 +656,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={222}
             />
           }
         />
@@ -644,6 +669,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={124}
             />
           }
         />
@@ -656,6 +682,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={135}
             />
           }
         />
@@ -668,6 +695,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={412}
             />
           }
         />
@@ -680,6 +708,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={101}
             />
           }
         />
@@ -692,6 +721,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={102}
             />
           }
         />
@@ -704,6 +734,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={765}
             />
           }
         />
@@ -716,6 +747,7 @@ function App() {
               navItems={navItemsBand}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={245}
             />
           }
         />
@@ -728,6 +760,7 @@ function App() {
               navItems={navItemsBand}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={254}
             />
           }
         />
@@ -740,6 +773,7 @@ function App() {
               navItems={navItemsBand}
               crt={crt}
               handleClickCRT={handleClickCRT}
+              number={222}
             />
           }
         />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function VideoModal(props) {
   const [showModal, setShowModal] = useState(false);
@@ -14,13 +14,14 @@ function VideoModal(props) {
 
   return (
     <div>
-      <div onClick={handleClick}><img className="icon" width={"32px"} src="/icons/link.svg" alt="link" /></div>
+      <div onClick={handleClick}>
+        <img className="icon" width={"32px"} src="/icons/link.svg" alt="link" />
+      </div>
       {showModal && (
-        
         <div onClick={handleClose} className="modal-overlay">
           <div className="modal">
-            
-            <iframe className='video-film-modal'
+            <iframe
+              className="video-film-modal"
               title="YouTube video"
               width="80%"
               height="80%"

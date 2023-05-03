@@ -15,15 +15,13 @@ function LandingPage({ crt, handleClickCRT }) {
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
-    const hasRendered = sessionStorage.getItem('hasRendered');
+    const hasRendered = sessionStorage.getItem("hasRendered");
     if (!hasRendered) {
       // Set the flag to indicate that the content has been rendered
-      sessionStorage.setItem('hasRendered', 'true');
+      sessionStorage.setItem("hasRendered", "true");
       setShouldRender(true);
     }
   }, []);
-
-
 
   useEffect(() => {
     let theDisplay1;
@@ -58,21 +56,18 @@ function LandingPage({ crt, handleClickCRT }) {
 
   return (
     <div className="App">
-       
-       {shouldRender &&<div style={{ display: `${displays}` }} className="img-container">
-        <img
-          onClick={handleClick}
-          className={start}
-          src="/tv.png"
-        ></img>
-      </div>}
-      <div style={{ opacity: `1` }} >
+      {shouldRender && (
+        <div style={{ display: `${displays}` }} className="img-container">
+          <img onClick={handleClick} className={start} src="/tv.png"></img>
+        </div>
+      )}
+      <div style={{ opacity: `1` }}>
         <div
           style={{ overflowY: `${compenentOverflow}` }}
           className="components"
         >
           <main className={`main ${crt}`}>
-            <Nav handleClickCRT={handleClickCRT} />
+            <Nav handleClickCRT={handleClickCRT} number={100} />
 
             <img
               className="logo"
@@ -161,17 +156,23 @@ function LandingPage({ crt, handleClickCRT }) {
                 {selectedButton === "Button 3" && (
                   <div className="table">
                     <div className="row">
-                      <div className="title"><Link to="/about-music">About</Link></div>
+                      <div className="title">
+                        <Link to="/about-music">About</Link>
+                      </div>
                       <div className="dots"></div>
                       <div className="value">245</div>
                     </div>
                     <div className="row">
-                      <div className="title"><Link to="/events">Event</Link></div>
+                      <div className="title">
+                        <Link to="/events">Event</Link>
+                      </div>
                       <div className="dots"></div>
                       <div className="value">254</div>
                     </div>
                     <div className="row">
-                      <div className="title"><Link to="/music-media">Media</Link></div>
+                      <div className="title">
+                        <Link to="/music-media">Media</Link>
+                      </div>
                       <div className="dots"></div>
                       <div className="value">222</div>
                     </div>
@@ -208,10 +209,9 @@ function LandingPage({ crt, handleClickCRT }) {
                 <p>www.zaharen.co</p>
                 <div className="line"></div>
               </div>
-             
             </div>
-             <Footer />
-              <div className="place-ex"></div>
+            <Footer />
+            <div className="place-ex"></div>
           </main>
         </div>
       </div>

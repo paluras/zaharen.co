@@ -10,6 +10,7 @@ function Blog({
   navItems,
   crt,
   handleClickCRT,
+  number,
 }) {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function Blog({
           <div className="components-blog">
             <main className={`main-blogs ${crt}`}>
               <div className="blog-top">
-                <Nav handleClickCRT={handleClickCRT} />
+                <Nav handleClickCRT={handleClickCRT} number={number} />
                 <NavSecond navItems={navItems} />
 
                 <div>
@@ -32,16 +33,12 @@ function Blog({
               </div>
               {media}
               {contact}
-            
+
               <Footer />
               <div className="place-ex"></div>
             </main>
-
-           
           </div>
-        
         </div>
-      
       </div>
     </div>
   );
