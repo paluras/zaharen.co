@@ -663,7 +663,13 @@ video {
     margin-left: 28px;
   }
 }
-
+@media screen and (max-width: 530px){
+  .container-right {
+   
+    width: 48%;
+   
+  }
+}
 @media screen and (max-width: 425px) {
   nav > p {
     font-size: 1rem;
