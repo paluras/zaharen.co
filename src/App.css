@@ -546,13 +546,14 @@ video {
   align-items: center;
   justify-content: center;
 }
-
-
 .for-fix{
   display: flex;
   flex-direction: column;
-  gap:8px
+  gap:30px
 }
+
+
+
 @media screen and (max-width: 768px) {
   .for-nothing {
     display: grid;
@@ -738,6 +739,15 @@ video {
   .container-lower > p {
     margin: auto;
     width: 95%;
+  }
+  .colored-box > p{
+    margin: auto;
+    width: 95%;
+  }
+  .for-fix{
+    display: flex;
+    flex-direction: column;
+    gap:8px
   }
 }
 

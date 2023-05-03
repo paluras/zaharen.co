@@ -193,7 +193,7 @@ function LandingPage({ crt, handleClickCRT }) {
                 )}
               </div>
             </div>
-            </div>
+            
             <div className="container-lower">
               <p>
                 Zaharenco is a jazz quartet whose music aims to explore the New
@@ -214,6 +214,7 @@ function LandingPage({ crt, handleClickCRT }) {
                 <p>www.zaharen.co</p>
                 <div className="line"></div>
               </div>
+            </div>
             </div>
             <Footer />
             <div className="place-ex"></div>
