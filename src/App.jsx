@@ -75,6 +75,7 @@ function App() {
           song={"Audio/Sonata no.1.mp3"}
           text={"Piano Sonata No.1 (2022)"}
           iconLink={iconLink[0]}
+          key={6}
         />
       </div>
       <div className="allthecacat">
@@ -100,10 +101,12 @@ function App() {
             <SongPlayer
               song={"Audio/Primordial feelings.mp3"}
               text={"Primordial Feelings"}
+              key={7}
             />
           </div>
           <div>
-            <SongPlayer song={"/Audio/Cold feet.mp3"} text={"Cold Feet"} />
+            <SongPlayer song={"/Audio/Cold feet.mp3"} text={"Cold Feet"}
+            key={8} />
           </div>
         </div>
       </div>
@@ -146,6 +149,7 @@ function App() {
           song={"Audio/Provincial.mp3"}
           text={"Provincial (2019)"}
           iconLink={iconLink[2]}
+          key={9}
         />
       </div>
     </div>
@@ -157,6 +161,7 @@ function App() {
         <SongPlayer
           song={"/film-music/Punguista music.mp3"}
           text={"Punguista (2022)"}
+          key ={1}
         />
        
       </div>
@@ -166,6 +171,7 @@ function App() {
           song={"/film-music/Salve Boutique Ad.mp3"}
           text={"Salve Boutique (2022)"}
           iconLink={iconLinkVideo[0]}
+          key={2}
         />
       </div>
       <div>
@@ -173,6 +179,7 @@ function App() {
           song={"/film-music/Isabelle Soundtrack.mp3"}
           text={"Isabelle (2021)"}
           iconLink={""}
+          key={3}
         />
       </div>
       <div className="video-justtittle">Titanik Kabaret - Theater (2021)</div>
@@ -190,6 +197,7 @@ function App() {
           song={"/film-music/The master of the waters.mp3"}
           text={"The Master of the Waters (2020)"}
           iconLink={""}
+          key={4}
         />
       </div>
       <div>
@@ -197,6 +205,7 @@ function App() {
           song={"/film-music/Danny and the wild bunch.mp3"}
           text={"Danny and the Wild Bunch - contest rescore (2019)"}
           iconLink={iconLinkVideo[1]}
+          key={5}
         />
       </div>
     </div>
@@ -247,13 +256,14 @@ function App() {
         </div>
         <div></div>
         <div>
-          <a
+          <a className="mix-flex"
             target="_blank"
             href="https://www.youtube.com/watch?v=vhOumBg0gDA&embeds_euri=https%3A%2F%2Feditor.wixapps.net%2F&embeds_origin=https%3A%2F%2Feditor.wixapps.net&feature=emb_logo"
           >
             <span>Mixing Engineer</span>
+            <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />{" "}
           </a>{" "}
-          <br />
+          
           Live Concert (2020) <br /> Mohamad Zatari Trio
         </div>
       </div>
@@ -264,13 +274,14 @@ function App() {
         </div>
         <div></div>
         <div>
-          <a
+          <a className="mix-flex"
             target="_blank"
             href="https://www.imdb.com/title/tt7624934/?ref_=nm_knf_t_1"
           >
             <span>Assistent Sound Editor</span>
-          </a>{" "}
-          <br /> Zoo (2018) <br /> dr. Antonio Tublen
+            <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />{" "}
+          </a>
+           Zoo (2018) <br /> dr. Antonio Tublen
         </div>
       </div>
     </div>
@@ -286,6 +297,7 @@ function App() {
       <div className="visual-container">
         <Link to="visual1">
           Catoptro-tono v.1 - AI based Sound Installation (2022)
+          <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />
         </Link>
         The catoptrophobia, or fear of mirrors, is the core of this
         installation. Through this work, I want to investigate the idea of sound
@@ -299,6 +311,7 @@ function App() {
       <div className="visual-container">
         <Link to="visual2">
           Primordial feelings - Audio-Visual Installation (2021)
+          <img className="icon" width="24px" src="/icons/link.svg" alt="link icon" />
         </Link>
         The art installation exhibited at the 2021 Diploma Festival. The
         installation consists of four tvs and two pairs of headphones. Each TV

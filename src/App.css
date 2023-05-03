@@ -25,7 +25,7 @@
   border-width: 2000px 40vw;
   transform: scale(1);
   object-fit: contain;
-  background-image: url("https://raw.githubusercontent.com/paluras/new/master/src/assets/7vqd.gif");
+  background-image: url("/static.gif");
   background-size: 90% 90%;
   background-repeat: no-repeat;
   background-position: center;
@@ -34,12 +34,12 @@
 .tv-main:hover {
   transform: scale(1.0505);
   transition: 1s;
-  background-image: url("https://raw.githubusercontent.com/paluras/new/master/src/assets/7vqd.gif");
+  background-image: url("/static.gif");
 }
 .tv-main:not(:hover) {
   transform: scale(1);
   transition: 1s;
-  background-image: url("https://raw.githubusercontent.com/paluras/new/master/src/assets/7vqd.gif");
+  background-image: url("/static.gif");
 }
 .tv-main-2 {
   box-sizing: border-box;
@@ -360,8 +360,7 @@ iframe {
 }
 
 .secondNav > a:last-child {
-  border-right:0px solid ;
- 
+  border-right: 0px solid;
 }
 .media {
   display: grid;
@@ -383,7 +382,7 @@ iframe {
 
 .contact-text {
   display: grid;
-  
+
   justify-content: center;
   text-align: center;
   font-size: 2rem;
@@ -392,7 +391,10 @@ iframe {
   gap: 30px;
   width: 60%;
   margin: auto;
-  
+}
+
+.mix-flex {
+  display: flex;
 }
 
 .contact-text > div > a {
@@ -413,6 +415,8 @@ iframe {
 }
 .visual-container > a {
   color: #ff68b4;
+  display: flex;
+  align-items: center;
 }
 video {
   object-fit: cover;
@@ -425,7 +429,6 @@ video {
   left: 0;
 }
 .modal {
-  
   left: 0;
   display: flex;
   justify-content: center;
@@ -461,19 +464,16 @@ video {
   filter: invert(97%) sepia(72%) saturate(3022%) hue-rotate(208deg)
     brightness(132%) contrast(109%);
   background-color: transparent;
-  
+  width: 24px;
 }
-
 
 .text-music > div {
   display: flex;
- 
 }
 
 .for-nothing {
   display: flex;
   align-items: center;
- 
   width: 100%;
 }
 
@@ -498,7 +498,7 @@ video {
   display: flex;
   align-items: center;
 }
-.container-player > div > div{
+.container-player > div > div {
   display: flex;
   align-items: center;
 }
@@ -529,40 +529,37 @@ video {
   align-items: start;
 }
 
-
-.video-film-modal{
+.video-film-modal {
   margin: auto 0;
-
 }
 
-.video-justtittle{
+.video-justtittle {
   margin-left: 48px;
 }
 
-.video-justtittle > div > div {
+.video-justtittle > div > div,
+.video-justtittle > div {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .for-nothing {
     display: grid;
   }
-  footer , .place-ex {
+  footer,
+  .place-ex {
     height: 42px;
     width: 90%;
   }
 
-
-  .tv-main {
+  .tv-main,
+  .tv-main-2 {
     width: 100%;
     border-width: 2000px 20vw;
   }
- 
+
   .progress-bar {
     position: relative;
     left: 28px;
@@ -631,9 +628,8 @@ video {
     grid-template-columns: 300px;
     color: white;
     gap: 30px;
-   
   }
-  .contact-text > div{
+  .contact-text > div {
     display: flex;
     justify-content: center;
   }
@@ -644,19 +640,18 @@ video {
   nav > p {
     font-size: 1.5rem;
   }
-  .text{
+  .text {
     font-size: 1.5rem;
   }
-   .secondNav > a > li {
+  .secondNav > a > li {
     font-size: 1.5rem;
   }
-  .icon{
-    width: 28px;
+  .icon {
+    width: 24px;
   }
-  .video-justtittle{
+  .video-justtittle {
     margin-left: 28px;
   }
- 
 }
 
 @media screen and (max-width: 425px) {
@@ -664,11 +659,9 @@ video {
     font-size: 1rem;
   }
 
-  .text{
+  .text {
     font-size: 1.5rem;
   }
-  
-  
 
   footer > div > p {
     font-size: 1.5rem;
@@ -681,14 +674,15 @@ video {
     gap: 7vw;
   }
 
-  .place-ex{
+  .place-ex {
     height: 40px;
   }
   .box {
     width: 10px;
     height: 10px;
   }
-  .tv-main , .tv-main-2 {
+  .tv-main,
+  .tv-main-2 {
     width: 100%;
   }
   .container {

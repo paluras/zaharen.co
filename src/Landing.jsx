@@ -63,7 +63,7 @@ function LandingPage({ crt, handleClickCRT }) {
         <img
           onClick={handleClick}
           className={start}
-          src="https://raw.githubusercontent.com/paluras/new/master/src/assets/pngwing.com.png"
+          src="/tv.png"
         ></img>
       </div>}
       <div style={{ opacity: `1` }} >
@@ -76,7 +76,7 @@ function LandingPage({ crt, handleClickCRT }) {
 
             <img
               className="logo"
-              src="https://raw.githubusercontent.com/paluras/new/master/src/assets/Zaharenco-logo.png"
+              src="/Zaharenco-logo.png"
               alt="logo-zaharenco"
             />
 
@@ -180,24 +180,9 @@ function LandingPage({ crt, handleClickCRT }) {
                 {selectedButton === "Button 4" && (
                   <div className="table">
                     <div className="row">
-                      <div className="title">asdasdt</div>
+                      <div className="title">Horoscop</div>
                       <div className="dots"></div>
-                      <div className="value">12412</div>
-                    </div>
-                    <div className="row">
-                      <div className="title">asdasf</div>
-                      <div className="dots"></div>
-                      <div className="value">135234</div>
-                    </div>
-                    <div className="row">
-                      <div className="title">asfdfg</div>
-                      <div className="dots"></div>
-                      <div className="value">412</div>
-                    </div>
-                    <div className="row">
-                      <div className="title">asdf</div>
-                      <div className="dots"></div>
-                      <div className="value">7654</div>
+                      <div className="value">111</div>
                     </div>
                   </div>
                 )}
