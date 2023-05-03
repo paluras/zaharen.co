@@ -91,91 +91,95 @@ function LandingPage({ crt, handleClickCRT }) {
               <div className="container-right">
                 {selectedButton === "Button 1" && (
                   <div className="table">
-                    <div className="row">
+                     <Link to="/bio"><div className="row">
                       <div className="title">
-                        <Link to="/bio"> Bio</Link>
+                        Bio
                       </div>
                       <div className="dots"></div>
                       <div className="value">245</div>
                     </div>
-                    <div className="row">
+                    </Link>
+                    <Link to="/photos"> <div className="row">
+                    
                       <div className="title">
-                        <Link to="/photos">Photos</Link>
+                        Photos
                       </div>
                       <div className="dots"></div>
                       <div className="value">254</div>
                     </div>
-                    <div className="row">
+                    </Link>
+                    <Link to="/inspiration"><div className="row">
                       <div className="title">
-                        <Link to="/inspiration">Inspiration</Link>
+                        Inspiration
                       </div>
                       <div className="dots"></div>
                       <div className="value">222</div>
-                    </div>
-                    <div className="row">
+                    </div></Link>
+                    <Link to="/contacts"> <div className="row">
                       <div className="title">
-                        <Link to="/contacts"> Contacts</Link>
+                         Contacts
                       </div>
                       <div className="dots"></div>
                       <div className="value">745</div>
                     </div>
+                    </Link>
                   </div>
                 )}
                 {selectedButton === "Button 2" && (
                   <div className="table">
-                    <div className="row">
+                    <Link to="/music"> <div className="row">
                       <div className="title">
-                        <Link to="/music">Music</Link>
+                       Music
                       </div>
                       <div className="dots"></div>
                       <div className="value">124</div>
-                    </div>
-                    <div className="row">
+                    </div></Link>
+                    <Link to="/film"> <div className="row">
                       <div className="title">
-                        <Link to="/film">Film</Link>
+                       Film
                       </div>
                       <div className="dots"></div>
                       <div className="value">135</div>
-                    </div>
-                    <div className="row">
+                    </div></Link>
+                    <Link to="/visual"><div className="row">
                       <div className="title">
-                        <Link to="/visual">Multimedia</Link>
+                        Multimedia
                       </div>
                       <div className="dots"></div>
                       <div className="value">412</div>
-                    </div>
-                    <div className="row">
+                    </div></Link>
+                    <Link to="/mixing"> <div className="row">
                       <div className="title">
-                        <Link to="/mixing">Mixing</Link>
+                       Mixing
                       </div>
                       <div className="dots"></div>
                       <div className="value">765</div>
-                    </div>
+                    </div></Link>
                   </div>
                 )}
                 {selectedButton === "Button 3" && (
                   <div className="table">
-                    <div className="row">
+                    <Link to="/about-music"><div className="row">
                       <div className="title">
-                        <Link to="/about-music">About</Link>
+                        About
                       </div>
                       <div className="dots"></div>
                       <div className="value">245</div>
-                    </div>
-                    <div className="row">
+                    </div></Link>
+                    <Link to="/events"> <div className="row">
                       <div className="title">
-                        <Link to="/events">Event</Link>
+                        Event
                       </div>
                       <div className="dots"></div>
                       <div className="value">254</div>
-                    </div>
-                    <div className="row">
+                    </div></Link>
+                    <Link to="/music-media"> <div className="row">
                       <div className="title">
-                        <Link to="/music-media">Media</Link>
+                        Media
                       </div>
                       <div className="dots"></div>
                       <div className="value">222</div>
-                    </div>
+                    </div></Link>
                   </div>
                 )}
                 {selectedButton === "Button 4" && (

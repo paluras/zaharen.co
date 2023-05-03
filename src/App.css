@@ -551,6 +551,7 @@ video {
 .for-fix{
   display: flex;
   flex-direction: column;
+  gap:8px
 }
 @media screen and (max-width: 768px) {
   .for-nothing {
@@ -728,6 +729,15 @@ video {
   }
   .box {
     display: none;
+  }
+  .container-lower{
+    display: flex;
+    justify-content: center;
+   
+  }
+  .container-lower > p {
+    margin: auto;
+    width: 95%;
   }
 }
 
