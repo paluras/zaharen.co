@@ -547,6 +547,11 @@ video {
   justify-content: center;
 }
 
+
+.for-fix{
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (max-width: 768px) {
   .for-nothing {
     display: grid;
@@ -673,7 +678,7 @@ video {
   .place-ex {
     height: 42px;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     gap: 7vw;
   }
 

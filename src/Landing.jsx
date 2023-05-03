@@ -68,7 +68,7 @@ function LandingPage({ crt, handleClickCRT }) {
         >
           <main className={`main ${crt}`}>
             <Nav handleClickCRT={handleClickCRT} number={100} />
-
+            <div className="for-fix">
             <img
               className="logo"
               src="/Zaharenco-logo.png"
@@ -188,6 +188,7 @@ function LandingPage({ crt, handleClickCRT }) {
                   </div>
                 )}
               </div>
+            </div>
             </div>
             <div className="container-lower">
               <p>
