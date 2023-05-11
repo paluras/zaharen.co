@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect ,lazy, Suspense  } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -58,7 +58,7 @@ function LandingPage({ crt, handleClickCRT }) {
     <div className="App">
       {shouldRender && (
         <div style={{ display: `${displays}` }} className="img-container">
-          <img onClick={handleClick} className={start} src="/tv.png"></img>
+          <img onClick={handleClick} className={start} src="/tv.png" alt="tv landing page"></img>
         </div>
       )}
       <div style={{ opacity: `1` }}>
