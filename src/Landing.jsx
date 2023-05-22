@@ -13,6 +13,7 @@ function LandingPage({ crt, handleClickCRT }) {
   const [secondDisplay, setSecondDisplay] = useState("0");
   const [compenentOverflow, setComponentOverflow] = useState("hidden");
   const [shouldRender, setShouldRender] = useState(false);
+  const [one, setOne] = useState('0')
 
   useEffect(() => {
     const hasRendered = sessionStorage.getItem("hasRendered");
@@ -20,6 +21,10 @@ function LandingPage({ crt, handleClickCRT }) {
       // Set the flag to indicate that the content has been rendered
       sessionStorage.setItem("hasRendered", "true");
       setShouldRender(true);
+     
+    }
+    if (hasRendered){
+      setOne("1")
     }
   }, []);
 
@@ -45,6 +50,7 @@ function LandingPage({ crt, handleClickCRT }) {
     setCount(count);
     count ? setStart("tv-main-2") : setStart("tv-main");
     count ? setMainPage("page-main") : setStart("page");
+    count ? setOne("1") : setOne("0")
     setClicked(true);
   }
 
@@ -61,7 +67,8 @@ function LandingPage({ crt, handleClickCRT }) {
           <img onClick={handleClick} className={start} src="/tv.png" alt="tv landing page"></img>
         </div>
       )}
-      <div style={{ opacity: `1` }}>
+      <div className="white"></div>
+      <div style={{ opacity: `${one}` }}>
         <div
           style={{ overflowY: `${compenentOverflow}` }}
           className="components"
