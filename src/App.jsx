@@ -603,7 +603,7 @@ function App() {
           element={
             <Blog
               textBlog={bioText}
-              tittleBlog={"Bio"}
+              tittleBlog={"BIO"}
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
@@ -616,7 +616,7 @@ function App() {
           element={
             <Blog
               textBlog={""}
-              tittleBlog={"Photos"}
+              tittleBlog={"PHOTOS"}
               media={mediaPhotos}
               navItems={navItems}
               crt={crt}
@@ -630,7 +630,7 @@ function App() {
           element={
             <Blog
               textBlog={""}
-              tittleBlog={"Contacts"}
+              tittleBlog={"CONTACTS"}
               contact={contacts}
               navItems={navItems}
               crt={crt}
@@ -644,7 +644,7 @@ function App() {
           element={
             <Blog
               textBlog={spotify}
-              tittleBlog={"Inspiration"}
+              tittleBlog={"INSPIRATION"}
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
@@ -657,7 +657,7 @@ function App() {
           element={
             <Blog
               textBlog={textMusic}
-              tittleBlog={"Music"}
+              tittleBlog={"MUSIC"}
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
@@ -670,7 +670,7 @@ function App() {
           element={
             <Blog
               textBlog={textFilm}
-              tittleBlog={"Film Composition"}
+              tittleBlog={"FILM COMPOSITION"}
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
@@ -683,7 +683,7 @@ function App() {
           element={
             <Blog
               textBlog={visualArts}
-              tittleBlog={"Visual"}
+              tittleBlog={"MULTIMEDIA ART"}
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}

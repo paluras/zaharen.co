@@ -1,8 +1,10 @@
 import React from "react";
-import { useState, useEffect ,lazy, Suspense  } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import SlidingText from "./components/Sliding/SlidingText.component";
+import TickerTape from "./components/Sliding/SlidingText.component";
 
 function LandingPage({ crt, handleClickCRT }) {
   const [count, setCount] = useState(true);
@@ -13,7 +15,7 @@ function LandingPage({ crt, handleClickCRT }) {
   const [secondDisplay, setSecondDisplay] = useState("0");
   const [compenentOverflow, setComponentOverflow] = useState("hidden");
   const [shouldRender, setShouldRender] = useState(false);
-  const [one, setOne] = useState('0')
+  const [one, setOne] = useState("0");
 
   useEffect(() => {
     const hasRendered = sessionStorage.getItem("hasRendered");
@@ -21,10 +23,9 @@ function LandingPage({ crt, handleClickCRT }) {
       // Set the flag to indicate that the content has been rendered
       sessionStorage.setItem("hasRendered", "true");
       setShouldRender(true);
-     
     }
-    if (hasRendered){
-      setOne("1")
+    if (hasRendered) {
+      setOne("1");
     }
   }, []);
 
@@ -50,7 +51,7 @@ function LandingPage({ crt, handleClickCRT }) {
     setCount(count);
     count ? setStart("tv-main-2") : setStart("tv-main");
     count ? setMainPage("page-main") : setStart("page");
-    count ? setOne("1") : setOne("0")
+    count ? setOne("1") : setOne("0");
     setClicked(true);
   }
 
@@ -60,11 +61,22 @@ function LandingPage({ crt, handleClickCRT }) {
     setSelectedButton(buttonName);
   };
 
+  const newsList = [
+    'Breaking News 1',
+    'Breaking News 2',
+    'Breaking News 3',
+  ];
+
   return (
     <div className="App">
       {shouldRender && (
         <div style={{ display: `${displays}` }} className="img-container">
-          <img onClick={handleClick} className={start} src="/tv.png" alt="tv landing page"></img>
+          <img
+            onClick={handleClick}
+            className={start}
+            src="/tv.png"
+            alt="tv landing page"
+          ></img>
         </div>
       )}
       <div className="white"></div>
@@ -76,152 +88,157 @@ function LandingPage({ crt, handleClickCRT }) {
           <main className={`main ${crt}`}>
             <Nav handleClickCRT={handleClickCRT} number={100} />
             <div className="for-fix">
-            <img
-              className="logo"
-              src="/Zaharenco-logo.png"
-              alt="logo-zaharenco"
-            />
+              <img
+                className="logo"
+                src="/Zaharenco-logo.png"
+                alt="logo-zaharenco"
+              />
 
-            <div className="container">
-              <div className="container-left">
-                <ul>
-                  <li onClick={() => handleClickDisplay("Button 1")}>About</li>
-                  <li onClick={() => handleClickDisplay("Button 2")}>
-                    Portfolio
-                  </li>
-                  <li onClick={() => handleClickDisplay("Button 3")}>Band</li>
-                  <li onClick={() => handleClickDisplay("Button 4")}>
-                    Horoscop
-                  </li>
-                </ul>
+              <div className="container">
+                <div className="container-left">
+                  <ul>
+                    <li onClick={() => handleClickDisplay("Button 1")}>
+                      ABOUT
+                    </li>
+                    <li onClick={() => handleClickDisplay("Button 2")}>
+                      PORTFOLIO
+                    </li>
+                    <li onClick={() => handleClickDisplay("Button 3")}>BAND</li>
+                    <li onClick={() => handleClickDisplay("Button 4")}>
+                      HOROSCOP
+                    </li>
+                  </ul>
+                </div>
+                <div className="container-right">
+                  {selectedButton === "Button 1" && (
+                    <div className="table">
+                      <Link to="/bio">
+                        <div className="row">
+                          <div className="title">BIO</div>
+                          <div className="dots"></div>
+                          <div className="value">245</div>
+                        </div>
+                      </Link>
+                      <Link to="/photos">
+                        {" "}
+                        <div className="row">
+                          <div className="title">PHOTOS</div>
+                          <div className="dots"></div>
+                          <div className="value">254</div>
+                        </div>
+                      </Link>
+                      <Link to="/inspiration">
+                        <div className="row">
+                          <div className="title">INSPIRATION</div>
+                          <div className="dots"></div>
+                          <div className="value">222</div>
+                        </div>
+                      </Link>
+                      <Link to="/contacts">
+                        {" "}
+                        <div className="row">
+                          <div className="title">CONTACTS</div>
+                          <div className="dots"></div>
+                          <div className="value">745</div>
+                        </div>
+                      </Link>
+                    </div>
+                  )}
+                  {selectedButton === "Button 2" && (
+                    <div className="table">
+                      <Link to="/music">
+                        {" "}
+                        <div className="row">
+                          <div className="title">MUSIC</div>
+                          <div className="dots"></div>
+                          <div className="value">124</div>
+                        </div>
+                      </Link>
+                      <Link to="/film">
+                        {" "}
+                        <div className="row">
+                          <div className="title">FILM COMPOSITION</div>
+                          <div className="dots"></div>
+                          <div className="value">135</div>
+                        </div>
+                      </Link>
+                      <Link to="/visual">
+                        <div className="row">
+                          <div className="title">MULTIMEDIA ART</div>
+                          <div className="dots"></div>
+                          <div className="value">412</div>
+                        </div>
+                      </Link>
+                      <Link to="/mixing">
+                        {" "}
+                        <div className="row">
+                          <div className="title">MIXING</div>
+                          <div className="dots"></div>
+                          <div className="value">765</div>
+                        </div>
+                      </Link>
+                    </div>
+                  )}
+                  {selectedButton === "Button 3" && (
+                    <div className="table">
+                      <Link to="/about-music">
+                        <div className="row">
+                          <div className="title">ABOUT</div>
+                          <div className="dots"></div>
+                          <div className="value">245</div>
+                        </div>
+                      </Link>
+                      <Link to="/events">
+                        {" "}
+                        <div className="row">
+                          <div className="title">EVENT</div>
+                          <div className="dots"></div>
+                          <div className="value">254</div>
+                        </div>
+                      </Link>
+                      <Link to="/music-media">
+                        {" "}
+                        <div className="row">
+                          <div className="title">MEDIA</div>
+                          <div className="dots"></div>
+                          <div className="value">222</div>
+                        </div>
+                      </Link>
+                    </div>
+                  )}
+                  {selectedButton === "Button 4" && (
+                    <div className="table">
+                      <div className="row">
+                        <div className="title">HOROSCOP</div>
+                        <div className="dots"></div>
+                        <div className="value">111</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="container-right">
-                {selectedButton === "Button 1" && (
-                  <div className="table">
-                     <Link to="/bio"><div className="row">
-                      <div className="title">
-                        Bio
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">245</div>
-                    </div>
-                    </Link>
-                    <Link to="/photos"> <div className="row">
-                    
-                      <div className="title">
-                        Photos
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">254</div>
-                    </div>
-                    </Link>
-                    <Link to="/inspiration"><div className="row">
-                      <div className="title">
-                        Inspiration
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">222</div>
-                    </div></Link>
-                    <Link to="/contacts"> <div className="row">
-                      <div className="title">
-                         Contacts
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">745</div>
-                    </div>
-                    </Link>
-                  </div>
-                )}
-                {selectedButton === "Button 2" && (
-                  <div className="table">
-                    <Link to="/music"> <div className="row">
-                      <div className="title">
-                       Music
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">124</div>
-                    </div></Link>
-                    <Link to="/film"> <div className="row">
-                      <div className="title">
-                       Film
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">135</div>
-                    </div></Link>
-                    <Link to="/visual"><div className="row">
-                      <div className="title">
-                        Multimedia
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">412</div>
-                    </div></Link>
-                    <Link to="/mixing"> <div className="row">
-                      <div className="title">
-                       Mixing
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">765</div>
-                    </div></Link>
-                  </div>
-                )}
-                {selectedButton === "Button 3" && (
-                  <div className="table">
-                    <Link to="/about-music"><div className="row">
-                      <div className="title">
-                        About
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">245</div>
-                    </div></Link>
-                    <Link to="/events"> <div className="row">
-                      <div className="title">
-                        Event
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">254</div>
-                    </div></Link>
-                    <Link to="/music-media"> <div className="row">
-                      <div className="title">
-                        Media
-                      </div>
-                      <div className="dots"></div>
-                      <div className="value">222</div>
-                    </div></Link>
-                  </div>
-                )}
-                {selectedButton === "Button 4" && (
-                  <div className="table">
-                    <div className="row">
-                      <div className="title">Horoscop</div>
-                      <div className="dots"></div>
-                      <div className="value">111</div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-            
-            <div className="container-lower">
-              <p>
-                Zaharenco is a jazz quartet whose music aims to explore the New
-                Jazz scene by fusing jazz with classical and rock influences. He
-                submits his works to the issue of musical predictability,
-                seeking a balance between predictability and uncertainty, and
-                thus managing to reach a wide range of emotions.
-              </p>
-              <div className="colored-box">
+
+              <div className="container-lower">
                 <p>
-                  Primordial feelings, his first EP, is an exposition of the 2
-                  main topics addressed: the impulsive being and the
-                  ever-changing sentimental self.
-                </p>
+                  Experience the artistic realm of Alexandru Zaharencu. Discover
+                  his captivating music, compelling compositions, and
+                  mesmerizing multimedia creations.</p><p> From jazz to contemporary,
+                  film scores to interactive installations, his diverse talent
+                  knows no boundaries. </p><p> Welcome to a world where imagination and
+                  innovation intertwine.
+                  </p>
+               
+                <div className="colored-box">
+                 
+                 
+                    <TickerTape />
+                </div>
+                <div className="line-border">
+                  <div className="line"></div>
+                  <p>www.zaharen.co</p>
+                  <div className="line"></div>
+                </div>
               </div>
-              <div className="line-border">
-                <div className="line"></div>
-                <p>www.zaharen.co</p>
-                <div className="line"></div>
-              </div>
-            </div>
             </div>
             <Footer />
             <div className="place-ex"></div>
