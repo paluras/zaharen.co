@@ -569,18 +569,13 @@ function App() {
           onClose={() => setSelectedImg(null)}
         />
       )}
-      <video width="300" height="300" controls>
-        <source
-          src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/video.webm"
-          alt=""
-        />
-      </video>
+      <iframe src="https://drive.google.com/file/d/1xX09-kh43imFjhgSbo-AKIT4WblZxf3j/preview" width="300" height="300" allow="autoplay" allowFullScreen="true"></iframe>
     </div>
   );
 
   const mediaVisual2 = (
     <div className="media">
-      <iframe src="https://player.vimeo.com/video/845232406?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="300" height="300" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Video2"></iframe>
+      <iframe src="https://drive.google.com/file/d/13NV2jJlOil6nXbTYbrRxIkwCNcCKqe3J/preview" width="300" height="300" allow="autoplay" allowFullScreen="true"></iframe>
       {img.pageThree.map((image) => (
         <img
           key={image.src}
@@ -596,14 +591,9 @@ function App() {
           onClose={() => setSelectedImg(null)}
         />
       )}
-      <video width="300" height="300" controls>
-        <source
-          src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project2/vidp3.webm"
-          alt="video visual project"
-        />
-      </video>
-      <iframe src="https://player.vimeo.com/video/844924416?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="300" height="300" frameborder="1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="tvCreation"></iframe>
      
+      <iframe src="https://player.vimeo.com/video/844924416?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="300" height="300" frameborder="1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="tvCreation"></iframe>
+      <iframe src="https://drive.google.com/file/d/10ToXdjlc2ELm6Z17Tma9qhyXcg3luGhg/preview" width="300" height="300" allow="autoplay" allowFullScreen="true"></iframe>
     </div>
   );
 
