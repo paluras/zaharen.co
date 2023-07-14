@@ -7,32 +7,59 @@ import img from "../img.json";
 import Modal from "./components/Modal";
 import SongPlayer from "./components/Player";
 import VideoModal from "./components/VideoModal";
+import Horoscope from "./components/HoroscopText";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
-  const [show, setShow] = useState("0px");
-  const [show2, setShow2] = useState("0px");
+  const [show, setShow] = useState("96px");
+  const [show2, setShow2] = useState("144px");
+  const [show3, setShow3] = useState("144px");
   const [crt, setCrt] = useState("");
   const [stateCrt, setStateCrt] = useState(false);
-  const [popupState, setpopupState] = useState(false);
-  const [popupState2, setpopupState2] = useState(false);
-
+  const [popupState, setpopupState] = useState(true);
+  const [popupState2, setpopupState2] = useState(true);
+  const [popupState3, setpopupState3] = useState(true);
+  const [words, setWords] = useState(["Film Composition", "Multimedia Art"])
+  useEffect(() =>{
+    const handleResize = ()=>{
+      if(window.innerWidth < 670){
+        setWords(["Film","Multi Media"])
+      }else{
+        setWords(["Film Composition", "Multimedia Art"])
+      }
+    }
+    handleResize()
+    window.addEventListener("resize",handleResize)
+    return()=>{
+      window.removeEventListener("resize",handleResize)
+    }
+  }, [])
   function handleClickCRT() {
     setStateCrt(!stateCrt);
     stateCrt ? setCrt("crt") : setCrt("");
   }
   function handlePopUp() {
     setpopupState(!popupState);
-    if (show === "0px") setShow("17vh");
+    /// 96px cause the initioal font is 28px x  amount of items plus 20(gap) x amount of items
+    if (show === "0px") setShow("96px");
     else {
       setShow("0px");
     }
   }
   function handlePopUp2() {
     setpopupState2(!popupState2);
-    if (show2 === "0px") setShow2("23vh");
+    
+    if (show2 === "0px") setShow2("144px");
     else {
       setShow2("0px");
+    }
+  }
+  function handlePopUp3() {
+    
+    setpopupState3(!popupState3)
+    if (show3 === "0px") setShow3("144px");
+    else {
+      setShow3("0px");
     }
   }
 
@@ -43,7 +70,7 @@ function App() {
   let link = (
     <img
       className="icon link"
-      width={"32px"}
+      width={"28px"}
       src="/icons/link.svg"
       alt="link"
     />
@@ -68,12 +95,49 @@ function App() {
 
   const textMusic = (
     <div className="text-music song">
+         <div className="allthecacat">
+        <div className="container-player">
+          <img
+            className="icon"
+            onClick={handlePopUp3}
+            src={popupState3 ? "/icons/up.svg" : "/icons/down.svg"}
+            alt=""
+          />
+          <div onClick={handlePopUp3} className="test">
+            Iona - ballet for one dancer (2023)
+          </div>
+         
+        </div>
+        <div style={{ height: `${show3}` }} className="drop-down-album">
+          <div>
+            <SongPlayer
+              song={"Audio/iona1.mp3"}
+              text={"Iona - Scene I"}
+              keys={"7"}
+            />
+          </div>
+          <div>
+            <SongPlayer
+              song={"/Audio/iona2.mp3"}
+              text={"Iona - Scene II"}
+              keys={"8"}
+            />
+          </div>
+          <div>
+            <SongPlayer
+              song={"/Audio/iona3.mp3"}
+              text={"Iona - Scene III"}
+              keys={"8"}
+            />
+          </div>
+        </div>
+      </div>
       <div>
         <SongPlayer
           song={"Audio/Sonata no.1.mp3"}
           text={"Piano Sonata No.1 (2022)"}
           iconLink={iconLink[0]}
-          key={6}
+          keys={"6"}
         />
       </div>
       <div className="allthecacat">
@@ -99,14 +163,14 @@ function App() {
             <SongPlayer
               song={"Audio/Primordial feelings.mp3"}
               text={"Primordial Feelings"}
-              key={7}
+              keys={"7"}
             />
           </div>
           <div>
             <SongPlayer
               song={"/Audio/Cold feet.mp3"}
               text={"Cold Feet"}
-              key={8}
+              keys={"8"}
             />
           </div>
         </div>
@@ -157,7 +221,7 @@ function App() {
   );
 
   const textFilm = (
-    <div className="text-music song">
+    <div className="text-music film">
       <div>
         <SongPlayer
           song={"/film-music/Punguista music.mp3"}
@@ -212,6 +276,17 @@ function App() {
   );
   const textMix = (
     <div className="text-mix">
+      <div className="odd">
+        <div></div>
+        <div>
+          <span>Sound Design</span> <br></br> Little light (2023)<br></br> dr. Mara Bugarin
+        </div>
+        <div></div>
+        <div>
+         
+        </div>
+        <div></div>
+      </div>
       <div className="even">
         <div>
           <span>Mixing Engineer</span> <br></br> L'elisir d'amore (2023)
@@ -244,7 +319,19 @@ function App() {
         </div>
         <div></div>
         <div>
-          <span>Mixing Engineer</span> <br></br> Isabelle (2021)<br></br> dr.
+        <a
+            className="mix-flex"
+            target="_blank"
+            href="https://www.imdb.com/title/tt13333354/?ref_=nm_knf_t_2 "
+          >
+            <span>Mixing Engineer</span>
+            <img
+              className="icon"
+              width="24px"
+              src="/icons/link.svg"
+              alt="link icon"
+            />{" "}
+          </a>{" "} Isabelle (2021)<br></br> dr.
           Cristian Nicolae
         </div>
       </div>
@@ -298,11 +385,39 @@ function App() {
     </div>
   );
 
-  const bioText = `Alexandru Zaharencu is a musician, composer, and multimedia artist. His music is distinguished by a dramatic component, a balance of predictability and honesty, and an approach to various genres ranging from jazz to contemporary music, film music, or sound design.
-  He was born in Tulcea, Romania, in 1998, and spent 12 years there studying classical piano performance. He continued his education at the National University of Music in Bucharest, where he earned bachelor's degrees in jazz-pop composition under Andrei Tudor and a master's in modern composition under Diana Rotaru.
-  As a composer, he has worked on numerous film and theater music projects, as well as advertising and choreographic projects. He additionally exhibited interactive installations such as Primordial feelings, an audio-visual installation based on the conversion of cathode ray tube TVs into oscilloscopes, which was shown at the Diploma 2021 festival, and Catoptro-tono v.1, which is based on catoptrophobia, the fear of mirrors, which was presented at arca.expo 1.3. In addition to his artistic work, he has worked as an audio engineer for music and film sound, as well as a sound designer or foley artist. Since 2021, he has been leading his fusion band Zaharenco, which combines jazz, classical architecture, and rock influences.
-  `;
-
+  const bioText = (
+    <>
+      {" "}
+      <p>
+        Alexandru Zaharencu is a musician, composer, and multimedia artist. His
+        music is distinguished by a dramatic component, a balance of
+        predictability and honesty, and an approach to various genres ranging
+        from jazz to contemporary music, film music, or sound design.
+      </p>
+      <p>
+        {" "}
+        He was born in Tulcea, Romania, in 1998, and spent 12 years there
+        studying classical piano performance. He continued his education at the
+        National University of Music in Bucharest, where he earned bachelor's
+        degrees in jazz-pop composition under Andrei Tudor and a master's in
+        modern composition under Diana Rotaru.
+      </p>
+      <p>
+        {" "}
+        As a composer, he has worked on numerous film and theater music
+        projects, as well as advertising and choreographic projects. He
+        additionally exhibited interactive installations such as Primordial
+        feelings, an audio-visual installation based on the conversion of
+        cathode ray tube TVs into oscilloscopes, which was shown at the Diploma
+        2021 festival, and Catoptro-tono v.1, which is based on catoptrophobia,
+        the fear of mirrors, which was presented at arca.expo 1.3.</p><p> In addition
+        to his artistic work, he has worked as an audio engineer for music and
+        film sound, as well as a sound designer or foley artist. Since 2021, he
+        has been leading his fusion band Zaharenco, which combines jazz,
+        classical architecture, and rock influences.
+      </p>
+    </>
+  );
   const visualArts = (
     <div className="visual-art">
       <div className="visual-container">
@@ -315,14 +430,15 @@ function App() {
             alt="link icon"
           />
         </Link>
+        <p>
         The catoptrophobia, or fear of mirrors, is the core of this
         installation. Through this work, I want to investigate the idea of sound
         self-mirroring based on motion tracking and the premise of gradually
         distorting one's perception of oneself and expressing it through sound
-        alterations. My project collaborator was Python engineer Teo Milea. We
+        alterations.</p><p> My project collaborator was Python engineer Teo Milea. We
         used Ableton in conjunction with a trained artificial intelligence to
         produce the sound motion tracking. This works was part of the arca.expo
-        1.3 exhibition.
+        1.3 exhibition.</p>
       </div>
       <div className="visual-container">
         <Link to="visual2">
@@ -347,7 +463,16 @@ function App() {
 
   const spotify = (
     <div className="inspo-section">
-   <iframe style={{borderRadius:"12px"}} src="https://open.spotify.com/embed/playlist/7bMNLNMcOXNeZR48vBuPHT?utm_source=generator" width="100%" height="352" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe
+        style={{ borderRadius: "12px" }}
+        src="https://open.spotify.com/embed/playlist/7bMNLNMcOXNeZR48vBuPHT?utm_source=generator"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        allowFullScreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
     </div>
   );
 
@@ -374,12 +499,14 @@ function App() {
   const aboutMusic = (
     <div className="page-band">
       <div>
-        <div>
+        <div className="container-lower">
+          <p>
           Zaharenco is a jazz quartet whose music aims to explore the New Jazz
-          scene by fusing jazz with classical and rock influences. He submits
+          scene by fusing jazz with classical and rock influences.</p><p> He submits
           his works to the issue of musical predictability, seeking a balance
           between predictability and uncertainty, and thus managing to reach a
           wide range of emotions.
+          </p><p>
           <a
             style={{ color: "#ff68b4" }}
             target="_blank"
@@ -390,10 +517,11 @@ function App() {
           </a>
           , his first EP, is an exposition of the 2 main topics addressed: the
           impulsive being and the ever-changing sentimental self.
+          </p>
         </div>
       </div>
 
-      <div className="media">
+      <div className="media band-photos">
         {img.pageBand.map((image) => (
           <img
             key={image.src}
@@ -451,6 +579,7 @@ function App() {
 
   const mediaVisual2 = (
     <div className="media">
+      <iframe src="https://player.vimeo.com/video/845232406?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="300" height="300" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Video2"></iframe>
       {img.pageThree.map((image) => (
         <img
           key={image.src}
@@ -468,22 +597,12 @@ function App() {
       )}
       <video width="300" height="300" controls>
         <source
-          src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project2/pVid1.webm"
-          alt="video project"
-        />
-      </video>
-      <video width="300" height="300" controls>
-        <source
-          src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project2/vidP2.webm"
-          alt="video visual project"
-        />
-      </video>
-      <video width="300" height="300" controls>
-        <source
           src="https://raw.githubusercontent.com/paluras/new/master/src/assets/project2/vidp3.webm"
           alt="video visual project"
         />
       </video>
+      <iframe src="https://player.vimeo.com/video/844924416?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="300" height="300" frameborder="1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="tvCreation"></iframe>
+     
     </div>
   );
 
@@ -504,15 +623,7 @@ function App() {
           onClose={() => setSelectedImg(null)}
         />
       )}
-      <iframe
-        width="300"
-        height="300"
-        src="https://www.youtube.com/embed/oHCpuh29s5Q"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+      
       <iframe
         width="300"
         height="300"
@@ -573,22 +684,25 @@ function App() {
   );
 
   const navItems = [
-    { text: "Bio", url: "/bio", key: "1" },
-    { text: "Photos", url: "/photos", key: 2 },
-    { text: "Inspo", url: "/inspiration", key: 3 },
-    { text: "Contact", url: "/contacts", key: 4 },
+    { text: "Bio", url: "/bio", keys: "1" },
+    { text: "Photos", url: "/photos", keys: 2 },
+    { text: "Influences", url: "/inspiration", keys: 3 },
+    { text: "Contact", url: "/contacts", keys: 4 },
   ];
 
   const navItemsPort = [
-    { text: "Music", url: "/music", key: 5 },
-    { text: "Film Composition", url: "/film", key: 6 },
-    { text: "Multimedia Art", url: "/visual", key: 7 },
-    { text: "Mixing", url: "/mixing", key: 8 },
+    { text: "Music", url: "/music", keys: 5 },
+    { text: `${words[0]}` ,  url: "/film", keys: 6 },
+    { text: `${words[1]}`, url: "/visual", keys: 7 },
+    { text: "Mixing", url: "/mixing", keys: 8 },
   ];
   const navItemsBand = [
-    { text: "Music", url: "/about-music", key: 9 },
-    { text: "Events", url: "/events", key: 10 },
-    { text: "Media", url: "/music-media", key: 11 },
+    { text: "Music", url: "/about-music", keys: 9 },
+    { text: "Events", url: "/events", keys: 10 },
+    { text: "Media", url: "/music-media", keys: 11 },
+  ];
+  const navItemsHoro = [
+    { text: "", url: "/horoscop", keys: 12 },
   ];
 
   return (
@@ -644,7 +758,7 @@ function App() {
           element={
             <Blog
               textBlog={spotify}
-              tittleBlog={"INSPIRATION"}
+              tittleBlog={"INFLUENCE"}
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
@@ -763,6 +877,19 @@ function App() {
               textBlog={bandMedia}
               tittleBlog={"Band Media"}
               navItems={navItemsBand}
+              crt={crt}
+              handleClickCRT={handleClickCRT}
+              number={222}
+            />
+          }
+        />
+         <Route
+          path="/horoscop"
+          element={
+            <Blog
+              textBlog={<Horoscope/>}
+              tittleBlog={"Horoscop"}
+              navItems={navItemsHoro}
               crt={crt}
               handleClickCRT={handleClickCRT}
               number={222}

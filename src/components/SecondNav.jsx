@@ -15,8 +15,8 @@ function NavSecond({ navItems }) {
   return (
     <div className="secondNav">
       {navItems.map((item, index) => (
-        <NavLink to={item.url} activeclassname="active">
-          <li key={item.key} className={index === activeIndex ? "active" : ""}>
+        <NavLink key={item.keys} to={item.url} activeclassname="active">
+          <li  className={index === activeIndex ? "active" : ""}>
             {item.text}
           </li>
         </NavLink>

@@ -47,7 +47,7 @@ function SongPlayer(props) {
   return (
     <div className="for-nothing">
       <div className="container-player">
-      <audio key={props.key} ref={audioRef} src={props.song} onTimeUpdate={handleTimeUpdate} />
+      <audio key={props.keys} ref={audioRef} src={props.song} onTimeUpdate={handleTimeUpdate} />
       <img  className="icon"
         src={isPlaying ? "/icons/stop.svg" : "/icons/play.svg"}
         alt={isPlaying ? "Stop" : "Play"}
