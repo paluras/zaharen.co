@@ -345,6 +345,7 @@ a:visited {
 .row {
   display: table;
   color: white;
+  padding: 2px;
 }
 .title,
 .dots,
@@ -780,6 +781,13 @@ video {
  
 }
 @media screen and (max-width: 530px){
+  
+ .row > .title , .value{
+  font-size: 1.25rem;
+ }
+ .dots{
+  border-bottom: 3px dotted rgb(255, 255, 255);
+ }
   .container-right {
    
     width: 48%;

@@ -11,9 +11,9 @@ import Horoscope from "./components/HoroscopText";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
-  const [show, setShow] = useState("96px");
-  const [show2, setShow2] = useState("144px");
-  const [show3, setShow3] = useState("144px");
+  const [show, setShow] = useState("116px");
+  const [show2, setShow2] = useState("174px");
+  const [show3, setShow3] = useState("174px");
   const [crt, setCrt] = useState("");
   const [stateCrt, setStateCrt] = useState(false);
   const [popupState, setpopupState] = useState(true);
@@ -41,7 +41,7 @@ function App() {
   function handlePopUp() {
     setpopupState(!popupState);
     /// 96px cause the initioal font is 28px x  amount of items plus 20(gap) x amount of items
-    if (show === "0px") setShow("96px");
+    if (show === "0px") setShow("116px");
     else {
       setShow("0px");
     }
@@ -49,7 +49,7 @@ function App() {
   function handlePopUp2() {
     setpopupState2(!popupState2);
     
-    if (show2 === "0px") setShow2("144px");
+    if (show2 === "0px") setShow2("174px");
     else {
       setShow2("0px");
     }
@@ -57,7 +57,7 @@ function App() {
   function handlePopUp3() {
     
     setpopupState3(!popupState3)
-    if (show3 === "0px") setShow3("144px");
+    if (show3 === "0px") setShow3("174px");
     else {
       setShow3("0px");
     }
@@ -114,6 +114,7 @@ function App() {
               song={"Audio/iona1.mp3"}
               text={"Iona - Scene I"}
               keys={"7"}
+             
             />
           </div>
           <div>

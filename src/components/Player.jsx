@@ -12,12 +12,15 @@ function SongPlayer(props) {
 
     if (isPlaying) {
       audio.pause();
+     
     } else {
       audio.play();
       setShowProgressBar(true);
+      
     }
 
     setIsPlaying(!isPlaying);
+   
   }
 
   function handleTimeUpdate() {
