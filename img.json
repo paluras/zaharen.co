@@ -21,7 +21,7 @@
 ,
 "pageThree":[  
     
-    {"src":"https://github.com/paluras/new/blob/master/src/assets/project2/Copy%20of%20IMG_4849.JPG?raw=true", "alt":"Poza cu proiect"},  
+    {"src":"/project123.jpg", "alt":"Poza cu proiect"},  
     {"src":"/TvIMG.JPG", "alt":"Poza cu proiect"},  
     {"src":"https://github.com/paluras/new/blob/master/src/assets/project2/Nush%20csz%20de%20asta%20Eu%20cu%20tv-uri.jpg?raw=true", "alt":"Poza cu mine"} 
 

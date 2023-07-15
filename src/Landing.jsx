@@ -145,7 +145,7 @@ function LandingPage({ crt, handleClickCRT }) {
                       </Link>
                       <Link to="/inspiration">
                         <div className="row">
-                          <div className="title">INFLUENCES</div>
+                          <div className="title">INSPIRATION</div>
                           <div className="dots"></div>
                           <div className="value">222</div>
                         </div>

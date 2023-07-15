@@ -1,8 +1,7 @@
-:root{
-  
-  --font-size-main:1.75rem;
-  --font-size-big:2.25rem;
-  --font-size-bigger:4rem;
+:root {
+  --font-size-main: 1.75rem;
+  --font-size-big: 2.25rem;
+  --font-size-bigger: 4rem;
 }
 
 /* 
@@ -17,58 +16,47 @@
     ffffff 7 white
 */
 @font-face {
-  font-family: 'european_teletextregular';
-  src: url('/font/europeanteletext-webfont.woff2') format('woff2'),
-       url('/font/europeanteletext-webfont.woff') format('woff');
+  font-family: "european_teletextregular";
+  src: url("/font/europeanteletext-webfont.woff2") format("woff2"),
+    url("/font/europeanteletext-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   letter-spacing: 0px;
-
 }
-
-
-
 
 @font-face {
-  font-family: 'european_teletextregular';
-  src: url('/font/europeanteletext-webfont.woff2') format('woff2'),
-       url('/font/europeanteletext-webfont.woff') format('woff');
+  font-family: "european_teletextregular";
+  src: url("/font/europeanteletext-webfont.woff2") format("woff2"),
+    url("/font/europeanteletext-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   letter-spacing: 0px;
-
 }
 @font-face {
-  font-family: 'modesevenregular';
-  src: url('/font2/mode7gx3-webfont.woff2') format('woff2'),
-       url('/font2/mode7gx3-webfont.woff') format('woff');
+  font-family: "modesevenregular";
+  src: url("/font2/mode7gx3-webfont.woff2") format("woff2"),
+    url("/font2/mode7gx3-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   letter-spacing: 0px;
-
 }
 @font-face {
-  font-family: 'Tele2';
-  src: url('/font2/mode7gx0-webfont.woff2') format('woff2'),
-       url('/font2/mode7gx0-webfont.woff') format('woff');
+  font-family: "Tele2";
+  src: url("/font2/mode7gx0-webfont.woff2") format("woff2"),
+    url("/font2/mode7gx0-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   letter-spacing: 0px;
-
 }
-
-
 
 * {
-  font-family: "Tele2","modesevenregular", monospace, sans-serif;
+  font-family: "Tele2", "modesevenregular", monospace, sans-serif;
   padding: 0;
   margin: 0;
   border: 0;
   font-smooth: never;
   -webkit-font-smoothing: none;
- 
 }
-
 
 *::-webkit-scrollbar {
   width: 0;
@@ -209,7 +197,7 @@ li {
   background-color: #ffff00;
   width: 50%;
   padding-left: 20px;
-  font-size:var(--font-size-big)
+  font-size: var(--font-size-big);
 }
 
 .container-right {
@@ -218,7 +206,7 @@ li {
   font-size: var(--font-size-main);
   position: absolute;
   right: 0px;
-  
+
   color: white;
   background-color: #0000ff;
   margin: auto;
@@ -234,7 +222,7 @@ li {
 .container-lower {
   display: flex;
   flex-direction: column;
-  
+
   color: white;
   font-size: var(--font-size-main);
 }
@@ -242,10 +230,8 @@ li {
   margin-bottom: 20px;
 }
 
-
 .colored-box {
   background-color: #ff0000;
-  
 }
 .line-border {
   display: flex;
@@ -294,7 +280,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #00ff00 ;
+  color: #00ff00;
 }
 .contact > a > p {
   color: #00ff00;
@@ -316,7 +302,7 @@ footer {
 .yellow {
   height: 20px;
   width: 20px;
-  background-color:#ffff00;
+  background-color: #ffff00;
 }
 .sport {
   display: flex;
@@ -376,14 +362,15 @@ a:visited {
 }
 .container-para {
   color: rgb(255, 255, 255);
-  font-size: var(--font-size-main)
+  font-size: var(--font-size-main);
 }
-.container-para > .text > p,.event{
+.container-para > .text > p,
+.event {
   margin-bottom: 20px;
 }
 .container-para > .title > a {
   color: #ff68b4;
-  font-size: var(--font-size-main)
+  font-size: var(--font-size-main);
 }
 .main-blogs > nav > p {
   color: rgb(255, 255, 255);
@@ -476,7 +463,6 @@ iframe {
   display: flex;
 }
 
-
 .contact-text > div > a {
   color: white;
   display: flex;
@@ -545,7 +531,7 @@ video {
     brightness(132%) contrast(109%);
   background-color: transparent;
   width: 24px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .text-music > div {
@@ -566,7 +552,6 @@ video {
   place-self: center;
 }
 
-
 .text-mix > div > div > div > span,
 .text-mix > div > div > a {
   color: #ff68b4;
@@ -580,9 +565,8 @@ video {
 .container-player {
   display: flex;
   align-items: center;
- 
 }
-.container-player > a{
+.container-player > a {
   height: 28px;
 }
 .container-player > div > div {
@@ -609,10 +593,9 @@ video {
   gap: 20px;
   transition: 1s ease;
   overflow: hidden;
-  
 }
 
-.drop-down-album > div:first-child{
+.drop-down-album > div:first-child {
   padding-top: 20px;
 }
 
@@ -620,7 +603,6 @@ video {
   flex-direction: column;
   align-items: start;
 }
-
 
 .video-film-modal {
   margin: auto 0;
@@ -636,35 +618,45 @@ video {
   align-items: center;
   justify-content: center;
 }
-.for-fix{
+.for-fix {
   display: flex;
   flex-direction: column;
-  gap:30px
+  gap: 30px;
 }
 
-.test{
+.test {
   height: 28px;
   display: flex;
   align-items: center;
 }
 
-.text-music.film >div>.for-nothing>.container-player> .test{
+.text-music.film > div > .for-nothing > .container-player > .test {
   height: auto;
 }
 
-.media.band-photos{
+.media.band-photos {
   grid-template-columns: repeat(2, 300px);
-  padding:20px 0px;
+  padding: 20px 0px;
 }
-.gpt{
-  
+.gpt {
   display: flex;
   justify-content: end;
 }
-
+.text-music.song > div:nth-child(6) {
+  padding-bottom: 20px;
+}
+.text-music.film > div:nth-child(9) {
+  padding-bottom: 20px;
+}
 
 @media screen and (max-width: 768px) {
-  .media.band-photos{
+  .text-music.film>div>.for-nothing> .progress-bar{
+    position: relative;
+  }
+  .text-music.film>div>.for-nothing {
+    position: inherit;
+  }
+  .media.band-photos {
     grid-template-columns: repeat(auto-fill, 300px);
   }
   .for-nothing {
@@ -776,26 +768,22 @@ video {
     margin-left: 28px;
   }
 
-  .container-tittle{
+  .container-tittle {
     font-size: 3rem;
   }
-  
- 
 }
-@media screen and (max-width: 530px){
-  
- .row > .title , .value{
-  font-size: 1.25rem;
- }
- .dots{
-  border-bottom: 3px dotted rgb(255, 255, 255);
- }
-  .container-right {
-   
-    width: 48%;
-   
+@media screen and (max-width: 530px) {
+  .row > .title,
+  .value {
+    font-size: 1.25rem;
   }
-  footer > div >a> p {
+  .dots {
+    border-bottom: 3px dotted rgb(255, 255, 255);
+  }
+  .container-right {
+    width: 45%;
+  }
+  footer > div > a > p {
     font-size: 1.25rem;
   }
   nav > p {
@@ -803,19 +791,30 @@ video {
   }
 
   .container-left > ul > li {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 425px) {
   nav > p {
     font-size: 1rem;
   }
-
+  p {
+    font-size: 1.25rem;
+  }
   .text {
     font-size: 1.25rem;
   }
+  
+  .the-main-content {
+    width: 95%;
+    margin: 0 auto;
+  }
 
-  footer > div >a> p {
+  .text-music.song > div:nth-child(2) {
+    height: 46px;
+  }
+
+  footer > div > a > p {
     font-size: 1.25rem;
   }
   footer,
@@ -847,22 +846,22 @@ video {
   }
   .container-left > ul {
     padding-left: 10px;
-    
   }
-  .container-left > ul > li{
+  .container-left > ul > li {
     font-size: 1.5rem;
   }
-.row > .title{
-  font-size: 1.25rem;
-}
-  .container-right >.title ,.value{
+  .row > .title {
+    font-size: 1.25rem;
+  }
+  .container-right > .title,
+  .value {
     font-size: 1rem;
   }
   .container-right {
     position: static;
     width: 50%;
     padding: 0;
-    
+    min-height: 116px;
   }
   .main {
     width: 100%;
@@ -870,12 +869,12 @@ video {
   .main-blogs {
     width: 100%;
   }
- 
+
   .colored-box {
     padding: 0px;
   }
   .secondNav > a {
-    border-right: 0px;
+    border-right: 2px solid black;
   }
   .secondNav > a > li {
     font-size: 1.5rem;
@@ -883,37 +882,34 @@ video {
   .box {
     display: none;
   }
-  .container-lower{
+  .container-lower {
     display: flex;
     justify-content: center;
-   
   }
   .container-lower > p {
     margin: auto;
     width: 95%;
     font-size: 1.25rem;
     margin-bottom: 10px;
-    
-    
-    
   }
-  .colored-box > p{
+  .colored-box > p {
     margin: auto;
     width: 95%;
     font-size: 1.25rem;
-    
-    
   }
-  .for-fix{
+  .for-fix {
     display: flex;
     flex-direction: column;
-    gap:8px
+    gap: 8px;
   }
   .logo {
     width: 100vw;
   }
-  .dots{
+  .dots {
     border-bottom: 3px dotted rgb(255, 255, 255);
+  }
+  .visual-container > a {
+    font-size: 1.5rem;
   }
 }
 
@@ -1104,5 +1100,3 @@ video {
 .crt {
   animation: textShadow 1.6s infinite;
 }
-
-

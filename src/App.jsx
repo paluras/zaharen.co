@@ -677,7 +677,7 @@ function App() {
   const navItems = [
     { text: "Bio", url: "/bio", keys: "1" },
     { text: "Photos", url: "/photos", keys: 2 },
-    { text: "Influences", url: "/inspiration", keys: 3 },
+    { text: "Inspo", url: "/inspiration", keys: 3 },
     { text: "Contact", url: "/contacts", keys: 4 },
   ];
 
@@ -749,7 +749,7 @@ function App() {
           element={
             <Blog
               textBlog={spotify}
-              tittleBlog={"INFLUENCE"}
+              tittleBlog={"INSPIRATION"}
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
