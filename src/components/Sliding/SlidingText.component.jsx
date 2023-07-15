@@ -7,7 +7,7 @@ const TickerTape = () => {
   
     useEffect(() => {
       const tickerContentWidth = tickerContentRef.current.offsetWidth;
-      const animationDuration = tickerContentWidth / 70; // Adjust the divisor to control the scrolling speed
+      const animationDuration = tickerContentWidth / 40; // Adjust the divisor to control the scrolling speed
       tickerContentRef.current.style.animationDuration = `${animationDuration}s`;
     }, []);
   return (
