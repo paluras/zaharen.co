@@ -610,10 +610,9 @@ video {
   margin-left: 24px;
   
   
-    display: grid;
-    grid-template-columns: 1fr 24px;
-    width: auto;
-    word-wrap: break-word;
+  display: flex;
+ 
+  align-items: center;
    
 }
 
@@ -627,11 +626,9 @@ video {
 .test {
   
   display: flex;
-  align-items: center;
   
+  align-items: center;
 }
-
-
 
 .inspo-section{
   height: 70vh;
