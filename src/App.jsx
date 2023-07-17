@@ -37,6 +37,7 @@ function App() {
   function handleClickCRT() {
     setStateCrt(!stateCrt);
     stateCrt ? setCrt("crt") : setCrt("");
+    
   }
   function handlePopUp() {
     setpopupState(!popupState);
@@ -108,11 +109,11 @@ function App() {
           </div>
          
         </div>
-        <div style={{ height: `${show3}` }} className="drop-down-album">
+        <div style={{ maxHeight: `${show3}` }} className="drop-down-album">
           <div>
             <SongPlayer
               song={"Audio/iona1.mp3"}
-              text={"Iona - Scene I"}
+              text={"Scene I"}
               keys={"7"}
              
             />
@@ -120,14 +121,14 @@ function App() {
           <div>
             <SongPlayer
               song={"/Audio/iona2.mp3"}
-              text={"Iona - Scene II"}
+              text={"Scene II"}
               keys={"8"}
             />
           </div>
           <div>
             <SongPlayer
               song={"/Audio/iona3.mp3"}
-              text={"Iona - Scene III"}
+              text={"Scene III"}
               keys={"8"}
             />
           </div>
@@ -159,7 +160,7 @@ function App() {
             {link}
           </a>
         </div>
-        <div style={{ height: `${show}` }} className="drop-down-album">
+        <div style={{ maxHeight: `${show}` }} className="drop-down-album">
           <div>
             <SongPlayer
               song={"Audio/Primordial feelings.mp3"}
@@ -192,13 +193,13 @@ function App() {
             alt=""
           />
           <div onClick={handlePopUp2} className="test">
-            Conditions(2021)
+            Conditions (2021)
           </div>
           <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
             {link}
           </a>
         </div>
-        <div style={{ height: `${show2}` }} className="drop-down-album">
+        <div style={{ maxHeight: `${show2}` }} className="drop-down-album">
           <div>
             <SongPlayer song={"Audio/condition 1.mp3"} text={"Conditions 1"} />
           </div>
@@ -279,7 +280,7 @@ function App() {
     <div className="text-mix">
       <div className="odd">
         <div></div>
-        <div>
+        <div className="good">
           <span>Sound Design</span> <br></br> Little light (2023)<br></br> dr. Mara Bugarin
         </div>
         <div></div>
@@ -289,12 +290,12 @@ function App() {
         <div></div>
       </div>
       <div className="even">
-        <div>
+        <div className="good">
           <span>Mixing Engineer</span> <br></br> L'elisir d'amore (2023)
           <br></br>dr. Cristian Mihailescu
         </div>
         <div></div>
-        <div>
+        <div className="good">
           <span>Sound Design</span> <br></br> Good, Evil and the Sun (2023){" "}
           <br></br> dr. Yutaro Keino
         </div>
@@ -302,24 +303,24 @@ function App() {
       </div>
       <div className="odd">
         <div></div>
-        <div>
+        <div className="good">
           <span>Sound Design</span> <br></br> Punguista (2022) <br></br> dr.
           Yutaro Keino
         </div>
         <div></div>
-        <div>
+        <div className="good">
           <span>Recording Engineer</span> <br></br> The Spell(2022) <br></br>{" "}
           Alice Sonia Michael
         </div>
         <div></div>
       </div>
       <div className="even">
-        <div>
+        <div className="good">
           <span>Recording Engineer</span> <br></br>Istehlal LP (2022)
           <br></br> Mohamad Zatari Trio
         </div>
         <div></div>
-        <div>
+        <div className="good">
         <a
             className="mix-flex"
             target="_blank"
@@ -332,18 +333,18 @@ function App() {
               src="/icons/link.svg"
               alt="link icon"
             />{" "}
-          </a>{" "} Isabelle (2021)<br></br> dr.
+          </a>{" "} <p style={{marginBottom:"0px"}}>Isabelle (2021)</p> dr.
           Cristian Nicolae
         </div>
       </div>
       <div className="odd">
         <div></div>
-        <div>
+        <div className="good">
           <span>Recording Engineer</span> <br></br>Sailor (2021) <br></br> Fine
           It’s Pink
         </div>
         <div></div>
-        <div>
+        <div className="good">
           <a
             className="mix-flex"
             target="_blank"
@@ -357,16 +358,16 @@ function App() {
               alt="link icon"
             />{" "}
           </a>{" "}
-          Live Concert (2020) <br /> Mohamad Zatari Trio
+          <p>Live Concert (2020)</p>  Mohamad Zatari Trio
         </div>
       </div>
       <div className="even">
-        <div>
+        <div className="good">
           <span>Recording Engineer </span>
           <br /> Love Create Inspire (2020) <br></br>Urma{" "}
         </div>
         <div></div>
-        <div>
+        <div className="good">
           <a
             className="mix-flex"
             target="_blank"
@@ -380,7 +381,7 @@ function App() {
               alt="link icon"
             />{" "}
           </a>
-          Zoo (2018) <br /> dr. Antonio Tublen
+          <p>Zoo (2018)</p>  dr. Antonio Tublen
         </div>
       </div>
     </div>
@@ -463,12 +464,12 @@ function App() {
   );
 
   const spotify = (
-    <div className="inspo-section">
+    <div  className="inspo-section">
       <iframe
         style={{ borderRadius: "12px" }}
         src="https://open.spotify.com/embed/playlist/7bMNLNMcOXNeZR48vBuPHT?utm_source=generator"
         width="100%"
-        height="352"
+        height="100%"
         frameBorder="0"
         allowFullScreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -575,7 +576,7 @@ function App() {
 
   const mediaVisual2 = (
     <div className="media">
-      <iframe src="https://drive.google.com/file/d/13NV2jJlOil6nXbTYbrRxIkwCNcCKqe3J/preview" width="300" height="300" allow="autoplay" allowFullScreen="true"></iframe>
+      <iframe src="https://drive.google.com/file/d/1kkrQPHBPq09oNfh1faAuhXnTVKFe95oL/preview" width="300" height="300" allow="autoplay"></iframe>
       {img.pageThree.map((image) => (
         <img
           key={image.src}
@@ -827,7 +828,7 @@ function App() {
           element={
             <Blog
               textBlog={textMix}
-              tittleBlog={"Mixing"}
+              tittleBlog={"MIXING"}
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}

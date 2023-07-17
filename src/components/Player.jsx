@@ -57,9 +57,9 @@ function SongPlayer(props) {
         onClick={handlePlayPause}
       />
       <div onClick={handlePlayPause}  className="test">
-      {props.text}
+      <div>{props.text}</div>{props.iconLink}
       </div>
-      {props.iconLink}
+      
       </div>
       
       {showProgressBar && (

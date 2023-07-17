@@ -14,9 +14,9 @@ function VideoModal(props) {
 
   return (
     <div>
-      <div onClick={handleClick}>
-        <img className="icon" width={"32px"} src="/icons/link.svg" alt="link" />
-      </div>
+      
+        <img onClick={handleClick} className="icon" width={"32px"} src="/icons/link.svg" alt="link" />
+      
       {showModal && (
         <div onClick={handleClose} className="modal-overlay">
           <div className="modal">

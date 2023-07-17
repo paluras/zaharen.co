@@ -138,14 +138,14 @@ function LandingPage({ crt, handleClickCRT }) {
                       <Link to="/photos">
                         {" "}
                         <div className="row">
-                          <div className="title">PHOTOS</div>
+                          <div className="title">Photos</div>
                           <div className="dots"></div>
                           <div className="value">254</div>
                         </div>
                       </Link>
                       <Link to="/inspiration">
                         <div className="row">
-                          <div className="title">INSPIRATION</div>
+                          <div className="title">inspiration</div>
                           <div className="dots"></div>
                           <div className="value">222</div>
                         </div>
@@ -188,7 +188,7 @@ function LandingPage({ crt, handleClickCRT }) {
                       <Link to="/mixing">
                         {" "}
                         <div className="row">
-                          <div className="title">MIXING</div>
+                          <div className="title">Mixing</div>
                           <div className="dots"></div>
                           <div className="value">765</div>
                         </div>
