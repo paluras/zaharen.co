@@ -22,7 +22,7 @@ function Blog({
                 <Nav handleClickCRT={handleClickCRT} number={number} />
                 <NavSecond navItems={navItems} />
 
-                <div>
+                <div className="the-main-content">
                   <div className="container-tittle">{tittleBlog}</div>
                   <div className="container-main">
                     <div className="container-para">

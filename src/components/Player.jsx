@@ -12,12 +12,15 @@ function SongPlayer(props) {
 
     if (isPlaying) {
       audio.pause();
+     
     } else {
       audio.play();
       setShowProgressBar(true);
+      
     }
 
     setIsPlaying(!isPlaying);
+   
   }
 
   function handleTimeUpdate() {
@@ -47,16 +50,16 @@ function SongPlayer(props) {
   return (
     <div className="for-nothing">
       <div className="container-player">
-      <audio key={props.key} ref={audioRef} src={props.song} onTimeUpdate={handleTimeUpdate} />
+      <audio key={props.keys} ref={audioRef} src={props.song} onTimeUpdate={handleTimeUpdate} />
       <img  className="icon"
         src={isPlaying ? "/icons/stop.svg" : "/icons/play.svg"}
         alt={isPlaying ? "Stop" : "Play"}
         onClick={handlePlayPause}
       />
       <div onClick={handlePlayPause}  className="test">
-      {props.text}
+      <div>{props.text}</div>{props.iconLink}
       </div>
-      {props.iconLink}
+      
       </div>
       
       {showProgressBar && (
