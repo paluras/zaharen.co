@@ -571,10 +571,11 @@ video {
 }
 
 .progress-bar {
-  width: 10vw;
+  width: 200px;
   background-color: rgb(196, 66, 66);
   height: 10px;
   margin-left: 20px;
+  position: relative;
 }
 .progress-bar-fill {
   height: 10px;
@@ -656,11 +657,7 @@ display: flex;
 align-items: center;
   width: 50%;
 }
-.good{
-  
-  
- 
-}
+
 
 @media screen and (max-width: 1000px) {
   .media {
@@ -677,9 +674,7 @@ align-items: center;
     width: 100%;
     
   }
-  .text-music.film>div>.for-nothing> .progress-bar{
-    position: relative;
-  }
+  
 
   
   

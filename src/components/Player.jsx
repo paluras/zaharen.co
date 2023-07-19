@@ -6,7 +6,9 @@ function SongPlayer(props) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [showProgressBar, setShowProgressBar] = useState(false);
-
+  const [number, setNumber] = useState()
+  const targetElementRef = useRef(null);
+  const elementXRef = useRef(0); 
   function handlePlayPause() {
     const audio = audioRef.current;
 
@@ -32,15 +34,24 @@ function SongPlayer(props) {
 
   function handleProgressBarClick(event) {
     const audio = audioRef.current;
-
-    const clickPosition = event.pageX - event.target.offsetLeft;
-    const progressBarWidth = event.target.offsetWidth;
-    const progress = clickPosition / progressBarWidth;
-    const time = progress * audio.duration;
-
-    audio.currentTime = time;
-    setCurrentTime(time);
+    const progressBar = document.querySelector("div.progress-bar");
+  
+    const progressBarRect = progressBar.getBoundingClientRect();
+    const clickPosition = event.clientX - progressBarRect.left;
+    const progressBarWidth = progressBar.offsetWidth;
+    
+    if (progressBarWidth !== 0) {
+      const progress = clickPosition / progressBarWidth;
+      const time = progress * audio.duration;
+  
+      if (isFinite(time)) {
+        audio.currentTime = time;
+        setCurrentTime(time);
+      }
+    }
   }
+
+ 
 
   const progressBarStyles = {
     width: `${(currentTime / duration) * 100}%`,
