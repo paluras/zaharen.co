@@ -175,9 +175,11 @@ nav > p {
 }
 ul {
   list-style: none;
+  width: 100%;
 }
 li {
   cursor: pointer;
+  width: 100%;
 }
 .container-left > ul > li:active {
   background-color: #0000ff;
@@ -537,7 +539,7 @@ video {
 
 
 .for-nothing {
-  position: relative;
+  
   display: flex;
   align-items: center;
   width: 100%;
