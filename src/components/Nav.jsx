@@ -8,25 +8,19 @@ function Nav({handleClickCRT,startNumber}){
     const months = ["Sun","Mon","Tue","Wen","Thurs","Fri","Sat",];
 
     const [currentNumber, setCurrentNumber] = useState(startNumber);
-    const [targetNumber, setTargetNumber] = useState(0);
+ 
   
     useEffect(() => {
-      const getRandomTargetNumber = () => {
-        const maxCount = 35;
-        const randomOffset = Math.floor(Math.random() * maxCount);
-        return startNumber + randomOffset;
-      };
-  
-      const targetNumber = getRandomTargetNumber();
-      setTargetNumber(targetNumber);
+      const maxCount = 5;
   
       const interval = setInterval(() => {
         setCurrentNumber((prevNumber) => {
-          if (prevNumber === targetNumber) {
+          const nextNumber = prevNumber + 1;
+          if (nextNumber >= startNumber + maxCount) {
             clearInterval(interval);
-            return prevNumber;
+            return startNumber + maxCount;
           }
-          return prevNumber + 1;
+          return nextNumber;
         });
       }, 100); // Change the speed of counting here (milliseconds)
   
@@ -34,7 +28,6 @@ function Nav({handleClickCRT,startNumber}){
         clearInterval(interval); // Cleanup the interval on component unmount
       };
     }, [startNumber]);
-
 
     useEffect(() => {
       const interval = setInterval(() => {
