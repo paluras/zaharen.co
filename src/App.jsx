@@ -19,25 +19,24 @@ function App() {
   const [popupState, setpopupState] = useState(true);
   const [popupState2, setpopupState2] = useState(true);
   const [popupState3, setpopupState3] = useState(true);
-  const [words, setWords] = useState(["Film Composition", "Multimedia Art"])
-  useEffect(() =>{
-    const handleResize = ()=>{
-      if(window.innerWidth < 670){
-        setWords(["Film","Multi Media"])
-      }else{
-        setWords(["Film Composition", "Multimedia Art"])
+  const [words, setWords] = useState(["Film Composition", "Multimedia Art"]);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 670) {
+        setWords(["Film", "Multi Media"]);
+      } else {
+        setWords(["Film Composition", "Multimedia Art"]);
       }
-    }
-    handleResize()
-    window.addEventListener("resize",handleResize)
-    return()=>{
-      window.removeEventListener("resize",handleResize)
-    }
-  }, [])
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   function handleClickCRT() {
     setStateCrt(!stateCrt);
     stateCrt ? setCrt("crt") : setCrt("");
-    
   }
   function handlePopUp() {
     setpopupState(!popupState);
@@ -49,15 +48,14 @@ function App() {
   }
   function handlePopUp2() {
     setpopupState2(!popupState2);
-    
+
     if (show2 === "0px") setShow2("154px");
     else {
       setShow2("0px");
     }
   }
   function handlePopUp3() {
-    
-    setpopupState3(!popupState3)
+    setpopupState3(!popupState3);
     if (show3 === "0px") setShow3("154px");
     else {
       setShow3("0px");
@@ -96,7 +94,7 @@ function App() {
 
   const textMusic = (
     <div className="text-music song">
-         <div className="allthecacat">
+      <div className="allthecacat">
         <div className="container-player">
           <img
             className="icon"
@@ -107,16 +105,10 @@ function App() {
           <div onClick={handlePopUp3} className="test">
             Iona - ballet for one dancer (2023)
           </div>
-         
         </div>
         <div style={{ maxHeight: `${show3}` }} className="drop-down-album">
           <div>
-            <SongPlayer
-              song={"Audio/iona1.mp3"}
-              text={"Scene I"}
-              keys={"7"}
-             
-            />
+            <SongPlayer song={"Audio/iona1.mp3"} text={"Scene I"} keys={"7"} />
           </div>
           <div>
             <SongPlayer
@@ -281,12 +273,11 @@ function App() {
       <div className="odd">
         <div></div>
         <div className="good">
-          <span>Sound Design</span> <br></br> Little light (2023)<br></br> dr. Mara Bugarin
+          <span>Sound Design</span> <br></br> Little light (2023)<br></br> dr.
+          Mara Bugarin
         </div>
         <div></div>
-        <div>
-         
-        </div>
+        <div></div>
         <div></div>
       </div>
       <div className="even">
@@ -321,7 +312,7 @@ function App() {
         </div>
         <div></div>
         <div className="good">
-        <a
+          <a
             className="mix-flex"
             target="_blank"
             href="https://www.imdb.com/title/tt13333354/?ref_=nm_knf_t_2 "
@@ -333,8 +324,9 @@ function App() {
               src="/icons/link.svg"
               alt="link icon"
             />{" "}
-          </a>{" "} <p style={{marginBottom:"0px"}}>Isabelle (2021)</p> dr.
-          Cristian Nicolae
+          </a>{" "}
+          <p style={{ marginBottom: "0px" }}>Isabelle (2021)</p> dr. Cristian
+          Nicolae
         </div>
       </div>
       <div className="odd">
@@ -358,7 +350,7 @@ function App() {
               alt="link icon"
             />{" "}
           </a>{" "}
-          <p>Live Concert (2020)</p>  Mohamad Zatari Trio
+          <p>Live Concert (2020)</p> Mohamad Zatari Trio
         </div>
       </div>
       <div className="even">
@@ -381,7 +373,7 @@ function App() {
               alt="link icon"
             />{" "}
           </a>
-          <p>Zoo (2018)</p>  dr. Antonio Tublen
+          <p>Zoo (2018)</p> dr. Antonio Tublen
         </div>
       </div>
     </div>
@@ -412,11 +404,14 @@ function App() {
         feelings, an audio-visual installation based on the conversion of
         cathode ray tube TVs into oscilloscopes, which was shown at the Diploma
         2021 festival, and Catoptro-tono v.1, which is based on catoptrophobia,
-        the fear of mirrors, which was presented at arca.expo 1.3.</p><p> In addition
-        to his artistic work, he has worked as an audio engineer for music and
-        film sound, as well as a sound designer or foley artist. Since 2021, he
-        has been leading his fusion band Zaharenco, which combines jazz,
-        classical architecture, and rock influences.
+        the fear of mirrors, which was presented at arca.expo 1.3.
+      </p>
+      <p>
+        {" "}
+        In addition to his artistic work, he has worked as an audio engineer for
+        music and film sound, as well as a sound designer or foley artist. Since
+        2021, he has been leading his fusion band Zaharenco, which combines
+        jazz, classical architecture, and rock influences.
       </p>
     </>
   );
@@ -433,14 +428,19 @@ function App() {
           />
         </Link>
         <p>
-        The catoptrophobia, or fear of mirrors, is the core of this
-        installation. Through this work, I want to investigate the idea of sound
-        self-mirroring based on motion tracking and the premise of gradually
-        distorting one's perception of oneself and expressing it through sound
-        alterations.</p><p> My project collaborator was Python engineer Teo Milea. We
-        used Ableton in conjunction with a trained artificial intelligence to
-        produce the sound motion tracking. This works was part of the arca.expo
-        1.3 exhibition.</p>
+          The catoptrophobia, or fear of mirrors, is the core of this
+          installation. Through this work, I want to investigate the idea of
+          sound self-mirroring based on motion tracking and the premise of
+          gradually distorting one's perception of oneself and expressing it
+          through sound alterations.
+        </p>
+        <p>
+          {" "}
+          My project collaborator was Python engineer Teo Milea. We used Ableton
+          in conjunction with a trained artificial intelligence to produce the
+          sound motion tracking. This works was part of the arca.expo 1.3
+          exhibition.
+        </p>
       </div>
       <div className="visual-container">
         <Link to="visual2">
@@ -464,7 +464,7 @@ function App() {
   );
 
   const spotify = (
-    <div  className="inspo-section">
+    <div className="inspo-section">
       <iframe
         style={{ borderRadius: "12px" }}
         src="https://open.spotify.com/embed/playlist/7bMNLNMcOXNeZR48vBuPHT?utm_source=generator"
@@ -503,22 +503,26 @@ function App() {
       <div>
         <div className="container-lower">
           <p>
-          Zaharenco is a jazz quartet whose music aims to explore the New Jazz
-          scene by fusing jazz with classical and rock influences.</p><p> He submits
-          his works to the issue of musical predictability, seeking a balance
-          between predictability and uncertainty, and thus managing to reach a
-          wide range of emotions.
-          </p><p>
-          <a
-            style={{ color: "#ff68b4" }}
-            target="_blank"
-            href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=Tgr-UWa9Rcag4uDjxw-uug"
-          >
+            Zaharenco is a jazz quartet whose music aims to explore the New Jazz
+            scene by fusing jazz with classical and rock influences.
+          </p>
+          <p>
             {" "}
-            Primordial feelings
-          </a>
-          , his first EP, is an exposition of the 2 main topics addressed: the
-          impulsive being and the ever-changing sentimental self.
+            He submits his works to the issue of musical predictability, seeking
+            a balance between predictability and uncertainty, and thus managing
+            to reach a wide range of emotions.
+          </p>
+          <p>
+            <a
+              style={{ color: "#ff68b4" }}
+              target="_blank"
+              href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=Tgr-UWa9Rcag4uDjxw-uug"
+            >
+              {" "}
+              Primordial feelings
+            </a>
+            , his first EP, is an exposition of the 2 main topics addressed: the
+            impulsive being and the ever-changing sentimental self.
           </p>
         </div>
       </div>
@@ -570,13 +574,27 @@ function App() {
           onClose={() => setSelectedImg(null)}
         />
       )}
-      <iframe src="https://drive.google.com/file/d/1xX09-kh43imFjhgSbo-AKIT4WblZxf3j/preview" width="300" height="300" allow="autoplay" allowFullScreen="true"></iframe>
+      <iframe
+        src="https://drive.google.com/file/d/1xX09-kh43imFjhgSbo-AKIT4WblZxf3j/preview"
+        width="300"
+        height="300"
+        allow="autoplay"
+        allowFullScreen="true"
+      ></iframe>
     </div>
   );
 
   const mediaVisual2 = (
     <div className="media">
-      <iframe src="https://drive.google.com/file/d/1kkrQPHBPq09oNfh1faAuhXnTVKFe95oL/preview" width="300" height="300" allow="autoplay"></iframe>
+      <iframe
+        width="300"
+        height="300"
+        src="https://www.youtube-nocookie.com/embed/I-kYxLFyJv0?controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen="true"
+      ></iframe>{" "}
       {img.pageThree.map((image) => (
         <img
           key={image.src}
@@ -592,9 +610,24 @@ function App() {
           onClose={() => setSelectedImg(null)}
         />
       )}
-     
-      <iframe src="https://player.vimeo.com/video/844924416?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="300" height="300" frameborder="1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="tvCreation"></iframe>
-      <iframe src="https://drive.google.com/file/d/10ToXdjlc2ELm6Z17Tma9qhyXcg3luGhg/preview" width="300" height="300" allow="autoplay" allowFullScreen="true"></iframe>
+      <iframe
+        width="300"
+        height="300"
+        src="https://www.youtube-nocookie.com/embed/_S5MQPStk6s?controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="300"
+        height="300"
+        src="https://www.youtube-nocookie.com/embed/qffrRDsCp0Y?controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>{" "}
     </div>
   );
 
@@ -615,7 +648,7 @@ function App() {
           onClose={() => setSelectedImg(null)}
         />
       )}
-      
+
       <iframe
         width="300"
         height="300"
@@ -684,18 +717,16 @@ function App() {
 
   const navItemsPort = [
     { text: "Music", url: "/music", keys: 5 },
-    { text: `${words[0]}` ,  url: "/film", keys: 6 },
+    { text: `${words[0]}`, url: "/film", keys: 6 },
     { text: `${words[1]}`, url: "/visual", keys: 7 },
     { text: "Mixing", url: "/mixing", keys: 8 },
   ];
   const navItemsBand = [
-    { text: "Music", url: "/about-music", keys: 9 },
+    { text: "About", url: "/about-music", keys: 9 },
     { text: "Events", url: "/events", keys: 10 },
     { text: "Media", url: "/music-media", keys: 11 },
   ];
-  const navItemsHoro = [
-    { text: "", url: "/horoscop", keys: 12 },
-  ];
+  const navItemsHoro = [{ text: "", url: "/horoscop", keys: 12 }];
 
   return (
     <>
@@ -875,11 +906,11 @@ function App() {
             />
           }
         />
-         <Route
+        <Route
           path="/horoscop"
           element={
             <Blog
-              textBlog={<Horoscope/>}
+              textBlog={<Horoscope />}
               tittleBlog={"Horoscop"}
               navItems={navItemsHoro}
               crt={crt}
