@@ -9,7 +9,6 @@ function Nav({handleClickCRT,startNumber}){
 
     const [currentNumber, setCurrentNumber] = useState(startNumber);
  
-  
     useEffect(() => {
       let isIncreasing = currentNumber <= startNumber;
       const targetNumber = startNumber ;
@@ -29,6 +28,14 @@ function Nav({handleClickCRT,startNumber}){
         clearInterval(interval); // Cleanup the interval on component unmount
       };
     }, [startNumber]);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTime(new Date());
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }, []);
 
  
 
