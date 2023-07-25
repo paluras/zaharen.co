@@ -772,7 +772,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={745}
+              number={200}
             />
           }
         />
@@ -824,7 +824,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={412}
+              number={200}
             />
           }
         />
@@ -863,7 +863,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={765}
+              number={200}
             />
           }
         />

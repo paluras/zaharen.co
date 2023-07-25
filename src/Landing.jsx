@@ -102,7 +102,7 @@ function LandingPage({ crt, handleClickCRT }) {
           className="components"
         >
           <main className={`main ${crt}`}>
-            <Nav handleClickCRT={handleClickCRT} number={100} />
+            <Nav handleClickCRT={handleClickCRT} startNumber={100} />
             <div className="for-fix">
               <img
                 className="logo"

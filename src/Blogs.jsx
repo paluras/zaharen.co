@@ -19,7 +19,7 @@ function Blog({
           <div className="components-blog">
             <main className={`main-blogs ${crt}`}>
               <div className="blog-top">
-                <Nav handleClickCRT={handleClickCRT} number={number} />
+                <Nav handleClickCRT={handleClickCRT} startNumber={number} />
                 <NavSecond navItems={navItems} />
 
                 <div className="the-main-content">
