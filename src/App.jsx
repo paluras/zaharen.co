@@ -758,7 +758,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={205}
+              number={206}
             />
           }
         />
@@ -772,7 +772,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={210}
+              number={214}
             />
           }
         />
@@ -785,7 +785,7 @@ function App() {
               navItems={navItems}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={215}
+              number={211}
             />
           }
         />
@@ -798,7 +798,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={220}
+              number={222}
             />
           }
         />
@@ -811,7 +811,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={230}
+              number={226}
             />
           }
         />
@@ -824,7 +824,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={235}
+              number={233}
             />
           }
         />
@@ -837,7 +837,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={240}
+              number={241}
             />
           }
         />
@@ -850,7 +850,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={245}
+              number={242}
             />
           }
         />
@@ -863,7 +863,7 @@ function App() {
               navItems={navItemsPort}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={250}
+              number={236}
             />
           }
         />
@@ -876,7 +876,7 @@ function App() {
               navItems={navItemsBand}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={255}
+              number={239}
             />
           }
         />
@@ -889,7 +889,7 @@ function App() {
               navItems={navItemsBand}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={260}
+              number={243}
             />
           }
         />
@@ -902,7 +902,7 @@ function App() {
               navItems={navItemsBand}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={265}
+              number={248}
             />
           }
         />

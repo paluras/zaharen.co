@@ -132,7 +132,7 @@ function LandingPage({ crt, handleClickCRT }) {
                         <div className="row">
                           <div className="title">BIO</div>
                           <div className="dots"></div>
-                          <div className="value">245</div>
+                          <div className="value">205</div>
                         </div>
                       </Link>
                       <Link to="/photos">
@@ -140,14 +140,14 @@ function LandingPage({ crt, handleClickCRT }) {
                         <div className="row">
                           <div className="title">Photos</div>
                           <div className="dots"></div>
-                          <div className="value">254</div>
+                          <div className="value">207</div>
                         </div>
                       </Link>
                       <Link to="/inspiration">
                         <div className="row">
-                          <div className="title">inspiration</div>
+                          <div className="title">Inspiration</div>
                           <div className="dots"></div>
-                          <div className="value">222</div>
+                          <div className="value">216</div>
                         </div>
                       </Link>
                       <Link to="/contacts">
@@ -155,7 +155,7 @@ function LandingPage({ crt, handleClickCRT }) {
                         <div className="row">
                           <div className="title">CONTACTS</div>
                           <div className="dots"></div>
-                          <div className="value">745</div>
+                          <div className="value">219</div>
                         </div>
                       </Link>
                     </div>
@@ -167,7 +167,7 @@ function LandingPage({ crt, handleClickCRT }) {
                         <div className="row">
                           <div className="title">MUSIC</div>
                           <div className="dots"></div>
-                          <div className="value">124</div>
+                          <div className="value">227</div>
                         </div>
                       </Link>
                       <Link to="/film">
@@ -175,14 +175,14 @@ function LandingPage({ crt, handleClickCRT }) {
                         <div className="row">
                           <div className="title">{words[0]}</div>
                           <div className="dots"></div>
-                          <div className="value">135</div>
+                          <div className="value">231</div>
                         </div>
                       </Link>
                       <Link to="/visual">
                         <div className="row">
                           <div className="title">{words[1]}</div>
                           <div className="dots"></div>
-                          <div className="value">412</div>
+                          <div className="value">238</div>
                         </div>
                       </Link>
                       <Link to="/mixing">

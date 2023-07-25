@@ -11,16 +11,17 @@ function Nav({handleClickCRT,startNumber}){
  
   
     useEffect(() => {
-      const maxCount = 5;
+      let isIncreasing = currentNumber <= startNumber;
+      const targetNumber = startNumber + isIncreasing;
   
       const interval = setInterval(() => {
         setCurrentNumber((prevNumber) => {
-          const nextNumber = prevNumber + 1;
-          if (nextNumber >= startNumber + maxCount) {
+          if ((isIncreasing && prevNumber >= targetNumber) || (!isIncreasing && prevNumber <= targetNumber)) {
             clearInterval(interval);
-            return startNumber + maxCount;
+            return targetNumber;
           }
-          return nextNumber;
+  
+          return isIncreasing ? prevNumber + 1 : prevNumber - 1;
         });
       }, 100); // Change the speed of counting here (milliseconds)
   
@@ -28,14 +29,6 @@ function Nav({handleClickCRT,startNumber}){
         clearInterval(interval); // Cleanup the interval on component unmount
       };
     }, [startNumber]);
-
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setTime(new Date());
-      }, 1000);
-  
-      return () => clearInterval(interval);
-    }, []);
 
  
 
