@@ -12,7 +12,7 @@ function Nav({handleClickCRT,startNumber}){
   
     useEffect(() => {
       let isIncreasing = currentNumber <= startNumber;
-      const targetNumber = startNumber + isIncreasing;
+      const targetNumber = startNumber ;
   
       const interval = setInterval(() => {
         setCurrentNumber((prevNumber) => {

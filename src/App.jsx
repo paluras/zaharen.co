@@ -915,7 +915,7 @@ function App() {
               navItems={navItemsHoro}
               crt={crt}
               handleClickCRT={handleClickCRT}
-              number={270}
+              number={255}
             />
           }
         />
