@@ -5,21 +5,21 @@ import { Link } from "react-router-dom";
 function Footer(){
     return( <footer>
         <div className="about">
-          <div className="box red"></div>
+        <Link to="/">  <div className="box red"></div></Link>
           <Link to="/"> <p>Home</p></Link>
         </div>
         <div className="contact">
-          <div className="box green"></div>
+        <Link to="/bio"> <div className="box green"></div></Link>
           <Link to="/bio"> <p>About</p></Link>
         </div>
         
         <div className="news">
-          <div className="box yellow"></div>
+        <Link to="/music"> <div className="box yellow"></div></Link>
           <Link to="/music"> <p>Portfolio</p></Link>
         </div>
         
         <div className="sport">
-          <div className="box blue"></div>
+        <Link to="/about-music"><div className="box blue"></div></Link>
           <Link to="/about-music"> <p>Band</p></Link>
         </div>
        </footer>)
