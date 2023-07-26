@@ -153,7 +153,7 @@ function LandingPage({ crt, handleClickCRT }) {
                       <Link to="/contacts">
                         {" "}
                         <div className="row">
-                          <div className="title">CONTACTS</div>
+                          <div className="title">Contact</div>
                           <div className="dots"></div>
                           <div className="value">217</div>
                         </div>
