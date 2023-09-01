@@ -14,7 +14,7 @@ function Footer(){
         </div>
         
         <div className="news">
-        <Link to="/music"> <div className="box yellow"></div></Link>
+        <Link to="/music" > <div className="box yellow"></div></Link>
           <Link to="/music"> <p>Portfolio</p></Link>
         </div>
         
