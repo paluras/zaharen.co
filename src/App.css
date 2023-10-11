@@ -618,6 +618,10 @@ video {
   align-items: center;
    
 }
+.flex{
+  display: grid;
+  flex-direction: row;
+}
 
 
 .for-fix {

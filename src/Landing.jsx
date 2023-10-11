@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useEffect, lazy, Suspense } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { useState, useEffect} from "react";
+import {  Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import TickerTape from "./components/Sliding/SlidingText.component";

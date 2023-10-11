@@ -8,6 +8,7 @@ import Modal from "./components/Modal";
 import SongPlayer from "./components/Player";
 import VideoModal from "./components/VideoModal";
 import Horoscope from "./components/HoroscopText";
+import Layout from "./components/Layout";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -733,10 +734,11 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<LandingPage crt={crt} handleClickCRT={handleClickCRT} />}
-        />
+          element={<Layout  />}
+        >
+        <Route index element={<LandingPage crt={crt} handleClickCRT={handleClickCRT} />}/>
         <Route
-          path="/bio"
+          path="bio"
           element={
             <Blog
               textBlog={bioText}
@@ -749,7 +751,7 @@ function App() {
           }
         />
         <Route
-          path="/photos"
+          path="photos"
           element={
             <Blog
               textBlog={""}
@@ -778,8 +780,7 @@ function App() {
         />
         <Route
           path="/inspiration"
-          element={
-            <Blog
+          element={<Blog
               textBlog={spotify}
               tittleBlog={"INSPIRATION"}
               navItems={navItems}
@@ -828,32 +829,34 @@ function App() {
             />
           }
         />
-        <Route
-          path="/visual/visual1"
-          element={
-            <Blog
-              textBlog={mediaVisual1}
-              tittleBlog={"Catoptro-tono v.1"}
-              navItems={navItemsPort}
-              crt={crt}
-              handleClickCRT={handleClickCRT}
-              number={241}
-            />
-          }
-        />
-        <Route
-          path="/visual/visual2"
-          element={
-            <Blog
-              textBlog={mediaVisual2}
-              tittleBlog={"Primordial feelings "}
-              navItems={navItemsPort}
-              crt={crt}
-              handleClickCRT={handleClickCRT}
-              number={242}
-            />
-          }
-        />
+          <Route
+            path="visual/visual1"
+            element={
+              <Blog
+                textBlog={mediaVisual1}
+                tittleBlog={"Catoptro-tono v.1"}
+                navItems={navItemsPort}
+                crt={crt}
+                handleClickCRT={handleClickCRT}
+                number={241}
+              />
+            }
+          />
+          <Route
+            path="visual/visual2"
+            element={
+              <Blog
+                textBlog={mediaVisual2}
+                tittleBlog={"Primordial feelings "}
+                navItems={navItemsPort}
+                crt={crt}
+                handleClickCRT={handleClickCRT}
+                number={242}
+              />
+            }
+          />
+        
+
         <Route
           path="/mixing"
           element={
@@ -919,6 +922,7 @@ function App() {
             />
           }
         />
+        </Route>
       </Routes>
     </>
   );
