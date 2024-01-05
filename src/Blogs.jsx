@@ -13,7 +13,6 @@ function Blog({
   number,
 }) {
   const [crt, setCrt] = useState(null);
-
   function handleClickCRT() {
     crt === null ? setCrt("crt") : setCrt(null);
   }

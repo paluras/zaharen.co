@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import TickerTape from "./components/Sliding/SlidingText.component";
+import Table from "./components/landing/Table";
 
-function LandingPage({ crt, handleClickCRT }) {
+function LandingPage() {
   const [count, setCount] = useState(true);
   const [start, setStart] = useState("tv-main");
   const [displays, setDisplay] = useState("flex");
@@ -15,6 +16,11 @@ function LandingPage({ crt, handleClickCRT }) {
   const [shouldRender, setShouldRender] = useState(false);
   const [one, setOne] = useState("0");
   const [selectedButton, setSelectedButton] = useState("Button 1");
+  const [crt, setCrt] = useState(null);
+
+  function handleClickCRT() {
+    crt === null ? setCrt("crt") : setCrt(null);
+  }
 
   const [words, setWords] = useState(["FILM COMPOSITION", "MULTIMEDIA ART"]);
 
@@ -74,6 +80,89 @@ function LandingPage({ crt, handleClickCRT }) {
   const handleClickDisplay = (buttonName) => {
     setSelectedButton(buttonName);
   };
+// Bad logic so i have to keep this array here
+  const obj = [
+    [
+      {
+        path: "/bio",
+        title: "BIO",
+        dots: 203,
+        id: 1,
+      },
+      {
+        path: "/photos",
+        title: "Photos",
+        dots: 209,
+        id: 2,
+      },
+      {
+        path: "/inspiration",
+        title: "Inspiration",
+        dots: 214,
+        id: 3,
+      },
+      {
+        path: "/contacts",
+        title: "Contact",
+        dots: 217,
+        id: 4,
+      },
+    ],
+    [
+      {
+        path: "/music",
+        title: "MUSIC",
+        dots: 225,
+        id: 5,
+      },
+      {
+        path: "/film",
+        title: `${words[0]}`,
+        dots: 229,
+        id: 6,
+      },
+      {
+        path: "/visual",
+        title: `${words[1]}`,
+        dots: 236,
+        id: 7,
+      },
+      {
+        path: "/mixing",
+        title: "Mixing",
+        dots: 239,
+        id: 8,
+      },
+    ],
+    [
+      {
+        path: "/about-music",
+        title: "ABOUT",
+        dots: 242,
+        id: 9,
+      },
+      {
+        path: "/events",
+        title: "EVENT",
+        dots: 246,
+        id: 10,
+      },
+      {
+        path: "/music-media",
+        title: "MEDIA",
+        dots: 251,
+        id: 11,
+      },
+    ],
+    [
+      {
+        path: "/horoscop",
+        title: "HOROSCOP",
+        dots: 255,
+        id: 12,
+      },
+    ],
+  ];
 
   return (
     <div className="App">
@@ -94,7 +183,12 @@ function LandingPage({ crt, handleClickCRT }) {
           className="components"
         >
           <main className={`main ${crt}`}>
-            <Nav handleClickCRT={handleClickCRT} startNumber={101} />
+            <Nav startNumber={101}>
+              {" "}
+              <span className="crt-mode" onClick={() => handleClickCRT()}>
+                CRT
+              </span>
+            </Nav>
             <div className="for-fix">
               <img
                 className="logo"
@@ -120,109 +214,24 @@ function LandingPage({ crt, handleClickCRT }) {
                 <div className="container-right">
                   {selectedButton === "Button 1" && (
                     <div className="table">
-                      <Link to="/bio">
-                        <div className="row">
-                          <div className="title">BIO</div>
-                          <div className="dots"></div>
-                          <div className="value">203</div>
-                        </div>
-                      </Link>
-                      <Link to="/photos">
-                        {" "}
-                        <div className="row">
-                          <div className="title">Photos</div>
-                          <div className="dots"></div>
-                          <div className="value">209</div>
-                        </div>
-                      </Link>
-                      <Link to="/inspiration">
-                        <div className="row">
-                          <div className="title">Inspiration</div>
-                          <div className="dots"></div>
-                          <div className="value">214</div>
-                        </div>
-                      </Link>
-                      <Link to="/contacts">
-                        {" "}
-                        <div className="row">
-                          <div className="title">Contact</div>
-                          <div className="dots"></div>
-                          <div className="value">217</div>
-                        </div>
-                      </Link>
+                     <Table obj={obj[0]} />
                     </div>
                   )}
                   {selectedButton === "Button 2" && (
                     <div className="table">
-                      <Link to="/music">
-                        {" "}
-                        <div className="row">
-                          <div className="title">MUSIC</div>
-                          <div className="dots"></div>
-                          <div className="value">225</div>
-                        </div>
-                      </Link>
-                      <Link to="/film">
-                        {" "}
-                        <div className="row">
-                          <div className="title">{words[0]}</div>
-                          <div className="dots"></div>
-                          <div className="value">229</div>
-                        </div>
-                      </Link>
-                      <Link to="/visual">
-                        <div className="row">
-                          <div className="title">{words[1]}</div>
-                          <div className="dots"></div>
-                          <div className="value">236</div>
-                        </div>
-                      </Link>
-                      <Link to="/mixing">
-                        {" "}
-                        <div className="row">
-                          <div className="title">Mixing</div>
-                          <div className="dots"></div>
-                          <div className="value">239</div>
-                        </div>
-                      </Link>
+                       <div className="table">
+                     <Table obj={obj[1]} />
+                    </div>
                     </div>
                   )}
                   {selectedButton === "Button 3" && (
                     <div className="table">
-                      <Link to="/about-music">
-                        <div className="row">
-                          <div className="title">ABOUT</div>
-                          <div className="dots"></div>
-                          <div className="value">242</div>
-                        </div>
-                      </Link>
-                      <Link to="/events">
-                        {" "}
-                        <div className="row">
-                          <div className="title">EVENT</div>
-                          <div className="dots"></div>
-                          <div className="value">246</div>
-                        </div>
-                      </Link>
-                      <Link to="/music-media">
-                        {" "}
-                        <div className="row">
-                          <div className="title">MEDIA</div>
-                          <div className="dots"></div>
-                          <div className="value">251</div>
-                        </div>
-                      </Link>
+                      <Table obj={obj[2]} />
                     </div>
                   )}
                   {selectedButton === "Button 4" && (
                     <div className="table">
-                      <Link to="/horoscop">
-                        <div className="row">
-                          <div className="title">HOROSCOP</div>
-                          <div className="dots"></div>
-                          <div className="value">255</div>
-                        </div>
-                      </Link>
+                      <Table obj={obj[3]} />
                     </div>
                   )}
                 </div>
