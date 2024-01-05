@@ -20,9 +20,6 @@ import Catatro from "./components/media-visual/Catatro";
 import Primordial from "./components/media-visual/Primordial";
 
 function App() {
-  const [crt, setCrt] = useState("");
-  const [stateCrt, setStateCrt] = useState(false);
-
   const [words, setWords] = useState(["Film Composition", "Multimedia Art"]);
   useEffect(() => {
     const handleResize = () => {
@@ -40,10 +37,7 @@ function App() {
   }, []);
 
   // this should be context
-  function handleClickCRT() {
-    setStateCrt(!stateCrt);
-    stateCrt ? setCrt("crt") : setCrt("");
-  }
+
   // Display the nav items based on Home / About etc
   const navItems = [
     { text: "Bio", url: "/bio", keys: "1" },
@@ -69,20 +63,11 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route
-            index
-            element={<LandingPage crt={crt} handleClickCRT={handleClickCRT} />}
-          />
+          <Route index element={<LandingPage />} />
           <Route
             path="bio"
             element={
-              <Blog
-                tittleBlog={"BIO"}
-                navItems={navItems}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
-                number={200}
-              >
+              <Blog tittleBlog={"BIO"} navItems={navItems} number={200}>
                 <BioComponent />
               </Blog>
             }
@@ -94,8 +79,6 @@ function App() {
                 tittleBlog={"PHOTOS"}
                 media={<MediaPhotos />}
                 navItems={navItems}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={206}
               />
             }
@@ -107,8 +90,6 @@ function App() {
                 tittleBlog={"CONTACTS"}
                 contact={<Contacts />}
                 navItems={navItems}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={214}
               />
             }
@@ -116,13 +97,7 @@ function App() {
           <Route
             path="/inspiration"
             element={
-              <Blog
-                tittleBlog={"INSPIRATION"}
-                navItems={navItems}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
-                number={211}
-              >
+              <Blog tittleBlog={"INSPIRATION"} navItems={navItems} number={211}>
                 <Spotify />
               </Blog>
             }
@@ -130,13 +105,7 @@ function App() {
           <Route
             path="/music"
             element={
-              <Blog
-                tittleBlog={"MUSIC"}
-                navItems={navItemsPort}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
-                number={222}
-              >
+              <Blog tittleBlog={"MUSIC"} navItems={navItemsPort} number={222}>
                 <TextMusic />
               </Blog>
             }
@@ -147,8 +116,6 @@ function App() {
               <Blog
                 tittleBlog={"FILM COMPOSITION"}
                 navItems={navItemsPort}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={226}
               >
                 <TextFilm />
@@ -161,8 +128,6 @@ function App() {
               <Blog
                 tittleBlog={"MULTIMEDIA ART"}
                 navItems={navItemsPort}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={233}
               >
                 <VisualArtComponent />
@@ -175,8 +140,6 @@ function App() {
               <Blog
                 tittleBlog={"Catoptro-tono v.1"}
                 navItems={navItemsPort}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={241}
               >
                 <Catatro />
@@ -189,8 +152,6 @@ function App() {
               <Blog
                 tittleBlog={"Primordial feelings "}
                 navItems={navItemsPort}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={242}
               >
                 <Primordial />
@@ -201,13 +162,7 @@ function App() {
           <Route
             path="/mixing"
             element={
-              <Blog
-                tittleBlog={"MIXING"}
-                navItems={navItemsPort}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
-                number={236}
-              >
+              <Blog tittleBlog={"MIXING"} navItems={navItemsPort} number={236}>
                 <MixComponent />
               </Blog>
             }
@@ -215,13 +170,7 @@ function App() {
           <Route
             path="/about-music"
             element={
-              <Blog
-                tittleBlog={"About"}
-                navItems={navItemsBand}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
-                number={239}
-              >
+              <Blog tittleBlog={"About"} navItems={navItemsBand} number={239}>
                 <AboutMuzicComponent />
               </Blog>
             }
@@ -229,13 +178,7 @@ function App() {
           <Route
             path="/events"
             element={
-              <Blog
-                tittleBlog={"Events"}
-                navItems={navItemsBand}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
-                number={243}
-              >
+              <Blog tittleBlog={"Events"} navItems={navItemsBand} number={243}>
                 <Events />
               </Blog>
             }
@@ -246,8 +189,6 @@ function App() {
               <Blog
                 tittleBlog={"Band Media"}
                 navItems={navItemsBand}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={248}
               >
                 <BandMedia />
@@ -261,8 +202,6 @@ function App() {
                 textBlog={<Horoscope />}
                 tittleBlog={"Horoscop"}
                 navItems={navItemsHoro}
-                crt={crt}
-                handleClickCRT={handleClickCRT}
                 number={255}
               />
             }

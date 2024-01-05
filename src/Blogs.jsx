@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import NavSecond from "./components/SecondNav";
+import { useState } from "react";
 ///taraneala continua si aici ///
 function Blog({
   children,
@@ -8,10 +9,14 @@ function Blog({
   media,
   contact,
   navItems,
-  crt,
-  handleClickCRT,
+
   number,
 }) {
+  const [crt, setCrt] = useState(null);
+
+  function handleClickCRT() {
+    crt === null ? setCrt("crt") : setCrt(null);
+  }
   return (
     <div className="App">
       <div>
@@ -19,7 +24,12 @@ function Blog({
           <div className="components-blog">
             <main className={`main-blogs ${crt}`}>
               <div className="blog-top">
-                <Nav handleClickCRT={handleClickCRT} startNumber={number} />
+                <Nav startNumber={number}>
+                  {" "}
+                  <span className="crt-mode" onClick={() => handleClickCRT()}>
+                    CRT
+                  </span>
+                </Nav>
                 <NavSecond navItems={navItems} />
 
                 <div className="the-main-content">
