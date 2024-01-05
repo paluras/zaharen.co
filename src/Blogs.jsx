@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import NavSecond from "./components/SecondNav";
 ///taraneala continua si aici ///
 function Blog({
-  textBlog,
+  children,
   tittleBlog,
   media,
   contact,
@@ -26,7 +26,7 @@ function Blog({
                   <div className="container-tittle">{tittleBlog}</div>
                   <div className="container-main">
                     <div className="container-para">
-                      <div className="text">{textBlog}</div>
+                      <div className="text">{children}</div>
                     </div>
                   </div>
                 </div>

@@ -3,7 +3,7 @@
   --font-size-big: 2.25rem;
   --font-size-bigger: 4rem;
 }
-
+/* O hell no */
 /* 
     Teletext palette 
     000000 0 black
@@ -54,7 +54,7 @@
   padding: 0;
   margin: 0;
   border: 0;
-  font-smooth: never;
+ 
   -webkit-font-smoothing: none;
 }
 
