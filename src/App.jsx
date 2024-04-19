@@ -199,11 +199,12 @@ function App() {
             path="/horoscop"
             element={
               <Blog
-                textBlog={<Horoscope />}
                 tittleBlog={"Horoscop"}
                 navItems={navItemsHoro}
                 number={255}
-              />
+              >
+                <Horoscope />
+              </Blog>
             }
           />
         </Route>
