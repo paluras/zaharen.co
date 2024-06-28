@@ -44,6 +44,7 @@ export default function LinkTree() {
             href="https://open.spotify.com/track/1uoIexbNMtcmitN7q9c5B1?si=GjilGNsJSGa3q68pZuzkCg&context=spotify%3Aalbum%3A1Bwz0ywI3x5zpLNRbT8UgA&nd=1&dlsi=b67c240ef5d44a98"
           >
             <video
+              playsInline
               id="linktree-img"
               src={videoSrc}
               autoPlay
@@ -56,17 +57,18 @@ export default function LinkTree() {
 
         <LinktreeButton linkProp={"./"} imgProp={""} textProp={"Zaharen.co"} />
         <LinktreeButton
-          linkProp={"https://music.apple.com/ro/artist/zaharenco/1591749000"}
-          imgProp={""}
-          textProp={"Apple Music"}
-        />
-        <LinktreeButton
           linkProp={
             "https://open.spotify.com/artist/4azDTEsE76hndB8paNOEe8?si=NHCTZCI7QIOVzVyIRbufUQ&utm_medium=share&utm_source=linktree&nd=1&dlsi=dbbb9deb79524a45"
           }
           imgProp={""}
           textProp={"Spotify"}
         />
+        <LinktreeButton
+          linkProp={"https://music.apple.com/ro/artist/zaharenco/1591749000"}
+          imgProp={""}
+          textProp={"Apple Music"}
+        />
+
         <LinktreeButton
           linkProp={
             "https://soundcloud.com/zaharenco?ref=clipboard&p=i&c=0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
