@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import TickerTape from "./components/Sliding/SlidingText.component";
@@ -80,7 +79,7 @@ function LandingPage() {
   const handleClickDisplay = (buttonName) => {
     setSelectedButton(buttonName);
   };
-// Bad logic so i have to keep this array here
+  // Bad logic so i have to keep this array here
   const obj = [
     [
       {
@@ -165,7 +164,7 @@ function LandingPage() {
   ];
 
   return (
-    <div className="App">
+    <div style={{ backgroundColor: "black" }} className="App">
       {shouldRender && (
         <div style={{ display: `${displays}` }} className="img-container">
           <img
@@ -214,14 +213,14 @@ function LandingPage() {
                 <div className="container-right">
                   {selectedButton === "Button 1" && (
                     <div className="table">
-                     <Table obj={obj[0]} />
+                      <Table obj={obj[0]} />
                     </div>
                   )}
                   {selectedButton === "Button 2" && (
                     <div className="table">
-                       <div className="table">
-                     <Table obj={obj[1]} />
-                    </div>
+                      <div className="table">
+                        <Table obj={obj[1]} />
+                      </div>
                     </div>
                   )}
                   {selectedButton === "Button 3" && (

@@ -1,23 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import LandingPage from "./Landing";
-import Blog from "./Blogs";
-import Events from "./components/Events";
-import VisualArtComponent from "./components/VisualArtComponent";
-import Horoscope from "./components/HoroscopText";
+const LandingPage = lazy(() => import("./Landing"));
+// import LandingPage from "./Landing";
+const Blog = lazy(() => import("./Blogs"));
+// import Blog from "./Blogs";
+const Events = lazy(() => import("./components/Events"));
+// import Events from "./components/Events";
+const VisualArtComponent = lazy(() =>
+  import("./components/VisualArtComponent")
+);
+// import VisualArtComponent from "./components/VisualArtComponent";
+
+const Horoscope = lazy(() => import("./components/HoroscopText"));
+// import Horoscope from "./components/HoroscopText";
 import Layout from "./components/Layout";
-import MixComponent from "./components/MixComponent";
-import AboutMuzicComponent from "./components/AboutMuzicComponent";
-import BioComponent from "./components/BioComponent";
-import Contacts from "./components/Contacts";
-import Spotify from "./components/Spotify";
-import TextMusic from "./components/TextMusic";
-import TextFilm from "./components/TextFilm";
-import MediaPhotos from "./components/MediaPhotos";
-import BandMedia from "./components/BandMedia";
-import Catatro from "./components/media-visual/Catatro";
-import Primordial from "./components/media-visual/Primordial";
+const MixComponent = lazy(() => import("./components/MixComponent"));
+// import MixComponent from "./components/MixComponent";
+const AboutMuzicComponent = lazy(() =>
+  import("./components/AboutMuzicComponent")
+);
+// import AboutMuzicComponent from "./components/AboutMuzicComponent";
+const BioComponent = lazy(() => import("./components/BioComponent"));
+// import BioComponent from "./components/BioComponent";
+const Contacts = lazy(() => import("./components/Contacts"));
+// import Contacts from "./components/Contacts";
+const Spotify = lazy(() => import("./components/Spotify"));
+// import Spotify from "./components/Spotify";
+const TextMusic = lazy(() => import("./components/TextMusic"));
+// import TextMusic from "./components/TextMusic";
+
+const TextFilm = lazy(() => import("./components/TextFilm"));
+// import TextFilm from "./components/TextFilm";
+const MediaPhotos = lazy(() => import("./components/MediaPhotos"));
+// import MediaPhotos from "./components/MediaPhotos";
+const BandMedia = lazy(() => import("./components/BandMedia"));
+// import BandMedia from "./components/BandMedia";
+const Catatro = lazy(() => import("./components/media-visual/Catatro"));
+// import Catatro from "./components/media-visual/Catatro";
+const Primordial = lazy(() => import("./components/media-visual/Primordial"));
+// import Primordial from "./components/media-visual/Primordial";
+
+import LinkTree from "./pages/linktree/Linktree";
+// const LinkTree = lazy(() => import("./pages/linktree/Linktree"));
+import { Suspense } from "react";
 
 function App() {
   const [words, setWords] = useState(["Film Composition", "Multimedia Art"]);
@@ -62,137 +88,369 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<LandingPage />} />
+        <Route
+          path="/"
+          element={
+            <Suspense
+              fallback={
+                <div
+                  style={{
+                    backgroundColor: "black",
+                    height: "100vh",
+                    width: "100wh",
+                  }}
+                >
+                  Loading...
+                </div>
+              }
+            >
+              <Layout />
+            </Suspense>
+          }
+        >
+          <Route
+            index
+            element={
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <LandingPage />
+              </Suspense>
+            }
+          />
           <Route
             path="bio"
             element={
-              <Blog tittleBlog={"BIO"} navItems={navItems} number={200}>
-                <BioComponent />
-              </Blog>
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog tittleBlog={"BIO"} navItems={navItems} number={200}>
+                  <BioComponent />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="photos"
             element={
-              <Blog
-                tittleBlog={"PHOTOS"}
-                media={<MediaPhotos />}
-                navItems={navItems}
-                number={206}
-              />
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog
+                  tittleBlog={"PHOTOS"}
+                  media={<MediaPhotos />}
+                  navItems={navItems}
+                  number={206}
+                />
+              </Suspense>
             }
           />
           <Route
             path="/contacts"
             element={
-              <Blog
-                tittleBlog={"CONTACTS"}
-                contact={<Contacts />}
-                navItems={navItems}
-                number={214}
-              />
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog
+                  tittleBlog={"CONTACTS"}
+                  contact={<Contacts />}
+                  navItems={navItems}
+                  number={214}
+                />
+              </Suspense>
             }
           />
           <Route
             path="/inspiration"
             element={
-              <Blog tittleBlog={"INSPIRATION"} navItems={navItems} number={211}>
-                <Spotify />
-              </Blog>
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog
+                  tittleBlog={"INSPIRATION"}
+                  navItems={navItems}
+                  number={211}
+                >
+                  <Spotify />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="/music"
             element={
-              <Blog tittleBlog={"MUSIC"} navItems={navItemsPort} number={222}>
-                <TextMusic />
-              </Blog>
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog tittleBlog={"MUSIC"} navItems={navItemsPort} number={222}>
+                  <TextMusic />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="/film"
             element={
-              <Blog
-                tittleBlog={"FILM COMPOSITION"}
-                navItems={navItemsPort}
-                number={226}
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
               >
-                <TextFilm />
-              </Blog>
+                <Blog
+                  tittleBlog={"FILM COMPOSITION"}
+                  navItems={navItemsPort}
+                  number={226}
+                >
+                  <TextFilm />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="/visual"
             element={
-              <Blog
-                tittleBlog={"MULTIMEDIA ART"}
-                navItems={navItemsPort}
-                number={233}
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
               >
-                <VisualArtComponent />
-              </Blog>
+                <Blog
+                  tittleBlog={"MULTIMEDIA ART"}
+                  navItems={navItemsPort}
+                  number={233}
+                >
+                  <VisualArtComponent />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="visual/visual1"
             element={
-              <Blog
-                tittleBlog={"Catoptro-tono v.1"}
-                navItems={navItemsPort}
-                number={241}
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
               >
-                <Catatro />
-              </Blog>
+                <Blog
+                  tittleBlog={"Catoptro-tono v.1"}
+                  navItems={navItemsPort}
+                  number={241}
+                >
+                  <Catatro />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="visual/visual2"
             element={
-              <Blog
-                tittleBlog={"Primordial feelings "}
-                navItems={navItemsPort}
-                number={242}
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
               >
-                <Primordial />
-              </Blog>
+                <Blog
+                  tittleBlog={"Primordial feelings "}
+                  navItems={navItemsPort}
+                  number={242}
+                >
+                  <Primordial />
+                </Blog>
+              </Suspense>
             }
           />
 
           <Route
             path="/mixing"
             element={
-              <Blog tittleBlog={"MIXING"} navItems={navItemsPort} number={236}>
-                <MixComponent />
-              </Blog>
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog
+                  tittleBlog={"MIXING"}
+                  navItems={navItemsPort}
+                  number={236}
+                >
+                  <MixComponent />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="/about-music"
             element={
-              <Blog tittleBlog={"About"} navItems={navItemsBand} number={239}>
-                <AboutMuzicComponent />
-              </Blog>
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog tittleBlog={"About"} navItems={navItemsBand} number={239}>
+                  <AboutMuzicComponent />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="/events"
             element={
-              <Blog tittleBlog={"Events"} navItems={navItemsBand} number={243}>
-                <Events />
-              </Blog>
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
+              >
+                <Blog
+                  tittleBlog={"Events"}
+                  navItems={navItemsBand}
+                  number={243}
+                >
+                  <Events />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
             path="/music-media"
             element={
-              <Blog
-                tittleBlog={"Band Media"}
-                navItems={navItemsBand}
-                number={248}
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "100vh",
+                      width: "100wh",
+                    }}
+                  >
+                    Loading...
+                  </div>
+                }
               >
-                <BandMedia />
-              </Blog>
+                <Blog
+                  tittleBlog={"Band Media"}
+                  navItems={navItemsBand}
+                  number={248}
+                >
+                  <BandMedia />
+                </Blog>
+              </Suspense>
             }
           />
           <Route
@@ -207,6 +465,7 @@ function App() {
               </Blog>
             }
           />
+          <Route path="/linktree" element={<LinkTree />} />
         </Route>
       </Routes>
     </>

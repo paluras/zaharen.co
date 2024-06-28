@@ -1,0 +1,84 @@
+.linktree-main {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    color: white;
+    padding: 60px 0px;
+    margin: 0;
+    background-color: black;
+}
+
+header,
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+}
+
+.linktree-zaharenco-logo {
+    width: 90%;
+    image-rendering: pixelated;
+
+}
+
+.img-container-linktree {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#linktree-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.button-container {
+    width: 100%;
+}
+
+.linktree-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #fcdd00;
+
+}
+
+.linktree-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.linktree-header>p {
+    text-wrap: balance;
+    text-align: center;
+}
+
+
+.linktree-img {
+    position: absolute;
+    left: 3vw;
+}
+
+.linktree-button>a {
+    background-color: #b1461c;
+    padding: 20px 20px;
+    width: 100%;
+    text-wrap: balance;
+
+}
