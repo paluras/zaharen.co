@@ -4,33 +4,45 @@ import "./linktree.style.css";
 
 export default function LinkTree() {
   const [videoSrc, setVideoSrc] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([
+    {
+      id: 888,
+      attributes: { srclinktree: "asdasd", img: "", thetext: "asdasd" },
+    },
+  ]);
+  const [loading, setLoading] = useState(true); // Loading state to show loading indicator
+  const [error, setError] = useState(null); // Error state to show error message if needed
+
+  const token =
+    "98518ba649c215aa43da7e313e4e85acb08e00dd07b530f11547648809b42a2cb9c63d821b20f2a83299a144e4ade9a53e7e174b5e90e640587b048a9239ff6e23ae7e7b2a5ebe97234e39b4a7649aa977de51d757983d0c2f6d7d08fcdbde4034a3b16299f7b23171b568da6f014493185cef930d3f6515e2ac9249841c694e";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}api/linktrees`,
-          {
-            headers: {
-              Authorization: `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
-            },
-          }
-        );
+        setLoading(true); // Set loading to true before fetching data
+        const response = await fetch("/api/external-api", {
+          headers: {
+            Authorization: `Bearer ${token}`, // Include your token here
+          },
+        });
 
-        if (response.ok) {
-          const data = await response.json();
-          setData(data.data); // Assuming the API response structure has a data field
-        } else {
-          console.error("Failed to fetch data:", response.statusText);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
         }
+
+        const data = await response.json();
+        setData(data); // Update state with fetched data
       } catch (error) {
+        setError(error.message); // Set error message if fetch fails
         console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false); // Set loading to false after fetching data
       }
     };
 
     fetchData();
-  }, []);
+  }, []); // Empty dependency array means this effect runs once, similar to componentDidMount
+  console.log(data);
   const updateVideoSource = () => {
     const width = window.innerWidth;
 
@@ -77,16 +89,19 @@ export default function LinkTree() {
             />
           </a>
         </div>
-        {data?.length > 0 &&
+
+        {!loading &&
+          !error &&
+          data.length > 0 &&
           data.map((item) => (
             <LinktreeButton
-              key={item.id} // Ensure each item has a unique key
-              linkProp={item.attributes.srclinktree} // Adjust according to your data structure
-              imgProp={item.attributes.img || null} // Adjust according to your data structure
-              textProp={item.attributes.thetext} // Adjust according to your data structure
+              key={item.id}
+              linkProp={item.attributes.srclinktree} // Accessing the srclinktree from attributes
+              imgProp={item.attributes.img || ""} // Accessing the img from attributes, default to empty string
+              textProp={item.attributes.thetext} // Accessing the thetext from attributes
             />
           ))}
-
+        {/* Static LinktreeButton instances */}
         <LinktreeButton linkProp={"./"} imgProp={""} textProp={"Zaharen.co"} />
         <LinktreeButton
           linkProp={
@@ -100,7 +115,6 @@ export default function LinkTree() {
           imgProp={""}
           textProp={"Apple Music"}
         />
-
         <LinktreeButton
           linkProp={
             "https://soundcloud.com/zaharenco?ref=clipboard&p=i&c=0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
@@ -113,7 +127,6 @@ export default function LinkTree() {
           imgProp={""}
           textProp={"Youtube"}
         />
-
         <LinktreeButton
           linkProp={
             "https://www.behance.net/gallery/156292383/Catoptro-tono-v1-AI-Based-Installation"
@@ -128,7 +141,6 @@ export default function LinkTree() {
           imgProp={""}
           textProp={"Primordial feelings - Audio-Visual Installation"}
         />
-
         <LinktreeButton
           linkProp={"https://www.behance.net/zaharenco"}
           imgProp={""}
