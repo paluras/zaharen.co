@@ -19,6 +19,7 @@ export default function LinkTree() {
         });
         if (response.ok) {
           const data = await response.json();
+          console.log(data);
           setData(data.data); // Assuming the API response structure has a data field
         } else {
           console.error("Failed to fetch data:", response.statusText);
