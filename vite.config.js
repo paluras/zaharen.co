@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -11,6 +10,11 @@ export default defineConfig({
         target: 'https://my-project-n0jf.onrender.com/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api'),
+      },
+      '/zaharen-api': {
+        target: 'https://www.zaharen.co/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/zaharen-api/, '/api'),
       },
     }
   }
