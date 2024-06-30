@@ -10,6 +10,8 @@ export default function LinkTree() {
     const fetchData = async () => {
       try {
         const apiUrl = process.env.VITE_API_URL;
+        const authToken = process.env.REACT_APP_AUTH_TOKEN;
+
         const response = await fetch(`${apiUrl}/api/linktrees`, {
           headers: {
             Authorization: `Bearer ${authToken}`,
