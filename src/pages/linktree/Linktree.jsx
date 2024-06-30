@@ -12,17 +12,24 @@ export default function LinkTree() {
         const apiUrl = process.env.VITE_API_URL;
         const authToken = process.env.REACT_APP_AUTH_TOKEN;
 
+        console.log("API URL:", apiUrl); // Check API URL
+        console.log("Auth Token:", authToken); // Check Auth Token
+
+        if (!apiUrl || !authToken) {
+          throw new Error("API URL or Auth Token is missing");
+        }
+
         const response = await fetch(`${apiUrl}/api/linktrees`, {
           headers: {
             Authorization: `Bearer ${authToken}`,
           },
         });
+
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
-          setData(data.data); // Assuming the API response structure has a data field
+          setData(data.data);
         } else {
-          console.error("Failed to fetch data:", response.statusText);
+          throw new Error(`Failed to fetch data: ${response.statusText}`);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
