@@ -10,7 +10,7 @@ export default function LinkTree() {
     const fetchData = async () => {
       try {
         const apiUrl = process.env.VITE_API_URL;
-        const authToken = process.env.REACT_APP_AUTH_TOKEN;
+        const authToken = process.env.VITE_AUTH_TOKEN;
 
         console.log("API URL:", apiUrl); // Check API URL
         console.log("Auth Token:", authToken); // Check Auth Token
