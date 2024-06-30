@@ -9,27 +9,20 @@ export default function LinkTree() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apiUrl = process.env.VITE_API_URL;
-        const authToken = process.env.VITE_AUTH_TOKEN;
-
-        console.log("API URL:", apiUrl); // Check API URL
-        console.log("Auth Token:", authToken); // Check Auth Token
-
-        if (!apiUrl || !authToken) {
-          throw new Error("API URL or Auth Token is missing");
-        }
-
-        const response = await fetch(`${apiUrl}/api/linktrees`, {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        });
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/linktrees`,
+          {
+            headers: {
+              Authorization: `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
+            },
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
-          setData(data.data);
+          setData(data.data); // Assuming the API response structure has a data field
         } else {
-          throw new Error(`Failed to fetch data: ${response.statusText}`);
+          console.error("Failed to fetch data:", response.statusText);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -38,7 +31,6 @@ export default function LinkTree() {
 
     fetchData();
   }, []);
-
   const updateVideoSource = () => {
     const width = window.innerWidth;
 
