@@ -10,7 +10,7 @@ export default function LinkTree() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/linktrees`,
+          `${import.meta.env.VITE_API_URL}api/linktrees`,
           {
             headers: {
               Authorization: `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
