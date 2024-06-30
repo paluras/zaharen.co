@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://my-project-n0jf.onrender.com/'; // Replace with your actual API endpoint
+const API_URL = 'https://my-project-n0jf.onrender.com'; // Replace with your actual API endpoint
 
 export const fetchData = async (endpoint) => {
     try {
