@@ -1,27 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { LinktreeButton } from "./components/LinktreeButton";
 import "./linktree.style.css";
-// import { fetchData } from "../../services/strapi"; // Ensure this path is correct
 
 export default function LinkTree() {
   const [videoSrc, setVideoSrc] = useState("");
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const result = await fetchData("linktrees");
-  //       if (result && result.data) {
-  //         setData(result.data);
-  //       }
-  //       console.log("Data fetched:", result);
-  //     } catch (error) {
-  //       console.error("Error fetching linktrees:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${apiUrl}/api/linktrees`, {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        });
+        if (response.ok) {
+          const data = await response.json();
+          setData(data.data); // Assuming the API response structure has a data field
+        } else {
+          console.error("Failed to fetch data:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  //   getData();
-  // }, []);
+    fetchData();
+  }, []);
 
   const updateVideoSource = () => {
     const width = window.innerWidth;
@@ -69,7 +74,7 @@ export default function LinkTree() {
             />
           </a>
         </div>
-        {/* {data?.length > 0 &&
+        {data?.length > 0 &&
           data.map((item) => (
             <LinktreeButton
               key={item.id} // Ensure each item has a unique key
@@ -77,7 +82,7 @@ export default function LinkTree() {
               imgProp={item.attributes.img || null} // Adjust according to your data structure
               textProp={item.attributes.thetext} // Adjust according to your data structure
             />
-          ))} */}
+          ))}
 
         <LinktreeButton linkProp={"./"} imgProp={""} textProp={"Zaharen.co"} />
         <LinktreeButton
