@@ -1,7 +1,13 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-
-  "headers": {
-    "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://my-project-n0jf.onrender.com;"
-  }
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://my-project-n0jf.onrender.com;"
+        }
+      ]
+    }
+  ]
 }
