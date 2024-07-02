@@ -199,6 +199,7 @@ function LandingPage() {
           <video
             className={`zahar-music-video`}
             autoPlay
+            playsInline
             loop
             muted={muted}
             style={
