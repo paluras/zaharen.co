@@ -3,13 +3,16 @@ export function LinktreeButton({ imgProp, textProp, linkProp, altText }) {
     <div className="button-container">
       <button className="linktree-button">
         {" "}
-        <img
-          className="linktree-img"
-          src={imgProp}
-          alt={undefined || altText}
-        />
         <a className="linktree-link" target="_blank" href={linkProp}>
           {" "}
+          {imgProp ? (
+            <img
+              height={30}
+              className="linktree-img"
+              src={imgProp}
+              alt={null || altText}
+            />
+          ) : null}
           {textProp}{" "}
         </a>
       </button>

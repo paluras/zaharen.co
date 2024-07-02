@@ -69,7 +69,6 @@ export default function LinkTree() {
           src="./Zaharenco-logo.png"
           alt="logo"
         />
-        <p>Composer based in Bucharest, Romania</p>
       </header>
 
       <section>
@@ -90,7 +89,7 @@ export default function LinkTree() {
           </a>
         </div>
 
-        {!loading &&
+        {/* {!loading &&
           !error &&
           data.length > 0 &&
           data.map((item) => (
@@ -100,52 +99,45 @@ export default function LinkTree() {
               imgProp={item.attributes.img || ""} // Accessing the img from attributes, default to empty string
               textProp={item.attributes.thetext} // Accessing the thetext from attributes
             />
-          ))}
+          ))} */}
         {/* Static LinktreeButton instances */}
+        <LinktreeButton
+          linkProp={
+            "https://open.spotify.com/track/1uoIexbNMtcmitN7q9c5B1?si=190fe1597f5d45fb"
+          }
+          imgProp={"./icons/spotifylogo.png"}
+          textProp={""}
+        />
+        <LinktreeButton
+          linkProp={
+            "https://music.apple.com/tr/album/condition-5-single/1750855792"
+          }
+          imgProp={"./icons/applelogo.png"}
+          textProp={""}
+        />
+        <LinktreeButton
+          linkProp={
+            "https://soundcloud.com/zaharenco/condition-5?si=64706e423ae44ba59b072f02532a3ab9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          }
+          imgProp={"./icons/soundcloudlogo.png"}
+        />
+        <LinktreeButton
+          linkProp={"https://music.youtube.com/watch?v=d104n1_4-JQ"}
+          imgProp={"./icons/youtubemusiclogo.png"}
+        />
+        <LinktreeButton
+          linkProp={"https://tidal.com/track/368003631?u"}
+          imgProp={"./icons/tidallogo.png"}
+        />
+        <LinktreeButton
+          linkProp={
+            "https://www.youtube.com/watch?v=d104n1_4-JQ&list=OLAK5uy_l7WTg0-6Mxygnc5Qnr1QVl3e7B9htiGdE"
+          }
+          imgProp={"./icons/youtubelogo.png"}
+          textProp={""}
+        />
+
         <LinktreeButton linkProp={"./"} imgProp={""} textProp={"Zaharen.co"} />
-        <LinktreeButton
-          linkProp={
-            "https://open.spotify.com/artist/4azDTEsE76hndB8paNOEe8?si=NHCTZCI7QIOVzVyIRbufUQ&utm_medium=share&utm_source=linktree&nd=1&dlsi=dbbb9deb79524a45"
-          }
-          imgProp={""}
-          textProp={"Spotify"}
-        />
-        <LinktreeButton
-          linkProp={"https://music.apple.com/ro/artist/zaharenco/1591749000"}
-          imgProp={""}
-          textProp={"Apple Music"}
-        />
-        <LinktreeButton
-          linkProp={
-            "https://soundcloud.com/zaharenco?ref=clipboard&p=i&c=0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-          }
-          imgProp={""}
-          textProp={"SoundCloud"}
-        />
-        <LinktreeButton
-          linkProp={"https://www.youtube.com/@zaharenco"}
-          imgProp={""}
-          textProp={"Youtube"}
-        />
-        <LinktreeButton
-          linkProp={
-            "https://www.behance.net/gallery/156292383/Catoptro-tono-v1-AI-Based-Installation"
-          }
-          imgProp={""}
-          textProp={"Catoptro-tono v.1 - Ai Based Sound Installation"}
-        />
-        <LinktreeButton
-          linkProp={
-            "https://www.behance.net/gallery/156288983/Primordial-Feelings-Audio-Visual-Installation"
-          }
-          imgProp={""}
-          textProp={"Primordial feelings - Audio-Visual Installation"}
-        />
-        <LinktreeButton
-          linkProp={"https://www.behance.net/zaharenco"}
-          imgProp={""}
-          textProp={"Behance"}
-        />
       </section>
     </main>
   );
