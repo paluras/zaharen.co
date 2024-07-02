@@ -10,18 +10,18 @@ function LandingPage() {
   const [start, setStart] = useState("tv-main");
   const [displays, setDisplay] = useState("flex");
   const [clicked, setClicked] = useState(false);
+  const [muted, setMuted] = useState(true);
 
   const [compenentOverflow, setComponentOverflow] = useState("hidden");
   const [shouldRender, setShouldRender] = useState(false);
   const [one, setOne] = useState("0");
   const [selectedButton, setSelectedButton] = useState("Button 1");
   const [crt, setCrt] = useState(null);
+  const [words, setWords] = useState(["FILM COMPOSITION", "MULTIMEDIA ART"]);
 
   function handleClickCRT() {
     crt === null ? setCrt("crt") : setCrt(null);
   }
-
-  const [words, setWords] = useState(["FILM COMPOSITION", "MULTIMEDIA ART"]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,6 +74,8 @@ function LandingPage() {
 
     count ? setOne("1") : setOne("0");
     setClicked(true);
+    setMuted(true);
+    console.log(muted);
   }
 
   const handleClickDisplay = (buttonName) => {
@@ -164,15 +166,57 @@ function LandingPage() {
   ];
 
   return (
-    <div style={{ backgroundColor: "black" }} className="App">
+    <div className="App">
       {shouldRender && (
-        <div style={{ display: `${displays}` }} className="img-container">
+        <div
+          style={{
+            display: `${displays}`,
+          }}
+          className="img-container"
+        >
+          <button
+            style={{
+              display: `${clicked ? "none" : "block"}`,
+              position: "absolute",
+              top: "10px",
+              backgroundColor: "white",
+              zIndex: "1000000000",
+              cursor: "pointer",
+              padding: "10px",
+            }}
+            onClick={() => handleClick()}
+          >
+            go to website
+          </button>
+
           <img
-            onClick={handleClick}
-            className={start}
+            style={clicked ? { transform: `scale(9)` } : {}}
+            onClick={() => setMuted(!muted)}
+            className="tv-main"
             src="/tv.png"
             alt="tv landing page"
           ></img>
+          <video
+            className={`zahar-music-video`}
+            autoPlay
+            loop
+            muted={muted}
+            style={
+              clicked
+                ? {
+                    zIndex: "1",
+                    transform: `scale(9) translateX(-8%)`,
+                    opacity: `0`,
+                  }
+                : {
+                    zIndex: "1",
+
+                    opacity: `1`,
+                  }
+            }
+            src="/output2.webm"
+            alt=""
+          />
         </div>
       )}
       <div className="white"></div>
