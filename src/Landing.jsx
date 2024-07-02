@@ -178,7 +178,8 @@ function LandingPage() {
             style={{
               display: `${clicked ? "none" : "block"}`,
               position: "absolute",
-              top: "10px",
+              bottom: "100px",
+              fontSize: "16px",
               backgroundColor: "white",
               zIndex: "1000000000",
               cursor: "pointer",
