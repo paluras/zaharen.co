@@ -194,7 +194,7 @@ function LandingPage() {
             style={clicked ? { transform: `scale(9)` } : {}}
             onClick={() => setMuted(!muted)}
             className="tv-main"
-            src="/tv.png"
+            src="/tv.webp"
             alt="tv landing page"
           ></img>
           <video
