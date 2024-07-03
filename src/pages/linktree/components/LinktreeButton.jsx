@@ -10,7 +10,7 @@ export function LinktreeButton({ imgProp, textProp, linkProp, altText }) {
               height={30}
               className="linktree-img"
               src={imgProp}
-              alt={null || altText}
+              alt={null || imgProp}
             />
           ) : null}
           {textProp}{" "}
