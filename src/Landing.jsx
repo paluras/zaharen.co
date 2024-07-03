@@ -236,7 +236,7 @@ function LandingPage() {
                     opacity: `1`,
                   }
             }
-            src="/output2.webm"
+            src="/Output2.mp4"
             alt=""
           />
         </div>
