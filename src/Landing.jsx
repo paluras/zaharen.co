@@ -189,6 +189,27 @@ function LandingPage() {
           >
             go to website
           </button>
+          <button
+            style={{
+              display: `${clicked ? "none" : "block"}`,
+              position: "absolute",
+              top: "100px",
+              fontSize: "16px",
+              backgroundColor: "white",
+              zIndex: "1000000000",
+              cursor: "pointer",
+              padding: "10px",
+            }}
+          >
+            <a
+              style={{
+                color: "black",
+              }}
+              href="/linktree"
+            >
+              listen more
+            </a>
+          </button>
 
           <img
             style={clicked ? { transform: `scale(9)` } : {}}
@@ -212,7 +233,6 @@ function LandingPage() {
                   }
                 : {
                     zIndex: "1",
-
                     opacity: `1`,
                   }
             }
