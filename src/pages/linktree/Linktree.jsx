@@ -35,7 +35,7 @@ export default function LinkTree() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '679345037709625');
+            fbq('init', '3318348991793514');
             fbq('track', 'PageView');
           `}
         </script>
