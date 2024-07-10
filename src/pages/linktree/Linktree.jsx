@@ -89,25 +89,25 @@ export default function LinkTree() {
             "https://music.apple.com/tr/album/condition-5-single/1750855792"
           }
           imgProp={"./icons/applelogo.png"}
+          altText={"Apple Music"}
           textProp={""}
-          onClick={() => trackButtonClick("Apple Music")}
         />
         <LinktreeButton
           linkProp={
             "https://soundcloud.com/zaharenco/condition-5?si=64706e423ae44ba59b072f02532a3ab9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
           }
           imgProp={"./icons/soundcloudlogo.png"}
-          onClick={() => trackButtonClick("SoundCloud")}
+          altText={"SoundCloud"}
         />
         <LinktreeButton
           linkProp={"https://music.youtube.com/watch?v=d104n1_4-JQ"}
           imgProp={"./icons/youtubemusiclogo.png"}
-          onClick={() => trackButtonClick("YouTube Music")}
+          altText={"YouTube Music"}
         />
         <LinktreeButton
           linkProp={"https://tidal.com/track/368003631?u"}
           imgProp={"./icons/tidallogo.png"}
-          onClick={() => trackButtonClick("Tidal")}
+          altText={"Tidal"}
         />
         <LinktreeButton
           linkProp={
@@ -115,12 +115,13 @@ export default function LinkTree() {
           }
           imgProp={"./icons/youtubelogo.png"}
           textProp={""}
-          onClick={() => trackButtonClick("YouTube")}
+          altText={"YouTube"}
         />
 
         <LinktreeButton
           linkProp={"./"}
           imgProp={""}
+          altText={"Zaharen.co"}
           textProp={"Zaharen.co"}
           onClick={() => trackButtonClick("Zaharen.co")}
         />
