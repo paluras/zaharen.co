@@ -22,6 +22,15 @@ export default function LinkTree() {
     return () => window.removeEventListener("resize", updateVideoSource);
   }, []);
 
+  // Function to track button clicks
+  const trackButtonClick = (buttonName) => {
+    if (window.fbq) {
+      window.fbq("track", "ClickButton", {
+        button_name: buttonName,
+      });
+    }
+  };
+
   return (
     <main className="linktree-main">
       <Helmet>
@@ -54,6 +63,7 @@ export default function LinkTree() {
           <a
             target="_blank"
             href="https://open.spotify.com/track/1uoIexbNMtcmitN7q9c5B1?si=GjilGNsJSGa3q68pZuzkCg&context=spotify%3Aalbum%3A1Bwz0ywI3x5zpLNRbT8UgA&nd=1&dlsi=b67c240ef5d44a98"
+            onClick={() => trackButtonClick("Cover Album")}
           >
             <video
               playsInline
@@ -72,6 +82,7 @@ export default function LinkTree() {
           }
           imgProp={"./icons/spotifylogo.png"}
           textProp={""}
+          onClick={() => trackButtonClick("Spotify")}
         />
         <LinktreeButton
           linkProp={
@@ -79,20 +90,24 @@ export default function LinkTree() {
           }
           imgProp={"./icons/applelogo.png"}
           textProp={""}
+          onClick={() => trackButtonClick("Apple Music")}
         />
         <LinktreeButton
           linkProp={
             "https://soundcloud.com/zaharenco/condition-5?si=64706e423ae44ba59b072f02532a3ab9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
           }
           imgProp={"./icons/soundcloudlogo.png"}
+          onClick={() => trackButtonClick("SoundCloud")}
         />
         <LinktreeButton
           linkProp={"https://music.youtube.com/watch?v=d104n1_4-JQ"}
           imgProp={"./icons/youtubemusiclogo.png"}
+          onClick={() => trackButtonClick("YouTube Music")}
         />
         <LinktreeButton
           linkProp={"https://tidal.com/track/368003631?u"}
           imgProp={"./icons/tidallogo.png"}
+          onClick={() => trackButtonClick("Tidal")}
         />
         <LinktreeButton
           linkProp={
@@ -100,9 +115,15 @@ export default function LinkTree() {
           }
           imgProp={"./icons/youtubelogo.png"}
           textProp={""}
+          onClick={() => trackButtonClick("YouTube")}
         />
 
-        <LinktreeButton linkProp={"./"} imgProp={""} textProp={"Zaharen.co"} />
+        <LinktreeButton
+          linkProp={"./"}
+          imgProp={""}
+          textProp={"Zaharen.co"}
+          onClick={() => trackButtonClick("Zaharen.co")}
+        />
       </section>
     </main>
   );
