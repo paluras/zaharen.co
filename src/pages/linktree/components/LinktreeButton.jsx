@@ -1,7 +1,7 @@
 export function LinktreeButton({ imgProp, textProp, linkProp, altText }) {
   const trackButtonClick = (buttonName) => {
     if (window.fbq) {
-      window.fbq("track", "Lead", {
+      window.fbq("track", "Subscribe", {
         button_name: buttonName,
       });
     }

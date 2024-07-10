@@ -25,7 +25,7 @@ export default function LinkTree() {
   // Function to track button clicks
   const trackButtonClick = (buttonName) => {
     if (window.fbq) {
-      window.fbq("track", "Lead", {
+      window.fbq("track", "Subscribe", {
         button_name: buttonName,
       });
     }
