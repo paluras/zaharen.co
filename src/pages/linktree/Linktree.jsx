@@ -82,7 +82,7 @@ export default function LinkTree() {
           }
           imgProp={"./icons/spotifylogo.png"}
           textProp={""}
-          onClick={() => trackButtonClick("Spotify")}
+          altText={"Spotify"}
         />
         <LinktreeButton
           linkProp={
@@ -123,7 +123,6 @@ export default function LinkTree() {
           imgProp={""}
           altText={"Zaharen.co"}
           textProp={"Zaharen.co"}
-          onClick={() => trackButtonClick("Zaharen.co")}
         />
       </section>
     </main>
