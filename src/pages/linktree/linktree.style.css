@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Diamante Bold";
-    src: url('./font/Diamante\ Bold.ttf') format("truetype");
+    src: url('../../../public/diamante_bold-webfont.woff2');
 }
 
 .linktree-main {
