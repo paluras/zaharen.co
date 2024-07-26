@@ -77,12 +77,26 @@ export default function LinkTree() {
           </a>
         </div>
         <LinktreeButton
+          linkProp={"https://www.youtube.com/watch?v=SYItzRqGkkY"}
+          imgProp={"./icons/youtubelogo.png"}
+          textProp={""}
+          altText={"YouTube"}
+        />
+        <LinktreeButton
           linkProp={
             "https://open.spotify.com/track/1uoIexbNMtcmitN7q9c5B1?si=190fe1597f5d45fb"
           }
           imgProp={"./icons/spotifylogo.png"}
           textProp={""}
           altText={"Spotify"}
+        />
+        <LinktreeButton
+          linkProp={
+            "https://open.spotify.com/playlist/7fP4Kd7jjElcPbHKihCmq3?si=7IHYCAQHRguxwPLYhmf04A"
+          }
+          imgProp={""}
+          altText={"New Jazz Romania Playlist"}
+          textProp={"New Jazz Romania Playlist"}
         />
         <LinktreeButton
           linkProp={
@@ -109,20 +123,12 @@ export default function LinkTree() {
           imgProp={"./icons/tidallogo.png"}
           altText={"Tidal"}
         />
-        <LinktreeButton
-          linkProp={
-            "https://www.youtube.com/watch?v=d104n1_4-JQ&list=OLAK5uy_l7WTg0-6Mxygnc5Qnr1QVl3e7B9htiGdE"
-          }
-          imgProp={"./icons/youtubelogo.png"}
-          textProp={""}
-          altText={"YouTube"}
-        />
 
         <LinktreeButton
           linkProp={"./"}
           imgProp={""}
-          altText={"Zaharen.co"}
-          textProp={"Zaharen.co"}
+          altText={"Website"}
+          textProp={"Website"}
         />
       </section>
     </main>

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Diamante Bold";
+    src: url('./font/Diamante\ Bold.ttf') format("truetype");
+}
+
 .linktree-main {
     justify-content: center;
     align-items: center;
@@ -8,6 +13,7 @@
     padding: 60px 0px;
     margin: 0;
     background-color: black;
+
 }
 
 header,
@@ -80,6 +86,8 @@ section {
 
 
 .linktree-button>a {
+    font-family: "Diamante Bold", sans-serif;
+    font-size: 1.75rem;
     background-color: #b1461c;
     padding: 20px 20px;
     width: 100%;
