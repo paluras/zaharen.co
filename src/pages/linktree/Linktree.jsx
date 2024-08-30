@@ -4,23 +4,23 @@ import "./linktree.style.css";
 import { Helmet } from "react-helmet";
 
 export default function LinkTree() {
-  const [videoSrc, setVideoSrc] = useState("");
+  // const [videoSrc, setVideoSrc] = useState("");
 
-  const updateVideoSource = () => {
-    const width = window.innerWidth;
+  // const updateVideoSource = () => {
+  //   const width = window.innerWidth;
 
-    if (width <= 480) {
-      setVideoSrc("./condition5video.webm"); // for mobile devices
-    } else {
-      setVideoSrc("./condition5bigVideo.webm"); // for desktops
-    }
-  };
+  //   if (width <= 480) {
+  //     setVideoSrc("./condition5video.webm"); // for mobile devices
+  //   } else {
+  //     setVideoSrc("./condition5bigVideo.webm"); // for desktops
+  //   }
+  // };
 
-  useEffect(() => {
-    updateVideoSource();
-    window.addEventListener("resize", updateVideoSource);
-    return () => window.removeEventListener("resize", updateVideoSource);
-  }, []);
+  // useEffect(() => {
+  //   updateVideoSource();
+  //   window.addEventListener("resize", updateVideoSource);
+  //   return () => window.removeEventListener("resize", updateVideoSource);
+  // }, []);
 
   // Function to track button clicks
   const trackButtonClick = (buttonName) => {
@@ -62,29 +62,25 @@ export default function LinkTree() {
         <div className="img-container-linktree">
           <a
             target="_blank"
-            href="https://open.spotify.com/track/1uoIexbNMtcmitN7q9c5B1?si=GjilGNsJSGa3q68pZuzkCg&context=spotify%3Aalbum%3A1Bwz0ywI3x5zpLNRbT8UgA&nd=1&dlsi=b67c240ef5d44a98"
+            href="https://open.spotify.com/track/0mqUU3foODusY7YLK5PJlq?si=g93ZQZC4STimjD57Cyb-DQ&context=spotify%3Aalbum%3A6nWWlyMKA5CzX2LMaXagkU"
             onClick={() => trackButtonClick("Cover Album")}
           >
-            <video
-              playsInline
+            <img
               id="linktree-img"
-              src={videoSrc}
-              autoPlay
-              muted
-              loop
+              src={"./Artwork Condition 4 v.5.jpg"}
               alt="Cover Album For Zaharenco"
             />
           </a>
         </div>
         <LinktreeButton
-          linkProp={"https://www.youtube.com/watch?v=SYItzRqGkkY"}
+          linkProp={"https://youtu.be/xryrrX6E2PM?si=tCr8XsLZtvULaO7x"}
           imgProp={"./icons/youtubelogo.png"}
           textProp={""}
           altText={"YouTube"}
         />
         <LinktreeButton
           linkProp={
-            "https://open.spotify.com/track/1uoIexbNMtcmitN7q9c5B1?si=190fe1597f5d45fb"
+            "https://open.spotify.com/track/0mqUU3foODusY7YLK5PJlq?si=g93ZQZC4STimjD57Cyb-DQ&context=spotify%3Aalbum%3A6nWWlyMKA5CzX2LMaXagkU"
           }
           imgProp={"./icons/spotifylogo.png"}
           textProp={""}
@@ -100,21 +96,21 @@ export default function LinkTree() {
         />
         <LinktreeButton
           linkProp={
-            "https://music.apple.com/tr/album/condition-5-single/1750855792"
+            "https://music.apple.com/au/album/s/1761316442?i=1761316443&app=music&itscg=10002&itsct=mus_1591749000&ct=pTf1e4CmIaPuOWw&at=1010l367Y&ls=1&mttnsubad=song_preadd_Measure"
           }
           imgProp={"./icons/applelogo.png"}
           altText={"Apple Music"}
           textProp={""}
         />
         <LinktreeButton
-          linkProp={
-            "https://soundcloud.com/zaharenco/condition-5?si=64706e423ae44ba59b072f02532a3ab9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-          }
+          linkProp={"https://on.soundcloud.com/e6hTbUim9KUiwBjg9"}
           imgProp={"./icons/soundcloudlogo.png"}
           altText={"SoundCloud"}
         />
         <LinktreeButton
-          linkProp={"https://music.youtube.com/watch?v=d104n1_4-JQ"}
+          linkProp={
+            "https://music.youtube.com/watch?v=xryrrX6E2PM&si=qkSJ5K9fvqv_7n0p"
+          }
           imgProp={"./icons/youtubemusiclogo.png"}
           altText={"YouTube Music"}
         />
