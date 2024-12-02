@@ -14,26 +14,40 @@ const AboutMuzicComponent = () => {
       <div>
         <div className="container-lower">
           <p>
-            Zaharenco is a jazz quartet whose music aims to explore the New Jazz
-            scene by fusing jazz with classical and rock influences.
-          </p>
-          <p>
-            {" "}
-            He submits his works to the issue of musical predictability, seeking
-            a balance between predictability and uncertainty, and thus managing
-            to reach a wide range of emotions.
+            Zaharenco is a jazz quartet that explores the New Jazz scene by
+            blending jazz with classical and rock influences. Zaharenco music
+            addresses the challenge of musical predictability, striving for a
+            balance between certainty and surprise to evoke a wide range of
+            emotions.
           </p>
           <p>
             <a
-              style={{ color: "#ff68b4" }}
-              target="_blank"
-              href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=Tgr-UWa9Rcag4uDjxw-uug"
+              className="pink"
+              href="https://youtu.be/_2n43gWQdxc?si=PjmhtL45qizZhbVM"
             >
-              {" "}
-              Primordial feelings
+              Primordial Feelings
             </a>
-            , his first EP, is an exposition of the 2 main topics addressed: the
-            impulsive being and the ever-changing sentimental self.
+            , the quartet’s first EP, presents an exploration of two central
+            themes: the impulsive being and the ever-changing sentimental self.
+          </p>
+          <p>
+            In 2024, Zaharenco released two more singles,{" "}
+            <a
+              className="pink"
+              href="https://youtu.be/SYItzRqGkkY?si=Y3qpfSJ9hxlPvtzf"
+            >
+              Condition 5
+            </a>{" "}
+            and{" "}
+            <a
+              style={{
+                color: "#ff68b4",
+              }}
+              href="https://youtu.be/xryrrX6E2PM?si=n-iwjlz3zLvf9qUr"
+            >
+              Contition 4 (Suspended in Mid-Air)
+            </a>
+            , both marking the lead-up to the upcoming album.
           </p>
         </div>
       </div>

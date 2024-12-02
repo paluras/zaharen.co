@@ -17,7 +17,7 @@ function LandingPage() {
   const [one, setOne] = useState("0");
   const [selectedButton, setSelectedButton] = useState("Button 1");
   const [crt, setCrt] = useState(null);
-  const [words, setWords] = useState(["FILM COMPOSITION", "MULTIMEDIA ART"]);
+  const [words, setWords] = useState(["FILM/THEATRE", "MULTIMEDIA ART"]);
 
   function handleClickCRT() {
     crt === null ? setCrt("crt") : setCrt(null);
@@ -26,9 +26,9 @@ function LandingPage() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 670) {
-        setWords(["FILM", "MULTIMEDIA"]);
+        setWords(["FILM/THEATRE", "MULTIMEDIA"]);
       } else {
-        setWords(["FILM COMPOSITION", "MULTIMEDIA ARTS"]);
+        setWords(["FILM/THEATRE", "MULTIMEDIA ARTS"]);
       }
     };
     handleResize();
@@ -157,8 +157,8 @@ function LandingPage() {
     ],
     [
       {
-        path: "/horoscop",
-        title: "HOROSCOP",
+        path: "/",
+        title: "NEWS",
         dots: 255,
         id: 12,
       },
@@ -271,9 +271,7 @@ function LandingPage() {
                       PORTFOLIO
                     </li>
                     <li onClick={() => handleClickDisplay("Button 3")}>BAND</li>
-                    <li onClick={() => handleClickDisplay("Button 4")}>
-                      HOROSCOP
-                    </li>
+                    <li onClick={() => handleClickDisplay("Button 4")}>NEWS</li>
                   </ul>
                 </div>
                 <div className="container-right">
@@ -284,9 +282,7 @@ function LandingPage() {
                   )}
                   {selectedButton === "Button 2" && (
                     <div className="table">
-                      <div className="table">
-                        <Table obj={obj[1]} />
-                      </div>
+                      <Table obj={obj[1]} />
                     </div>
                   )}
                   {selectedButton === "Button 3" && (

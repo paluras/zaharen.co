@@ -1,27 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { LinktreeButton } from "./components/LinktreeButton";
 import "./linktree.style.css";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 export default function LinkTree() {
-  // const [videoSrc, setVideoSrc] = useState("");
-
-  // const updateVideoSource = () => {
-  //   const width = window.innerWidth;
-
-  //   if (width <= 480) {
-  //     setVideoSrc("./condition5video.webm"); // for mobile devices
-  //   } else {
-  //     setVideoSrc("./condition5bigVideo.webm"); // for desktops
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   updateVideoSource();
-  //   window.addEventListener("resize", updateVideoSource);
-  //   return () => window.removeEventListener("resize", updateVideoSource);
-  // }, []);
-
+  const navigate = useNavigate();
   // Function to track button clicks
   const trackButtonClick = (buttonName) => {
     if (window.fbq) {
@@ -51,10 +35,14 @@ export default function LinkTree() {
       </Helmet>
       <header className="linktree-header">
         <img
+          onClick={() => navigate("/")}
           className="linktree-zaharenco-logo"
           aria-hidden
           src="./Zaharenco-logo.png"
           alt="logo"
+          style={{
+            cursor: "pointer",
+          }}
         />
       </header>
 
@@ -114,6 +102,12 @@ export default function LinkTree() {
           imgProp={"./icons/youtubemusiclogo.png"}
           altText={"YouTube Music"}
         />
+        <LinktreeButton
+          linkProp={"https://zaharenco.bandcamp.com"}
+          imgProp={"./icons/Logo Bandcamp Edit.png"}
+          altText={"Tidal"}
+        />
+
         <LinktreeButton
           linkProp={"https://tidal.com/track/368003631?u"}
           imgProp={"./icons/tidallogo.png"}

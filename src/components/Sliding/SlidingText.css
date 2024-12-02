@@ -1,37 +1,35 @@
 .ticker-tape {
-  
-    overflow: hidden;
-    position: relative;
-  }
-  .colored-box{
-    width: 80vw;
-  }
-  
-  .ticker-content {
-    
-    display: inline-block;
-    white-space: nowrap;
-    animation: ticker 10s linear infinite; /* Adjust the animation duration as needed */
-  }
-  @media screen and (max-width: 768px) {
-    .colored-box{
-        width: 90vw;
-      }
-}
-@media screen and (max-width: 425px) {
-    .colored-box{
-        width: 100vw;
-        font-size: 1.25rem;
-      }
+
+  overflow: hidden;
+  position: relative;
 }
 
-  
-  @keyframes ticker {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+
+
+.ticker-content {
+
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 10s linear infinite;
+  /* Adjust the animation duration as needed */
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 425px) {
+  .colored-box {
+
+    font-size: 1.25rem;
   }
-  
+}
+
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

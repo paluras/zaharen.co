@@ -19,7 +19,6 @@ function SongPlayer(props) {
 
     setIsPlaying(!isPlaying);
   }
- 
 
   function handleTimeUpdate() {
     const audio = audioRef.current;
@@ -68,12 +67,11 @@ function SongPlayer(props) {
           src={isPlaying ? "/icons/stop.svg" : "/icons/play.svg"}
           alt={isPlaying ? "Stop" : "Play"}
         />
-        <div className="test">
+        <div className="test pink">
           <div onClick={handlePlayPause}>{props.text}</div>
           {props.iconLink}
         </div>
       </div>
-
       {showProgressBar && (
         <div
           className="progress-bar"

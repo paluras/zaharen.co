@@ -46,13 +46,13 @@ import LinkTree from "./pages/linktree/Linktree";
 import { Suspense } from "react";
 
 function App() {
-  const [words, setWords] = useState(["Film Composition", "Multimedia Art"]);
+  const [words, setWords] = useState(["Film & Theatre", "Multimedia Art"]);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 670) {
-        setWords(["Film", "Multi Media"]);
+        setWords(["Film & Theatre", "Multi Media"]);
       } else {
-        setWords(["Film Composition", "Multimedia Art"]);
+        setWords(["Film & Theatre", "Multimedia Art"]);
       }
     };
     handleResize();
@@ -68,7 +68,7 @@ function App() {
   const navItems = [
     { text: "Bio", url: "/bio", keys: "1" },
     { text: "Photos", url: "/photos", keys: 2 },
-    { text: "Inspo", url: "/inspiration", keys: 3 },
+    { text: "Playlist", url: "/inspiration", keys: 3 },
     { text: "Contact", url: "/contacts", keys: 4 },
   ];
 
