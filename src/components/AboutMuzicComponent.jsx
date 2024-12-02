@@ -1,69 +1,53 @@
-import React from "react";
-import img from "../../img.json";
-import { useState } from "react";
+// Component
+import React, { useState, useEffect } from "react";
+import { client } from "../lib/sanity";
+import { PortableText } from "@portabletext/react";
 import Modal from "./Modal";
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(client);
 
 const AboutMuzicComponent = () => {
+  const [bandData, setBandData] = useState(null);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  function handleImageClick(src) {
-    setSelectedImg(src);
+  useEffect(() => {
+    const query = `*[_type == "about"][0]{
+      mainText,
+      images
+    }`;
+
+    client.fetch(query).then((data) => {
+      setBandData(data);
+    });
+  }, []);
+
+  function handleImageClick(image) {
+    setSelectedImg(image);
   }
+
+  if (!bandData) return <div>Loading...</div>;
+
   return (
     <div className="page-band">
       <div>
         <div className="container-lower">
-          <p>
-            Zaharenco is a jazz quartet that explores the New Jazz scene by
-            blending jazz with classical and rock influences. Zaharenco music
-            addresses the challenge of musical predictability, striving for a
-            balance between certainty and surprise to evoke a wide range of
-            emotions.
-          </p>
-          <p>
-            <a
-              className="pink"
-              href="https://youtu.be/_2n43gWQdxc?si=PjmhtL45qizZhbVM"
-            >
-              Primordial Feelings
-            </a>
-            , the quartet’s first EP, presents an exploration of two central
-            themes: the impulsive being and the ever-changing sentimental self.
-          </p>
-          <p>
-            In 2024, Zaharenco released two more singles,{" "}
-            <a
-              className="pink"
-              href="https://youtu.be/SYItzRqGkkY?si=Y3qpfSJ9hxlPvtzf"
-            >
-              Condition 5
-            </a>{" "}
-            and{" "}
-            <a
-              style={{
-                color: "#ff68b4",
-              }}
-              href="https://youtu.be/xryrrX6E2PM?si=n-iwjlz3zLvf9qUr"
-            >
-              Contition 4 (Suspended in Mid-Air)
-            </a>
-            , both marking the lead-up to the upcoming album.
-          </p>
+          <PortableText value={bandData.mainText} />
         </div>
       </div>
 
       <div className="media band-photos">
-        {img.pageBand.map((image) => (
+        {bandData.images.map((image) => (
           <img
-            key={image.src}
-            src={image.src}
+            key={image._key}
+            src={builder.image(image).url()}
             alt={image.alt}
-            onClick={() => handleImageClick(image.src)}
+            onClick={() => handleImageClick(image)}
           />
         ))}
         {selectedImg && (
           <Modal
-            src={selectedImg}
+            src={builder.image(selectedImg).url()}
             alt="full-image"
             onClose={() => setSelectedImg(null)}
           />

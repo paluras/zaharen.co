@@ -217,7 +217,7 @@ function App() {
                 }
               >
                 <Blog
-                  tittleBlog={"INSPIRATION"}
+                  tittleBlog={"NEW JAZZ ROMANIA"}
                   navItems={navItems}
                   number={211}
                 >
@@ -265,7 +265,7 @@ function App() {
                 }
               >
                 <Blog
-                  tittleBlog={"FILM COMPOSITION"}
+                  tittleBlog={"FILM & THEATRE"}
                   navItems={navItemsPort}
                   number={226}
                 >

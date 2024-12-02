@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { client } from "../lib/sanity";
 
 const Events = () => {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const query = `*[_type == "events"] | order(date desc)`;
+
+    client.fetch(query).then((data) => {
+      setEvents(data);
+    });
+  }, []);
+
   return (
     <>
-      <div className="event">
-        15 Nov 2024 – Workshop Jazz is not Dead - National College of Arts
-        "Queen Maria", Constanța
-      </div>
-      <div className="event">
-        16 Nov 2024 - Workshop Jazz is not Dead - Avramide House, Tulcea
-      </div>
-      <div className="event">16 Nov 2024 – Concert, Avramide House, Tulcea</div>
-
-      <div className="event">18 Nov 2022 - Uzina, Bucharest</div>
-      <div className="event">17 Sep 2022 - Străzi deschise, Bucharest</div>
-      <div className="event">03 Sep 2022 - Jazz in the Park, Cluj-Napoca</div>
-      <div className="event">30 July 2022 - Tam tam Festival, Brașov</div>
-      <div className="event">04 May 2022 - Point, Bucharest</div>
+      {events.map((event) => (
+        <div key={event._id} className="event">
+          {new Date(event.date).toLocaleDateString("en-US", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+          })}
+          – {event.title} - {event.location}
+        </div>
+      ))}
     </>
   );
 };

@@ -76,7 +76,6 @@ export default function TextFilm() {
         </Description>
       </div>
 
-      <TitleWithVideo title="Titanik Kabaret - Theater (2021)" />
       <div className="film-item">
         <TitleWithVideo
           title="Die Melodie Der Welt - Rescore (2021)"
@@ -84,11 +83,6 @@ export default function TextFilm() {
         />
         <Description>Rescoring and Sound design</Description>
       </div>
-
-      <TitleWithVideo
-        title="inHabited - contest rescore (2020)"
-        videoId="Nx7hPJIzaDA"
-      />
 
       <div>
         <TitleWithVideo title="Pelicam IFF (2020)" />
