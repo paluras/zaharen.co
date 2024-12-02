@@ -83,7 +83,7 @@ function App() {
     { text: "Events", url: "/events", keys: 10 },
     { text: "Media", url: "/music-media", keys: 11 },
   ];
-  const navItemsHoro = [{ text: "", url: "/horoscop", keys: 12 }];
+  const navItemsHoro = [{ text: "", url: "/news", keys: 12 }];
 
   return (
     <>
@@ -454,13 +454,9 @@ function App() {
             }
           />
           <Route
-            path="/horoscop"
+            path="/news"
             element={
-              <Blog
-                tittleBlog={"Horoscop"}
-                navItems={navItemsHoro}
-                number={255}
-              >
+              <Blog tittleBlog={"News"} navItems={navItemsHoro} number={255}>
                 <Horoscope />
               </Blog>
             }
