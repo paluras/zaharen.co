@@ -16,7 +16,7 @@ const BioComponent = () => {
     });
   }, []);
 
-  if (!bioData) return <div>Loading...</div>;
+  if (!bioData) return <div></div>;
 
   const components = {
     marks: {
@@ -33,9 +33,14 @@ const BioComponent = () => {
   return (
     <>
       <PortableText value={bioData.content} components={components} />
-      <a style={{ color: "#ff68b4" }} href={bioData.cvLink}>
-        CV
-      </a>
+      <p style={{ textAlign: "right", width: "100%" }}>
+        {" "}
+        <br />
+        <br />
+        <a style={{ color: "#ff68b4" }} href={bioData.cvLink}>
+          CV
+        </a>
+      </p>
     </>
   );
 };

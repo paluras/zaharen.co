@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import TickerTape from "./components/Sliding/SlidingText.component";
 import Table from "./components/landing/Table";
-import LandingPageText from "./components/HoroscopText";
 import LandingPagePost from "./components/LandingPagePost";
 
 function LandingPage() {

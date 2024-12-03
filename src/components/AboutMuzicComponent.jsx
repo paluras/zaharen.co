@@ -26,7 +26,7 @@ const AboutMuzicComponent = () => {
     setSelectedImg(image);
   }
 
-  if (!bandData) return <div>Loading...</div>;
+  if (!bandData) return <div></div>;
 
   return (
     <div className="page-band">

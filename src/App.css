@@ -203,7 +203,7 @@ iframe {
   width: 100%;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(2, 300px);
   align-items: center;
   justify-content: center;
 }
@@ -621,4 +621,80 @@ video {
 
 
 
+}
+
+
+.secondNav {
+  transition: opacity 0.3s ease;
+}
+
+.secondNav.transitioning {
+  opacity: 0.7;
+}
+
+.nav-pending {
+  pointer-events: none;
+}
+
+.secondNav li {
+  transition: all 0.3s ease;
+}
+
+.secondNav li.active {
+  transition: all 0.3s ease;
+}
+
+/* Optional: add a subtle animation for the active state */
+@keyframes activeState {
+  from {
+    transform: translateY(2px);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.secondNav li.active {
+  animation: activeState 0.3s ease forwards;
+}
+
+
+.the-main-content {
+  transition: all 0.3s ease-in-out;
+}
+
+.content-transition {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes contentEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.the-main-content:not(.content-transition) {
+  animation: contentEnter 0.3s ease-in-out forwards;
+}
+
+.container-main {
+  transition: all 0.3s ease-in-out;
+}
+
+.text {
+  transition: all 0.3s ease-in-out;
+}
+
+.container-lower>p>a {
+  color: #ff68b4;
 }

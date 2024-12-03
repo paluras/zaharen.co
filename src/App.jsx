@@ -1,8 +1,9 @@
 import { useState, useEffect, lazy } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+
+import Blog from "./Blogs";
 const LandingPage = lazy(() => import("./Landing"));
-const Blog = lazy(() => import("./Blogs"));
 const Events = lazy(() => import("./components/Events"));
 const VisualArtComponent = lazy(() =>
   import("./components/VisualArtComponent")

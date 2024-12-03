@@ -24,7 +24,7 @@ const BandMedia = () => {
     setSelectedImg(image);
   }
 
-  if (!mediaData) return <div>Loading...</div>;
+  if (!mediaData) return <div></div>;
 
   return (
     <div className="media">

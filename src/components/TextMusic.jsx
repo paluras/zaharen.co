@@ -3,12 +3,12 @@ import { useState } from "react";
 import SongPlayer from "./Player";
 
 const TextMusic = () => {
-  const [show, setShow] = useState("106px");
-  const [show2, setShow2] = useState("154px");
-  const [show3, setShow3] = useState("154px");
-  const [popupState, setpopupState] = useState(true);
-  const [popupState2, setpopupState2] = useState(true);
-  const [popupState3, setpopupState3] = useState(true);
+  const [show, setShow] = useState("0px");
+  const [show2, setShow2] = useState("0px");
+  const [show3, setShow3] = useState("0px");
+  const [popupState, setpopupState] = useState(false);
+  const [popupState2, setpopupState2] = useState(false);
+  const [popupState3, setpopupState3] = useState(false);
 
   function handlePopUp() {
     setpopupState(!popupState);
