@@ -101,7 +101,7 @@ function LandingPage() {
       },
       {
         path: "/inspiration",
-        title: "Inspiration",
+        title: "New Jazz Romania",
         dots: 214,
         id: 3,
       },
