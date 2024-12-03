@@ -24,7 +24,7 @@ const Horoscope = () => {
       .catch(console.error);
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div></div>;
 
   return (
     <div className="posts-container">

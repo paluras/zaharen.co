@@ -21,9 +21,7 @@ const LandingPagePost = () => {
         style={{
           minHeight: "500px",
         }}
-      >
-        Loading...
-      </div>
+      ></div>
     );
 
   return (

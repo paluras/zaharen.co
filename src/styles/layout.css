@@ -4,7 +4,7 @@
     --transition-time: 1s;
     --container-width-mobile: 95%;
     --container-width-tablet: 90%;
-    --container-width-desktop: 80%;
+    --container-width-desktop: 70%;
 }
 
 /* Base page layout */
@@ -47,6 +47,7 @@
 }
 
 .main {
+
     min-height: 100vh;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -58,6 +59,7 @@
     margin: 0 auto;
     height: 100%;
     width: var(--container-width-mobile);
+
 }
 
 .blog-top {
@@ -79,14 +81,20 @@
     .main,
     .main-blogs {
         overflow-y: scroll;
-        width: var(--container-width-tablet);
+
         transition: var(--transition-time);
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+
     .main {
         width: var(--container-width-desktop);
+    }
+
+    .main-blogs {
+        width: var(--container-width-desktop);
+
     }
 }
