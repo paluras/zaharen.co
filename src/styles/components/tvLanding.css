@@ -42,6 +42,8 @@
     transition: var(--transition-fast);
 }
 
+
+
 /* Image container */
 .img-container {
     position: absolute;

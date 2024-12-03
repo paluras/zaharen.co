@@ -97,8 +97,18 @@
 .container-lower p {
     margin-bottom: 10px;
     padding: 0 var(--standard-padding);
+    font-size: 1rem;
+}
+
+.container-lower>h3 {
     font-size: 1.25rem;
 }
+
+.container-lower>h4 {
+    font-size: 1rem;
+}
+
+.container-lower {}
 
 /* Utility classes */
 .colored-box {
@@ -146,6 +156,16 @@
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .container-lower>h3 {
+        font-size: 1.75rem;
+    }
+
+    .container-lower>h4 {
+        font-size: 1.5rem;
+    }
+
+
 
     .container-left ul li {
         font-size: 1.75rem;
