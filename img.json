@@ -1,40 +1,62 @@
-{"pageOne":[  
-    
-    {"src":"/about-media/ZAH (1).jpg", "alt":"poza cu fata"},  
-    {"src":"/about-media/ZAH (2).jpg", "alt":"poza zahar"},  
-    {"src":"/about-media/ZAH (3).png", "alt":"poza zahar2"}, 
-    {"src":"/about-media/ZAH (4).jpg", "alt":"poza zahar 3"},
-    {"src":"/about-media/ZAH (5).jpg", "alt":"poza zahar 4"},
-    {"src":"/about-media/ZAH (6).jpg", "alt":"poza zahar "} 
-     
-] ,
-"pageTwo":[  
-    
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/1.JPG", "alt":"Poza proiect"},  
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/2.JPG", "alt":"Poza cu tv"},  
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG", "alt":"Poza cu tv"}, 
-    {"src":"https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/4.JPG", "alt":"Poza cu tv"}
-   
-  
-     
-]
-,
-"pageThree":[  
-    
-    {"src":"/project123.jpg", "alt":"Poza cu proiect"},  
-    {"src":"/TvIMG.JPG", "alt":"Poza cu proiect"},  
-    {"src":"https://github.com/paluras/new/blob/master/src/assets/project2/Nush%20csz%20de%20asta%20Eu%20cu%20tv-uri.jpg?raw=true", "alt":"Poza cu mine"} 
+{
+  "pageOne": [
+    { "src": "/about-media/ZAH (1).jpg", "alt": "poza cu fata" },
+    { "src": "/about-media/ZAH (2).jpg", "alt": "poza zahar" },
+    { "src": "/about-media/ZAH (3).png", "alt": "poza zahar2" },
+    { "src": "/about-media/ZAH (4).jpg", "alt": "poza zahar 3" },
+    { "src": "/about-media/ZAH (5).jpg", "alt": "poza zahar 4" },
+    { "src": "/about-media/ZAH (6).jpg", "alt": "poza zahar " }
+  ],
+  "pageTwo": [
+    {
+      "src": "https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/1.JPG",
+      "alt": "Poza proiect"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/2.JPG",
+      "alt": "Poza cu tv"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/3.JPG",
+      "alt": "Poza cu tv"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/paluras/new/master/src/assets/project1/4.JPG",
+      "alt": "Poza cu tv"
+    }
+  ],
+  "pageThree": [
+    { "src": "/project123.jpg", "alt": "Poza cu proiect" },
+    { "src": "/TvIMG.JPG", "alt": "Poza cu proiect" },
+    {
+      "src": "https://github.com/paluras/new/blob/master/src/assets/project2/Nush%20csz%20de%20asta%20Eu%20cu%20tv-uri.jpg?raw=true",
+      "alt": "Poza cu mine"
+    }
+  ],
+  "pageBand": [
+    { "src": "/band-media/Photo 2.jpg", "alt": "Poza cu zahar " },
+    {
+      "src": "/band-media/Photo 3.jpg",
+      "alt": "Poza album"
+    },
+    { "src": "/band-media/Photo 1.jpg", "alt": "Poza cu zahar " },
+    { "src": "/band-media/Photo 4.jpg", "alt": "Poza cu zahar " }
+  ],
 
-  
-     
-],
-"pageBand":[  
-    {"src":"/band-media/Poza Zaharenco.JPG", "alt":"Poza cu oameni"},  
-    {"src":"/band-media/Primordial feelings_Artwork .png", "alt":"Poza album"}
-],
-
-"pageBandMedia":[  
-    {"src":"/band-media/band3.jpg", "alt":"Poza concert"},  
-    {"src":"/band-media/band1.jpg", "alt":"Poza concert"},
-    {"src":"/band-media/band2.jpg", "alt":"Poza concert"}
-]}
+  "pageBandMedia": [
+    { "src": "/band-media/band3.jpg", "alt": "Poza concert" },
+    { "src": "/band-media/band1.jpg", "alt": "Poza concert" },
+    { "src": "/band-media/band2.jpg", "alt": "Poza concert" }
+  ],
+  "captov2": [
+    {
+      "src": "/src/assets/project3/Catoptro-tono v.2 Instruct╠ªiuni Bec Verde v.2.jpeg"
+    },
+    {
+      "src": "/src/assets/project3/Catoptro-tono v.2 Interior v.2.jpeg"
+    },
+    {
+      "src": "/src/assets/project3/Catoptro-tono v.2 Poster.jpg"
+    }
+  ]
+}

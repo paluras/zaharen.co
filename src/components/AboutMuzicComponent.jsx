@@ -1,55 +1,53 @@
-import React from "react";
-import img from "../../img.json";
-import { useState } from "react";
+// Component
+import React, { useState, useEffect } from "react";
+import { client } from "../lib/sanity";
+import { PortableText } from "@portabletext/react";
 import Modal from "./Modal";
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(client);
 
 const AboutMuzicComponent = () => {
+  const [bandData, setBandData] = useState(null);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  function handleImageClick(src) {
-    setSelectedImg(src);
+  useEffect(() => {
+    const query = `*[_type == "about"][0]{
+      mainText,
+      images
+    }`;
+
+    client.fetch(query).then((data) => {
+      setBandData(data);
+    });
+  }, []);
+
+  function handleImageClick(image) {
+    setSelectedImg(image);
   }
+
+  if (!bandData) return <div></div>;
+
   return (
     <div className="page-band">
       <div>
         <div className="container-lower">
-          <p>
-            Zaharenco is a jazz quartet whose music aims to explore the New Jazz
-            scene by fusing jazz with classical and rock influences.
-          </p>
-          <p>
-            {" "}
-            He submits his works to the issue of musical predictability, seeking
-            a balance between predictability and uncertainty, and thus managing
-            to reach a wide range of emotions.
-          </p>
-          <p>
-            <a
-              style={{ color: "#ff68b4" }}
-              target="_blank"
-              href="https://open.spotify.com/album/4z5ldoG03eOzAsPBvbpCj0?si=Tgr-UWa9Rcag4uDjxw-uug"
-            >
-              {" "}
-              Primordial feelings
-            </a>
-            , his first EP, is an exposition of the 2 main topics addressed: the
-            impulsive being and the ever-changing sentimental self.
-          </p>
+          <PortableText value={bandData.mainText} />
         </div>
       </div>
 
       <div className="media band-photos">
-        {img.pageBand.map((image) => (
+        {bandData.images.map((image) => (
           <img
-            key={image.src}
-            src={image.src}
+            key={image._key}
+            src={builder.image(image).url()}
             alt={image.alt}
-            onClick={() => handleImageClick(image.src)}
+            onClick={() => handleImageClick(image)}
           />
         ))}
         {selectedImg && (
           <Modal
-            src={selectedImg}
+            src={builder.image(selectedImg).url()}
             alt="full-image"
             onClose={() => setSelectedImg(null)}
           />

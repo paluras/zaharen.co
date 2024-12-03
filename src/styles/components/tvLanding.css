@@ -1,0 +1,62 @@
+/* Variables */
+:root {
+    --border-color: white;
+    --transition-slow: 2s;
+    --transition-fast: 1s;
+    --hover-scale: 1.0505;
+    --video-translate-x: -15%;
+    --video-translate-y: -8%;
+}
+
+/* TV main container */
+.tv-main {
+    position: absolute;
+    box-sizing: border-box;
+    border: var(--border-color) solid;
+    border-width: 100vh 20vw;
+    width: 85%;
+    z-index: 2;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: var(--transition-slow);
+    cursor: url("./playMusic.svg") 16 16, pointer;
+}
+
+.tv-main:hover {
+    transform: scale(var(--hover-scale));
+    transition: var(--transition-fast);
+}
+
+/* Video element */
+.zahar-music-video {
+    width: 30%;
+    transform: scale(1) translateX(var(--video-translate-x)) translateY(var(--video-translate-y));
+    object-fit: cover;
+    box-sizing: border-box;
+    transition: var(--transition-slow);
+}
+
+.tv-main:hover+.zahar-music-video {
+    transform: scale(var(--hover-scale)) translateX(var(--video-translate-x)) translateY(var(--video-translate-y));
+    transition: var(--transition-fast);
+}
+
+/* Image container */
+.img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: var(--transition-slow) ease;
+}
+
+/* Tablet and above */
+@media screen and (min-width: 768px) {
+    .zahar-music-video {
+        width: 30%;
+    }
+}

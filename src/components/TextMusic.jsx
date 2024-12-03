@@ -3,12 +3,12 @@ import { useState } from "react";
 import SongPlayer from "./Player";
 
 const TextMusic = () => {
-  const [show, setShow] = useState("106px");
-  const [show2, setShow2] = useState("154px");
-  const [show3, setShow3] = useState("154px");
-  const [popupState, setpopupState] = useState(true);
-  const [popupState2, setpopupState2] = useState(true);
-  const [popupState3, setpopupState3] = useState(true);
+  const [show, setShow] = useState("0px");
+  const [show2, setShow2] = useState("0px");
+  const [show3, setShow3] = useState("0px");
+  const [popupState, setpopupState] = useState(false);
+  const [popupState2, setpopupState2] = useState(false);
+  const [popupState3, setpopupState3] = useState(false);
 
   function handlePopUp() {
     setpopupState(!popupState);
@@ -42,7 +42,6 @@ const TextMusic = () => {
     />
   );
 
-
   const iconLink = [
     <a href="https://on.soundcloud.com/zCpfC" target="_blank">
       {link}
@@ -56,16 +55,66 @@ const TextMusic = () => {
   ];
   return (
     <div className="text-music song">
+      {/* CONDITION 5 */}
+      <div>
+        <SongPlayer
+          song={"Audio/Zaharenco - Condition 4 [master 48 24 -11dB] 3.mp3"}
+          text={"Condition 4 (2024) "}
+          keys={"6"}
+        />
+        <p
+          style={{
+            marginLeft: "24px",
+            fontSize: "1.25rem",
+          }}
+        >
+          Latest Zaharenco Release – the second track from the upcoming album,
+          featuring Lucas Contreras on guitar, Laura Benedek on bass, and Sergiu
+          Părgras on drums. Recorded at Avanpost Media, with Laurent Larzilliere
+          as recording engineer and Dan Georgescu handling mixing and mastering.
+        </p>
+      </div>
+      {/* CONDITION 5 */}
+      <div>
+        <SongPlayer
+          song={"Audio/Zaharenco - Condition 5.mp3"}
+          text={"Condition 5 (2024)"}
+          keys={"6"}
+        />
+        <p
+          style={{
+            marginLeft: "24px",
+            fontSize: "1.25rem",
+          }}
+        >
+          Featuring Lucas Contreras on guitar, Laura Benedek on bass, and Sergiu
+          Părgras on drums. Recorded at Avanpost Media, with Laurent Larzilliere
+          as recording engineer and Dan Georgescu handling mixing and mastering.
+        </p>
+      </div>
+      {/* IONA */}
       <div className="allthecacat">
         <div className="container-player">
           <img
             className="icon"
             onClick={handlePopUp3}
             src={popupState3 ? "/icons/up.svg" : "/icons/down.svg"}
-            alt=""
+            alt="Open close"
           />
-          <div onClick={handlePopUp3} className="test">
-            Iona - ballet for one dancer (2023)
+          <div>
+            <div className="pink" onClick={handlePopUp3}>
+              Iona - ballet for one dancer (2023)
+            </div>
+            <p
+              style={{
+                fontSize: "1.2rem",
+              }}
+            >
+              This piece is inspired by the dramaturgy of Iona by Marin Sorescu
+              and represents my Master's degree project. It follows the
+              narrative aspect of the ambiance, reflecting the emotions of the
+              sole character in the drama. This version is a mockup.
+            </p>
           </div>
         </div>
         <div style={{ maxHeight: `${show3}` }} className="drop-down-album">
@@ -88,6 +137,7 @@ const TextMusic = () => {
           </div>
         </div>
       </div>
+      {/* INSIDE OF YOU */}
       <div>
         <SongPlayer
           song={"Audio/Sonata no.1.mp3"}
@@ -95,7 +145,16 @@ const TextMusic = () => {
           iconLink={iconLink[0]}
           keys={"6"}
         />
+        <p
+          style={{
+            marginLeft: "24px",
+            fontSize: "1.25rem",
+          }}
+        >
+          Performed by Adriana Toacsen
+        </p>
       </div>
+      {/* PRIMORDIAL FEELINGS */}
       <div className="allthecacat">
         <div className="container-player">
           <img
@@ -104,8 +163,31 @@ const TextMusic = () => {
             src={popupState ? "/icons/up.svg" : "/icons/down.svg"}
             alt=""
           />
-          <div onClick={handlePopUp} className="test">
-            Primordial feelings (2021)
+          <div>
+            <div onClick={handlePopUp} className="test pink">
+              Primordial feelings (2021)
+            </div>
+
+            <p
+              style={{
+                fontSize: "1.2rem",
+              }}
+            >
+              The first EP released under the name Zaharenco, it explores two
+              main themes: the impulsive being and the ever-changing sentimental
+              self. It also served as the starting point for the
+              <a
+                style={{
+                  color: "#ff68b4",
+                }}
+                href="/visual/visual2"
+              >
+                {" "}
+                Primordial Feelings installation
+              </a>{" "}
+              . Featuring Florian Nicolau on bass and Sergiu Părgras on drums.
+              Recorded at Avanpost Media.
+            </p>
           </div>
           <a
             target="_blank"
@@ -131,13 +213,25 @@ const TextMusic = () => {
           </div>
         </div>
       </div>
+
+      {/* INSIDE OF YOU */}
       <div>
         <SongPlayer
           song={"Audio/Inside of you.mp3"}
           text={"Inside of you (2020)"}
           iconLink={iconLink[1]}
         />
+        <p
+          style={{
+            marginLeft: "24px",
+            fontSize: "1.25rem",
+          }}
+        >
+          This song is based on my exploration of Live Looping techniques.{" "}
+        </p>
       </div>
+
+      {/* CONDITIONS */}
       <div className="allthecacat">
         <div className="container-player">
           <img
@@ -146,7 +240,7 @@ const TextMusic = () => {
             src={popupState2 ? "/icons/up.svg" : "/icons/down.svg"}
             alt=""
           />
-          <div onClick={handlePopUp2} className="test">
+          <div onClick={handlePopUp2} className="test pink">
             Conditions (2021)
           </div>
           <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
@@ -160,11 +254,9 @@ const TextMusic = () => {
           <div>
             <SongPlayer song={"Audio/condition 2.mp3"} text={"Conditions 2"} />
           </div>
-          <div>
-            <SongPlayer song={"Audio/condition 4.mp3"} text={"Conditions 4"} />
-          </div>
         </div>
       </div>
+      {/* PROVINCIAL */}
       <div>
         <SongPlayer
           song={"Audio/Provincial.mp3"}

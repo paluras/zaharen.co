@@ -1,27 +1,43 @@
-import React from "react";
-import img from "../../img.json";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { client } from "../lib/sanity";
+import imageUrlBuilder from "@sanity/image-url";
 import Modal from "./Modal";
 
+const builder = imageUrlBuilder(client);
+
 const MediaPhotos = () => {
+  const [photos, setPhotos] = useState([]);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  function handleImageClick(src) {
-    setSelectedImg(src);
+  useEffect(() => {
+    const query = `*[_type == "mediaGallery"][0]{
+      photos
+    }`;
+
+    client.fetch(query).then((data) => {
+      if (data && data.photos) {
+        setPhotos(data.photos);
+      }
+    });
+  }, []);
+
+  function handleImageClick(image) {
+    setSelectedImg(image);
   }
+
   return (
     <div className="media">
-      {img.pageOne.map((image) => (
+      {photos.map((image) => (
         <img
-          key={image.src}
-          src={image.src}
+          key={image._key}
+          src={builder.image(image).url()}
           alt={image.alt}
-          onClick={() => handleImageClick(image.src)}
+          onClick={() => handleImageClick(image)}
         />
       ))}
       {selectedImg && (
         <Modal
-          src={selectedImg}
+          src={builder.image(selectedImg).url()}
           alt="full-image"
           onClose={() => setSelectedImg(null)}
         />

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 function Nav({ children, startNumber }) {
   const [time, setTime] = useState(new Date());
-  //const [number , setNumber] = useState(Math.floor(Math.random() * 100))
   const months = ["Sun", "Mon", "Tue", "Wen", "Thurs", "Fri", "Sat"];
 
   const [currentNumber, setCurrentNumber] = useState(startNumber);
