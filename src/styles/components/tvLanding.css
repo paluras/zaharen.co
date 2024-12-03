@@ -14,7 +14,7 @@
     box-sizing: border-box;
     border: var(--border-color) solid;
     border-width: 100vh 20vw;
-    width: 100%;
+    width: 85%;
     z-index: 2;
     object-fit: contain;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@
 
 /* Video element */
 .zahar-music-video {
-    width: 410px;
+    width: 30%;
     transform: scale(1) translateX(var(--video-translate-x)) translateY(var(--video-translate-y));
     object-fit: cover;
     box-sizing: border-box;
@@ -57,6 +57,6 @@
 /* Tablet and above */
 @media screen and (min-width: 768px) {
     .zahar-music-video {
-        width: 40%;
+        width: 30%;
     }
 }
