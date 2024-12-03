@@ -48,11 +48,17 @@
     display: inline-block;
     font-size: 1.25rem;
     padding: 5px;
-    width: auto;
+    width: 100%;
+    text-align: center;
 }
 
 .container-left ul li:active,
 .container-left ul li:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.container-left ul li.active {
     background-color: var(--blue);
     color: var(--white);
 }

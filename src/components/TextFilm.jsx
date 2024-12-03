@@ -111,7 +111,7 @@ export default function TextFilm() {
         </Description>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .text-music.film {
           display: flex;
           flex-direction: column;

@@ -6,7 +6,6 @@ export const client = createClient({
     useCdn: true,
     apiVersion: '2024-02-02',
     perspective: 'published',
-    withCredentials: true,
 })
 
 export async function getLatestLandingPost() {

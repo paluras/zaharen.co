@@ -18,6 +18,7 @@ function LandingPage() {
   const [shouldRender, setShouldRender] = useState(false);
   const [one, setOne] = useState("0");
   const [selectedButton, setSelectedButton] = useState("Button 1");
+  const [activeItem, setActiveItem] = useState("ABOUT");
   const [crt, setCrt] = useState(null);
   const [words, setWords] = useState(["FILM/THEATRE", "MULTIMEDIA ART"]);
 
@@ -80,8 +81,9 @@ function LandingPage() {
     console.log(muted);
   }
 
-  const handleClickDisplay = (buttonName) => {
+  const handleClickDisplay = (buttonName, itemName) => {
     setSelectedButton(buttonName);
+    setActiveItem(itemName);
   };
   // Bad logic so i have to keep this array here
   const obj = [
@@ -266,14 +268,32 @@ function LandingPage() {
               <div className="container">
                 <div className="container-left">
                   <ul>
-                    <li onClick={() => handleClickDisplay("Button 1")}>
+                    <li
+                      className={activeItem === "ABOUT" ? "active" : ""}
+                      onClick={() => handleClickDisplay("Button 1", "ABOUT")}
+                    >
                       ABOUT
                     </li>
-                    <li onClick={() => handleClickDisplay("Button 2")}>
+                    <li
+                      className={activeItem === "PORTFOLIO" ? "active" : ""}
+                      onClick={() =>
+                        handleClickDisplay("Button 2", "PORTFOLIO")
+                      }
+                    >
                       PORTFOLIO
                     </li>
-                    <li onClick={() => handleClickDisplay("Button 3")}>BAND</li>
-                    <li onClick={() => handleClickDisplay("Button 4")}>NEWS</li>
+                    <li
+                      className={activeItem === "BAND" ? "active" : ""}
+                      onClick={() => handleClickDisplay("Button 3", "BAND")}
+                    >
+                      BAND
+                    </li>
+                    <li
+                      className={activeItem === "NEWS" ? "active" : ""}
+                      onClick={() => handleClickDisplay("Button 4", "NEWS")}
+                    >
+                      NEWS
+                    </li>
                   </ul>
                 </div>
                 <div className="container-right">

@@ -15,7 +15,16 @@ const LandingPagePost = () => {
       .catch(console.error);
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div
+        style={{
+          minHeight: "500px",
+        }}
+      >
+        Loading...
+      </div>
+    );
 
   return (
     <PortableText
