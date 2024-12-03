@@ -22,6 +22,7 @@ const TextFilm = lazy(() => import("./components/TextFilm"));
 const MediaPhotos = lazy(() => import("./components/MediaPhotos"));
 const BandMedia = lazy(() => import("./components/BandMedia"));
 const Catatro = lazy(() => import("./components/media-visual/Catatro"));
+const Catatrov2 = lazy(() => import("./components/media-visual/Catatrov2"));
 const Primordial = lazy(() => import("./components/media-visual/Primordial"));
 
 import LinkTree from "./pages/linktree/Linktree";
@@ -166,9 +167,8 @@ function App() {
                 tittleBlog={"Catoptro-tono v.1"}
                 navItems={navItemsPort}
                 number={241}
-              >
-                <Catatro />
-              </Blog>
+                media={<Catatro />}
+              ></Blog>
             }
           />
           <Route
@@ -178,9 +178,8 @@ function App() {
                 tittleBlog={"Catoptro-tono v.2"}
                 navItems={navItemsPort}
                 number={241}
-              >
-                <Catatro />
-              </Blog>
+                media={<Catatrov2 />}
+              ></Blog>
             }
           />
           <Route
@@ -190,9 +189,8 @@ function App() {
                 tittleBlog={"Primordial feelings "}
                 navItems={navItemsPort}
                 number={242}
-              >
-                <Primordial />
-              </Blog>
+                media={<Primordial />}
+              ></Blog>
             }
           />
 

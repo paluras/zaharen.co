@@ -47,5 +47,16 @@
     { "src": "/band-media/band3.jpg", "alt": "Poza concert" },
     { "src": "/band-media/band1.jpg", "alt": "Poza concert" },
     { "src": "/band-media/band2.jpg", "alt": "Poza concert" }
+  ],
+  "captov2": [
+    {
+      "src": "/src/assets/project3/Catoptro-tono v.2 Instruct╠ªiuni Bec Verde v.2.jpeg"
+    },
+    {
+      "src": "/src/assets/project3/Catoptro-tono v.2 Interior v.2.jpeg"
+    },
+    {
+      "src": "/src/assets/project3/Catoptro-tono v.2 Poster.jpg"
+    }
   ]
 }

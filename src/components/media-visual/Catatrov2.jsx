@@ -3,7 +3,7 @@ import img from "../../../img.json";
 import { useState } from "react";
 import Modal from "../Modal";
 
-const Catatro = () => {
+const Catatrov2 = () => {
   const [selectedImg, setSelectedImg] = useState(null);
 
   function handleImageClick(src) {
@@ -11,7 +11,7 @@ const Catatro = () => {
   }
   return (
     <div className="media">
-      {img.pageTwo.map((image) => (
+      {img.captov2.map((image) => (
         <img
           key={image.src}
           src={image.src}
@@ -27,14 +27,14 @@ const Catatro = () => {
         />
       )}
       <iframe
-        src="https://drive.google.com/file/d/1xX09-kh43imFjhgSbo-AKIT4WblZxf3j/preview"
+        src="https://www.youtube-nocookie.com/embed/TXJ5TWWE5RM?si=vFZrFJ6EySEqd2K3"
         width="300"
         height="300"
         allow="autoplay"
-        allowFullScreen="true"
+        allowFullScreen={true}
       ></iframe>
     </div>
   );
 };
 
-export default Catatro;
+export default Catatrov2;
