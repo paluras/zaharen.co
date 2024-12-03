@@ -1,33 +1,50 @@
-import React from "react";
-import img from "../../../img.json";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { client } from "../../lib/sanity";
+import imageUrlBuilder from "@sanity/image-url";
 import Modal from "../Modal";
 
+const builder = imageUrlBuilder(client);
+
 const Catatrov2 = () => {
+  const [projectData, setProjectData] = useState(null);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  function handleImageClick(src) {
-    setSelectedImg(src);
+  useEffect(() => {
+    const query = `*[_type == "catatroProject"][0]{
+      images,
+      youtubeUrl
+    }`;
+
+    client.fetch(query).then((data) => {
+      setProjectData(data);
+    });
+  }, []);
+
+  function handleImageClick(image) {
+    setSelectedImg(image);
   }
+
+  if (!projectData) return <div>Loading...</div>;
+
   return (
     <div className="media">
-      {img.captov2.map((image) => (
+      {projectData.images.map((image) => (
         <img
-          key={image.src}
-          src={image.src}
+          key={image._key}
+          src={builder.image(image).url()}
           alt={image.alt}
-          onClick={() => handleImageClick(image.src)}
+          onClick={() => handleImageClick(image)}
         />
       ))}
       {selectedImg && (
         <Modal
-          src={selectedImg}
+          src={builder.image(selectedImg).url()}
           alt="full-image"
           onClose={() => setSelectedImg(null)}
         />
       )}
       <iframe
-        src="https://www.youtube-nocookie.com/embed/TXJ5TWWE5RM?si=vFZrFJ6EySEqd2K3"
+        src={projectData.youtubeUrl}
         width="300"
         height="300"
         allow="autoplay"
