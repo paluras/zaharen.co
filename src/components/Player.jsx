@@ -68,7 +68,7 @@ function SongPlayer(props) {
           alt={isPlaying ? "Stop" : "Play"}
         />
         <div className="test pink">
-          <div onClick={handlePlayPause}>{props.text}</div>
+          <h2 onClick={handlePlayPause}>{props.text}</h2>
           {props.iconLink}
         </div>
       </div>

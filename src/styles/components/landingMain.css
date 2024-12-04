@@ -1,8 +1,8 @@
 /* Variables */
 :root {
-    --blue: #0000ff;
-    --yellow: #ffff00;
-    --red: #ff0000;
+    --blue: #00f;
+    --yellow: #ff0;
+    --red: #f00;
     --white: white;
     --standard-padding: 10px;
     --border-style: 5px solid var(--blue);
@@ -148,7 +148,7 @@
 
 
 /* Media Queries */
-@media screen and (min-width: 450px) {
+@media screen and (width >=420px) {
     .container {
         display: flex;
         position: relative;
@@ -182,23 +182,24 @@
 
     .value,
     .title {
-
         font-size: 1.5rem;
     }
 
     .container-lower p {
-
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
 
 }
 
-@media screen and (min-width:768px) {
+@media screen and (width >=768px) {
     .container-left ul li {
         font-size: 2rem;
         display: flex;
     }
 
+    .container-lower p {
+        font-size: 1.5rem;
+    }
 
 }

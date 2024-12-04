@@ -4,7 +4,7 @@
         url("/font/europeanteletext-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 @font-face {
@@ -13,16 +13,16 @@
         url("/font/europeanteletext-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 @font-face {
-    font-family: "modesevenregular";
+    font-family: modesevenregular;
     src: url("/font2/mode7gx3-webfont.woff2") format("woff2"),
         url("/font2/mode7gx3-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 @font-face {
@@ -31,5 +31,5 @@
         url("/font2/mode7gx0-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }

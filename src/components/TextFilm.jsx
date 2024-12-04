@@ -3,10 +3,10 @@ import SongPlayer from "./Player";
 import VideoModal from "./VideoModal";
 
 const TitleWithVideo = ({ title, videoId }) => (
-  <div className="video-justtittle">
+  <h2 className="video-justtittle">
     {title}
     {videoId && <VideoModal videoId={videoId} />}
-  </div>
+  </h2>
 );
 
 const Description = ({ children }) => <p className="description">{children}</p>;
@@ -110,30 +110,6 @@ export default function TextFilm() {
           Rescore for the Film Music Competition – Zurich
         </Description>
       </div>
-
-      <style>{`
-        .text-music.film {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .film-item {
-        }
-
-        .video-justtittle {
-          color: #ff68b4;
-        }
-
-        .description {
-          margin-left: 24px;
-          font-size: 1.2rem;
-        }
-
-        /* Ensure SongPlayer titles are also pink */
-        :global(.text-music.film .SongPlayer .title) {
-          color: pink;
-        }
-      `}</style>
     </div>
   );
 }

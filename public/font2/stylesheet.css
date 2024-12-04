@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'modesevenregular';
+    font-family: modesevenregular;
     src: url('mode7gx3-webfont.woff2') format('woff2'),
          url('mode7gx3-webfont.woff') format('woff');
     font-weight: normal;

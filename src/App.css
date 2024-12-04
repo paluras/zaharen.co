@@ -1,19 +1,31 @@
-@import './styles/variables.css';
-@import './styles/layout.css';
-@import './styles/typography.css';
-@import './styles/components.css';
-@import './styles/crt.css';
+@import url('./styles/variables.css');
+@import url('./styles/layout.css');
+@import url('./styles/typography.css');
+@import url('./styles/components.css');
+@import url('./styles/crt.css');
 
-
-
-
+:root {
+  --color-pink: #ff68b4;
+  --color-blue: #00bce8;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey: #666;
+  --color-border: #ddd;
+  --color-bg-dark: #282828;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 3rem;
+}
 
 * {
-  font-family: "Tele2", "modesevenregular", monospace, sans-serif;
+  font-family: "Tele2", modesevenregular, monospace, sans-serif;
   padding: 0;
   margin: 0;
   border: 0;
-
   -webkit-font-smoothing: none;
 }
 
@@ -31,9 +43,7 @@ li {
   width: 100%;
 }
 
-
 /* POSTS PLEASE REFACTOR */
-
 .posts-container {
   max-width: 800px;
   margin: 0 auto;
@@ -73,7 +83,8 @@ li {
 
 .post-body-image {
   float: left;
-  /* or float: right; depending on your preference */
+  /* or float: right;
+     depending on your preference */
   margin: 0 20px 10px 0;
   /* right margin for text spacing */
   max-width: 300px;
@@ -93,9 +104,8 @@ li {
   clear: both;
 }
 
-
 .dots {
-  border-bottom: 5px dotted rgb(255, 255, 255);
+  border-bottom: 5px dotted rgb(255 255 255);
   width: 100%;
 }
 
@@ -106,21 +116,28 @@ li {
 }
 
 .container-tittle {
-  font-size: var(--font-size-bigger);
+  font-size: 3rem;
   color: #00bce8;
   margin-bottom: -10px;
-  font-size: 3rem;
-
-
-
-
 }
 
-
 .container-para {
-  color: rgb(255, 255, 255);
-  font-size: var(--font-size-main);
-  font-size: 1.5rem;
+  color: rgb(255 255 255);
+  font-size: 1rem;
+}
+
+@media screen and (width >=425px) {
+  .container-para {
+    color: rgb(255 255 255);
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (width >=768px) {
+  .container-para {
+    color: rgb(255 255 255);
+    font-size: 1.5rem;
+  }
 }
 
 .container-para>.text>p,
@@ -134,7 +151,7 @@ li {
 }
 
 .main-blogs>nav>p {
-  color: rgb(255, 255, 255);
+  color: rgb(255 255 255);
 }
 
 .container-blog {
@@ -146,7 +163,7 @@ li {
 
 .container-blog.text {
   width: 100%;
-  font-size: var(--font-size-main);
+  font-size: 1rem;
   color: white;
 }
 
@@ -164,7 +181,6 @@ iframe {
 }
 
 /* Second Navigation */
-
 .secondNav {
   width: 100%;
   height: 64px;
@@ -190,7 +206,6 @@ iframe {
 
 .secondNav>li>a {
   text-align: center;
-
   width: 100%;
 }
 
@@ -199,7 +214,7 @@ iframe {
 }
 
 .secondNav>a:last-child {
-  border-right: 0px solid;
+  border-right: 0 solid;
 }
 
 .media {
@@ -254,8 +269,6 @@ iframe {
   align-items: center;
 }
 
-
-
 .contact-text>div>a {
   color: white;
   display: flex;
@@ -291,24 +304,20 @@ video {
   background-color: #282828a9;
   z-index: 10;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   overflow-x: none;
 }
 
 .modal {
   position: relative;
   display: grid;
-  align-content: center;
-  width: 100%;
-  justify-content: center;
+  place-content: center center;
   height: 100vh;
   width: 100vw;
-
 }
 
 .big-img {
-
   margin: 0 auto;
   width: 60%;
   max-height: 100vh;
@@ -321,7 +330,6 @@ video {
 
 .music-spotify {
   width: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,7 +339,7 @@ video {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 1.75rem;
+
 }
 
 .text-music>div>.for-nothing>a {
@@ -345,10 +353,7 @@ video {
   cursor: pointer;
 }
 
-
-
 .for-nothing {
-
   display: flex;
   align-items: center;
   width: 100%;
@@ -383,7 +388,7 @@ video {
 
 .progress-bar {
   width: 200px;
-  background-color: rgb(196, 66, 66);
+  background-color: rgb(196 66 66);
   height: 10px;
   margin-left: 20px;
   position: relative;
@@ -395,7 +400,6 @@ video {
 }
 
 .drop-down-album {
-
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -421,12 +425,8 @@ video {
 
 .video-justtittle {
   margin-left: 24px;
-
-
   display: flex;
-
   align-items: center;
-
 }
 
 .flex {
@@ -434,11 +434,8 @@ video {
   flex-direction: row;
 }
 
-
 .test {
-
   display: flex;
-
   align-items: center;
 }
 
@@ -446,14 +443,10 @@ video {
   height: 70vh;
 }
 
-
 .media.band-photos {
-
   grid-template-columns: repeat(2, 300px);
-  padding: 20px 0px;
+  padding: 20px 0;
 }
-
-
 
 .text-music.song>div:nth-child(6) {
   padding-bottom: 20px;
@@ -464,27 +457,22 @@ video {
 }
 
 .mix-flex {
-
   display: flex;
   align-items: center;
   width: 50%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (width <=1000px) {
   .media {
-
     grid-template-columns: repeat(auto-fill, 300px);
-
   }
-
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <=768px) {
   .mix-flex {
     display: flex;
     align-items: flex-start;
     width: 100%;
-
   }
 
   .media.band-photos {
@@ -495,10 +483,7 @@ video {
     display: grid;
   }
 
-
-
   .progress-bar {
-
     left: 28px;
     width: 200px;
   }
@@ -523,7 +508,6 @@ video {
     margin-bottom: 10px;
   }
 
-
   .even:nth-of-type(odd) {
     gap: 15px;
   }
@@ -540,8 +524,6 @@ video {
   li {
     font-size: 2rem;
   }
-
-
 
   .contact-text {
     height: auto;
@@ -571,9 +553,7 @@ video {
     width: 100%;
   }
 
-  .text {
-    font-size: 1.5rem;
-  }
+
 
   .secondNav>a>li {
     font-size: 1.25rem;
@@ -592,31 +572,20 @@ video {
   }
 }
 
-@media screen and (max-width: 530px) {
-
-
-
+@media screen and (width <=530px) {
   footer>div>a>p {
     font-size: 1.25rem;
   }
-
-
 }
 
-@media screen and (max-width: 425px) {
-
-
+@media screen and (width <=425px) {
   .text-film-hope {
     display: flex;
   }
 
-  p {
-    font-size: 1.25rem;
-  }
 
-  .text {
-    font-size: 1.25rem;
-  }
+
+
 
   .the-main-content {
     width: 95%;
@@ -627,16 +596,13 @@ video {
     font-size: 1.25rem;
   }
 
-
-
   .box {
     width: 10px;
     height: 10px;
   }
 
-
   .colored-box {
-    padding: 0px;
+    padding: 0;
   }
 
   .secondNav>a {
@@ -647,93 +613,32 @@ video {
     display: none;
   }
 
-
-
-
   .dots {
-    border-bottom: 3px dotted rgb(255, 255, 255);
-  }
-
-  .visual-container>a {
-    font-size: 1.5rem;
+    border-bottom: 3px dotted rgb(255 255 255);
   }
 
 
-
 }
-
-
-/* .secondNav {
-  transition: opacity 0.3s ease;
-}
-
-.secondNav.transitioning {
-  opacity: 0.7;
-}
-
-.nav-pending {
-  pointer-events: none;
-}
-
-.secondNav li {
-  transition: all 0.3s ease;
-}
-
-.secondNav li.active {
-  transition: all 0.3s ease;
-}
-
-/* Optional: add a subtle animation for the active state */
-/* @keyframes activeState {
-  from {
-    transform: translateY(2px);
-    opacity: 0.8;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.secondNav li.active {
-  animation: activeState 0.3s ease forwards;
-}
-
-
-.the-main-content {
-  transition: all 0.3s ease-in-out;
-}
-
-.content-transition {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes contentEnter {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.the-main-content:not(.content-transition) {
-  animation: contentEnter 0.3s ease-in-out forwards;
-}
-
-.container-main {
-  transition: all 0.3s ease-in-out;
-}
-
-.text {
-  transition: all 0.3s ease-in-out;
-} */
 
 .container-lower>p>a {
   color: #ff68b4;
+}
+
+.text-music.film {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-justtittle {
+  color: #ff68b4;
+}
+
+.description {
+  margin-left: 24px;
+
+}
+
+/* Ensure SongPlayer titles are also pink */
+:global(.text-music.film .SongPlayer .title) {
+  color: pink;
 }

@@ -27,7 +27,10 @@ const VisualArtComponent = () => {
       {projects.map((project, index) => (
         <div key={index} className="visual-container">
           <Link to={project.slug}>
-            {project.title} – {project.year}
+            <h2>
+              {" "}
+              {project.title} – {project.year}
+            </h2>
             <img
               className="icon"
               width="24px"

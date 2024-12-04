@@ -65,7 +65,6 @@ const TextMusic = () => {
         <p
           style={{
             marginLeft: "24px",
-            fontSize: "1.25rem",
           }}
         >
           Latest Zaharenco Release – the second track from the upcoming album,
@@ -84,7 +83,6 @@ const TextMusic = () => {
         <p
           style={{
             marginLeft: "24px",
-            fontSize: "1.25rem",
           }}
         >
           Featuring Lucas Contreras on guitar, Laura Benedek on bass, and Sergiu
@@ -102,14 +100,10 @@ const TextMusic = () => {
             alt="Open close"
           />
           <div>
-            <div className="pink" onClick={handlePopUp3}>
+            <h2 className="pink" onClick={handlePopUp3}>
               Iona - ballet for one dancer (2023)
-            </div>
-            <p
-              style={{
-                fontSize: "1.2rem",
-              }}
-            >
+            </h2>
+            <p>
               This piece is inspired by the dramaturgy of Iona by Marin Sorescu
               and represents my Master's degree project. It follows the
               narrative aspect of the ambiance, reflecting the emotions of the
@@ -148,7 +142,6 @@ const TextMusic = () => {
         <p
           style={{
             marginLeft: "24px",
-            fontSize: "1.25rem",
           }}
         >
           Performed by Adriana Toacsen
@@ -164,9 +157,9 @@ const TextMusic = () => {
             alt=""
           />
           <div>
-            <div onClick={handlePopUp} className="test pink">
+            <h2 onClick={handlePopUp} className="test pink">
               Primordial feelings (2021)
-            </div>
+            </h2>
 
             <p
               style={{
@@ -224,7 +217,6 @@ const TextMusic = () => {
         <p
           style={{
             marginLeft: "24px",
-            fontSize: "1.25rem",
           }}
         >
           This song is based on my exploration of Live Looping techniques.{" "}
@@ -240,9 +232,9 @@ const TextMusic = () => {
             src={popupState2 ? "/icons/up.svg" : "/icons/down.svg"}
             alt=""
           />
-          <div onClick={handlePopUp2} className="test pink">
+          <h2 onClick={handlePopUp2} className="test pink">
             Conditions (2021)
-          </div>
+          </h2>
           <a href="https://on.soundcloud.com/4Lgkt" target="_blank">
             {link}
           </a>

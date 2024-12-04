@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --black: rgb(0, 0, 0);
+    --black: rgb(0 0 0);
     --transition-time: 1s;
     --container-width-mobile: 95%;
     --container-width-tablet: 90%;
@@ -29,7 +29,6 @@
 .components,
 .components-blog,
 .page-main {
-
     background-color: var(--black);
     min-height: 100vh;
 }
@@ -47,7 +46,6 @@
 }
 
 .main {
-
     min-height: 100vh;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -68,27 +66,23 @@
 }
 
 /* Tablet and above */
-@media screen and (min-width: 768px) {
-
+@media screen and (width >= 768px) {
     .page,
     .page-main,
     .main,
     .main-blogs {
-
         overflow-y: scroll;
     }
 
     .main,
     .main-blogs {
         overflow-y: scroll;
-
         transition: var(--transition-time);
     }
 }
 
 /* Desktop */
-@media screen and (min-width: 1024px) {
-
+@media screen and (width >= 1024px) {
     .main {
         width: var(--container-width-desktop);
     }

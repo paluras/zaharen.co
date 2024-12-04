@@ -25,6 +25,8 @@
     "@vitejs/plugin-react": "^3.1.0",
     "dotenv": "^16.4.5",
     "react-router-dom": "^6.9.0",
+    "stylelint": "^16.11.0",
+    "stylelint-config-standard": "^36.0.1",
     "vite": "^4.2.0"
   }
 }

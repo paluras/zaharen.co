@@ -1,14 +1,14 @@
 /* variables.css */
 :root {
     /* Colors */
-    --color-primary: #0000ff;
+    --color-primary: #00f;
     --color-secondary: #ff68b4;
     --color-accent: #00bce8;
-    --color-warning: #ff0000;
-    --color-success: #00ff00;
-    --color-info: #ffff00;
-    --color-white: #ffffff;
-    --color-black: #000000;
+    --color-warning: #f00;
+    --color-success: #0f0;
+    --color-info: #ff0;
+    --color-white: #fff;
+    --color-black: #000;
 
     /* Font Families */
     --font-primary: "Tele2", "modesevenregular", monospace, sans-serif;
@@ -39,4 +39,10 @@
     /* Z-indices */
     --z-index-base: 1;
     --z-index-modal: 10;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 500;
 }
