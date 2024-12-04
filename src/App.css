@@ -5,6 +5,9 @@
 @import './styles/crt.css';
 
 
+
+
+
 * {
   font-family: "Tele2", "modesevenregular", monospace, sans-serif;
   padding: 0;
@@ -91,11 +94,6 @@ li {
 }
 
 
-
-
-
-
-
 .dots {
   border-bottom: 5px dotted rgb(255, 255, 255);
   width: 100%;
@@ -110,9 +108,14 @@ li {
 .container-tittle {
   font-size: var(--font-size-bigger);
   color: #00bce8;
-  padding-bottom: 10px;
+  margin-bottom: -10px;
   font-size: 3rem;
+
+
+
+
 }
+
 
 .container-para {
   color: rgb(255, 255, 255);
@@ -221,16 +224,34 @@ iframe {
 }
 
 .contact-text {
+  height: 60vh;
   display: grid;
-
-  justify-content: center;
-  text-align: center;
   font-size: var(--font-size-main);
-  grid-template-columns: repeat(3, 1fr);
-  color: white;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
   gap: 30px;
-  width: 60%;
-  margin: auto;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* First row alignment - bottom */
+.contact-text>div:nth-child(-n+3) {
+  align-self: end;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+/* Second row alignment - top */
+.contact-text>div:nth-child(n+4) {
+  align-self: start;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 
@@ -238,7 +259,8 @@ iframe {
 .contact-text>div>a {
   color: white;
   display: flex;
-
+  justify-content: left;
+  width: 100%;
   align-items: center;
 }
 
@@ -522,17 +544,26 @@ video {
 
 
   .contact-text {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.5rem;
-    grid-template-columns: 300px;
-    color: white;
-    gap: 30px;
+    height: auto;
+    grid-template-columns: 200px;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px 0;
   }
 
-  .contact-text>div {
-    display: flex;
+  /* Override nth-child rules for mobile */
+  .contact-text>div,
+  .contact-text>div:nth-child(-n+3),
+  .contact-text>div:nth-child(n+4) {
+    align-self: auto;
+    height: 50px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-text>div>a {
+    align-self: auto;
+    height: auto;
     justify-content: center;
   }
 
@@ -632,7 +663,7 @@ video {
 }
 
 
-.secondNav {
+/* .secondNav {
   transition: opacity 0.3s ease;
 }
 
@@ -653,7 +684,7 @@ video {
 }
 
 /* Optional: add a subtle animation for the active state */
-@keyframes activeState {
+/* @keyframes activeState {
   from {
     transform: translateY(2px);
     opacity: 0.8;
@@ -701,8 +732,8 @@ video {
 
 .text {
   transition: all 0.3s ease-in-out;
-}
+} */
 
-.container-lower>p>a {
+*/ .container-lower>p>a {
   color: #ff68b4;
 }
