@@ -4,16 +4,11 @@
 @import './styles/components.css';
 @import './styles/crt.css';
 
-
-
-
-
 * {
   font-family: "Tele2", "modesevenregular", monospace, sans-serif;
   padding: 0;
   margin: 0;
   border: 0;
-
   -webkit-font-smoothing: none;
 }
 
@@ -30,7 +25,6 @@ li {
   cursor: pointer;
   width: 100%;
 }
-
 
 /* POSTS PLEASE REFACTOR */
 
@@ -93,7 +87,6 @@ li {
   clear: both;
 }
 
-
 .dots {
   border-bottom: 5px dotted rgb(255, 255, 255);
   width: 100%;
@@ -110,12 +103,7 @@ li {
   color: #00bce8;
   margin-bottom: -10px;
   font-size: 3rem;
-
-
-
-
 }
-
 
 .container-para {
   color: rgb(255, 255, 255);
@@ -190,7 +178,6 @@ iframe {
 
 .secondNav>li>a {
   text-align: center;
-
   width: 100%;
 }
 
@@ -253,8 +240,6 @@ iframe {
   justify-content: left;
   align-items: center;
 }
-
-
 
 .contact-text>div>a {
   color: white;
@@ -345,10 +330,7 @@ video {
   cursor: pointer;
 }
 
-
-
 .for-nothing {
-
   display: flex;
   align-items: center;
   width: 100%;
@@ -421,12 +403,8 @@ video {
 
 .video-justtittle {
   margin-left: 24px;
-
-
   display: flex;
-
   align-items: center;
-
 }
 
 .flex {
@@ -434,11 +412,8 @@ video {
   flex-direction: row;
 }
 
-
 .test {
-
   display: flex;
-
   align-items: center;
 }
 
@@ -446,14 +421,11 @@ video {
   height: 70vh;
 }
 
-
 .media.band-photos {
 
   grid-template-columns: repeat(2, 300px);
   padding: 20px 0px;
 }
-
-
 
 .text-music.song>div:nth-child(6) {
   padding-bottom: 20px;
@@ -464,7 +436,6 @@ video {
 }
 
 .mix-flex {
-
   display: flex;
   align-items: center;
   width: 50%;
@@ -472,11 +443,8 @@ video {
 
 @media screen and (max-width: 1000px) {
   .media {
-
     grid-template-columns: repeat(auto-fill, 300px);
-
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -494,8 +462,6 @@ video {
   .for-nothing {
     display: grid;
   }
-
-
 
   .progress-bar {
 
@@ -523,7 +489,6 @@ video {
     margin-bottom: 10px;
   }
 
-
   .even:nth-of-type(odd) {
     gap: 15px;
   }
@@ -540,8 +505,6 @@ video {
   li {
     font-size: 2rem;
   }
-
-
 
   .contact-text {
     height: auto;
@@ -594,17 +557,13 @@ video {
 
 @media screen and (max-width: 530px) {
 
-
-
   footer>div>a>p {
     font-size: 1.25rem;
   }
 
-
 }
 
 @media screen and (max-width: 425px) {
-
 
   .text-film-hope {
     display: flex;
@@ -627,13 +586,10 @@ video {
     font-size: 1.25rem;
   }
 
-
-
   .box {
     width: 10px;
     height: 10px;
   }
-
 
   .colored-box {
     padding: 0px;
@@ -647,9 +603,6 @@ video {
     display: none;
   }
 
-
-
-
   .dots {
     border-bottom: 3px dotted rgb(255, 255, 255);
   }
@@ -658,81 +611,7 @@ video {
     font-size: 1.5rem;
   }
 
-
-
 }
-
-
-/* .secondNav {
-  transition: opacity 0.3s ease;
-}
-
-.secondNav.transitioning {
-  opacity: 0.7;
-}
-
-.nav-pending {
-  pointer-events: none;
-}
-
-.secondNav li {
-  transition: all 0.3s ease;
-}
-
-.secondNav li.active {
-  transition: all 0.3s ease;
-}
-
-/* Optional: add a subtle animation for the active state */
-/* @keyframes activeState {
-  from {
-    transform: translateY(2px);
-    opacity: 0.8;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.secondNav li.active {
-  animation: activeState 0.3s ease forwards;
-}
-
-
-.the-main-content {
-  transition: all 0.3s ease-in-out;
-}
-
-.content-transition {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes contentEnter {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.the-main-content:not(.content-transition) {
-  animation: contentEnter 0.3s ease-in-out forwards;
-}
-
-.container-main {
-  transition: all 0.3s ease-in-out;
-}
-
-.text {
-  transition: all 0.3s ease-in-out;
-} */
 
 .container-lower>p>a {
   color: #ff68b4;
