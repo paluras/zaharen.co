@@ -50,10 +50,19 @@ const Contacts = () => {
   ];
 
   return (
-    <div className="contact-text">
-      {contacts.map((contact, index) => (
-        <ContactItem key={index} {...contact} />
-      ))}
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div className="contact-text">
+        {contacts.map((contact, index) => (
+          <ContactItem key={index} {...contact} />
+        ))}
+      </div>
     </div>
   );
 };
