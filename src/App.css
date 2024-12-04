@@ -734,6 +734,6 @@ video {
   transition: all 0.3s ease-in-out;
 } */
 
-*/ .container-lower>p>a {
+.container-lower>p>a {
   color: #ff68b4;
 }

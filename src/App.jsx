@@ -1,5 +1,5 @@
 // App.jsx
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, lazy } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout"; // Remove lazy loading for Layout
