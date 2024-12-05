@@ -148,9 +148,9 @@
 
 
 /* Media Queries */
-@media screen and (width >=420px) {
+@media screen and (width >=425px) {
     .container {
-        display: flex;
+
         position: relative;
         width: 100%;
         flex-direction: row;
@@ -168,16 +168,16 @@
 
 
     .container-left ul li {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         display: flex;
+        justify-content: center;
+
     }
 
-    .container-left ul {
-        display: block;
-    }
+
 
     .container-left {
-        width: 75%;
+        width: calc(100% -10px);
     }
 
     .value,
@@ -193,13 +193,79 @@
 }
 
 @media screen and (width >=768px) {
+
+
+    .container {
+        display: flex;
+
+    }
+
     .container-left ul li {
         font-size: 2rem;
         display: flex;
+        justify-content: left;
+    }
+
+    .container-left ul {
+        display: block;
     }
 
     .container-lower p {
         font-size: 1.5rem;
     }
 
+    .container-left {
+        width: 75%;
+    }
+
+    .container-left ul li {
+        font-size: 1.75rem;
+        display: flex;
+    }
+
 }
+
+
+
+
+/* .container {
+
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container-lower>h3 {
+        font-size: 1.75rem;
+    }
+
+    .container-lower>h4 {
+        font-size: 1.5rem;
+    }
+
+
+
+    .container-left ul li {
+        font-size: 1.5rem;
+
+    }
+
+    .container-left ul {}
+
+    .container-left {
+        width: calc(100% - 10px);
+    }
+
+    .value,
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .container-lower p {
+        font-size: 1.25rem;
+    }
+
+
+}
+ */
