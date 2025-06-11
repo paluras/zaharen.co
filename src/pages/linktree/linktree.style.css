@@ -1,56 +1,234 @@
+/* ================================
+   FONTS & CSS CUSTOM PROPERTIES
+   ================================ */
 @font-face {
     font-family: "Diamante Bold";
-    src: url('../../../public/diamante_bold-webfont.woff2');
+    src: url('../../../public/diamante_bold-webfont.woff2') format('woff2');
+    font-display: swap;
 }
 
+:root {
+    /* Color palette */
+    --primary-bg: rgb(14, 12, 12);
+    --accent-yellow: #fcdd00;
+    --accent-brown: #b1461c;
+    --text-white: #ffffff;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-darker: rgba(0, 0, 0, 0.4);
+    --overlay-dark: rgba(0, 0, 0, 0.2);
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 60px;
+
+    /* Border radius */
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+
+    /* Breakpoints */
+    --mobile-max: 754px;
+    --desktop-min: 755px;
+}
+
+/* ================================
+   RESET & BASE STYLES
+   ================================ */
+* {
+    box-sizing: border-box;
+}
+
+/* ================================
+   MAIN LAYOUT
+   ================================ */
 .linktree-main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    display: flex;
-    color: white;
-    padding: 60px 60px;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-xl);
     margin: 0;
-    background-color: rgb(14, 12, 12);
-
+    background-color: var(--primary-bg);
+    color: var(--text-white);
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
-header,
-section {
+/* ================================
+   HEADER STYLES
+   ================================ */
+.linktree-header {
     max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-
+    margin-bottom: var(--spacing-md);
 }
 
 .linktree-zaharenco-logo {
     width: 100%;
+    height: auto;
     image-rendering: pixelated;
-
+    cursor: pointer;
+    transition: var(--transition-normal);
+    border-radius: var(--radius-md);
 }
 
+.linktree-zaharenco-logo:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.linktree-header>p {
+    text-wrap: balance;
+    text-align: center;
+    margin-top: var(--spacing-md);
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ================================
+   CONTENT SECTION
+   ================================ */
+.linktree-content {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: var(--spacing-md);
+}
+
+/* ================================
+   LOADING STATE
+   ================================ */
+.linktree-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--overlay-dark);
+    border-top: 3px solid var(--accent-yellow);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================================
+   MOBILE-FIRST LAYOUT (DEFAULT)
+   ================================ */
+.linktree-bento-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+/* ================================
+   FEATURED IMAGE STYLES
+   ================================ */
 .img-container-linktree {
     width: 100%;
-    margin-bottom: 10px;
+    margin: var(--spacing-sm) 0;
+    border: 4px solid var(--accent-yellow);
+    border-radius: var(--radius-lg);
+    background-color: var(--accent-brown);
+    transition: var(--transition-normal);
+    box-shadow: 0 4px 12px var(--shadow-dark);
+    align-self: center;
+    position: relative;
+    overflow: hidden;
+}
 
+.img-container-linktree::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(252, 221, 0, 0.1) 0%,
+            transparent 50%,
+            rgba(177, 70, 28, 0.1) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.img-container-linktree:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--shadow-darker);
+    border-color: rgba(252, 221, 0, 0.8);
+}
+
+.featured-image-link {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background-color: var(--overlay-dark);
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
 }
 
 #linktree-img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     image-rendering: pixelated;
+    transition: var(--transition-normal);
+    display: block;
 }
 
-.linktree-img {
-    width: 50%;
-    object-fit: contain;
+.img-container-linktree:hover #linktree-img {
+    transform: scale(1.05);
 }
 
+/* ================================
+   BUTTON CONTAINERS
+   ================================ */
+.bento-button {
+    width: 100%;
+}
 
+.bento-button .linktree-button {
+    margin: var(--spacing-sm) 0;
+}
+
+.full-width-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+/* ================================
+   BUTTON STYLES
+   ================================ */
 .button-container {
     width: 100%;
 }
@@ -60,42 +238,276 @@ section {
     display: flex;
     align-items: center;
     border: none;
-    margin: 10px 0;
+    margin: var(--spacing-sm) 0;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: var(--transition-normal);
     width: 100%;
-    border-style: solid;
-    border-width: 4px;
-    border-color: #fcdd00;
-
+    border: 4px solid var(--accent-yellow);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: transparent;
 }
 
-.linktree-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.linktree-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow-darker);
+    border-color: rgba(252, 221, 0, 0.9);
 }
 
-.linktree-header>p {
-    text-wrap: balance;
-    text-align: center;
+.linktree-button:active {
+    transform: translateY(0);
 }
-
-
-
 
 .linktree-button>a {
     font-family: "Diamante Bold", sans-serif;
     font-size: 1.75rem;
-    background-color: #b1461c;
-    padding: 20px;
+    background-color: var(--accent-brown);
+    padding: var(--spacing-lg);
     width: 100%;
     text-wrap: balance;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: var(--transition-fast);
+    gap: var(--spacing-md);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
 
+.linktree-button:hover>a {
+    background-color: rgba(177, 70, 28, 0.9);
+}
+
+/* ================================
+   UTILITY CLASSES
+   ================================ */
+.no-content-message {
+    text-align: center;
+    padding: var(--spacing-xl);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* ================================
+   TABLET/MOBILE LAYOUT
+   ================================ */
+@media screen and (max-width: 754px) {
+    .linktree-main {
+        padding: 10 10;
+        gap: var(--spacing-md);
+    }
+
+    /* Show image on mobile in this layout */
+    .img-container-linktree {
+        display: flex !important;
+        /* Override the display: none */
+        width: 100%;
+        max-width: none;
+        margin: 0 0 0 0;
+        align-self: center;
+        max-height: 320px;
+    }
+
+    .img-container-linktree .featured-image-link {
+        aspect-ratio: 1 / 1;
+        /* Nice mobile aspect ratio */
+        object-fit: contain;
+        width: 100%;
+        max-height: 320;
+    }
+
+    .img-container-linktree #linktree-img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    /* Mobile bento container becomes simple flex column */
+    .linktree-bento-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        width: 100%;
+    }
+
+    /* All mobile buttons - consistent styling */
+    .bento-button,
+    .full-width-buttons {
+        width: 100%;
+    }
+
+    .bento-button .linktree-button,
+    .full-width-buttons .linktree-button {
+        margin: 0;
+        height: 70px;
+        /* Slightly smaller for mobile */
+        width: 100%;
+    }
+
+    .bento-button .linktree-button>a,
+    .full-width-buttons .linktree-button>a {
+        font-size: 1.5rem;
+        padding: var(--spacing-md);
+        height: 70px;
+        width: 100%;
+    }
+
+    /* Full width buttons maintain same gap */
+    .full-width-buttons {
+        gap: var(--spacing-md);
+        margin-top: 0;
+        /* No extra margin since bento handles spacing */
+    }
+
+    .linktree-zaharenco-logo {}
+}
+
+/* Small mobile optimization */
+@media screen and (max-width: 480px) {
+    .linktree-main {
+        padding: 20px;
+    }
+
+    .linktree-button>a {
+        font-size: 1.3rem;
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+}
+
+/* ================================
+   DESKTOP BENTO LAYOUT
+   ================================ */
+@media screen and (min-width: 755px) {
+    .linktree-content {
+        max-width: 700px;
+        gap: 0;
+    }
+
+    .linktree-bento-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 85px);
+        /* Fixed 85px rows to match button height */
+        gap: var(--spacing-md);
+        /* 15px consistent gap */
+        margin-bottom: 0;
+        align-items: stretch;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .img-container-linktree {
+        grid-row: 1 / 4;
+        /* Spans all 3 rows */
+        grid-column: 1 / 2;
+        max-width: none;
+        margin: 0;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        /* Total height = 3 × 85px + 2 × 15px gaps = 285px */
+        height: calc(3 * 85px + 2 * var(--spacing-md));
+    }
+
+    .img-container-linktree .featured-image-link {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: unset;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .img-container-linktree #linktree-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        flex: 1;
+    }
+
+    /* Bento buttons - positioned in grid */
+    .bento-button {
+        grid-column: 2 / 3;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .bento-button:nth-child(2) {
+        grid-row: 1;
+    }
+
+    .bento-button:nth-child(3) {
+        grid-row: 2;
+    }
+
+    .bento-button:nth-child(4) {
+        grid-row: 3;
+    }
+
+    /* ALL BUTTONS - Exact same height and styling */
+    .bento-button .linktree-button,
+    .full-width-buttons .linktree-button {
+        width: 100%;
+        height: 85px;
+        /* Fixed height for perfect consistency */
+        margin: 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .bento-button .linktree-button>a,
+    .full-width-buttons .linktree-button>a {
+        width: 100%;
+        height: 85px;
+        /* Exact match to button height */
+        font-size: 1.4rem;
+        padding: var(--spacing-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        line-height: 1.3;
+    }
+
+    /* Full width buttons - same gap as bento */
+    .full-width-buttons {
+        gap: var(--spacing-md);
+        /* Exact same 15px gap */
+        margin-top: var(--spacing-md);
+        /* Same 15px connection gap - no extra space */
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+/* ================================
+   ACCESSIBILITY & FOCUS STATES
+   ================================ */
+.linktree-zaharenco-logo:focus,
+.featured-image-link:focus,
+.linktree-button:focus,
+.linktree-button a:focus {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+
+    .img-container-linktree,
+    .linktree-button {
+        border-width: 3px;
+    }
 }
