@@ -12,18 +12,63 @@ const Events = () => {
     });
   }, []);
 
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const upcomingEvents = events
+    .filter((event) => {
+      const eventDate = new Date(event.date);
+      eventDate.setHours(0, 0, 0, 0);
+      return eventDate >= today;
+    })
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  const pastEvents = events
+    .filter((event) => {
+      const eventDate = new Date(event.date);
+      eventDate.setHours(0, 0, 0, 0);
+      return eventDate < today;
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  };
+
   return (
     <>
-      {events.map((event) => (
-        <div key={event._id} className="event">
-          {new Date(event.date).toLocaleDateString("en-US", {
-            day: "2-digit",
-            month: "short",
-            year: "numeric",
-          })}
-          – {event.title} - {event.location}
+      {/* Upcoming Events Section */}
+      {upcomingEvents.length > 0 && (
+        <div className="events-section">
+          <h2>Upcoming Events</h2>
+          {upcomingEvents.map((event) => (
+            <div key={event._id} className="event">
+              {formatDate(event.date)} – {event.title} - {event.location}
+            </div>
+          ))}
         </div>
-      ))}
+      )}
+
+      {/* Past Events Section */}
+      {pastEvents.length > 0 && (
+        <div className="events-section">
+          <h2>Past Events</h2>
+          {pastEvents.map((event) => (
+            <div key={event._id} className="event">
+              {formatDate(event.date)} – {event.title} - {event.location}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* No events message */}
+      {events.length === 0 && (
+        <div className="no-events">No events available.</div>
+      )}
     </>
   );
 };

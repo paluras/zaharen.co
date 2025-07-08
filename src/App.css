@@ -145,6 +145,10 @@ li {
   margin-bottom: 10px;
 }
 
+.events-section {
+  margin-bottom: 30px;
+}
+
 .container-para>.title>a {
   color: #ff68b4;
   font-size: var(--font-size-main);
