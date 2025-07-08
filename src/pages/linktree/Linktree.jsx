@@ -8,6 +8,9 @@ import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(client);
 
+// Facebook Pixel ID - hardcoded
+const FACEBOOK_PIXEL_ID = "438399329170276";
+
 export default function LinkTree() {
   const navigate = useNavigate();
   const [config, setConfig] = useState(null);
@@ -19,7 +22,7 @@ export default function LinkTree() {
       try {
         setIsLoading(true);
 
-        // Query for linktree configuration
+        // Query for linktree configuration (removed facebookPixelId)
         const configQuery = `*[_type == "linktreeConfig"][0]{
           title,
           logo,
@@ -27,8 +30,7 @@ export default function LinkTree() {
           featuredImage,
           featuredImagePath,
           featuredImageLink,
-          featuredImageAlt,
-          facebookPixelId
+          featuredImageAlt
         }`;
 
         // Query for active buttons ordered by display order
@@ -157,8 +159,8 @@ export default function LinkTree() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        {/* Facebook Pixel */}
-        {config?.facebookPixelId && (
+        {/* Facebook Pixel - hardcoded */}
+        {FACEBOOK_PIXEL_ID && (
           <script>
             {`
               !function(f,b,e,v,n,t,s)
@@ -169,7 +171,7 @@ export default function LinkTree() {
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${config.facebookPixelId}');
+              fbq('init', '${FACEBOOK_PIXEL_ID}');
               fbq('track', 'PageView');
             `}
           </script>
