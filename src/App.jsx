@@ -1,11 +1,8 @@
-// App.jsx
 import { useState, useEffect, lazy } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout"; // Remove lazy loading for Layout
+import Layout from "./components/Layout";
 import LandingPage from "./Landing";
-
-// Lazy load components
 
 const Events = lazy(() => import("./components/Events"));
 const VisualArtComponent = lazy(() =>
@@ -45,7 +42,6 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Navigation configuration
   const navConfig = {
     about: [
       { text: "Bio", url: "/bio", keys: "1", startNumber: 200 },
