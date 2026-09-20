@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -24,6 +24,7 @@ const Catatro = lazy(() => import("./components/media-visual/Catatro"));
 const Catatrov2 = lazy(() => import("./components/media-visual/Catatrov2"));
 const Primordial = lazy(() => import("./components/media-visual/Primordial"));
 const LinkTree = lazy(() => import("./pages/linktree/Linktree"));
+const EPK = lazy(() => import("./pages/epk/EPK"));
 
 function App() {
   const [words, setWords] = useState(["Film & Theatre", "Multimedia Art"]);
@@ -67,6 +68,14 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/linktree" element={<LinkTree />} />
+      <Route
+        path="/epk"
+        element={
+          <Suspense fallback={null}>
+            <EPK />
+          </Suspense>
+        }
+      />
 
       <Route element={<Layout navConfig={navConfig} />}>
         <Route path="/bio" element={<BioComponent />} />
