@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "@fontsource/anton/latin-400.css";
 import "@fontsource/anton/latin-ext-400.css";
 import "@fontsource/archivo/latin-400.css";
@@ -13,25 +13,28 @@ const copy = {
   en: {
     releaseDate: "Out October 8, 2026",
     bioLead:
-      'Zaharenco Releases "Condition 2," Alternative Jazz with Rock Influences',
+      "Zaharenco Releases – Condition 2 – Alternative Jazz with Rock Influences",
     bio: [
-      "Zaharenco, a Bucharest-based project working at the crossroads of modern jazz, rock and classical music, releases Condition 2 on October 8, 2026. The single precedes the project's debut album, Looking for a Better Place, due out in November 2026.",
-      "Where Zaharenco's earlier releases leaned on melody and a more calculated structure, in the vein of bands like GoGo Penguin, Condition 2 is a different animal: an energy-driven track built around a simple melody, almost like a tune a child might hum, dressed up with electric guitar riffs and a driving rhythm that pushes it forward.",
-      "The track is entirely instrumental, and it's best heard start to finish: it builds gradually, with each section growing naturally out of the one before it.",
-      "Condition 2 opens with a clear idea before breaking into free play, where the saxophone seems to multiply and talk to itself, a conversation carried by the same voice coming from several directions at once.",
-      "The track features Alexandru Zaharencu (electric piano, synth), Timotei Bîgu (saxophone), Raul Iuga (electric guitar) and Cristian Florea (drums).",
-      "Alongside Condition 4 (Suspended in Mid-Air) and Condition 5, it continues the Conditions series, built on sincere feelings presented without filter.",
-      "Condition 2 is one of the most dynamic tracks on Looking for a Better Place, an album that, true to its name, isn't chasing a single formula but an ongoing search.",
+      "Zaharenco, a Bucharest-based project working at the crossroads of modern jazz, rock and classical music, releases Condition 2 on October 8, 2026. The single precedes the project's debut album, Looking for a Better Place, due out in November 2026, and arrives alongside a narrative music video premiering the same day on Zaharenco's YouTube channel, a collaboration with Coca Production (Andrei Coca, Sorin Nedelcu) from a concept by Alexandru Zaharencu.",
+      "Zaharenco's earlier work favored melody and careful architecture, in the spirit of bands like GoGo Penguin. Condition 2 breaks that pattern: a restless, energy-driven track built on a melody simple enough to hum, wrapped in electric guitar riffs and a rhythm that keeps driving forward. Entirely instrumental, it's best heard start to finish, building gradually as each section grows naturally out of the one before. It opens with a clear idea before breaking into free play, where the saxophone seems to multiply and talk to itself: a conversation carried by the same voice, coming from several directions at once.",
+      "The track features Alexandru Zaharencu (electric piano, synth), Timotei Bîgu (saxophone), Raul Iuga (electric guitar) and Cristian Florea (drums). Alongside Condition 4 (Suspended in Mid-Air) and Condition 5, it continues the Conditions series, built on sincere feelings presented without filter, and stands as one of the most dynamic tracks on Looking for a Better Place, an album that, true to its name, isn't chasing a single formula but an ongoing search.",
       'Zaharenco started out in November 2023 with the release of the "Primordial Feelings" EP, and has since performed at major local stages including Gărâna Jazz Festival, JazzX, Jazz in the Park and Csiki Jazz.',
     ],
     listen: "Listen",
     prerelease: "PRE-RELEASE: FOR PRESS & BOOKING ONLY",
     privatePreview:
       "Private preview, for press and booking use only. Please do not share publicly before release.",
+    video: "Video",
+    officialVideo: "Official Music Video, out October 8, 2026 (YouTube premiere)",
+    officialDescription:
+      "Narrative video, directed by Coca Production (Andrei Coca, Sorin Nedelcu), concept by Alexandru Zaharencu. Filmed on Bucharest's last remaining stone slide from the communist era, in Floreasca Park; the same slide appears in the single's cover artwork, in an older photograph.",
+    promoMaterials: "Promo Materials",
+    artworkAnimation: "Artwork Animation",
     previousReleases: "Previous Releases",
     catalog:
-      "Full catalog (updates automatically once Condition 2 is live on Spotify):",
+      "Full catalog, played in full on YouTube (updates automatically as new videos go up):",
     pressPhotos: "Press Photos",
+    fullResolution: "Full resolution.",
     download: "Download",
     credits: "Credits",
     creditRoles: [
@@ -40,44 +43,73 @@ const copy = {
       "Guitar",
       "Drums",
     ],
+    techRider: "Tech Rider",
+    riderDescription: "Stage plot & backline requirements for the live quartet.",
+    downloadPdf: "Download PDF",
     contact: "Contact & Social",
+    close: "Close image",
   },
   ro: {
     releaseDate: "Lansare: 8 octombrie 2026",
     bioLead:
       "Zaharenco lansează „Condition 2”, jazz alternativ cu influențe rock",
     bio: [
-      "Zaharenco, proiect din București aflat la intersecția dintre jazz modern, rock și muzică clasică, lansează pe 8 octombrie 2026 piesa Condition 2, single-ul care precede lansarea albumului de debut al proiectului, Looking for a Better Place, programat pentru noiembrie 2026.",
-      "Dacă lansările precedente ale Zaharenco se defineau prin melodicitate și o construcție mai calculată, apropiată de trupe precum GoGo Penguin, Condition 2 e mai degrabă o piesă de energie, construită în jurul unei melodii simple, aproape ca un cântec fredonat de un copil, dar îmbrăcată în riff-uri de chitară electrică și ritm alert care conduc piesa înainte.",
-      "Piesa e complet instrumentală și se ascultă cel mai bine de la primul până la ultimul sunet. Se construiește treptat, iar fiecare parte capătă sens din cele dinainte.",
-      "Condition 2 pornește dintr-o idee clară, apoi se descompune într-un joc liber, în care saxofonul pare să se multiplice și să discute cu sine, ca o conversație purtată de aceeași voce din mai multe direcții deodată.",
-      "Pe track îi ascultați pe Alexandru Zaharencu (pian electric, synth), Timotei Bîgu (saxofon), Raul Iuga (chitară electrică) și Cristian Florea (tobe).",
-      "Alături de Condition 4 (Suspended in Mid-Air) și Condition 5, piesa continuă o serie Conditions ce se bazează din trăiri sincere, prezentate fără filtru.",
-      "Condition 2 e una dintre cele mai dinamice piese de pe Looking for a Better Place, un album care, așa cum îi spune și numele, nu urmărește o formulă unică, ci o căutare continuă.",
+      "Zaharenco, proiect din București aflat la intersecția dintre jazz modern, rock și muzică clasică, lansează pe 8 octombrie 2026 piesa Condition 2, single-ul care precede lansarea albumului de debut al proiectului, Looking for a Better Place, programat pentru noiembrie 2026. Single-ul apare alături de un videoclip narativ, cu premieră în aceeași zi pe canalul de YouTube al Zaharenco, realizat în colaborare cu Coca Production (Andrei Coca, Sorin Nedelcu), după un concept semnat de Alexandru Zaharencu.",
+      "Dacă lansările precedente ale Zaharenco se defineau prin melodicitate și o construcție mai calculată, apropiată de trupe precum GoGo Penguin, Condition 2 e mai degrabă o piesă de energie, construită în jurul unei melodii simple, aproape ca un cântec fredonat de un copil, dar îmbrăcată în riff-uri de chitară electrică și ritm alert care conduc piesa înainte. Piesa e complet instrumentală și se ascultă cel mai bine de la primul până la ultimul sunet, construindu-se treptat, fiecare parte căpătând sens din cele dinainte. Pornește dintr-o idee clară, apoi se descompune într-un joc liber, în care saxofonul pare să se multiplice și să discute cu sine: o conversație purtată de aceeași voce, din mai multe direcții deodată.",
+      "Pe track îi ascultați pe Alexandru Zaharencu (pian electric, synth), Timotei Bîgu (saxofon), Raul Iuga (chitară electrică) și Cristian Florea (tobe). Alături de Condition 4 (Suspended in Mid-Air) și Condition 5, piesa continuă seria Conditions, bazată pe trăiri sincere, prezentate fără filtru, și e una dintre cele mai dinamice piese de pe Looking for a Better Place, un album care, așa cum îi spune și numele, nu urmărește o formulă unică, ci o căutare continuă.",
       "Zaharenco a pornit în noiembrie 2023, odată cu lansarea EP-ului „Primordial Feelings”. În ultimii ani a concertat pe scene locale importante precum Gărâna Jazz Festival, JazzX, Jazz in the Park sau Csiki Jazz.",
     ],
     listen: "Ascultă",
     prerelease: "PRE-LANSARE: DOAR PENTRU PRESĂ ȘI BOOKING",
     privatePreview:
       "Fișier privat de preview, doar pentru presă și booking. Vă rugăm să nu îl distribuiți public înainte de lansare.",
+    video: "Video",
+    officialVideo: "Videoclip oficial, lansare 8 octombrie 2026 (premieră pe YouTube)",
+    officialDescription:
+      "Videoclip narativ, regizat de Coca Production (Andrei Coca, Sorin Nedelcu), concept Alexandru Zaharencu. Filmat pe ultimul tobogan de piatră din perioada comunistă rămas în București, în Parcul Floreasca; același tobogan apare și în artwork-ul single-ului, într-o fotografie mai veche.",
+    promoMaterials: "Materiale promo",
+    artworkAnimation: "Animație artwork",
     previousReleases: "Lansări anterioare",
     catalog:
-      "Catalogul complet (se actualizează automat de îndată ce apare pe Spotify):",
+      "Catalogul complet, ascultat integral pe YouTube (se actualizează automat pe măsură ce apar videoclipuri noi):",
     pressPhotos: "Fotografii de presă",
+    fullResolution: "Rezoluție completă.",
     download: "Descarcă",
     credits: "Credite",
     creditRoles: ["Compozitor / Pian electric, Synth", "Saxofon", "Chitară", "Tobe"],
+    techRider: "Tech Rider",
+    riderDescription: "Schemă de scenă și cerințe de backline pentru cvartetul live.",
+    downloadPdf: "Descarcă PDF",
     contact: "Contact & Social",
+    close: "Închide imaginea",
   },
 };
 
+const promoVideos = [
+  {
+    titleKey: "artworkAnimation",
+    embed: "https://www.youtube.com/embed/I5KRp2hd6yM?si=JlVRDbo9zbDUWhSe",
+    download:
+      "https://drive.google.com/file/d/1jHar8Y6UHK6M0RHMk6KqkiC3xeEHwzbd/view?usp=share_link",
+  },
+  {
+    title: "Live 1",
+    embed: "https://www.youtube.com/embed/pb-XqWiem_Q?si=P5jaaHbU8Obd5DJz",
+    download:
+      "https://drive.google.com/file/d/16SqpCDlQ_JBK56Skjwe11E1PZQEgAH1e/view?usp=share_link",
+  },
+  {
+    title: "Live 2",
+    embed: "https://www.youtube.com/embed/J7sKOOc8Uv0?si=3B4D6jCfM1_jI2DK",
+    download:
+      "https://drive.google.com/file/d/1V8sURrUja9rTnIYuYGbMygVgsySNB1Q2/view?usp=share_link",
+  },
+];
+
 const pressPhotos = [
-  "https://cdn.sanity.io/images/732p2d9l/production/f5e420a8543cbffd73cc1b5ed883dce44fa9d551-1920x1080.jpg",
-  "https://cdn.sanity.io/images/732p2d9l/production/4da7d600766add523d7c3cbb45331a57cdb034b2-4672x7008.jpg",
-  "https://cdn.sanity.io/images/732p2d9l/production/a281cfb3f2025de8b281babfa9eec2f7980a8b40-2048x1365.jpg",
-  "https://cdn.sanity.io/images/732p2d9l/production/563d51eaf0945866e67992a4914731e8cd06a790-3605x5407.jpg",
-  "https://cdn.sanity.io/images/732p2d9l/production/122a89eec6d33aecd5915483f83727f139ee4a50-7290x5939.jpg",
-  "https://cdn.sanity.io/images/732p2d9l/production/0afe177ac88f30fb140fcdb772de34e7c61c820d-8005x5877.jpg",
+  { src: "/epk/press-group-1.jpg", alt: "Zaharenco band photo 1" },
+  { src: "/epk/press-group-2.jpg", alt: "Zaharenco band photo 2" },
+  { src: "/epk/press-solo.jpg", alt: "Alexandru Zaharencu solo portrait" },
 ];
 
 const creditNames = [
@@ -104,8 +136,24 @@ function SectionTitle({ children }) {
   );
 }
 
+function VideoEmbed({ src, title }) {
+  return (
+    <iframe
+      src={src}
+      title={title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+      loading="lazy"
+    />
+  );
+}
+
 export default function EPK() {
   const [language, setLanguage] = useState("en");
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const closeButtonRef = useRef(null);
+  const photoTriggerRef = useRef(null);
   const text = copy[language];
 
   useEffect(() => {
@@ -124,40 +172,65 @@ export default function EPK() {
     };
   }, [language]);
 
+  useEffect(() => {
+    if (!selectedPhoto) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setSelectedPhoto(null);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      photoTriggerRef.current?.focus();
+    };
+  }, [selectedPhoto]);
+
+  const openPhoto = (photo, trigger) => {
+    photoTriggerRef.current = trigger;
+    setSelectedPhoto(photo);
+  };
+
   return (
     <div className="epk-page">
       <main className="epk-main">
         <header className="epk-header">
-          <div className="epk-header-left">
-            <div className="epk-language-switch" aria-label="Language selector">
-              {[
-                ["en", "EN"],
-                ["ro", "RO"],
-              ].map(([value, label]) => (
-                <button
-                  type="button"
-                  key={value}
-                  className={language === value ? "is-active" : ""}
-                  aria-pressed={language === value}
-                  onClick={() => setLanguage(value)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+          <div className="epk-language-switch" aria-label="Language selector">
+            {[
+              ["en", "EN"],
+              ["ro", "RO"],
+            ].map(([value, label]) => (
+              <button
+                type="button"
+                key={value}
+                className={language === value ? "is-active" : ""}
+                aria-pressed={language === value}
+                onClick={() => setLanguage(value)}
+              >
+                {label}
+              </button>
+            ))}
           </div>
-
-          <a className="epk-logo-link" href="/" aria-label="Zaharenco home">
-            <img src="/Zaharenco-logo.png" alt="Zaharenco" />
-          </a>
-
-          <div className="epk-header-right">
-            <span className="epk-badge">PRESS / EPK</span>
-          </div>
+          <span className="epk-badge">PRESS / EPK</span>
         </header>
 
         <div className="epk-hero">
-          <img src="/epk/condition-2.jpg" alt="Condition 2 by Zaharenco artwork" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/epk/condition-2.jpg"
+            aria-label="Condition 2 by Zaharenco artwork animation"
+          >
+            <source src="/epk/condition-2-loop.mp4" type="video/mp4" />
+          </video>
           <div className="epk-hero-caption">
             <h1>Condition 2</h1>
             <span className="epk-release-date">{text.releaseDate}</span>
@@ -182,7 +255,7 @@ export default function EPK() {
               <span className="epk-tag">{text.prerelease}</span>
               <p>{text.privatePreview}</p>
               <audio controls preload="metadata">
-                <source src="/Audio/condition%202.mp3" type="audio/mpeg" />
+                <source src="/epk/condition-2-preview.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </div>
@@ -190,15 +263,53 @@ export default function EPK() {
         </section>
 
         <section className="epk-section">
+          <SectionTitle>{text.video}</SectionTitle>
+          <article className="epk-video-featured">
+            <VideoEmbed
+              src="https://www.youtube.com/embed/7NygA9GW99k?si=446IhWJ8JXVslHbl"
+              title="Condition 2 – Official Music Video"
+            />
+            <h3>{text.officialVideo}</h3>
+            <p>{text.officialDescription}</p>
+            <a
+              className="epk-download epk-download-inline"
+              href="https://drive.google.com/file/d/1Riq-bOJ-fihO6Gbex-ZBfwnU3y3eQp5T/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {text.download}
+            </a>
+          </article>
+
+          <h3 className="epk-video-subheading">{text.promoMaterials}</h3>
+          <div className="epk-video-grid">
+            {promoVideos.map((video) => {
+              const title = video.titleKey ? text[video.titleKey] : video.title;
+              return (
+                <article className="epk-video-card" key={video.embed}>
+                  <VideoEmbed src={video.embed} title={title} />
+                  <h3>{title}</h3>
+                  <a
+                    className="epk-download"
+                    href={video.download}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {text.download}
+                  </a>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="epk-section">
           <SectionTitle>{text.previousReleases}</SectionTitle>
           <p className="epk-note">{text.catalog}</p>
-          <div className="epk-spotify-frame">
-            <iframe
-              className="epk-spotify"
-              title="Zaharenco on Spotify"
-              src="https://open.spotify.com/embed/artist/4azDTEsE76hndB8paNOEe8?utm_source=generator&theme=0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
+          <div className="epk-catalog-frame">
+            <VideoEmbed
+              src="https://www.youtube.com/embed/xryrrX6E2PM?list=PLQTiNiutzmRc"
+              title="Zaharenco on YouTube"
             />
           </div>
         </section>
@@ -206,18 +317,29 @@ export default function EPK() {
         <section className="epk-section">
           <SectionTitle>{text.pressPhotos}</SectionTitle>
           <div className="epk-photo-grid">
-            {pressPhotos.map((photo, index) => (
-              <article className="epk-photo-card" key={photo}>
-                <img
-                  src={photo}
-                  alt={`Alexandru Zaharencu press ${language === "ro" ? "foto" : "photo"} ${index + 1}`}
-                  loading="lazy"
-                />
-                <a className="epk-download" download href={photo}>
-                  {text.download}
-                </a>
+            {pressPhotos.map((photo) => (
+              <article className="epk-photo-card" key={photo.src}>
+                <button
+                  type="button"
+                  className="epk-photo-button"
+                  onClick={(event) => openPhoto(photo, event.currentTarget)}
+                  aria-label={`${text.pressPhotos}: ${photo.alt}`}
+                >
+                  <img src={photo.src} alt={photo.alt} loading="lazy" />
+                </button>
               </article>
             ))}
+          </div>
+          <div className="epk-rider-box epk-photo-download">
+            <span>{text.fullResolution}</span>
+            <a
+              className="epk-download epk-download-blue"
+              href="https://drive.google.com/drive/folders/1sqkwsxzBK57zQ5uC7hSJ-s1vb4YdJjyy?usp=share_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {text.download}
+            </a>
           </div>
         </section>
 
@@ -233,6 +355,20 @@ export default function EPK() {
               ))}
             </tbody>
           </table>
+        </section>
+
+        <section className="epk-section">
+          <SectionTitle>{text.techRider}</SectionTitle>
+          <div className="epk-rider-box">
+            <span>{text.riderDescription}</span>
+            <a
+              className="epk-download epk-download-blue"
+              href="/epk/zaharenco-tech-rider.pdf"
+              download
+            >
+              {text.downloadPdf}
+            </a>
+          </div>
         </section>
 
         <section className="epk-section">
@@ -258,6 +394,29 @@ export default function EPK() {
           </ul>
         </section>
       </main>
+
+      {selectedPhoto && (
+        <div
+          className="epk-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={selectedPhoto.alt}
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setSelectedPhoto(null);
+          }}
+        >
+          <button
+            ref={closeButtonRef}
+            type="button"
+            className="epk-lightbox-close"
+            aria-label={text.close}
+            onClick={() => setSelectedPhoto(null)}
+          >
+            ×
+          </button>
+          <img src={selectedPhoto.src} alt={selectedPhoto.alt} />
+        </div>
+      )}
     </div>
   );
 }
