@@ -18,6 +18,24 @@
     form-action 'self'
   "
     />
+    <script>
+      if (/^\/epk\/?$/.test(window.location.pathname)) {
+        [
+          "/fonts/epk/anton-latin-400-normal.woff2",
+          "/fonts/epk/anton-latin-ext-400-normal.woff2",
+          "/fonts/epk/archivo-latin-400-normal.woff2",
+          "/fonts/epk/archivo-latin-ext-400-normal.woff2",
+        ].forEach((href) => {
+          const preload = document.createElement("link");
+          preload.rel = "preload";
+          preload.as = "font";
+          preload.type = "font/woff2";
+          preload.href = href;
+          preload.crossOrigin = "anonymous";
+          document.head.appendChild(preload);
+        });
+      }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",

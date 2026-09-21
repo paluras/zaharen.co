@@ -1,12 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import "@fontsource/anton/latin-400.css";
-import "@fontsource/anton/latin-ext-400.css";
-import "@fontsource/archivo/latin-400.css";
-import "@fontsource/archivo/latin-ext-400.css";
-import "@fontsource/archivo/latin-600.css";
-import "@fontsource/archivo/latin-ext-600.css";
-import "@fontsource/archivo/latin-800.css";
-import "@fontsource/archivo/latin-ext-800.css";
 import "./epk.css";
 
 const copy = {
