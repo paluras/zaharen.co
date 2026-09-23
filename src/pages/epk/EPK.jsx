@@ -23,8 +23,6 @@ const copy = {
     promoMaterials: "Promo Materials",
     artworkAnimation: "Artwork Animation",
     previousReleases: "Previous Releases",
-    catalog:
-      "Full catalog, played in full on YouTube (updates automatically as new videos go up):",
     pressPhotos: "Press Photos",
     fullResolution: "Full resolution.",
     download: "Download",
@@ -62,8 +60,6 @@ const copy = {
     promoMaterials: "Materiale promo",
     artworkAnimation: "Animație artwork",
     previousReleases: "Lansări anterioare",
-    catalog:
-      "Catalogul complet, ascultat integral pe YouTube (se actualizează automat pe măsură ce apar videoclipuri noi):",
     pressPhotos: "Fotografii de presă",
     fullResolution: "Rezoluție completă.",
     download: "Descarcă",
@@ -297,7 +293,6 @@ export default function EPK() {
 
         <section className="epk-section">
           <SectionTitle>{text.previousReleases}</SectionTitle>
-          <p className="epk-note">{text.catalog}</p>
           <div className="epk-catalog-frame">
             <VideoEmbed
               src="https://www.youtube.com/embed/xryrrX6E2PM?list=PLQTiNiutzmRc"
