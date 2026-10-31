@@ -24,7 +24,8 @@ const Catatro = lazy(() => import("./components/media-visual/Catatro"));
 const Catatrov2 = lazy(() => import("./components/media-visual/Catatrov2"));
 const Primordial = lazy(() => import("./components/media-visual/Primordial"));
 const LinkTree = lazy(() => import("./pages/linktree/Linktree"));
-const EPK = lazy(() => import("./pages/epk/EPK"));
+const AlbumEPK = lazy(() => import("./pages/epk/AlbumEPK"));
+const Condition2EPK = lazy(() => import("./pages/condition2/Condition2EPK"));
 
 function App() {
   const [words, setWords] = useState(["Film & Theatre", "Multimedia Art"]);
@@ -69,10 +70,18 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/linktree" element={<LinkTree />} />
       <Route
-        path="/epk"
+        path="/epk/:lang?"
         element={
           <Suspense fallback={null}>
-            <EPK />
+            <AlbumEPK />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/condition2/:lang?"
+        element={
+          <Suspense fallback={null}>
+            <Condition2EPK />
           </Suspense>
         }
       />

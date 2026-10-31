@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import "./epk.css";
+import useRouteLanguage from "../../lib/useRouteLanguage";
+import "./condition2.css";
 
 const copy = {
   en: {
@@ -137,8 +138,8 @@ function VideoEmbed({ src, title }) {
   );
 }
 
-export default function EPK() {
-  const [language, setLanguage] = useState("en");
+export default function Condition2EPK() {
+  const [language, setLanguage] = useRouteLanguage("/condition2");
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const closeButtonRef = useRef(null);
   const photoTriggerRef = useRef(null);
@@ -151,14 +152,6 @@ export default function EPK() {
       document.title = previousTitle;
     };
   }, []);
-
-  useEffect(() => {
-    const previousLanguage = document.documentElement.lang;
-    document.documentElement.lang = language;
-    return () => {
-      document.documentElement.lang = previousLanguage;
-    };
-  }, [language]);
 
   useEffect(() => {
     if (!selectedPhoto) return undefined;

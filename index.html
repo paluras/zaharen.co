@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="logo.svg" />
+    <link rel="icon" href="/logo.svg" />
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
@@ -19,14 +19,34 @@
   "
     />
     <script>
-      if (/^\/epk\/?$/.test(window.location.pathname)) {
-        [
-          "/fonts/epk/anton-latin-400-normal.woff2",
-          "/fonts/epk/anton-latin-ext-400-normal.woff2",
-          "/fonts/epk/archivo-latin-400-normal.woff2",
-          "/fonts/epk/archivo-latin-ext-400-normal.woff2",
-        ].forEach((href) => {
-          const preload = document.createElement("link");
+      (function () {
+        var path = window.location.pathname;
+        var fonts = [];
+        if (/^\/condition2(\/(en|ro))?\/?$/.test(path)) {
+          fonts = [
+            "/fonts/epk/anton-latin-400-normal.woff2",
+            "/fonts/epk/anton-latin-ext-400-normal.woff2",
+            "/fonts/epk/archivo-latin-400-normal.woff2",
+            "/fonts/epk/archivo-latin-ext-400-normal.woff2",
+          ];
+        } else if (/^\/epk(\/(en|ro))?\/?$/.test(path)) {
+          fonts = [
+            "/fonts/epk-album/archivo-var-latin.woff2",
+            "/fonts/epk-album/archivo-var-latin-ext.woff2",
+            "/fonts/epk-album/ibm-plex-mono-400-latin.woff2",
+          ];
+          // The album cover is the largest thing on screen; start it before the page chunk loads.
+          var cover = document.createElement("link");
+          cover.rel = "preload";
+          cover.as = "image";
+          cover.type = "image/webp";
+          cover.setAttribute("imagesrcset", "/epk/album/cover-700.webp 700w, /epk/album/cover-1400.webp 1400w");
+          cover.setAttribute("imagesizes", "(min-width: 760px) 50vw, 100vw");
+          cover.setAttribute("fetchpriority", "high");
+          document.head.appendChild(cover);
+        }
+        fonts.forEach(function (href) {
+          var preload = document.createElement("link");
           preload.rel = "preload";
           preload.as = "font";
           preload.type = "font/woff2";
@@ -34,7 +54,7 @@
           preload.crossOrigin = "anonymous";
           document.head.appendChild(preload);
         });
-      }
+      })();
     </script>
     <script type="application/ld+json">
       {
